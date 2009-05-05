@@ -1,0 +1,347 @@
+2007-06-29  Christian Persch <chpe@gnome.org>
+
+	* drawing.c:
+	* game.c:
+	* input.c:
+	* same-gnome.[ch]:
+	* ui.[ch]:
+	* Makefile.am: Allow building with gtk-only platform.
+
+2007-02-07  Mariano Suárez-Alvarez  <mariano@gnome.org>
+
+	* ui.c(window_state_cb): s/FALSe/FALSE/ (bug #405056)
+
+2006-04-06  Thomas Andersen  <phomes@gmail.com>
+
+	* ui.c: Update About dialog
+
+2006-04-03  Callum McKenzie  <callum@spooky-possum.org>
+
+	* Makefile.am: 
+	* ui.c:
+	* same-gnome.desktop.in: Update the icon handling to use icon
+	themes. Rename gnome-gsame.png gnome-same-gnome.png.
+
+2006-03-27  Callum McKenzie  <callum@spooky-possum.org>
+
+	* same-gnome.c (initialise_options): Make sure that the -z option
+	doesn't get over-ridden by the auto-save game and also make it use
+	the logical numbering (i.e. SMALL=1, not 2).
+
+	* same-gnome.c: Patch from Paolo Borelli to use GOption. See bug
+	#336095.
+
+2006-03-19  Callum McKenzie  <callum@spooky-possum.org>
+
+	* game.c: 
+	* ui.c: Replace // style comments with /* */ style.
+
+2006-01-17  Callum McKenzie  <callum@spooky-possum.org>
+
+	* same-gnome.c: Patch from Scott Bronson to ensure user-edited
+	accelerators are saved (bug #327280).
+
+2006-01-08  Callum McKenzie  <callum@spooky-possum.org>
+
+	* game.c: Patch to allow compilation with the Forte C
+	compiler. (Damien Carbery, Bug #326024.)
+
+2005-12-20  Callum McKenzie  <callum@spooky-possum.org>
+
+	* same-gnome.c (main): Added setgid_io_init ().
+
+2005-08-29  Callum McKenzie  <callum@spooky-possum.org>
+
+	* same-gnome.c: 
+	* ui.c:
+	* game.c: Use the new high scores API.
+
+2005-08-25  Callum McKenzie  <callum@spooky-possum.org>
+
+	* help/C/same-gnome.xml: Patch from Shaun McCance to fix some XML
+	errors.
+
+2005-08-17  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* drawing.c (expose_cb): Avoid drawing glitches when expose is
+	called during an animation. Also remove the redraw_cb and call
+	redraw explicitly at the end of the render. The effect is far 
+	better and makes de-glitching easier. Also fix the multiple 
+	calls to set up the render callback.
+
+	* same-gnome.h: 
+	* same-gnome.c:
+	* game.h:
+	* game.c:
+	* ui.c: Patch from Tom Rathbone to save the game state between
+	games. It uses gconf for now, but it is quite easy to change to
+	another save location. See bug #313243 for discussion.
+
+2005-08-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: 
+	* game.c: Added context tags as per the request in bug
+	#312802.
+
+2005-07-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/figures/*:
+	* help/C/same-gnome.xml: Bump the appversion number for
+	2.12. Update the screenshots.
+
+2005-07-20  Dennis Cranston <dennis_cranston@yahoo.com>
+
+	* same-gnome/ui.c: Add a mnemonic to the new game button.
+
+2005-07-18  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* drawing.h: 
+	* same-gnome.h: 
+	* input.h: 
+	* game.h: 
+	* same-gnome.c: 
+	* input.c: 
+	* game.c: 
+	* drawing.c: Rearrange include files to try and avoid a
+	libgnomeui dependence. It drags in a lot of stuff we don't
+	actually use.
+
+2005-06-07  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: Patch from Paolo Borelli to fix some memory leaks and
+	sprinkle a few "const" statements around.
+
+2005-05-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: Use the new games_scores_dialog API for setting the
+	buttons and further reduce evil-looking code.
+
+2005-05-24  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c (game_over_dialog): Initialise baddialog and use the new
+	_set_message method of games_scores_dialog.
+
+2005-04-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* drawing.c (render_cb): Code improvements for the background
+	rendering. Also fade to the background colour rather than black
+	during the destruction animation.
+
+	* drawing.c:
+	* ui.h:
+	* ui.c: Remove init_pixmaps and distribute initialisation to
+	be done in a just-in-time fashion.
+
+	* drawing.c: Draw the cursor with a brighter (not necessarily
+	better) colour and make it two pixels wide. Also draw the top and
+	bottom lines in the cirrect place.
+	
+2005-04-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* drawing.c: Preliminary support for non black and white
+	background and grid. The colours are still awful though.
+
+2005-04-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: 
+	* ui.h:
+	* game.c: Remove the ball count message and just use the points
+	message. This solves the criticism in bug #172359 via a different
+	route.
+	
+	* help/C/same-gnome.xml: 
+	* drawing.h: 
+	* same-gnome.h: 
+	* ui.c:
+	* drawing.c: Install a fast-animation option.
+
+2005-04-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* same-gnome.c:
+	* ui.c: Fullscreen toggle -> Fullscreen / Leave Fullscreen.
+	Use stock items from games-stock.h. Use actions rather than
+	widgets to store UI references.
+
+2005-03-24  Dennis Cranston <dennis_cranston@yahoo.com>
+
+	* ui.c:  Use an etched in shadow for list view.
+	
+2005-03-23  Dennis Cranston  <dennis_cranston@yahoo.com>
+
+	* ui.c: Make theme dialog more HIG compliant.
+	
+2005-03-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: Add a keyboard shortcut for fullscreen mode.
+
+	* same-gnome.schemas.in: Fix typo in the schema file (bug
+	#167273).
+
+	* ui.c: Fix typos (bugs #166551 and #167276).
+
+2005-03-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/same-gnome.xml: Yet more updates. I actually
+	spell-checked it this time. Also fixed up one of the pictures, I
+	have no idea how a lime green line got down one side of it.
+
+2005-02-26  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* drawing.c (expose_cb): Make sure we draw the left and bottom
+	lines.
+
+	* help/C/same-gnome.xml: More updates. Added a new figure on how
+	to play.
+
+2005-02-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c (game_over_dialog): Make sure we set the category correctly
+	for the high score dialog so that if we score on one game, and
+	then score in another, the correct category is shown.
+
+	* help/C/same-gnome.xml: More work on the help file. Changed the
+	screenshot graphics files.
+
+	* drawing.c (render_cb): Added code to handle old theme names that
+	may have changed. Explicitly, the removal of the -sync magic and
+	the .png -> .svg changeover.
+
+2005-02-23  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/same-gnome-C.omf: Updated for the new document.
+
+2005-02-18  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c (build_gui): Set the size menu item correctly at start-up.
+
+	* help/C/same-gnome.xml: Start to rewrite the manual for the new
+	version.
+
+2005-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: Patch from Nickolay V. Shmyrev to get l12n working
+	properly. Also some cleanups for code that it made redundant.
+
+2005-01-26  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* stones.png: Updated to use transparent backgrounds and to now
+	have any animation glitches.
+
+2005-01-21  William Jon McCann  <mccann@jhu.edu>
+
+	* input.c (mouse_leave_cb): Only respond to normal event
+	crossings.  Fixes #163963.
+
+2005-01-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* stones.png: Expand to have four colours. Also pad out to have 16
+	frames. There is still a glitch in the animation though.
+
+2005-01-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* same-gnome.c:
+	* same-gnome.h:
+	* drawing.c:
+	* ui.c: Add support for user-supplied themes.
+
+	* drawing.h:
+	* drawing.c:
+	* ui.c: Finish the theme dialog and implement theme changing.
+
+2005-01-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c (theme_cb): Start a theme dialog.
+	(build_gui): Remove deprecated gnome_* functions.
+
+2005-01-07  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: Rework the end of game dialogs.
+
+2005-01-06  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* input.c: 
+	* game.c:
+	* ui.c:
+	* same-gnome.c:
+	* drawing.c:
+	* globals.h:
+	* same-gnome.h: globals.h -> same-gnome.h .
+
+2005-01-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* game.c: Make sure we update game_size properly. 
+
+	* same-gnome.c: 	
+	* game.c:
+	* game.h:
+	* ui.c: Add support for the high scores dialog.
+
+2005-01-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c: Add quit and new game buttons to the game over
+	dialog. Other minor cleanups.
+
+2004-12-31  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* game.c:
+	* ui.c:
+	* ui.h: Further tweaks to the message interface.
+
+	* ui.h:
+	* ui.c:
+	* input.c:
+	* drawing.c: Provide a helpful "n objects selected" message.
+
+	* ui.h:
+	* ui.c: Rework the status bar so that it is no longer a
+	statusbar. It now looks like gnomine.
+
+2004-12-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* ui.c:
+	* game.h: Tweaks for undo during an animation.
+
+	* drawing.c:
+	* ui.c: 
+	* ui.h:
+	* game.h:
+	* globals.h:
+	* same-gnome.c:
+	* game.c: Implement Undo/Redo.
+
+2004-12-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* drawing.c:
+	* globals.h:
+	* game.c:
+	* input.c: Cleanups.
+
+	* ui.c: Fullscreen now works.
+
+2004-12-26  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am:
+	* same-gnome.c: 
+	* same-gnome.h:
+	* game.c:
+	* ui.c:	
+	* ui.h: Move the ui code to its own file. Also remove same-gnome.h
+	in the header shuffle.
+
+2004-12-23  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am: 
+	* same-gnome.c: Get online help working.
+
+	* same-gnome.c: 
+	* drawing.c: Allow resizing of the board.
+
+	* Makefile.am: Remove setgid bit from the binary for now.
+
+2004-12-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* *.c:
+	* *.h: Complete rewrite from scratch. New features include:
+	Variable board sizes, animations, keyboard control, and a
+	resizeable window.
+

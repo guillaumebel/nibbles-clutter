@@ -1,0 +1,66 @@
+<gconfschemafile>
+    <schemalist>    
+
+      <schema>
+        <key>/schemas/apps/same-gnome/tileset</key>
+        <applyto>/apps/same-gnome/tileset</applyto>
+        <owner>same-gnome</owner>
+        <type>string</type>
+        <default>stones.png</default>
+        <locale name="C">
+          <short>The theme to use</short>
+          <long>The filename of the theme to use.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/same-gnome/size</key>
+        <applyto>/apps/same-gnome/size</applyto>
+        <owner>same-gnome</owner>
+        <type>int</type>
+        <default>2</default>
+        <locale name="C">
+          <short>The board size</short>
+          <long>The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = Large.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/same-gnome/custom_width</key>
+        <applyto>/apps/same-gnome/custom_width</applyto>
+        <owner>same-gnome</owner>
+        <type>int</type>
+        <default>15</default>
+        <locale name="C">
+          <short>Width of the custom board</short>
+          <long>The width of the custom board, 101 &gt; width &gt; 3.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/same-gnome/custom_height</key>
+        <applyto>/apps/same-gnome/custom_height</applyto>
+        <owner>same-gnome</owner>
+        <type>int</type>
+        <default>10</default>
+        <locale name="C">
+          <short>Height of the custom board</short>
+          <long>The height of the custom board, 101 &gt; height &gt; 3.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/same-gnome/fast_animation</key>
+        <applyto>/apps/same-gnome/fast_animation</applyto>
+        <owner>same-gnome</owner>
+        <type>bool</type>
+        <default>FALSE</default>
+        <locale name="C">
+          <short>Use fast animation</short>
+          <long>Setting this to FALSE means the pieces fall slowly, but gracefully. A setting of TRUE causes the pieces to fall quickly and jerkily.</long>
+        </locale>
+      </schema>
+
+  </schemalist>
+  
+</gconfschemafile>

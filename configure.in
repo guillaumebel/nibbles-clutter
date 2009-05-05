@@ -1,0 +1,1130 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.53])
+AC_INIT([GNOME Games], [2.27.2],
+  [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-games],
+  [gnome-games])
+
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_SRCDIR([gnomine/gnomine.c])
+AC_CONFIG_HEADERS([config.h])
+
+AM_INIT_AUTOMAKE([1.9 no-dist-gzip dist-bzip2 foreign])
+
+if test -z "$enable_maintainer_mode"; then
+  enable_maintainer_mode=yes
+fi
+AM_MAINTAINER_MODE([enable])
+
+# First parse the list of enabled games, so we know which options
+# we support and which features to check for
+
+# This is the canonical list of all game subdirectories.
+allgames="aisleriot blackjack gnometris gnect gnomine same-gnome mahjongg gtali gnotravex gnotski glines iagno glchess gnobots2 gnibbles gnome-sudoku"
+AC_SUBST([allgames])
+staginggames="lightsoff"
+AC_SUBST([staginggames])
+
+gamelist=""
+
+AC_MSG_CHECKING([which games to build])
+
+AC_ARG_WITH([games],
+  [--with-games=game1,game2,...],
+  [],[with_games=all])
+
+AC_ARG_ENABLE([games],
+  [AS_HELP_STRING([--enable-games=list],[Enable the games in the comma separated list ("all" and "none" are valid)])],
+  [with_games="$enableval"],[])
+
+if test -n "$with_games"; then
+  gamelist=""
+  IFS="${IFS=	}"; gg_saved_ifs="$IFS"; IFS=","
+  for item in $with_games; do
+    case $item in
+      all) gamelist="$allgames" ;;
+      none) gamelist="" ;;
+      *) if test -z "$gamelist"; then
+           gamelist="$item"
+         else
+           gamelist="$gamelist $item"
+         fi
+         ;;
+    esac
+  done
+  IFS="$gg_saved_ifs"
+else
+  gamelist="$allgames"   
+fi
+
+## This has a particularly silly name because autoconf doesn't allow 
+## --disable-foo to have arguments so we have to use an --enable-fubar form.
+AC_ARG_ENABLE(omitgames,
+  AC_HELP_STRING([--enable-omitgames=list],
+    [Don't compile games in the comma separated list. ("all" and "none" are valid)]))
+if test -n "$enable_omitgames"; then
+   enable_omitgames=`echo ,"${enable_omitgames}", | sed -e 's/[[	,]][[	,]]*/ /g' -e 's/,$//'`
+   omittedgames=""
+   gamelist=""
+   for item in ${enable_omitgames}; do
+     for game in ${allgames}; do
+       case ${item} in
+	  all) omittedgames=${allgames};;
+	  none) omittedgames="";;
+          ${game}) omittedgames="${game} ${omittedgames}";;
+	  *) ;; 
+        esac
+     done
+   done
+   for game in ${allgames}; do
+     case ${omittedgames} in
+       *${game}*) ;;
+       *) gamelist="${gamelist} ${game}";;
+     esac
+   done
+elif test -z "$gamelist"; then
+   # Everything on by default
+   gamelist=${allgames}
+fi
+
+## This is the staging area
+## These games aren't quite ready for prime-time
+
+AC_MSG_CHECKING([whether to enable staging games])
+AC_ARG_ENABLE([staging],
+  [AS_HELP_STRING([--enable-staging],[whether to enable beta game support (default: disabled)])],[],[])
+AC_MSG_RESULT([$enable_staging])
+
+if test "$enable_staging" = "yes"; then
+	gamelist="${gamelist} ${staginggames}"
+fi
+
+AC_MSG_RESULT([$gamelist])
+
+AC_SUBST([gamelist])
+
+# Feature matrix
+
+need_cxx=no
+need_ggz=no
+need_rsvg=no
+need_guile=no
+need_python=no
+need_libxml=no
+need_clutter=no
+need_dbus_glib=no
+want_sound=no
+allow_gnuchess=no
+allow_smclient=no
+disallow_hildon=no
+
+for game in $gamelist; do
+  case $game in
+    gnometris|blackjack) need_cxx=yes ;;
+    *) ;;
+  esac
+  case $game in
+    gnibbles|iagno|gnect|glchess) need_ggz=yes ;;
+    *) ;;
+  esac
+  case $game in
+    aisleriot) need_guile=yes ;;
+    *) ;;
+  esac
+  case $game in
+    glchess) allow_gnuchess=yes ;;
+    *) ;;
+  esac
+  case $game in
+    glchess|gnome-sudoku) need_python=yes ;;
+    *) ;;
+  esac
+  case $game in
+    aisleriot|gnect|gnibbles|gnobots2|gnometris|iagno) want_sound=yes ;;
+    *) ;;
+  esac
+  case $game in
+    aisleriot) ;;
+    *) disallow_hildon=yes ;;
+  esac
+  case $game in
+    aisleriot|blackjack) ;;
+    *) need_rsvg=yes ;;
+  esac
+  case $game in
+    aisleriot|glines|gnobots2|gnomine|gnotravex|gnotski|iagno) allow_smclient=yes ;;
+    *) ;;
+  esac
+  case $game in
+    blackjack) need_libxml=yes ;;
+    *) ;;
+  esac
+  case $game in
+    gnometris|lightsoff) need_clutter=yes ;;
+    *) ;;
+  esac
+done
+
+# Locate various programs
+
+PKG_PROG_PKG_CONFIG([0.15])
+
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_LN_S
+AC_PROG_SED
+
+if test "$need_cxx" = "yes"; then
+  AC_PROG_CXX
+
+  # Check whether a C++ was found (AC_PROG_CXX sets $CXX to "g++" even when it
+  # doesn't exist)
+  AC_LANG_PUSH([C++])
+  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([],[])],[],[AC_MSG_ERROR([No C++ compiler found])])
+  AC_LANG_POP([C++])
+fi
+
+# Run these before AC_PROG_LIBTOOL, else it bugs
+AC_GGZ_INIT
+AC_GGZ_PLATFORM_BASE
+AC_GGZ_PLATFORM
+
+AM_PROG_CC_C_O
+
+AC_PROG_LIBTOOL
+
+GNOME_COMMON_INIT
+GNOME_DEBUG_CHECK
+GNOME_COMPILE_WARNINGS([maximum])
+GNOME_CXX_WARNINGS([yes])
+GNOME_MAINTAINER_MODE_DEFINES
+
+AC_C99_VARIADIC_MACROS
+AC_C99_VARIABLE_ARRAYS
+AC_C99_INITIALIZERS
+AC_C99_STDINT_H   
+
+# *****************
+# Distribution info
+# *****************
+
+LSB_DISTRIBUTOR=
+LSB_DISTRIBUTION=
+
+AC_PATH_PROG([LSB_RELEASE],[lsb_release],[false])
+if test "$LSB_RELEASE" != "false"; then
+  LSB_DISTRIBUTOR="$($LSB_RELEASE -s -i)"
+  LSB_DISTRIBUTION="$($LSB_RELEASE -s -d)"
+fi
+
+AC_DEFINE_UNQUOTED([LSB_DISTRIBUTOR],["$LSB_DISTRIBUTOR"],[The distributor ID])
+AC_DEFINE_UNQUOTED([LSB_DISTRIBUTION],["$LSB_DISTRIBUTION"],[The full distribution description])
+
+# *************
+# Documentation
+# *************
+
+GNOME_DOC_INIT([0.10.0],[have_gdu=yes],[have_gdu=no])
+
+dnl ****************************************************************************
+dnl * Python 2.4
+dnl ****************************************************************************
+
+AM_PATH_PYTHON([2.4],[have_python=yes],[have_python=no])
+
+# ************
+# Dependencies
+# ************
+
+# Check which platform to use
+
+AC_MSG_CHECKING([for which platform to build])
+AC_ARG_WITH([platform],
+  [AS_HELP_STRING([--with-platform=gnome|hildon|gtk-only (default: gnome)])],
+  [case "$withval" in
+    gnome|hildon|gtk-only) ;;
+    maemo) with_platform=hildon with_platform_variant=maemo3 ;; # compat
+    *) AC_MSG_ERROR([invalid argument "$withval" for --with-platform]) ;;
+   esac],
+  [with_platform=gnome])
+AC_MSG_RESULT([$with_platform])
+
+if test "$with_platform" = "hildon"; then
+  # "maemo" is Maemo 4.x
+  AC_MSG_CHECKING([for which platform variant to build])
+  AC_ARG_WITH([platform-variant],
+    [AS_HELP_STRING([--with-platform-variant=maemo3|maemo4|mid (default: maemo4)])],
+    [case "$withval" in
+       maemo4|maemo3|mid) ;;
+       maemo) with_platform_variant=maemo4 ;;
+       *) AC_MSG_ERROR([unknown platform variant "$withval"]) ;;
+     esac],
+    [with_platform_variant=maemo3])
+  AC_MSG_RESULT([$with_platform_variant])
+fi
+
+if test "$with_platform" = "hildon" -a "$disallow_hildon" = "yes"; then
+  AC_MSG_ERROR([Trying to build with Hildon platform, but some of the following games don't support this: $gamelist])
+fi
+
+AM_CONDITIONAL([HAVE_GNOME],[test "$with_platform" = "gnome"])
+AM_CONDITIONAL([HAVE_HILDON],[test "$with_platform" = "hildon"])
+AM_CONDITIONAL([HAVE_MAEMO],[test "$with_platform" = "hildon" -a "$with_platform_variant" != "mid"])
+AM_CONDITIONAL([HAVE_MAEMO_3],[test "$with_platform" = "hildon" -a "$with_platform_variant" = "maemo3"])
+
+if test "$with_platform" = "gnome"; then
+  AC_DEFINE([HAVE_GNOME],[1],[Define if GNOME support is enabled])
+fi
+if test "$with_platform" = "hildon"; then
+  AC_DEFINE([HAVE_HILDON],[1],[Define if Hildon support is enabled])
+
+  if test "$with_platform_variant" != "mid"; then
+    AC_DEFINE([HAVE_MAEMO],[1],[Define if Maemo support is enabled])
+  fi
+  if test "$with_platform_variant" = "maemo3"; then
+    AC_DEFINE([HAVE_MAEMO_3],[1],[Define if Maemo 3.x support is enabled])
+  fi
+fi
+
+# Features
+
+# Sound
+
+if test "$want_sound" = "yes"; then
+  AC_MSG_CHECKING([whether to enable sound support])
+  AC_ARG_ENABLE([sound],
+    [AS_HELP_STRING([--enable-sound],[Enable sound with GStreamer or SDL_Mixer.])],
+    [],[case "$with_platform" in
+          gnome|gtk-only) enable_sound=yes ;;
+          hildon) enable_sound=no ;;
+        esac])
+  AC_MSG_RESULT([$enable_sound])
+else
+  enable_sound=no
+fi
+
+# Check which sound library to use
+
+AC_MSG_CHECKING([for which sound library to use])
+AC_ARG_WITH([sound],
+  [AS_HELP_STRING([--with-sound=libcanberra|sdl_mixer (default: libcanberra)])],
+  [with_sound="$withval"],
+  [with_sound=libcanberra])
+AC_MSG_RESULT([$with_sound])
+
+# Clutter
+
+# We're using need_guile as a quick way to check whether building aisleriot
+if test "$need_guile" = "yes"; then
+  AC_MSG_CHECKING([whether to enable aisleriot/clutter])
+  AC_ARG_ENABLE([aisleriot-clutter],
+    [AS_HELP_STRING([--enable-aisleriot-clutter],[Whether to enable the clutter version of aisleriot (default: disabled)])],
+    [],[enable_aisleriot_clutter=no])
+  AC_MSG_RESULT([$enable_aisleriot_clutter])
+
+  if test "$enable_aisleriot_clutter" = "yes"; then
+    # Distro packagers: DO NOT ENABLE AISLERIOT/CLUTTER IN YOUR DISTRO PACKAGES, OR ELSE!
+    AC_MSG_NOTICE([Aisleriot/Clutter is experimental; do not enable this for distribution packages!])
+    need_clutter=yes
+  fi
+fi
+
+AM_CONDITIONAL([ENABLE_AISLERIOT_CLUTTER],[test "$enable_aisleriot_clutter" = "yes"])
+
+case "$with_platform" in
+  gnome|gtk-only) ;;
+  hildon) if test "$need_clutter" = "yes"; then
+            AC_MSG_ERROR([Clutter is not supported on hildon; disable Gnometris, Lights Off and Aisleriot/Clutter])
+          fi
+          ;;
+esac
+
+# Card theme formats
+
+AC_MSG_CHECKING([for requested card theme formats])
+AC_ARG_WITH([card-theme-formats],
+  [AS_HELP_STRING([--with-card-theme-formats],[which card theme formats to support (svg, fixed, kde, pysol, defaults, all)])],
+  [],[case "$with_platform" in
+        gnome|gtk-only) with_card_theme_formats="svg" ;;
+        hildon) with_card_theme_formats="fixed" ;;
+      esac])
+
+enable_card_theme_format_svg=no
+enable_card_theme_format_kde=no
+enable_card_theme_format_fixed=no
+enable_card_theme_format_sliced=no
+enable_card_theme_format_pysol=no
+
+IFS="${IFS=	}"; gg_saved_ifs="$IFS"; IFS=","
+for format in "$with_card_theme_formats"; do
+  case "$format" in
+    all) enable_card_theme_format_svg=yes
+         enable_card_theme_format_kde=yes
+         enable_card_theme_format_fixed=yes
+         enable_card_theme_format_sliced=yes
+         enable_card_theme_format_pysol=yes
+         with_card_theme_formats="svg,kde,fixed,sliced,pysol"
+         ;;
+    svg) enable_card_theme_format_svg=yes ;;
+    kde) enable_card_theme_format_kde=yes ;;
+    fixed) enable_card_theme_format_fixed=yes ;;
+    sliced) enable_card_theme_format_svg=yes ;;
+    pysol) enable_card_theme_format_pysol=yes ;;
+    *) AC_MSG_ERROR([unknown card theme format $format]) ;;
+  esac
+done
+IFS="$gg_saved_ifs"
+
+AC_MSG_RESULT([$with_card_theme_formats])
+
+if test "$enable_card_theme_format_svg" = "yes"; then
+  AC_DEFINE([ENABLE_CARD_THEME_FORMAT_SVG],[1],[Define to enable SVG card theme format support])
+  need_rsvg=yes
+fi
+if test "$enable_card_theme_format_kde" = "yes"; then
+  AC_DEFINE([ENABLE_CARD_THEME_FORMAT_KDE],[1],[Define to enable KDE card theme format support])
+  need_rsvg=yes
+fi
+if test "$enable_card_theme_format_fixed" = "yes"; then
+  AC_DEFINE([ENABLE_CARD_THEME_FORMAT_FIXED],[1],[Define to enable prerendered card theme format support])
+fi
+if test "$enable_card_theme_format_sliced" = "yes"; then
+  AC_DEFINE([ENABLE_CARD_THEME_FORMAT_SLICED],[1],[Define to enable pre-2.19 card theme format support])
+fi
+if test "$enable_card_theme_format_pysol" = "yes"; then
+  AC_DEFINE([ENABLE_CARD_THEME_FORMAT_PYSOL],[1],[Define to enable PySol card theme format support])
+fi
+
+AM_CONDITIONAL([ENABLE_CARD_THEME_FORMAT_SVG],[test "$enable_card_theme_format_svg" = "yes"])
+AM_CONDITIONAL([ENABLE_CARD_THEME_FORMAT_KDE],[test "$enable_card_theme_format_kde" = "yes"])
+AM_CONDITIONAL([ENABLE_CARD_THEME_FORMAT_FIXED],[test "$enable_card_theme_format_fixed" = "yes"])
+AM_CONDITIONAL([ENABLE_CARD_THEME_FORMAT_SLICED],[test "$enable_card_theme_format_sliced" = "yes"])
+AM_CONDITIONAL([ENABLE_CARD_THEME_FORMAT_PYSOL],[test "$enable_card_theme_format_pysol" = "yes"])
+
+# Default card theme
+
+AC_MSG_CHECKING([which card theme to use by default])
+AC_ARG_WITH([default-card-theme],
+  [AS_HELP_STRING([--with-default-card-theme=NAME],[Which card theme to use by default (default: gnomangelo_bitmap)])],
+  [],[case "$with_platform" in
+        gnome|gtk-only) with_default_card_theme=gnomangelo_bitmap.svg ;;
+        hildon) with_default_card_theme=paris.card-theme ;;
+      esac])
+AC_MSG_RESULT([$with_default_card_theme])
+
+AC_DEFINE_UNQUOTED([GAMES_CARD_THEME_DEFAULT],["$with_default_card_theme"],[The default card theme])
+
+AC_MSG_CHECKING([which card theme format to use by default])
+AC_ARG_WITH([default-card-theme-format],
+  [AS_HELP_STRING([--with-default-card-theme-format=NAME],[Which card theme format to use by default (default: platform dependent)])],
+  [],[case "$with_platform" in
+        gnome|gtk-only) with_default_card_theme_format=svg ;;
+        hildon) with_default_card_theme_format=fixed ;;
+      esac])
+AC_MSG_RESULT([$with_default_card_theme_format])
+
+case "$with_default_card_theme_format" in
+  svg|kde|fixed|sliced|pysol) ;;
+  *) AC_MSG_ERROR([card theme format $with_default_card_theme_format unknown])
+esac
+
+AC_DEFINE_UNQUOTED([GAMES_CARD_THEME_DEFAULT_FORMAT_STRING],["$with_default_card_theme_format"],[The default card theme format type string])
+
+# Card theme installer
+
+AC_MSG_CHECKING([whether card themes installer support is requested])
+AC_ARG_ENABLE([card-themes-installer],
+  [AS_HELP_STRING([--enable-card-themes-installer],[Enable card theme installer with PackageKit (default: disabled)])],
+  [],[enable_card_themes_installer=no])
+AC_MSG_RESULT([$enable_card_themes_installer])
+
+if test "$enable_card_themes_installer" = "yes"; then
+  if test -z "$LSB_DISTRIBUTOR" -o -z "$LSB_DISTRIBUTION"; then
+    AC_MSG_ERROR([couldn't determine the distribution information using lsb_release])
+  fi
+
+  AC_DEFINE([ENABLE_CARD_THEMES_INSTALLER],[1],[Define if card theme installer support is enabled])
+  need_dbus_glib=yes
+fi
+
+AM_CONDITIONAL([ENABLE_CARD_THEMES_INSTALLER],[test "$enable_card_themes_installer" = "yes"])
+
+# ********************
+# Checks for libraries
+# ********************
+
+PYGTK_REQUIRED=2.14.0
+
+if test "$with_platform" = "hildon" -a "$with_platform_variant" = "maemo3"; then
+GTK_REQUIRED=2.6.0
+elif test "$with_platform" = "hildon"; then
+GTK_REQUIRED=2.10.0
+else
+GTK_REQUIRED=2.16.0
+fi
+
+GCONF_REQUIRED=2.0
+LIBXML_REQUIRED=2.4.0
+CAIRO_REQUIRED=1.0
+RSVG_REQUIRED=2.14.0
+GSTREAMER_REQUIRED=0.10.11
+HILDON_LIBS_REQUIRED=0.14
+HILDON_1_REQUIRED=1.00
+DBUS_GLIB_REQUIRED=0.75
+LIBCANBERRA_GTK_REQUIRED=0
+
+# Check for common modules
+
+need_gthread=no
+PKG_CHECK_MODULES([GTHREAD],[gthread-2.0])
+AC_SUBST([GTHREAD_CFLAGS])
+AC_SUBST([GTHREAD_LIBS])
+
+PKG_CHECK_MODULES([GTK],[gtk+-2.0 >= $GTK_REQUIRED])
+AC_SUBST([GTK_CFLAGS])
+AC_SUBST([GTK_LIBS])
+
+AM_GCONF_SOURCE_2
+AC_PATH_PROG([GCONFTOOL],[gconftool-2])
+
+# Check for libXML2
+
+if test "$need_libxml" = "yes"; then
+  PKG_CHECK_MODULES([XML],[libxml-2.0 >= $LIBXML_REQUIRED])
+  AC_SUBST([XML_CFLAGS])
+  AC_SUBST([XML_LIBS])
+fi
+
+# Check for GNOME modules
+
+if test "$with_platform" = "gnome"; then
+  PKG_CHECK_MODULES([GNOME],[gconf-2.0 >= $GCONF_REQUIRED])
+  AC_SUBST([GNOME_CFLAGS])
+  AC_SUBST([GNOME_LIBS])
+
+  need_gthread=yes
+fi
+
+# Check for Hildon modules
+
+if test "$with_platform" = "hildon"; then
+  if test "$with_platform_variant" = "maemo3"; then
+    PKG_CHECK_MODULES([HILDON],[
+      libosso
+      hildon-libs >= $HILDON_LIBS_REQUIRED])
+  else
+    PKG_CHECK_MODULES([HILDON],[
+      libosso
+      dbus-1
+      hildon-1 >= $HILDON_1_REQUIRED])
+  fi
+
+  AC_SUBST([HILDON_CFLAGS])
+  AC_SUBST([HILDON_LIBS])
+fi
+
+# Check for librsvg
+
+have_rsvg=no
+if test "$need_rsvg" = "yes"; then
+  have_rsvg=yes
+
+  # Errors out if rsvg is not found
+  PKG_CHECK_MODULES([RSVG],[
+    librsvg-2.0 >= $RSVG_REQUIRED
+    cairo >= $CAIRO_REQUIRED])
+
+  AC_SUBST([RSVG_CFLAGS])
+  AC_SUBST([RSVG_LIBS])
+
+  AC_DEFINE([HAVE_RSVG],[1],[Refine if librsvg is available])
+
+  # This only existed in some pre-gio rsvg versions
+  rsvg_gnomevfs=$($PKG_CONFIG --variable=gnome_vfs_supported librsvg-2.0)
+  if test "$rsvg_gnomevfs" = "yes"; then
+    AC_DEFINE([HAVE_RSVG_GNOMEVFS],[1],[Define if librsvg has gnome-vfs support])
+
+    need_gthread=yes
+  fi
+fi
+
+AM_CONDITIONAL([HAVE_RSVG],[test "$have_rsvg" = "yes"])
+
+# Check for Clutter
+
+if test "$need_clutter" = "yes"; then
+  CLUTTER_API_VERSION=
+  AC_MSG_CHECKING([for clutter API version])
+  for API_VERSION in 0.9; do
+    PKG_CHECK_EXISTS([clutter-$API_VERSION clutter-gtk-$API_VERSION],
+      [CLUTTER_API_VERSION=$API_VERSION; break],[])
+  done
+  if test -z "$CLUTTER_API_VERSION"; then
+    AC_MSG_ERROR([no clutter found])
+  fi
+  AC_MSG_RESULT([$CLUTTER_API_VERSION])
+
+  CLUTTER_REQUIRED=0.9.3
+  CLUTTER_GTK_REQUIRED=0.9.0
+
+  PKG_CHECK_MODULES([CLUTTER],[
+    clutter-$CLUTTER_API_VERSION >= $CLUTTER_REQUIRED])
+  AC_SUBST([CLUTTER_CFLAGS])
+  AC_SUBST([CLUTTER_LIBS])
+
+  PKG_CHECK_MODULES([CLUTTER_GTK],[
+    clutter-gtk-$CLUTTER_API_VERSION  >= $CLUTTER_GTK_REQUIRED])
+  AC_SUBST([CLUTTER_GTK_CFLAGS])
+  AC_SUBST([CLUTTER_GTK_LIBS])
+fi
+
+AM_CONDITIONAL([HAVE_CLUTTER],[test "$need_clutter" = "yes"])
+
+# Check for DBUS/GLIB
+
+if test "$need_dbus_glib" = "yes"; then
+  PKG_CHECK_MODULES([DBUS_GLIB],[dbus-glib-1 >= $DBUS_GLIB_REQUIRED])
+  AC_SUBST([DBUS_GLIB_CFLAGS])
+  AC_SUBST([DBUS_GLIB_LIBS])
+fi
+
+# Check for PyGTK
+
+if test "$have_python" = "yes"; then
+  PKG_CHECK_MODULES([PYGTK],[
+    pygtk-2.0 >= $PYGTK_REQUIRED],
+    [have_pygtk=yes],[have_pygtk=no])
+fi
+
+enable_python=no
+if test "$have_python" = "yes" -a "$have_pygtk" = "yes"; then
+  AC_SUBST([PYGTK_CFLAGS])
+  AC_SUBST([PYGTK_LIBS])
+  
+  enable_python=yes
+fi
+
+if test "$enable_python" = "no" -a "$need_python" = "yes"; then
+  AC_MSG_ERROR([Some games need python, but python or pygtk packages were not found.])
+fi
+
+AM_CONDITIONAL([HAVE_PYTHON],[test "$enable_python" = "yes"])
+
+# GThread
+
+AM_CONDITIONAL([WITH_GTHREAD],[test "$need_gthread" = "yes"])
+
+# Sound support: Libcanberra, GStreamer or SDL_mixer
+
+if test "$enable_sound"; then
+  AC_DEFINE([ENABLE_SOUND],[1],[Define if sound support is enabled])
+fi
+
+have_libcanberra=no
+if test "$enable_sound" = "yes" -a "$with_sound" = "libcanberra"; then
+  PKG_CHECK_MODULES([CANBERRA_GTK],[libcanberra-gtk >= $LIBCANBERRA_GTK_REQUIRED],[],
+    [AC_MSG_ERROR([Sound support using libcanberra was requested, but libcanberra-gtk not found.])])
+
+  AC_DEFINE([HAVE_CANBERRA_GTK],[1],[Define if libcanberra-gtk support is enabled])
+  have_libcanberra=yes
+fi
+
+if test "$enable_sound" = "yes" -a "$with_sound" = "sdl_mixer"; then
+  # Check for SDL_Mixer sound support, sets SDL_MIXER_CFLAGS, SDL_MIXER_LIBS, AUDIO_SDL
+  GAMES_CHECK_SOUND()
+
+  if test "$SDL_mixer" = "no"; then
+    AC_MSG_ERROR([Sound support using SDL-Mixer was requested, but SDL-Mixer not found.])
+  fi
+fi
+
+if test "x$SDL_mixer" = "xyes"; then
+  AC_SUBST(SDL_MIXER_CFLAGS)
+  AC_SUBST(SDL_MIXER_LIBS)
+
+  AC_DEFINE([HAVE_SDL_MIXER],[1],[Define if SDL_Mixer is available])
+fi
+
+AM_CONDITIONAL([HAVE_CANBERRA_GTK],[test "$have_libcanberra" = "yes"])
+AM_CONDITIONAL([HAVE_SDL_MIXER],[test "x$SDL_mixer" = "xyes"])
+AM_CONDITIONAL([ENABLE_SOUND],[test "$enable_sound" = "yes"])
+
+# SMClient
+
+SMCLIENT_PKGS=
+if test "$allow_smclient" = "yes"; then
+  GDK_TARGET="$($PKG_CONFIG --variable target gdk-2.0)"
+
+  AC_MSG_CHECKING([which smclient backend to use])
+  AC_ARG_WITH([smclient],
+    [AS_HELP_STRING([--with-smclient],[which smclient backend to use (xsmp/win32/quartz)])],
+    [],
+    [case "$with_platform" in
+       gnome|gtk-only) case "$GDK_TARGET" in
+                         x11) with_smclient=xsmp SMCLIENT_PKGS="sm" ;;
+                         win32|quartz) with_smclient=$GDK_TARGET ;;
+                         *) with_smclient=no ;;
+                       esac
+                       ;;
+       hildon) with_smclient=no ;;
+     esac])
+  AC_MSG_RESULT([$with_smclient])
+
+  if test "$with_smclient" != "no"; then
+    if test -n "$SMCLIENT_PKGS"; then
+      PKG_CHECK_MODULES([SMCLIENT],[$SMCLIENT_PKGS])
+    fi
+
+    AC_DEFINE([WITH_SMCLIENT],[1],[Define if smclient is enabled])
+  fi
+
+else
+  with_smclient=no
+fi
+
+AM_CONDITIONAL([WITH_SMCLIENT],[test "$with_smclient" != "no"])
+AM_CONDITIONAL([WITH_SMCLIENT_XSMP],[test "$with_smclient" = "xsmp"])
+AM_CONDITIONAL([WITH_SMCLIENT_WIN32],[test "$with_smclient" = "win32"])
+AM_CONDITIONAL([WITH_SMCLIENT_QUARTZ],[test "$with_smclient" = "quartz"])
+
+# *************
+
+AC_PATH_PROG([GLIB_GENMARSHAL],[glib-genmarshal])
+
+# Maemo's (OS2007 & OS2008) glib-genmarshal breaks on --internal
+if test "$with_platform" = "hildon"; then
+  GLIB_GENMARSHAL_INTERNAL=
+else
+  GLIB_GENMARSHAL_INTERNAL="--internal"
+fi
+AC_SUBST([GLIB_GENMARSHAL_INTERNAL])
+
+# *************
+# Check for GGZ
+# *************
+
+have_ggz=no
+if test "$need_ggz" = "yes"; then
+
+  AC_GGZ_INIT(defaults, export)
+  AC_GGZ_LIBGGZ([],[])
+  AC_GGZ_VERSION(0, 0, 14)
+  AC_GGZ_GGZMOD
+  AC_GGZ_CONFIG("true", ignore)
+  #AC_GGZ_INTL
+
+  AC_GGZ_CHECK_SERVER
+
+  AC_GGZ_PTHREADS
+  AC_GGZ_GCRYPT
+  AC_GGZ_TLS
+
+  GGZ_GTK_INCLUDES="-I\$(top_srcdir)/dependencies/ggz-gtk"
+  AC_SUBST(GGZ_GTK_INCLUDES)
+  GGZ_GTK_LDFLAGS=""
+  AC_SUBST(GGZ_GTK_LDFLAGS)
+  LIB_GGZ_GTK="\$(top_builddir)/dependencies/ggz-gtk/libggz-gtk.la"
+  AC_SUBST(LIB_GGZ_GTK)
+
+  AC_DEFINE(GGZ_GTK, 1, [Support for embedded GGZ through libggz-gtk])
+  AC_DEFINE(GGZ_CLIENT, 1, [Client support for GGZ])
+
+  have_ggz=yes
+fi # need_ggz = yes
+
+AC_GGZ_CHECK_SERVER_DEFINES
+AM_CONDITIONAL([GGZ_GTK],[test "$have_ggz" = "yes"])
+AM_CONDITIONAL([INSTALL_GGZ_GTK],[false])
+AM_CONDITIONAL([GGZ_CLIENT], [test "$have_ggz" = "yes"])
+AM_CONDITIONAL([WITH_INCLUDED_GGZ],[test "$have_ggz" = "yes"])
+
+GNOME_GAMES_GGZ_DSC_RULE='%.dsc:   %.dsc.in   ; $(SED) -e "s|[@]VERSION[@]|$(VERSION)|g" -e "s|[@]libexecdir[@]|$(libexecdir)|g" -e "s|[@]bindir[@]|$(bindir)|g" -e "s|[@]ggzexecmoddir[@]|$(ggzexecmoddir)|g"< $< > $[@]'
+AC_SUBST([GNOME_GAMES_GGZ_DSC_RULE])
+
+# ********
+
+AM_CFLAGS="$AM_CFLAGS $WARN_CFLAGS"
+AM_CXXFLAGS="$AM_CXXFLAGS $WARN_CXXFLAGS"
+
+# ****
+# i18n
+# ****
+
+GETTEXT_PACKAGE=gnome-games
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [The gettext package name])
+AM_GLIB_GNU_GETTEXT
+
+IT_PROG_INTLTOOL([0.40.4])
+
+GNOME_GAMES_GGZ_INTLTOOL_ROOM_RULE='%.room:   %.room.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< [$]@'
+AC_SUBST([GNOME_GAMES_GGZ_INTLTOOL_ROOM_RULE])
+
+# ********************
+# Game specific checks
+# ********************
+
+have_guile=no
+have_guile_1_8=no
+if test "$need_guile" = "yes"; then
+  AC_PATH_PROG([GUILE],[guile])
+  if test -z "$GUILE" ; then
+    AC_MSG_ERROR([guile not found; install guile development headers or use --enable-omitgames=aisleriot])
+  fi
+
+  AC_PATH_PROG([GUILE_CONFIG],[guile-config])
+  if test -z "$GUILE_CONFIG"; then
+    AC_MSG_ERROR([guile not found; install guile development headers or use --enable-omitgames=aisleriot])
+  fi
+
+  AC_SUBST([GUILE])
+  AC_SUBST([GUILE_CONFIG])
+
+  GUILE_CFLAGS=`$GUILE_CONFIG compile`
+  GUILE_LIBS=`$GUILE_CONFIG link`
+  AC_SUBST([GUILE_CFLAGS])
+  AC_SUBST([GUILE_LIBS])
+
+  # Checking for the header file is basically the only way to find
+  # out if the _development_ files are present. guile-config returns
+  # a value regardless of what is actually installed. The problem
+  # with this is if the header ever gets moved to a non-default location.
+  gg_save_CFLAGS="$CFLAGS"
+  CFLAGS="$GUILE_CFLAGS $CFLAGS"
+  AC_CHECK_HEADER([libguile.h],[have_guile=yes],
+    [AC_MSG_ERROR([guile not found; install guile development headers or use --enable-omitgames=aisleriot])])
+  CFLAGS="$gg_save_CFLAGS"
+
+  # On 64-bit machines guile < 1.6.5 causes a crash in aisleriot
+  if uname -m | grep -q 64 > /dev/null; then
+    GUILE_TARGET="1.6.5"
+  else
+    GUILE_TARGET="1.6.0"
+  fi
+  if test `$GUILE -c '(if (string<? (version) (cadr (command-line))) (display "no") (display "yes")) (newline)' $GUILE_TARGET` != yes ; then
+    AC_MSG_ERROR([Your version of guile is too old, please install a recent guile package (>= $GUILE_TARGET)])
+  fi
+
+  have_guile_1_8=$($GUILE -c '(if (string<? (version) (cadr (command-line))) (display "no") (display "yes")) (newline)' 1.8.0)
+
+  if test "$have_guile_1_8" = "yes"; then
+    AC_DEFINE([HAVE_GUILE_1_8],[1],[Define if guile version is 1.8.0 or above])
+  fi
+fi
+
+AM_CONDITIONAL([HAVE_GUILE],[test "$have_guile" = "yes"])
+AM_CONDITIONAL([HAVE_GUILE_1_8],[test "$have_guile_1_8" = "yes"])
+
+# Possibly disable the included gnuchess
+
+if test "$allow_gnuchess" = "yes"; then
+  AC_ARG_ENABLE([gnuchess],
+  [AS_HELP_STRING([--disable-gnuchess],[Disable included gnuchess for glChess])],
+  [],[enable_gnuchess=yes])
+
+  if test "$enable_gnuchess" = "yes"; then
+    AC_DEFINE([ENABLE_GNUCHESS],[1],[Enable compilation of included GNU Chess as AI chess engine for glChess])
+  fi
+fi
+
+AM_CONDITIONAL([WITH_INCLUDED_GNUCHESS],[test "$enable_gnuchess" = "yes"])
+
+# Check for library functions
+# ===========================
+
+AC_CHECK_FUNCS([dup2 strcasecmp strchr strerror \
+                malloc vprintf], [],
+               [AC_MSG_ERROR([cannot find required function])])
+AC_CHECK_FUNCS([fork select]) 
+AC_CHECK_FUNCS([alarm getpwuid getenv setenv close hstrerror kill socketpair])
+
+AC_FUNC_SELECT_ARGTYPES
+
+AC_HEADER_STDC
+
+AC_TYPE_SIGNAL
+AC_FUNC_FORK
+AC_FUNC_STRCOLL
+AC_FUNC_VPRINTF
+
+# Check for PF_LOCAL/PF_UNIX
+# ==========================
+# There should be an autoconf macro to check this???
+#
+# Not having this is not necessarily a fatal error.  It should mean that
+# the WinAPI interface is used instead.
+AC_MSG_CHECKING([for PF_LOCAL])
+AC_EGREP_CPP(PF_LOCAL,
+             [#include <sys/types.h>
+              #include <sys/socket.h>
+              PF_LOCAL ],
+             [AC_MSG_RESULT(no)
+              AC_MSG_CHECKING([for PF_UNIX])
+              AC_EGREP_CPP(PF_UNIX, [ #include <sys/types.h>
+                                      #include <sys/socket.h>
+				      PF_UNIX ],
+                           [AC_MSG_RESULT(no)],
+                           [AC_MSG_RESULT(yes)
+                            AC_DEFINE([PF_LOCAL], PF_UNIX,
+				      [PF_UNIX is available])
+			    AC_DEFINE([AF_LOCAL], AF_UNIX,
+				      [AF_UNIX is available])])], 
+             AC_MSG_RESULT(yes))
+
+# Check for header files
+# ======================
+AC_CHECK_HEADERS([fcntl.h limits.h sys/time.h time.h \
+                  unistd.h], [],
+                 [AC_MSG_ERROR([cannot find required header file])])
+AC_CHECK_HEADERS([netdb.h sys/socket.h winsock2.h])
+AC_HEADER_SYS_WAIT
+
+
+# Checks for typedefs, structures, and compiler characteristics
+AC_C_CONST
+AC_C_VOLATILE
+AC_FUNC_REALLOC
+AC_HEADER_STDBOOL
+AC_C_INLINE
+AC_TYPE_SIZE_T
+AC_HEADER_TIME
+
+# FIXMEchpe! FIXME
+if test "x${prefix}" = "xNONE"; then
+   AC_DEFINE_UNQUOTED(GNOME_ICONDIR, "${ac_default_prefix}/share/pixmaps", [Pix
+map directory])
+else
+   AC_DEFINE_UNQUOTED(GNOME_ICONDIR, "${prefix}/share/pixmaps", [Pixmap directo
+ry])
+fi
+
+AC_MSG_CHECKING([for some Win32 platform])
+case "$host" in
+  *-*-cygwin*|*-*-mingw*)
+    platform_win32=yes
+    ;;
+  *)
+    platform_win32=no
+    ;;
+esac
+AC_MSG_RESULT([$platform_win32])
+AM_CONDITIONAL(PLATFORM_WIN32, test "$platform_win32" = "yes")
+
+AC_MSG_CHECKING([for native Win32])
+case "$host" in
+  *-*-mingw*)
+    os_win32=yes
+    ;;
+  *)
+    os_win32=no
+    ;;
+esac
+AC_MSG_RESULT([$os_win32])
+AM_CONDITIONAL(OS_WIN32, test "$os_win32" = "yes")
+
+# **********
+# Unit tests
+# **********
+
+# check for "check", unit testing library/header
+PKG_CHECK_MODULES([CHECK], [check >= 0.9.4],
+    [
+        HAVE_CHECK=yes
+        #AC_MSG_NOTICE(CHECK_CFLAGS: $CHECK_CFLAGS)
+        #AC_MSG_NOTICE(CHECK_LIBS: $CHECK_LIBS)
+    ],
+    HAVE_CHECK=no)
+AM_CONDITIONAL(HAVE_CHECK, test "x$HAVE_CHECK" = "xyes")
+
+dnl building of tests
+AC_ARG_ENABLE(tests,
+  AC_HELP_STRING([--disable-tests], [disable building test apps]),
+  [
+    case "${enableval}" in
+      yes) BUILD_TESTS=yes ;;
+      no)  BUILD_TESTS=no ;;
+      *)   AC_MSG_ERROR(bad value ${enableval} for --disable-tests) ;;
+    esac
+  ],
+[BUILD_TESTS=yes]) dnl Default value
+AM_CONDITIONAL(BUILD_TESTS,         test "x$BUILD_TESTS" = "xyes")
+
+AC_ARG_ENABLE([setgid],
+  [AS_HELP_STRING([--disable-setgid],
+    [Disable the use of setgid binaries])],
+  [case "${enableval}" in
+    yes) setgid=true ;;
+    no)  setgid=false ;;
+    *) AC_MSG_ERROR([bad value ${enableval} for --disable-setgid]) ;;
+   esac],[setgid=true])
+AC_SUBST(setgid)
+
+AC_ARG_WITH(scores-group,
+  AC_HELP_STRING([--with-scores-group=group],
+    [Group for the high score tables and binaries]),
+  scores_group="$withval",scores_group="games")
+AC_SUBST(scores_group)
+AC_ARG_WITH(scores-user,
+  AC_HELP_STRING([--with-scores-user=user],
+    [User for the high score tables]),
+  scores_user="$withval",scores_user="games")
+AC_SUBST(scores_user)
+
+scoredir='${localstatedir}/games'
+AC_SUBST(scoredir)
+
+##############################################
+
+AC_SUBST([AM_CPPFLAGS])
+AC_SUBST([AM_CFLAGS])
+AC_SUBST([AM_CXXFLAGS])
+AC_SUBST([AM_LDFLAGS])
+
+##############################################
+##############################################
+
+SHAVE_INIT([$(top_srcdir)], [enable])
+
+AC_CONFIG_FILES([
+Makefile
+po/Makefile.in
+dependencies/Makefile
+dependencies/ggz-gtk/Makefile
+dependencies/gnuchess/Makefile
+icons/Makefile
+sounds/Makefile
+libgames-support/Makefile
+blackjack/Makefile
+blackjack/data/Makefile
+blackjack/help/Makefile
+blackjack/pixmaps/Makefile
+blackjack/src/Makefile
+gnect/Makefile
+gnect/src/Makefile
+gnect/data/Makefile
+gnect/pixmaps/Makefile
+gnect/help/Makefile
+gnomine/Makefile
+gnomine/help/Makefile
+same-gnome/Makefile
+same-gnome/help/Makefile
+mahjongg/Makefile
+mahjongg/help/Makefile
+gtali/Makefile
+gtali/pix/Makefile
+gtali/help/Makefile
+iagno/Makefile
+iagno/help/Makefile
+gnotravex/Makefile
+gnotravex/gnotravex.desktop.in
+gnotravex/help/Makefile
+gnotravex/pixmaps/Makefile
+gnotski/Makefile
+gnotski/help/Makefile
+glines/Makefile
+glines/glines.desktop.in
+glines/help/Makefile
+gnometris/Makefile
+gnometris/pix/Makefile
+gnometris/help/Makefile
+gnobots2/Makefile
+gnobots2/help/Makefile
+gnibbles/Makefile
+gnibbles/help/Makefile
+gnibbles/pix/Makefile
+aisleriot/Makefile
+aisleriot/sol.desktop.in
+aisleriot/freecell.desktop.in
+aisleriot/rules/Makefile
+aisleriot/help/Makefile
+glchess/Makefile
+glchess/data/Makefile
+glchess/help/Makefile
+glchess/src/glchess.in
+glchess/src/Makefile
+glchess/src/lib/Makefile
+glchess/src/lib/defaults.py
+glchess/src/lib/chess/Makefile
+glchess/src/lib/chess/fics/Makefile
+glchess/src/lib/ggz/Makefile
+glchess/src/lib/gtkui/Makefile
+glchess/src/lib/scene/Makefile
+glchess/src/lib/scene/cairo/Makefile
+glchess/src/lib/scene/opengl/Makefile
+glchess/src/lib/ui/Makefile
+glchess/textures/Makefile
+gnome-sudoku/Makefile
+gnome-sudoku/src/gnome-sudoku.in
+gnome-sudoku/src/Makefile
+gnome-sudoku/src/lib/Makefile
+gnome-sudoku/src/lib/defaults.py
+gnome-sudoku/src/lib/gtk_goodies/Makefile
+gnome-sudoku/data/Makefile
+gnome-sudoku/images/Makefile
+gnome-sudoku/help/Makefile
+same-gnome/same-gnome.desktop.in
+gnometris/gnometris.desktop.in
+gnobots2/gnobots2.desktop.in
+gnibbles/gnibbles.desktop.in
+gnotski/gnotski.desktop.in
+glchess/glchess.desktop.in
+mahjongg/mahjongg.desktop.in
+blackjack/data/blackjack.desktop.in
+gtali/gtali.desktop.in
+gnome-sudoku/gnome-sudoku.desktop.in
+iagno/iagno.desktop.in
+gnect/data/gnect.desktop.in
+gnomine/gnomine.desktop.in
+lightsoff/Makefile
+lightsoff/arrow.js
+lightsoff/board.js
+lightsoff/light.js
+lightsoff/main.js
+lightsoff/score.js
+lightsoff/lightsoff
+lightsoff/lightsoff.desktop.in
+tests/Makefile
+tests/libgames-support/Makefile
+shave
+shave-libtool
+])
+AC_OUTPUT
+
+echo "
+Configuration:
+
+    Source code location:  ${srcdir}
+    Compiler:              ${CC}
+
+    Platform:              ${with_platform}"
+
+if test -n "$with_platform_variant"; then
+  echo "
+    Platform variant:      ${with_platform_variant}"
+fi
+
+echo "
+    Games to be compiled:  ${gamelist}
+
+    Using SM Client:       ${with_smclient}
+    Using RSVG:            ${have_rsvg}
+    Card theme formats:    ${with_card_theme_formats}
+    Default theme format:  ${with_default_card_theme_format}
+    Default theme:         ${with_default_card_theme}
+    Sound support:         ${with_sound}
+    Use setgid binaries:   ${setgid}
+    Scores user:           ${scores_user}
+    Scores & setgid group: ${scores_group}
+"
+
+if grep "$scores_group:" /etc/group > /dev/null; then
+:;
+else
+echo
+echo "Warning: The $scores_group group does not exist. Installation will"
+echo "         succeed, but high score logging will not work. To specify a"
+echo "         different group use the --with-scores-group option."
+echo
+fi
+
