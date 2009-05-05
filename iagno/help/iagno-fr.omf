@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Eric Baudais)</creator>
+    <maintainer>(Eric Baudais)</maintainer>
+    <title>Manuel de Iagno</title>
+    <date>7 avril 2000</date>
+    <version identifier="1.0" date="7 avril 2000"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Iagno est le jeu de stratégie à deux joueurs Othello, également connu sous le nom de Reversi et comparable au jeu Go. Les pièces sont des jetons dont un côté est noir, l'autre blanc. L'objectif du joueur est de retourner les jetons de son adversaire, en l'empêchant de faire de même. Une fois que le plateau est rempli de jetons, le gagnant est le joueur qui possède le plus de jetons de sa couleur sur le plateau.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/iagno/fr/iagno.xml"/>
+    <language code="fr"/>
+    <relation seriesid="c4d35e1a-878f-4161-8293-98170c696596"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

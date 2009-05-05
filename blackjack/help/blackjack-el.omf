@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(William Jon McCann)</creator>
+    <maintainer>(William Jon McCann)</maintainer>
+    <title>Μπλάκτζακ Εγχειρίδιο</title>
+    <date>Σεπτέμβριος 2004 </date>
+    <version identifier="Τεκμηρίωση του Μπλάκτζακ V2.8" date="Σεπτέμβριος 2004 "/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Το μπλάκτζακ είναι ένα παιχνίδι με κανόνες από το καζίνο, με πολλούς παίκτες, για το περιβάλλον του Gnome. Το αντικείμενο του παιχνιδιού είναι να αποκτήσετε χέρι με τιμή που είναι πιο κοντά στο 21 από εκείνο του ντίλερ, χωρίς να ξεπεράσετε το 21. Ο παίκτης στοιχηματίζει με εικονικές μάρκες.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/blackjack/el/blackjack.xml"/>
+    <language code="el"/>
+    <relation seriesid="00680528-1387-403e-8a7e-70ea267df275"/>
+    <rights type="GNU FDL" license.version="1.1" holder="William Jon McCann"/>
+  </resource>
+</omf>

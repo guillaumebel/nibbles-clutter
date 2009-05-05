@@ -1,0 +1,37 @@
+Unit testing for gnome-games using Check
+----------------------------------------
+
+gnome-games uses Check 0.9.5 for unit testing.
+
+http://check.sourceforge.net/
+
+Check is a unit testing framework for C. It features a simple interface
+for defining unit tests, putting little in the way of the developer. 
+Tests are run in a separate address space, so Check can catch both assertion
+failures and code errors that cause segmentation faults or other signals. 
+The output from unit tests can be used within source code editors and IDEs.
+
+Here are two goals for unit testing in gnome-games:
+
+- The first goal would be adding tests checking known bugs. If you detect a 
+bug and don't want it to be regressed you can add a test to know if 
+it happens again.
+
+- The second goal is trying to run as many code paths as you can, in order
+to be sure they behave as expected, and don't segfault.
+
+
+Todo list for unit testing in gnome-games:
+------------------------------------------
+
+* Displaying test coverage using lcov is planned, but not implemented yet.
+http://sourceforge.net/projects/ltp/
+
+* glChess and Gnome Sudoku are implemented in Python,
+and could use PyUnit as an unit testing framework.
+http://pyunit.sourceforge.net/
+
+* Write more tests for each of the games. 
+
+* New unit tests for new bugs to prevent regression.
+

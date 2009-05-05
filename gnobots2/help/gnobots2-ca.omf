@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Patanjali Somayaji)</creator>
+    <creator>(Mark Rae)</creator>
+    <maintainer>(Patanjali Somayaji)</maintainer>
+    <title>Manual del Robots</title>
+    <date>Agost de 2007</date>
+    <version identifier="Manual del Robots (versió 2.9)" date="Agost de 2007"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      El Robots és una versió gràfica del joc de robots original basat en text, que es pot trobar en alguns sistemes UNIX. El jugador ha d'evitar els robots que el volen caçar fent que xoquin entre ells.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnobots2/ca/gnobots2.xml"/>
+    <language code="ca"/>
+    <relation seriesid="20b9a66e-8798-480a-a9e8-f309c7afefb6"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Patanjali Somayaji, Mark Rae"/>
+  </resource>
+</omf>

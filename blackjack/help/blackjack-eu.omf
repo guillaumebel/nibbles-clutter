@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(William Jon McCann)</creator>
+    <maintainer>(William Jon McCann)</maintainer>
+    <title>Blackjacken eskuliburua</title>
+    <date>2004ko iraila</date>
+    <version identifier="Blackjack-en eskuliburuaren 2.8 bertsioa" date="2004ko iraila"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Blackjack kasinoko arauak aplikatzen dituen karta sorta anitzeko jokoa da, GNOME proiektuarentzat prestatua. Jokoaren helburua da eskualdiko balioa 21etik gertuago egotea banatzailearen eskualdiko balioa baino, 21 gainditu gabe.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/blackjack/eu/blackjack.xml"/>
+    <language code="eu"/>
+    <relation seriesid="00680528-1387-403e-8a7e-70ea267df275"/>
+    <rights type="GNU FDL" license.version="1.1" holder="William Jon McCann"/>
+  </resource>
+</omf>

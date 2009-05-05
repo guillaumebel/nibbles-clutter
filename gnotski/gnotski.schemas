@@ -1,0 +1,327 @@
+<gconfschemafile>
+    <schemalist>
+
+      <schema>
+        <key>/schemas/apps/gnotski/level</key>
+        <applyto>/apps/gnotski/level</applyto>
+        <owner>gnotski</owner>
+        <type>int</type>
+        <default>0</default>
+        <locale name="C">
+          <short>The puzzle in play</short>
+          <long>The number of the puzzle being played.</long>
+        </locale>
+
+        <locale name="ar">
+          <short>اللغز الملعوب</short>
+          <long>رقم اللغز الملعوب.</long>
+        </locale>
+
+        <locale name="as">
+          <short>যে ধাঁধাটি খেলা হৈছে</short>
+          <long>সমাধানকৃত ধাঁধাৰ সংখ্যা</long>
+        </locale>
+
+        <locale name="bg">
+          <short>Текущата главоблъсканица</short>
+          <long>Номерът на главоблъсканицата, която се играе в момента.</long>
+        </locale>
+
+        <locale name="bn">
+          <short>যে ধাঁধাটি খেলা হচ্ছে</short>
+          <long>সমাধানকৃত ধাঁধার সংখ্যা</long>
+        </locale>
+
+        <locale name="bn_IN">
+          <short>যে ধাঁধাটি খেলা হচ্ছে</short>
+          <long>সমাধানকৃত ধাঁধার সংখ্যা</long>
+        </locale>
+
+        <locale name="ca">
+          <short>El trencaclosques que s&apos;està jugant</short>
+          <long>El número del trencaclosques que s&apos;està jugant.</long>
+        </locale>
+
+        <locale name="cs">
+          <short>Hraná hádanka</short>
+          <long>Číslo hrané hádanky.</long>
+        </locale>
+
+        <locale name="cy">
+          <short>Y pos yn ystod y chwarae</short>
+          <long>Rhif y pos sy&apos;n cael ei chwarae.</long>
+        </locale>
+
+        <locale name="da">
+          <short>Det igangværende spil</short>
+          <long>Spillets nummer.</long>
+        </locale>
+
+        <locale name="de">
+          <short>Das momentane Puzzle</short>
+          <long>Die Anzahl der gespielten Puzzle.</long>
+        </locale>
+
+        <locale name="dz">
+          <short>རྩེ་བའི་བསྒང་གི་སྒྲིག་རྩེད།</short>
+          <long>ད་ལྟོ་རྩེ་བའི་བསྒང་གི་ སྒྲིག་རྩེད་ཀྱི་ཨང་གྲངས།</long>
+        </locale>
+
+        <locale name="el">
+          <short>Το παζλ που είναι σε εξέλιξη</short>
+          <long>Ο αριθμός του τρέχοντος παζλ.</long>
+        </locale>
+
+        <locale name="en_CA">
+          <short>The puzzle in play</short>
+          <long>The puzzle number being played.</long>
+        </locale>
+
+        <locale name="en_GB">
+          <short>The puzzle in play</short>
+          <long>The number of the puzzle being played.</long>
+        </locale>
+
+        <locale name="es">
+          <short>El juego actual</short>
+          <long>El número del juego que se está jugando.</long>
+        </locale>
+
+        <locale name="et">
+          <short>Käimasoleva mõistatuse number</short>
+          <long>Lahendatava mõistatuse number.</long>
+        </locale>
+
+        <locale name="eu">
+          <short>Jokoan dagoen buru-hausgarria</short>
+          <long>Jokoan dauden buru-hausgarri kopurua.</long>
+        </locale>
+
+        <locale name="fa">
+          <short>جورچین در حال بازی</short>
+          <long>تعداد جورچین‌های بازی شده.</long>
+        </locale>
+
+        <locale name="fi">
+          <short>Pelattava pulma</short>
+          <long>Pelattavan pulman järjestysnumero</long>
+        </locale>
+
+        <locale name="fr">
+          <short>Le puzzle en cours</short>
+          <long>Le nombre de puzzles déjà joués.</long>
+        </locale>
+
+        <locale name="gl">
+          <short>O quebracabezas que se está realizando</short>
+          <long>O número de quebracabezas que se está realizando.</long>
+        </locale>
+
+        <locale name="gu">
+          <short>રમતમાં કોયડો</short>
+          <long>રમાયેલ કોયડાઓની સંખ્યા.</long>
+        </locale>
+
+        <locale name="he">
+          <short>The puzzle in play</short>
+          <long>The number of the puzzle being played.</long>
+        </locale>
+
+        <locale name="hi">
+          <short>खेल में पजल</short>
+          <long>खेले जा रहे पजल की संख्या.</long>
+        </locale>
+
+        <locale name="hr">
+          <short>Zagonetka u igri</short>
+          <long>Broj puzzlea koji se igra.</long>
+        </locale>
+
+        <locale name="hu">
+          <short>A játszott feladvány</short>
+          <long>A játszott feladvány száma.</long>
+        </locale>
+
+        <locale name="id">
+          <short>Puzzle sedang dimainkan</short>
+          <long>Jumlah puzzle yang sedang di mainkan.</long>
+        </locale>
+
+        <locale name="it">
+          <short>Il rompicapo da giocare</short>
+          <long>Il numero del rompicapo che verrà giocato.</long>
+        </locale>
+
+        <locale name="ja">
+          <short>プレイするパズル</short>
+          <long>プレイするパズルの数です。</long>
+        </locale>
+
+        <locale name="kn">
+          <short>ಬಿಡಿಸಲಾಗುತ್ತಿರುವ ಸಮಸ್ಯೆ</short>
+          <long>ಬಿಡಿಸಲಾಗುತ್ತಿರುವ ಸಮಸ್ಯೆಗಳ ಸಂಖ್ಯೆ.</long>
+        </locale>
+
+        <locale name="ko">
+          <short>플레이할 퍼즐</short>
+          <long>플레이하는 퍼즐의 크기.</long>
+        </locale>
+
+        <locale name="lt">
+          <short>Žaidžiamas galvosūkis</short>
+          <long>Žaistų galvosūkių skaičius.</long>
+        </locale>
+
+        <locale name="lv">
+          <short>Mīkla spēlē</short>
+          <long>Miklas, kura tiek spēlēta, numurs.</long>
+        </locale>
+
+        <locale name="mai">
+          <short>खेलमे पहेली</short>
+          <long>खेलल जाए रहल पहेली क&apos; सँख्या .</long>
+        </locale>
+
+        <locale name="mk">
+          <short>Сложувалката која се игра</short>
+          <long>Бројот на сложувалката која ја решавате.</long>
+        </locale>
+
+        <locale name="ml">
+          <short>കളിയിലുള്ള പസില്‍</short>
+          <long>കളിച്ച പസ്സിലിന്റെ എണ്ണം.</long>
+        </locale>
+
+        <locale name="mr">
+          <short>खेळल्या जाणारे कोडं</short>
+          <long>खेळल्या जाणाऱ्या कोड्याचा क्रमांक.</long>
+        </locale>
+
+        <locale name="nb">
+          <short>Puslespillet som spilles</short>
+          <long>Nummer på puslespillet som spilles.</long>
+        </locale>
+
+        <locale name="ne">
+          <short>खेलमा रहेका पजल</short>
+          <long>खेलिरहेका पजलको सङ्ख्या ।</long>
+        </locale>
+
+        <locale name="nl">
+          <short>De huidige puzzel</short>
+          <long>Het nummer van de huidige puzzel.</long>
+        </locale>
+
+        <locale name="nn">
+          <short>Puslespelet som speles</short>
+          <long>Nummer på puslespelet som speles.</long>
+        </locale>
+
+        <locale name="or">
+          <short>ଗୋଲକଧନ୍ଦା ଖେଳାୟାଉଛି</short>
+          <long>ଖେଳାୟାଇଥିବା ଗୋଲକଧନ୍ଦାଗୁଡିକର ସଂଖ୍ଯା</long>
+        </locale>
+
+        <locale name="pa">
+          <short>ਪਹੇਲੀ ਜਾਰੀ ਹੈ</short>
+          <long>ਖੇਡੀਆਂ ਪਹੇਲੀਆਂ ਦੀ ਗਿਣਤੀ ਹੈ।</long>
+        </locale>
+
+        <locale name="pl">
+          <short>Rozwiązywana układanka</short>
+          <long>Numer rozwiązywanej układanki.</long>
+        </locale>
+
+        <locale name="pt">
+          <short>O puzzle em jogo</short>
+          <long>O número do puzzle em jogo.</long>
+        </locale>
+
+        <locale name="pt_BR">
+          <short>O quebra-cabeça em jogo</short>
+          <long>O número do quebra-cabeça sendo jogado.</long>
+        </locale>
+
+        <locale name="ro">
+          <short>Puzzle-ul jucat</short>
+          <long>Numărul puzzle-ului ce este jucat.</long>
+        </locale>
+
+        <locale name="ru">
+          <short>Текущая головоломка</short>
+          <long>Номер текущей головоломки</long>
+        </locale>
+
+        <locale name="sl">
+          <short>Sestavljanka v igri</short>
+          <long>Številka sestavljanke, ki jo igrate.</long>
+        </locale>
+
+        <locale name="sq">
+          <short>Gjëegjëza në lojë e sipër</short>
+          <long>Numri i gjëegjëzave që janë duke u luajtur.</long>
+        </locale>
+
+        <locale name="sr">
+          <short>Слагалица која се игра</short>
+          <long>Број слагалице која се игра.</long>
+        </locale>
+
+        <locale name="sr@latin">
+          <short>Slagalica koja se igra</short>
+          <long>Broj slagalice koja se igra.</long>
+        </locale>
+
+        <locale name="sv">
+          <short>Pusslet som spelas</short>
+          <long>Numret på det pussel som spelas.</long>
+        </locale>
+
+        <locale name="ta">
+          <short>இப்போது விளையாடும் புதிர்</short>
+          <long>விளையாடும் புதிரின் எண்</long>
+        </locale>
+
+        <locale name="th">
+          <short>ปริศนาที่กำลังเล่น</short>
+          <long>หมายเลขปริศนาที่กำลังเล่น</long>
+        </locale>
+
+        <locale name="tr">
+          <short>Oynanmakta olan bulmaca</short>
+          <long>Oynanan bulmaca sayısı.</long>
+        </locale>
+
+        <locale name="uk">
+          <short>Поточна головоломка</short>
+          <long>Номер поточної головоломки.</long>
+        </locale>
+
+        <locale name="vi">
+          <short>Câu đố đang chơi</short>
+          <long>Số câu đố đang được chơi</long>
+        </locale>
+
+        <locale name="xh">
+          <short>Iphazili edlalwayo</short>
+          <long>Inani lephazili edlalwayo.</long>
+        </locale>
+
+        <locale name="zh_CN">
+          <short>正在玩的布局</short>
+          <long>正在玩的布局的编号。</long>
+        </locale>
+
+        <locale name="zh_HK">
+          <short>正在玩的版圖</short>
+          <long>代表正在玩的版圖的數字。</long>
+        </locale>
+
+        <locale name="zh_TW">
+          <short>正在玩的版圖</short>
+          <long>代表正在玩的版圖的數字。</long>
+        </locale>
+      </schema>
+
+    </schemalist>
+</gconfschemafile>

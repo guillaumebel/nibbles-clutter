@@ -1,0 +1,2982 @@
+<gconfschemafile>
+
+  <schemalist>
+      <schema>
+      <key>/schemas/apps/gnect/player1</key>
+      <applyto>/apps/gnect/player1</applyto>
+      <owner>gnect</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Level of Player One</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>مستوى اللاعب الأول</short>
+        <long>صفر أنس، من واحد إلى ثلاثة يتناسب مع مستوى لاعب الحاسوب.</long>
+      </locale>
+
+      <locale name="as">
+        <short>প্ৰথম খেলোয়াড়েৰ দক্ষতা স্তৰ</short>
+        <long>শূন্য দিয়ে খেলোয়াড় হিসেবে একজন মানুষকে বোঝানো হৈছে, আৰ এক থেকে তিন দিয়ে বোঝানো হৈছে কম্পিউটাৰ খেলোয়াড়েৰ দক্ষতাৰ তিনটি মাত্ৰা ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Birinci Ounçunun Səviyyəsi</short>
+        <long>Sıfır insandır; kompüter oyunçunun səviyyəsinə üçü birə uyğun gəlir.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Узровень першага гульца</short>
+        <long>Нуль - чалавек, ад аднаго да трох - узровень кампутара.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Ниво на играч № 1</short>
+        <long>0 е за човек; 1÷3 отговарят на нивото на компютъра.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>প্রথম খেলোয়াড়ের দক্ষতা স্তর</short>
+        <long>শূন্য দিয়ে খেলোয়াড় হিসেবে একজন মানুষকে বোঝানো হচ্ছে, আর এক থেকে তিন দিয়ে বোঝানো হচ্ছে কম্পিউটার খেলোয়াড়ের দক্ষতার তিনটি মাত্রা।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>প্রথম খেলোয়াড়ের দক্ষতা স্তর</short>
+        <long>শূন্য দিয়ে খেলোয়াড় হিসেবে একজন মানুষকে বোঝানো হচ্ছে, আর এক থেকে তিন দিয়ে বোঝানো হচ্ছে কম্পিউটার খেলোয়াড়ের দক্ষতার তিনটি মাত্রা।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Nivell del primer jugador</short>
+        <long>0 és humà; d&apos;1 a 3 correspon al nivell del jugador de l&apos;ordinador.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Úroveň Hráče 1</short>
+        <long>Nula znamená člověk; jedna až tři odpovídá úrovni počítačového hráče.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Lefel Chwaraewr Un</short>
+        <long>Mae sero yn golygu person; mae un, dau a tri yn cyfateb i lefel chwaraewr y cyfrifiadur.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Niveau for spiller en</short>
+        <long>Nul er menneske; Et til tre svarer til sværhedsgraden for computerspilleren.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Level von Spieler 1</short>
+        <long>Null ist menschlich, eins bis drei entspricht dem Level des Computergegner.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེད་མི་དང་པའི་གནས་རིམ།</short>
+        <long>ཀླད་ཀོར་དེ་ འགྲོ་བ་མི་ཨིན། གཅིག་ལས་གསུམ་ཚུན་ གློག་རིག་རྩེད་མིའི་གནས་རིམ་དང་མཐུནམ་ཨིན།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Επίπεδο του πρώτου παίχτη</short>
+        <long>Το μηδέν είναι για τον άνθρωπο. Οι αριθμοί από το ένα ώς το τρία αντιστοιχούν στον υπολογιστή.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Level of Player One</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Level of Player One</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Nivel del jugador Uno</short>
+        <long>Cero es humano, del uno al tres corresponde al nivel del jugador automático.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Esimese mängija tase</short>
+        <long>Null tähendab inimest, numbrid ühest kuni kolmeni tähendavad arvuti taset.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>1. jokalariaren maila</short>
+        <long>Zero giza jokalaria da; batetik hirura ordenagailu-jokalariaren maila da.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>سطح بازیکن یک</short>
+        <long>صفر انسان است؛ یک تا سه متناظر با سطح بازیکن کامپیوتری است.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Ensimmäisen pelaajan kenttä</short>
+        <long>Nolla on ihminen; yhdestä kolmeen vastaa tietokonepelaajan vaikeutta.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Niveau du Joueur Un</short>
+        <long>Zéro correspond au choix humain ; un à trois correspondent au niveau de l&apos;adversaire électronique.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Leibheal Imreoir a hAon</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Nivel do xogador 1</short>
+        <long>Cero é o humano; do un ao tres corresponde ao nivel do xogador controlado polo computador.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>પહેલા ખેલાડીનું સ્તર</short>
+        <long>શૂનેય એ મનુષ્ય માટે અને એક થી ત્રણ એ કમ્પ્યૂટરખેલાડીના સ્તર સાથે સંકળાયોલા છે.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Level of Player One</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>पहले खिलाड़ी का स्तर</short>
+        <long>शून्य मनुष्य का है, एक से तीन तक का लेवल कम्प्यूटर खिलाड़ी हेतु है.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Razina Igrača 1</short>
+        <long>Nula je čovjek; a od jedan do tri razina računalnog protivnika.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Első játékos szintje</short>
+        <long>A nulla az ember, az egytől háromig terjedő értékek a számítógépes játékos szintjét jelentik.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Level Pemain Satu</short>
+        <long>Nol berarti orang; satu hingga tiga berarti komputer dengan level yang diberikan angka tersebut.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Geta leikmanns númer eitt</short>
+        <long>Núll er mennskur leikmaður; einn til þrír samsvara getu tölvustýrðsleikmanns.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Livello del giocatore uno</short>
+        <long>Zero è il giocatore umano; uno fino a tre corrispondono al livello del computer.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>プレイヤー１のレベル</short>
+        <long>0 = 人間; 1〜3 = コンピュータのレベル</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಒಂದನೆ ಆಟಗಾರ ಮಟ್ಟ</short>
+        <long>ಸೊನ್ನೆಯು ಮನುಷ್ಯರನ್ನು ಸೂಚಿಸುತ್ತದೆ; ಒಂದರಿಂದ ಮೂರರವರೆಗೆ ಗಣಕ ಆಟಗಾರರ ಮಟ್ಟವನ್ನು ಸೂಚಿಸುತ್ತದೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>플레이어 1의 수준</short>
+        <long>0은 사용자; 1부터 3은 컴퓨터 플레이어의 수준에 해당합니다.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Pirmojo žaidėjo lygis</short>
+        <long>Nulis yra žmogiškas žaidėjas, skaičiai nuo vieno iki trijų atitinka įvairius kompiuterinių žaidėjų lygius.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Pirmā spēlētāja līmenis</short>
+        <long>Nulle ir cilvēks, viens līdz trīs atbilst datora spēlētāju līmenim.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>पहिलुक खेलाड़ी क&apos; स्तर</short>
+        <long>शून्य मनुष्य क&apos; अछि एकटा सँ तीन तक क&apos; लेवल कम्प्यूटर खेलाड़ी लेल अछि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Ниво на првиот играч</short>
+        <long>Нула е за човек; еден до три одговара на нивото на компјутерскиот играч.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ആദ്യത്തെ കളിക്കാരന്റെ നിലവാരം</short>
+        
+      </locale>
+
+      <locale name="mn">
+        <short>Эхний төвшин</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="mr">
+        <short>पहील्या खेळाडुची पातळी</short>
+        <long>शुन्य म्हणजे मानवी; एक ते तीन ह्या पातळ्या संगणक खेळाडु दर्शवतात.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Peringkat bagi Pemain Pertama</short>
+        <long>Sifar ialah manusia; satu hingga tiga merujuk kepada peringkat komputer.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Nivå for spiller en</short>
+        <long>Null betyr menneske, en til tre korresponderer til nivå for datamaskinspilleren.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>खेलाडी १ को स्तर</short>
+        <long>शुन्यले मानव जनाउँछ; एक देखि तीन सम्मले कम्प्युटर खेलाडीलाई दर्शाउछ ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Niveau van de eerste speler</short>
+        <long>Nul is menselijk; een tot drie correspondeert met het niveau van de computeropponent</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Nivå på fyrste spelar</short>
+        <long>Null er menneske, ein til tre er ulike nivå av dataspelar.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଖେଳାଳୀ ଏକର ସ୍ତର</short>
+        <long>ଶୂନ୍ଯ ମଣିଷ ଅଟେ; ତିନି ଦେଇ ଏକ କମ୍ପ୍ଯୁଟର ଖେଳାଳୀର ସ୍ତର ଅନୁରୂପ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਪਹਿਲੇ ਖਿਡਾਰੀ ਦਾ ਪੱਧਰ</short>
+        <long>ਜ਼ੀਰੋ ਮਨੁੱਖੀ ਹੈ; ਇੱਕ ਤੋਂ ਤਿੰਨ ਤੱਕ ਕੰਪਿਊਟਰ ਖਿਡਾਰੀਆਂ ਦੇ ਪੱਧਰ ਹਨ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Poziom pierwszego gracza</short>
+        <long>Zero oznacza gracza - człowieka; wartości od jeden do trzech ustawiają poziom gry komputera.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Nível do Jogador Um</short>
+        <long>Zero corresponde a humano; de um até três corresponde ao nível do jogador controlado pelo computador.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Nível do Jogador Um</short>
+        <long>Zero é humano; um a três correspondem ao nível de inteligência do computador.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Nivelul Jucătorului Unu</short>
+        <long>Zero este uman, iar de la unu la trei este corespunzător nivelului jucătorului computer.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Уровень первого Игрока</short>
+        <long>Ноль обозначает игрока-человека, а значение от единицы до тройки обозначает уровень мастерства компьютерного игрока.</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Úroveň hráča č.1</short>
+        <long>0 je človek, jedna až tri je úroveň počítačového súpera.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Stopnja prvega igralca</short>
+        <long>Ničla je človek; števila od ena do tri pripadajo stopnji računalniškega igralca.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Niveli i Lojtarit Një</short>
+        <long>Zero është njeri, nga një deri më tre i përket nivelit të lojtarit kompjuter.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Ниво првог играча</short>
+        <long>Нула је човек; од један до три је ниво компјутерског противника.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Nivo prvog igrača</short>
+        <long>Nula je čovek; od jedan do tri je nivo kompjuterskog protivnika.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Nivå för spelare ett</short>
+        <long>Noll är mänsklig, ett till tre motsvarar nivån för datorspelaren.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>முதல் விளையாடுபவரின் மட்டம்</short>
+        <long>மனிதன் என்றால் சைபர்; ஒன்றில் இருந்து மூன்று வரை அதற்கான நிலை போட்டியாளர்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>మొదటి ఆటగాడి యొక్క స్థాయి</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>ระดับของผู้เล่นที่หนึ่ง</short>
+        <long>ศูนย์หมายถึงมนุษย์; หนึ่งถึงสามหมายถึงระดับผู้เล่นที่เป็นคอมพิวเตอร์</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Birinci Oyuncunun Seviyesi</short>
+        <long>Sıfır insan; birden üçe kadar olan sayılarda bilgisayarın seviyesini belirtir.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Рівень першого гравця</short>
+        <long>Нуль означає гравця-людину, від одного до трьох — рівень гри комп&apos;ютера</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Cấp độ của người chơi Một</short>
+        <long>Không là người chơi, một đến ba ứng với cấp độ của máy tính.</long>
+      </locale>
+
+      <locale name="wa">
+        <short>Livea do prumî djoweu</short>
+        
+      </locale>
+
+      <locale name="xh">
+        <short>Inqanaba Lomdlali Wokuqala</short>
+        <long>Iqanda libumntu; isinye ukuya kwisithathu sihambelana nenqanaba lomdlali wekhompyutha.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>玩家一的级别</short>
+        <long>0 代表玩家；1 到 3 代表相应的计算机玩家。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>第一個玩家的棋力</short>
+        <long>0 是人類玩家；1 至 3 表示電腦玩家的棋力。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>第一個玩家的棋力</short>
+        <long>0 是人類玩家；1 至 3 表示電腦玩家的棋力。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnect/player2</key>
+      <applyto>/apps/gnect/player2</applyto>
+      <owner>gnect</owner>
+      <type>int</type>
+      <default>1</default>
+      <locale name="C">
+        <short>Level of Player Two</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>مستوى اللاعب الثاني</short>
+        <long>صفر أنس، من واحد إلى ثلاثة يتناسب مع مستوى لاعب الحاسوب.</long>
+      </locale>
+
+      <locale name="as">
+        <short>দ্বিতীয় খেলোয়াড়েৰ দক্ষতা স্তৰ</short>
+        <long>শূন্য দিয়ে খেলোয়াড় হিসেবে একজন মানুষকে বোঝানো হৈছে, আৰ এক থেকে তিন দিয়ে বোঝানো হৈছে কম্পিউটাৰ খেলোয়াড়েৰ দক্ষতাৰ তিনটি মাত্ৰা ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>İkinci Ounçunun Səviyyəsi</short>
+        <long>Sıfır insandır; kompüter oyunçunun səviyyəsinə üçü birə uyğun gəlir.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Узровень другога гульца</short>
+        <long>Нуль - чалавек, ад аднаго да трох - узровень кампутара.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Ниво на играч № 2</short>
+        <long>0 е за човек; 1÷3 отговарят на нивото на компютъра.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>দ্বিতীয় খেলোয়াড়ের দক্ষতা স্তর</short>
+        <long>শূন্য দিয়ে খেলোয়াড় হিসেবে একজন মানুষকে বোঝানো হচ্ছে, আর এক থেকে তিন দিয়ে বোঝানো হচ্ছে কম্পিউটার খেলোয়াড়ের দক্ষতার তিনটি মাত্রা।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>দ্বিতীয় খেলোয়াড়ের দক্ষতা স্তর</short>
+        <long>শূন্য দিয়ে খেলোয়াড় হিসেবে একজন মানুষকে বোঝানো হচ্ছে, আর এক থেকে তিন দিয়ে বোঝানো হচ্ছে কম্পিউটার খেলোয়াড়ের দক্ষতার তিনটি মাত্রা।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Nivell del segon jugador</short>
+        <long>0 és humà; d&apos;1 a 3 correspon al nivell del jugador de l&apos;ordinador.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Úroveň Hráče 2</short>
+        <long>Nula znamená člověk; jedna až tři odpovídá úrovni počítačového hráče.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Lefel Chwaraewr Dau</short>
+        <long>Mae sero yn golygu person; mae un, dau a tri yn cyfateb i lefel chwaraewr y cyfrifiadur.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Niveau for spiller to</short>
+        <long>Nul er menneske; Et til tre svarer til sværhedsgraden for computerspilleren.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Level von Spieler 2</short>
+        <long>Null ist menschlich, eins bis drei entspricht dem Level des Computergegner.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེད་མི་གཉིས་པའི་གནས་རིམ།</short>
+        <long>ཀླད་ཀོར་དེ་ འགྲོ་བ་མི་ཨིན། གཅིག་ལས་གསུམ་ཚུན་ གློག་རིག་རྩེད་མིའི་གནས་རིམ་དང་མཐུནམ་ཨིན།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Επίπεδο του δεύτερου παίχτη</short>
+        <long>Το μηδέν είναι για τον άνθρωπο. Οι αριθμοί από το ένα ώς το τρία αντιστοιχούν στον υπολογιστή.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Level of Player Two</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Level of Player Two</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Nivel del jugador Dos</short>
+        <long>Cero es humano, del uno al tres corresponde al nivel del jugador automático.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Teise mängija tase</short>
+        <long>Null tähendab inimest, numbrid ühest kuni kolmeni tähendavad arvuti taset.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>2. jokalariaren maila</short>
+        <long>Zero giza jokalaria da; batetik hirura ordenagailu-jokalariaren maila da.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>سطح بازیکن دو</short>
+        <long>صفر انسان است؛ یک تا سه متناظر با سطح بازیکن کامپیوتری است.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pelaajan kaksi kenttä</short>
+        <long>Nolla on ihminen; yhdestä kolmeen vastaa tietokonepelaajan vaikeutta.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Niveau du deuxième joueur</short>
+        <long>Zéro correspond au choix humain ; un à trois correspondent au niveau de l&apos;adversaire électronique.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Nivel do xogador 2</short>
+        <long>Cero é o humano; do un ao tres corresponde ao nivel do xogador controlado polo computador.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>બીજા ખેલાડીનું સ્તર</short>
+        <long>શૂનેય એ મનુષ્ય માટે અને એક થી ત્રણ એ કમ્પ્યૂટરખેલાડીના સ્તર સાથે સંકળાયોલા છે.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Level of Player Two</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>दूसरे खिलाड़ी का स्तर</short>
+        <long>शून्य मनुष्य का है, एक से तीन तक का लेवल कम्प्यूटर खिलाड़ी हेतु है.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Razina Igrača 2</short>
+        <long>Nula je čovjek; a od jedan do tri razina računalnog protivnika.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Második játékos szintje</short>
+        <long>A nulla az ember, az egytől háromig terjedő értékek a számítógépes játékos szintjét jelentik.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Level Pemain Dua</short>
+        <long>Nol berarti orang; satu hingga tiga berarti komputer dengan level yang diberikan angka tersebut.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Geta leikmanns númer tvö</short>
+        <long>Núll er mennskur leikmaður; einn til þrír samsvara getu tölvustýrðsleikmanns.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Livello del giocatore due</short>
+        <long>Zero è il giocatore umano; uno fino a tre corrispondono al livello del computer.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>プレイヤー２のレベル</short>
+        <long>0 = 人間; 1〜3 = コンピュータのレベル</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಎರಡನೆ ಆಟಗಾರ ಮಟ್ಟ</short>
+        <long>ಸೊನ್ನೆಯು ಮನುಷ್ಯರನ್ನು ಸೂಚಿಸುತ್ತದೆ; ಒಂದರಿಂದ ಮೂರರವರೆಗೆ ಗಣಕ ಆಟಗಾರರ ಮಟ್ಟವನ್ನು ಸೂಚಿಸುತ್ತದೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>플레이어 2의 수준</short>
+        <long>0은 사용자; 1부터 3은 컴퓨터 플레이어의 수준에 해당합니다.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Antrojo žaidėjo lygis</short>
+        <long>Nulis yra žmogiškas žaidėjas, skaičiai nuo vieno iki trijų atitinka įvairius kompiuterinių žaidėjų lygius.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Otrā spēlētāja līmenis</short>
+        <long>Nulle ir cilvēks, viens līdz trīs atbilst datora spēlētāju līmenim.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>दोसर खेलाड़ी क&apos; स्तर</short>
+        <long>शून्य मनुष्य क&apos; अछि एकटा सँ तीन तक क&apos; लेवल कम्प्यूटर खेलाड़ी लेल अछि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Ниво на вториот играч</short>
+        <long>Нула е за човек; еден до три одговара на нивото на компјутерскиот играч.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>രണ്ടാമത്തെ കളിക്കാരന്റെ നിലവാരം</short>
+        
+      </locale>
+
+      <locale name="mn">
+        <short>Хоёрдох төвшин</short>
+        <long>Zero is human; one through three correspond to the level of the computer player.</long>
+      </locale>
+
+      <locale name="mr">
+        <short>दुसऱ्या खेळाडुची पातळी</short>
+        <long>शुन्य म्हणजे मानवी; एक ते तीन ह्या पातळ्या संगणक खेळाडु दर्शवतात.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Peringkat bagi pemain kedua.</short>
+        <long>Sifar ialah manusia; satu hingga tiga merujuk kepada peringkat komputer.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Nivå for spiller to</short>
+        <long>Null betyr menneske, en til tre korresponderer til nivå for datamaskinspilleren.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>खेलाडी २ को स्तर</short>
+        <long>शुन्यले मानव जनाउँछ; एक देखि तीन सम्मले कम्प्युटर खेलाडीलाई दर्शाउछ ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Niveau van de tweede speler</short>
+        <long>Nul is menselijk; een tot drie correspondeert met het niveau van de computeropponent</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Nivå på andre spelar</short>
+        <long>Null er menneske, ein til tre er ulike nivå av dataspelar.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଖେଳାଳୀ ଦୁଇ ସ୍ତର</short>
+        <long>ଶୂନ୍ଯ ମଣିଷ ଅଟେ; ତିନି ଦେଇ ଏକ କମ୍ପ୍ଯୁଟର ଖେଳାଳୀର ସ୍ତର ଅନୁରୂପ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਦੂਜੇ ਖਿਡਾਰੀ ਦਾ ਪੱਧਰ</short>
+        <long>ਜ਼ੀਰੋ ਮਨੁੱਖੀ ਹੈ; ਇੱਕ ਤੋਂ ਤਿੰਨ ਤੱਕ ਕੰਪਿਊਟਰ ਖਿਡਾਰੀਆਂ ਦੇ ਪੱਧਰ ਹਨ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Poziom drugiego gracza</short>
+        <long>Zero oznacza gracza - człowieka; wartości od jeden do trzech ustawiają poziom gry komputera.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Nível do Jogador Dois</short>
+        <long>Zero corresponde a humano; de um até três corresponde ao nível do jogador controlado pelo computador.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Nível do Jogador Dois</short>
+        <long>Zero é humano; um a três correspondem ao nível de inteligência do computador.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Nivelul Jucătorului Doi</short>
+        <long>Zero este uman, iar de la unu la trei este corespunzător nivelului jucătorului computer.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Уровень второго Игрока</short>
+        <long>Ноль обозначает игрока-человека, а значение от единицы до тройки обозначает уровень мастерства компьютерного игрока.</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Úroveň hráča č.2</short>
+        <long>0 je človek, jedna až tri je úroveň počítačového súpera.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Stopnja drugega igralca</short>
+        <long>Ničla je človek; števila od ena do tri pripadajo stopnji računalniškega igralca.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Niveli i Lojtarit Dy</short>
+        <long>Zero është njeri, nga një deri më tre i përket nivelit të lojtarit kompjuter.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Ниво другог играча</short>
+        <long>Нула је човек; од један до три је ниво компјутерског противника.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Nivo drugog igrača</short>
+        <long>Nula je čovek; od jedan do tri je nivo kompjuterskog protivnika.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Nivå för spelare två</short>
+        <long>Noll är mänsklig, ett till tre motsvarar nivån för datorspelaren.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>இரண்டாம் விளையாடுபவரின் மட்டம்</short>
+        <long>மனிதன் என்றால் சைபர்; ஒன்றில் இருந்து மூன்று வரை அதற்கான நிலை போட்டியாளர்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>రెండవ ఆటగాడి యొక్క స్థాయి</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>ระดับของผู้เล่นที่สอง</short>
+        <long>ศูนย์หมายถึงมนุษย์; หนึ่งถึงสามหมายถึงระดับผู้เล่นที่เป็นคอมพิวเตอร์</long>
+      </locale>
+
+      <locale name="tr">
+        <short>İkinci Oyuncunun Seviyesi</short>
+        <long>Sıfır insan; birden üçe kadar olan sayılarda bilgisayarın seviyesini belirtir.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Рівень другого гравця</short>
+        <long>Нуль означає гравця-людину, від одного до трьох — рівень гри комп&apos;ютера</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Cấp độ cho người chơi Hai</short>
+        <long>Không là người chơi, một đến ba ứng với cấp độ của máy tính.</long>
+      </locale>
+
+      <locale name="wa">
+        <short>Livea do deujhinme djoweu</short>
+        
+      </locale>
+
+      <locale name="xh">
+        <short>Inqanaba Lomdlali Wesibini</short>
+        <long>Iqanda libumntu; isinye ukuya kwisithathu sihambelana nenqanaba lomdlali wekhompyutha.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>玩家二的级别</short>
+        <long>0 代表玩家；1 到 3 代表相应的计算机玩家。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>第二個玩家的棋力</short>
+        <long>0 是人類玩家；1 至 3 表示電腦玩家的棋力。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>第二個玩家的棋力</short>
+        <long>0 是人類玩家；1 至 3 表示電腦玩家的棋力。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnect/theme_id</key>
+      <applyto>/apps/gnect/theme_id</applyto>
+      <owner>gnect</owner>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C">
+        <short>Theme ID</short>
+        <long>A number specifying the preferred theme.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>هوية التيمة</short>
+        <long>رقم يحدد التيمة المحبذة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>থিম-এৰ আইডি</short>
+        <long>পছন্দেৰ থীম নিৰ্দেশক একটি সংখ্যা ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Örtük ID-si</short>
+        <long>İstənən örtüyü bildirən rəqəm.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Тема</short>
+        <long>Число определящо предпочитаната тема.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>থিম-এর আইডি</short>
+        <long>পছন্দের থীম নির্দেশক একটি সংখ্যা।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>থিম-এর আইডি</short>
+        <long>পছন্দের থীম নির্দেশক একটি সংখ্যা।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Id. del tema</short>
+        <long>Un nombre que especifica el tema preferit.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>ID motivu</short>
+        <long>Číslo určující preferovaný motiv.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>ID Thema</short>
+        <long>Rhif yn nodi&apos;r hoff thema.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Tema-id</short>
+        <long>En tal der angiver det foretrukne tema.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Themenkennung</short>
+        <long>Eine Zahl, die das bevorzugte Thema angibt.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>བརྗོད་དོན་གྱི་ངོ་རྟགས།</short>
+        <long>དགའ་གདམ་ཅན་གྱི་བརྗོད་དོན་ གསལ་བཀོད་འབད་བའི་ཨང་གྲངས་ཅིག</long>
+      </locale>
+
+      <locale name="el">
+        <short>Ταυτότητα θέματος</short>
+        <long>Ένας αριθμός που καθορίζει το προτιμώμενο θέμα.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Theme ID</short>
+        <long>A number specifying the preferred theme.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Theme ID</short>
+        <long>A number specifying the preferred theme.</long>
+      </locale>
+
+      <locale name="es">
+        <short>ID de tema</short>
+        <long>Un número que especifica el tema preferido.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Teema ID</short>
+        <long>Number eelistatud teema kirjeldamiseks.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Gaiaren IDa</short>
+        <long>Gai hobetsia zehazten duen zenbakia.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>شناسه‌ی تم</short>
+        <long>عدد مشخص کننده‌ی تم ترجیح داده شده.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Teeman tunnus</short>
+        <long>Halutun teeman määrittelevä numero.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>ID du thème</short>
+        <long>Un numéro spécifiant le thème préféré.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>ID de tema</short>
+        <long>Un número que especifica o tema preferido.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>થીમ ID</short>
+        <long>આ ક્રમ પ્રસ્તુત થીમને સ્પષ્ટ કરે છે.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Theme ID</short>
+        <long>A number specifying the preferred theme.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>प्रसंग आईडी</short>
+        <long>पसंदीदा प्रसंग निर्दिष्ट करने का एक क्रमांक.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>ID Teme</short>
+        <long>Broj koji specificira određenu temu</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Témaazonosító</short>
+        <long>A kedvelt témát megadó szám.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Tema ID</short>
+        <long>Nomor yang menentukan tema.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Þemakenni</short>
+        <long>Númer sem tilgreinir valið þema.</long>
+      </locale>
+
+      <locale name="it">
+        <short>ID tema</short>
+        <long>Un numero che specifica il tema preferito.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>テーマの ID</short>
+        <long>お好みのテーマを表す番号です。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ವಿನ್ಯಾಸ ಐಡಿ</short>
+        <long>ಐಚ್ಛಿಕ ಥೀಮನ್ನು ಸೂಚಿಸುವ ಒಂದು ಸಂಖ್ಯೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>테마 ID</short>
+        <long>사용할 테마를 지정하는 숫자.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Temos ID</short>
+        <long>Skaičius nurodantis pasirinktą temą.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Tēmas id</short>
+        <long>Numurs kas precizē labāko tēmu.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>प्रसंग आईडी</short>
+        <long>पसंदीदा प्रसंग निर्दिष्ट करब क&apos; एकटा क्रमांक.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>ID на тема</short>
+        <long>Број кој ја специфицира саканата тема.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഥീം ID</short>
+        
+      </locale>
+
+      <locale name="mn">
+        <short>Загварын ТТ</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>थिम आयडी</short>
+        <long>थिम प्राधान्य दर्शविणारा एक क्रमांक.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>ID Tema</short>
+        <long>Nombor yang menyatakan tema digerami.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Tema-ID</short>
+        <long>Et tall som spesifiserer foretrukket tema.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>विषयवस्तु आईडी</short>
+        <long>रूचाइएको विषयवस्तु निर्दिष्ट गर्ने नम्बर ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Thema-id</short>
+        <long>Een getal dat met het gekozen thema overeenkomt.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Drakt-ID</short>
+        <long>Eit tal som fortel kva som er den føretrukne drakta.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ବିଷଯ ID</short>
+        <long>ପସନ୍ଦ ଥିମକୁ ନିଦ୍ଧିଷ୍ଟ କରିବା ପାଇଁ ସଂଖ୍ଯା</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਥੀਮ ID</short>
+        <long>ਤਰਜੀਹ ਵਾਲੇ ਥੀਮ ਨੂੰ ਦਰਸਾਉਂਦਾ ਨੰਬਰ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>ID motywu</short>
+        <long>Liczba określająca preferowany motyw.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>ID de Tema</short>
+        <long>Um número que especifica o tema preferido.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>ID do tema</short>
+        <long>Um número que especifique o tema preferido.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>ID Temă</short>
+        <long>Un număr specificând tema preferată.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Идентификатор темы</short>
+        <long>Число, указывающее выбранную тему.</long>
+      </locale>
+
+      <locale name="rw">
+        <short>Ikiranga Insanganyamatsiko</short>
+        
+      </locale>
+
+      <locale name="si">
+        <short>තේමා අංකය</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>ID témy</short>
+        
+      </locale>
+
+      <locale name="sl">
+        <short>ID teme</short>
+        <long>Številka ki določa prednostno temo.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>ID e Temës</short>
+        <long>Numër që përcakton temën e preferuar.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>ИБ теме</short>
+        <long>Број који означава жељену тему.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>IB teme</short>
+        <long>Broj koji označava željenu temu.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Tema-id</short>
+        <long>Ett tal som anger det tema som föredras.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>கருத்து அடையாளம்</short>
+        <long>விரும்பிய கருத்துகளை குறிக்கும் எண்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>వైవిధ్యాంశ ID</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>หมายเลขชุดตกแต่ง</short>
+        <long>ตัวเลขระบุชุดตกแต่งที่เลือก</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Tema No</short>
+        <long>Tercih edilen temayı belirten rakam.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Ідентифікатор теми</short>
+        <long>Число, що вказує вибрану тему.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Mã số sắc thái</short>
+        <long>Số ghi rõ sắc thái ưa thích.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>I-ID Yomxholo</short>
+        <long>Inani elichaza umxholo okhethiweyo.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>主题 ID</short>
+        <long>指定首选主题的数字。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>佈景主題數字</short>
+        <long>一個數字，代表你想用的佈景主題。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>佈景主題數字</short>
+        <long>一個數字，代表您想用的佈景主題。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnect/animate</key>
+      <applyto>/apps/gnect/animate</applyto>
+      <owner>gnect</owner>
+      <type>bool</type>
+      <default>TRUE</default>
+      <locale name="C">
+        <short>Animate</short>
+        <long>Whether or not to use animation.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>تحريك الرسوم</short>
+        <long>استعمال أو عدم استعمال صور متحركة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>অ্যানিমেট</short>
+        <long>অ্যানিমেশন ব্যৱহাৰ  কৰা হ&apos;ব কি হ&apos;ব না ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Animasiyanı fəallaşdır</short>
+        <long>Animasiyanın işlədilməsi</long>
+      </locale>
+
+      <locale name="be">
+        <short>Ажыцьцяўленьне</short>
+        <long>Ці выкарыстоўваць анімацыю.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Анимация</short>
+        <long>Да се ползва ли анимация или не.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>অ্যানিমেট</short>
+        <long>অ্যানিমেশন ব্যবহার  করা হবে কি হবে না।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>অ্যানিমেট</short>
+        <long>অ্যানিমেশন ব্যবহার  করা হবে কি হবে না।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Anima</short>
+        <long>Si s&apos;han d&apos;utilitzar les animacions.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Animace</short>
+        <long>Jestli se má použít animace.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Animeiddio</short>
+        <long>A ddylid defnyddio animeiddiad.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Animér</short>
+        <long>Om animering skal benyttes.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Animieren</short>
+        <long>Sollen Animationen angezeigt werden?</long>
+      </locale>
+
+      <locale name="dz">
+        <short>སྤྲོ་ཉམས་ཅན་བཟོ།</short>
+        <long>སྤྲོ་ཉམས་ལག་ལེན་འཐབ་ནི་ཨིན་ན་མེན།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Σε κίνηση</short>
+        <long>Αν θα χρησιμοποιούνται κινούμενες εικόνες ή όχι.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Animate</short>
+        <long>Whether or not to use animation.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Animate</short>
+        <long>Whether to use animation.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Animar</short>
+        <long>Usar animación.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Animatsioon</short>
+        <long>Kas animatsiooni kasutatakse või mitte</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Animatu</short>
+        <long>Animazioa erabiliko den ala ez adierazten du.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>پویانماسازی</short>
+        <long>این که از پویانمایی استفاده شود یا نه.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Animoi</short>
+        <long>Tulisiko animaatio näyttää?</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Animation</short>
+        <long>Indique s&apos;il faut utiliser ou non les animations.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Beochan</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Animar</short>
+        <long>Indica se se usa a animación ou non.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>એનીમેટ કરો</short>
+        <long>ઍનીમૅશન વાપરવુ કે નહિ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Animate</short>
+        <long>Whether or not to use animation.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>एनिमेट</short>
+        <long>एनीमेशन उपयोग करें या नहीं.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Animiraj</short>
+        <long>Prikazivati animacije ili ne.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Animáció</short>
+        <long>Legyen-e animáció.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Animasi</short>
+        <long>Gunakan animasi atau tidak.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Sýna hreyfingar</short>
+        <long>Hvort sýna á hreyfingar eða ekki.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Anima</short>
+        <long>Indica se usare o meno l&apos;animazione.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>アニメーションするかどうか</short>
+        <long>アニメーションを使用するかどうかです。</long>
+      </locale>
+
+      <locale name="ka">
+        <short>ანიმირება</short>
+        
+      </locale>
+
+      <locale name="kn">
+        <short>ಸಜೀವಗೊಳಿಸು</short>
+        <long>ಸಜೀವನವನ್ನು(ಅನಿಮೇಶನ್‌) ಬಳಸಬೇಕೆ ಅಥವ ಬೇಡವೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>애니메이션</short>
+        <long>애니메이션을 사용할 지 여부.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Animacija</short>
+        <long>Ar naudoti animaciją.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Animēt</short>
+        <long>Vai lietot animāciju.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>संजीवित करू</short>
+        <long>एनीमेशन उपयोग करू अथवा नहि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Анимирај</short>
+        <long>Дали да се користи анимација.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ആനിമേറ്റ് ചെയ്യുക</short>
+        <long>ആനിമേഷന്‍ ഉപയോഗിക്കണമോ വേണ്ടയോ എന്ന്.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Хөдөлгөөнт</short>
+        <long>Хөдөлгөөн хэрэглэх эсэх</long>
+      </locale>
+
+      <locale name="mr">
+        <short>सचेतन करा</short>
+        <long>ऍनीमेशन वापरायचे किंवा नाही.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Animasi</short>
+        <long>Samada menggunakan animasi atau tidak.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Animer</short>
+        <long>Om animasjoner skal brukes eller ikke.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>एनिमेट गर्नुहोस्</short>
+        <long>एनिमेसन प्रयोग गर्ने या नगर्ने ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Animatie</short>
+        <long>Of er animatie wordt gebruikt</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Animer</short>
+        <long>Om animasjonar skal brukast.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Animar</short>
+        
+      </locale>
+
+      <locale name="or">
+        <short>ଚଳଚିତ୍ର</short>
+        <long>ଚଳଚିତ୍ର ଉପୟୋଗ କରାୟିବ କି ନାହିଁ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਸਜੀਵ</short>
+        <long>ਕੀ ਸਜੀਵਤਾ ਵਰਤੀ ਜਾਵੇ ਜਾਂ ਨਹੀਂ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Animacja</short>
+        <long>Przełącza wyświetlanie animacji.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Animar</short>
+        <long>Se utilizar ou não animações.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Animar</short>
+        <long>Usar ou não animação.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Animație</short>
+        <long>Dacă să se folosească sau nu animația.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Анимировать</short>
+        <long>Использовать анимацию или нет.</long>
+      </locale>
+
+      <locale name="si">
+        <short>සජිවිකරණය</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Animovať</short>
+        <long>Či sa má používať animácia.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Animiraj</short>
+        <long>Uporabljaj ali ne uporabljaj animacij.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Animimi</short>
+        <long>Nëse duhet përdorur apo jo animimi.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Анимирано</short>
+        <long>Да ли приказивати анимације.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Animirano</short>
+        <long>Da li prikazivati animacije.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Animera</short>
+        <long>Huruvida animationer ska användas eller inte.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>அசைவூட்டு</short>
+        <long>அசைவூட்ட படத்தை பயன்படுத்துவதா அல்லது வேண்டாமா</long>
+      </locale>
+
+      <locale name="th">
+        <short>ใช้ภาพเคลื่อนไหว</short>
+        <long>กำหนดว่าจะใช้ภาพเคลื่อนไหวหรือไม่</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Canlandır</short>
+        <long>Canlandırma kullanıp kullanılmayacağı.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Анімувати</short>
+        <long>Чи використовувати анімацію.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Hoạt cảnh</short>
+        <long>Có dùng hoạt cảnh hay không.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Yenza oopopayi</short>
+        <long>Nokuba ngaba basetyenziswe na oopopayi okanye hayi.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>动画</short>
+        <long>是否使用动画。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>平滑移動</short>
+        <long>是否使用動畫。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>平滑移動</short>
+        <long>是否使用動畫。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnect/sound</key>
+      <applyto>/apps/gnect/sound</applyto>
+      <owner>gnect</owner>
+      <type>bool</type>
+      <default>TRUE</default>
+      <locale name="C">
+        <short>Sound</short>
+        <long>Whether or not to play event sounds.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Klank</short>
+        <long>Of gebeureklanke gespeel moet word of nie.</long>
+      </locale>
+
+      <locale name="am">
+        <short>ድምፅ</short>
+        
+      </locale>
+
+      <locale name="ar">
+        <short>صوت</short>
+        <long>عزف أو عدم عزف أصوات أحداث.</long>
+      </locale>
+
+      <locale name="as">
+        <short>ধ্বনি</short>
+        <long>ইভেন্টসূচক শব্দ বাজানো হ&apos;ব কি হ&apos;ব না ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Səs</short>
+        <long>Hadisə səslərinin çalınması.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Гук</short>
+        <long>Ці будзе агучвацца гульня.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Звук</short>
+        <long>Дали да се изпълняват звуци при събития.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>শব্দ</short>
+        <long>ইভেন্টসূচক শব্দ বাজানো হবে কি হবে না।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>শব্দ</short>
+        <long>বিবিধ ঘটনার জন্য শব্দ বাজানো হবে কি না।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>So</short>
+        <long>Si s&apos;han de reproduir els esdeveniments de so.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Zvuk</short>
+        <long>Jestli přehrávat zvuky k událostem.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Sain</short>
+        <long>A ddylid chwarae seiniau digwyddiadau.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Lyd</short>
+        <long>Om lydhændelser skal afspilles.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Ton</short>
+        <long>Legt fest, ob bei bestimmten Ereignissen Klänge abgespielt werden.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>སྒྲ་སྐད།</short>
+        <long>འབྱུང་ལས་ཀྱི་སྒྲ་སྐད་ གཏང་དགོ་ག་མིན་དགོ</long>
+      </locale>
+
+      <locale name="el">
+        <short>Ήχος</short>
+        <long>Αν θα αναπαράγονται ήχοι συμβάντων ή όχι.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Sound</short>
+        <long>Whether or not to play event sounds.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Sound</short>
+        <long>Whether to play event sounds.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Sonido</short>
+        <long>Reproducir sonidos de evento.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Heli</short>
+        <long>Kas helisid esitatakse või mitte.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Soinua</short>
+        <long>Gertaera-soinuak erreproduzituko diren ala ez adierazten du.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>صدا</short>
+        <long>این که صدای رویدادهای پخش شود یا نه.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Ääni</short>
+        <long>Tulisiko tapahtumaäänet soittaa?</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Son</short>
+        <long>Indique s&apos;il faut jouer ou non les sons d&apos;événements.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Fuaim</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Son</short>
+        <long>Indica se reproducir ou non sons de evento.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ધ્વનિ</short>
+        <long>બનાવનો અવાજ વગાડવો કે નહિ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Sound</short>
+        <long>Whether or not to play event sounds.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>ध्वनि</short>
+        <long>घटनाओं हेतु ध्वनि बजाएँ या नहीं.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Zvuk</short>
+        <long>Zvukovi pri događajima ili ne.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Hang</short>
+        <long>Legyen-e az eseményeknek hangjuk.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Suara</short>
+        <long>Mainkan suara atau tidak.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Hljóð</short>
+        <long>Hvort spila á leikhljóð eða ekki.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Suono</short>
+        <long>Indica se riprodurre o meno gli eventi sonori.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>効果音を鳴らすかどうか</short>
+        <long>イベント時のサウンドを演奏するかどうかです。</long>
+      </locale>
+
+      <locale name="ka">
+        <short>ხმა</short>
+        
+      </locale>
+
+      <locale name="kn">
+        <short>ಧ್ವನಿ</short>
+        <long>ಆಟ ಆಡುವಾಗ ಶಬ್ಧಗಳನ್ನು ಹೊರಡಿಸಬೇಕೆ ಅಥವ ಬೇಡವೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>소리</short>
+        <long>이벤트 사운드를 재생할 지 여부.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Garsai</short>
+        <long>Ar skleisti garsus žaidimo metu.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Skaņa</short>
+        <long>Vai atskaņot notikumu skaņas.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>ध्वनि</short>
+        <long>घटनासभ लेल ध्वनि बजाउ अथवा नहि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Звук</short>
+        <long>Дали да се слуша звук.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ശബ്ദം</short>
+        <long>കളിക്കുമ്പോള്‍ ശബ്ദം പ്രവര്‍ത്തിക്കണമോ വേണ്ടയോ എന്ന്.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Дуу</short>
+        <long>Дуу тоглуулах эсэх</long>
+      </locale>
+
+      <locale name="mr">
+        <short>आवाज</short>
+        <long>घटनांकरीता श्राव्य इशारा द्यायचा किंवा नाही.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Bunyi</short>
+        <long>Samada memainkan bunyi atau tidak.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Lyd</short>
+        <long>Om lyder skal spilles av for hendelser.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>ध्वनि</short>
+        <long>घटना ध्वनि प्ले गर्ने या नगर्ने ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Geluid</short>
+        <long>Of er geluid wordt afgespeeld bij gebeurtenissen</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Lyd</short>
+        <long>Om lydar skal spelast for hendingar.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Son</short>
+        
+      </locale>
+
+      <locale name="or">
+        <short>ଶବ୍ଦ</short>
+        <long>ଘଟଣା ଧ୍ବନୀ ଖେଳାୟିବ କି ନାହିଁ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਅਵਾਜ਼</short>
+        <long>ਕੀ ਅਵਾਜ਼ ਖੇਡ ਖੇਡੀ ਜਾਵੇ ਜਾਂ ਨਹੀਂ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Dźwięk</short>
+        <long>Określa, czy odtwarzać dźwięki zdarzeń</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Som</short>
+        <long>Se reproduzir ou não sons de eventos.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Som</short>
+        <long>Reproduz os sons dos eventos.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Sunet</short>
+        <long>Dacă sau nu să se folosească sunete pentru evenimente.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Звук</short>
+        <long>Воспроизводить звуки событий или нет.</long>
+      </locale>
+
+      <locale name="rw">
+        <short>Ijwi</short>
+        
+      </locale>
+
+      <locale name="si">
+        <short>ශබ්දය</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Zvuk</short>
+        <long>Či sa majú hrať zvuky udalostí.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Zvok</short>
+        <long>Ali naj se ob dogodkih predvajajo zvoki.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Zëri</short>
+        <long>Nëse tingujt e lojës duhen aktivizuar apo jo.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Звук</short>
+        <long>Да ли пуштати звукове при догађајима.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Zvuk</short>
+        <long>Da li puštati zvukove pri događajima.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Ljud</short>
+        <long>Huruvida händelseljud ska spelas eller inte.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>ஒலி</short>
+        <long>சம்பவ ஒலியை ஒலிக்கவா அல்லது வேண்டாமா</long>
+      </locale>
+
+      <locale name="te">
+        <short>ధ్వని</short>
+        <long>ఆడుతున్నపుడు కదలికల శ్రవణాన్ని మోగించాలా</long>
+      </locale>
+
+      <locale name="th">
+        <short>เสียง</short>
+        <long>กำหนดว่าจะเล่นเสียงของเหตุการณ์ต่างๆ หรือไม่</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Ses</short>
+        <long>Olay seslerinin çalınıp çalınmayacağı.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Звук</short>
+        <long>Чи супроводжувати події звуками.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Âm thanh</short>
+        <long>Có bật âm thanh cho sự kiện không.</long>
+      </locale>
+
+      <locale name="wa">
+        <short>Son</short>
+        
+      </locale>
+
+      <locale name="xh">
+        <short>Isandi</short>
+        <long>Nokuba ngaba zidlalwe na izandi zezehlo okanye hayi.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>音效</short>
+        <long>是否播放事件声音。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>音效</short>
+        <long>是否以音效代表不同事件發生。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>音效</short>
+        <long>是否以音效代表不同事件發生。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnect/keyleft</key>
+      <applyto>/apps/gnect/keyleft</applyto>
+      <owner>gnect</owner>
+      <type>int</type>
+      <default>65361</default>
+      <locale name="C">
+        <short>Move left</short>
+        <long>Key press to move left.</long>
+      </locale>
+
+      <locale name="am">
+        <short>ወደግራ አንቀሳቅስ</short>
+        
+      </locale>
+
+      <locale name="ar">
+        <short>نقل إلى اليسار</short>
+        <long>نقر الزر لالنقل إلى اليسار.</long>
+      </locale>
+
+      <locale name="as">
+        <short>বামে সৰান</short>
+        <long>বামে নেওয়াৰ জন্য কী (Key) চাপতে হয় ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Sola hərəkət</short>
+        <long>Sola getmək üçün düymə.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Рушыць улева</short>
+        <long>Клявіша для зруху ўлева.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Движение наляво</short>
+        <long>Клавиш за движение наляво.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>বামে সরান</short>
+        <long>বামে নেওয়ার জন্য কী (Key) চাপতে হয়।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>বামে সরান</short>
+        <long>বামে নেওয়ার জন্য কী (Key) চাপতে হয়।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Mou a l&apos;esquerra</short>
+        <long>Tecla per moure a l&apos;esquerra.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Pohyb doleva</short>
+        <long>Klávesa pro přesun doleva.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Symud i&apos;r chwith</short>
+        <long>Y fysell i&apos;w gwasgu er mwyn symud i&apos;r chwith.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Træk til venstre</short>
+        <long>Tastetryk for at flytte til venstre.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Nach links bewegen</short>
+        <long>Tastendruck zum Verschieben nach links.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>གཡོན་ལུ་སྤོ།</short>
+        <long>གཡོན་ལུ་སྤོ་ནིའི་ ལྡེ་མིག་ཨེབ།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Μετακίνηση προς τα αριστερά</short>
+        <long>Πάτημα πλήκτρου για μετακίνηση προς τα αριστερά.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Move left</short>
+        <long>Key press to move left.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Move left</short>
+        <long>Key press to move left.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Mover izquierda</short>
+        <long>Tecla para izquierda.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Vasakule liigutamine</short>
+        <long>Vasakule liigutamise klahvivajutus.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Mugitu ezkerrera</short>
+        <long>Sakatu tekla ezkerrerantz joateko.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>جابه‌جایی به چپ</short>
+        <long>فشردن کلید برای جابه‌جایی به چپ.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Siirry vasemmalle</short>
+        <long>Näppäin vasemmalle siirtämiseen.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Déplacer à gauche</short>
+        <long>Touche à appuyer pour déplacer à gauche.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Bog ar clé</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Mover á esquerda</short>
+        <long>Tecla para mover á esquerda.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ડાબે ખસો</short>
+        <long>ડાબે ખસેડવા માટે કી નું દબાણ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>הזז שמאלה</short>
+        <long>Key press to move left.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>बायाँ जाएँ</short>
+        <long>बायेँ ले जाने हेतु कुंजी दबाएँ.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Pomakni lijevo</short>
+        <long>Pritisnite tipku za pomicanje u lijevo.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Lépés balra</short>
+        <long>Billentyű a balra mozgáshoz.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Pindah kiri</short>
+        <long>Tekan untuk pindah ke kiri.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Færa til vinstri</short>
+        <long>Lykill til að hreyfa til vinstri.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Sposta a sinistra</short>
+        <long>Tasto da premere per spostare a sinistra.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>左へ移動する</short>
+        <long>左に移動するキーです。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಎಡಕ್ಕೆ ನಡೆಸು</short>
+        <long>ಎಡಕ್ಕೆ ಚಲಿಸಲು ಒತ್ತಬೇಕಿರುವ ಕೀಲಿ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>왼쪽으로 이동</short>
+        <long>왼쪽으로 이동할 때 누를 키.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Eiti kairėn</short>
+        <long>Judėjimo į kairę klavišas.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Gājiens pa kreisi</short>
+        <long>Taustiņa nospiediens, lai pārvietotos pa kreisi.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>बायाँ जाउ</short>
+        <long>बामाँ लए जाए लेल कुँजी दाबू.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Помести лево</short>
+        <long>Притиснете копче за да се поместите лево.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഇടത്തേക്ക് നീങ്ങുക</short>
+        <long>ഇടത്തേക്ക് നീങ്ങുന്നതിനായി കീ അമര്‍ത്തുക.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Зүүн шилжих: </short>
+        <long>Зүүн шилжэх товч дар</long>
+      </locale>
+
+      <locale name="mr">
+        <short>डावीकडे हलवा</short>
+        <long>डावीकडे हलवायला कळ दाबा.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Gerakan kekiri</short>
+        <long>Kekunci untuk bergerak ke kiri.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Flytt til venstre</short>
+        <long>Tastetrykk for å gå til venstre.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>बाँया सार्नुहोस्</short>
+        <long>बायाँ सार्नलाई कुञ्जी थिच्नुहोस् ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Naar links</short>
+        <long>Toetsaanslag om naar links te gaan</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Flytt til venstre</short>
+        <long>Tast for å flytta til venstre.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Bolegar cap a esquèrra</short>
+        
+      </locale>
+
+      <locale name="or">
+        <short>ବାମପାଖକୁ   ଘୁଞ୍ଚାଅ</short>
+        <long>ବାମକୁ ଘୁଞ୍ଚିବା ପାଇଁ କି ଦବାଅ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਖੱਬੇ ਚੱਲੋ</short>
+        <long>ਖੱਬੇ ਚੱਲਣ ਲਈ ਸਵਿੱਚ ਦਬਾਉ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Przesunięcie w lewo</short>
+        <long>Klawisz przesunięcia w lewo.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Mover à esquerda</short>
+        <long>Tecla para mover à esquerda.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Ir para esquerda</short>
+        <long>Tecla para mover à esquerda.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Mută la stânga</short>
+        <long>Tasta pentru mișcare la stânga.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Влево</short>
+        <long>Клавиша для перемещения влево.</long>
+      </locale>
+
+      <locale name="rw">
+        <short>Kwimura ibumoso</short>
+        
+      </locale>
+
+      <locale name="si">
+        <short>වමට ගෙනයන්න</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Posun doľava</short>
+        <long>Kláves pre presun doľava.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Premaknite se v levo</short>
+        <long>Pritisk tipke za premik v levo.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Lëviz majtas</short>
+        <long>Tasti për të lëvizur majtas.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Потез у лево</short>
+        <long>Тастер за кретање у лево.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Potez u levo</short>
+        <long>Taster za kretanje u levo.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Flytta vänster</short>
+        <long>Tangenttryck för att flytta till vänster.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>இடதுபுறம் நகர்.</short>
+        <long>இடதுபுறம் நகர விசையை அழுத்து.</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఎడమకు జరుగు</short>
+        <long>ఎడమవైపుకు జరుగుటకు మీటను నొక్కుము</long>
+      </locale>
+
+      <locale name="th">
+        <short>เลื่อนซ้าย</short>
+        <long>ปุ่มกดเพื่อเลื่อนซ้าย</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Sola taşı</short>
+        <long>Sola taşımak için gereken tuş.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Ліворуч</short>
+        <long>Натисніть клавішу руху ліворуч.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Sang trái</short>
+        <long>Nhấn phím để di chuyển trái.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Yiya ngasekhohlo</short>
+        <long>Ukucofa iqhosha ukuya ngasekhohlo.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>向左移动</short>
+        <long>左移的按键。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>向左移動</short>
+        <long>向左移所使用的按鍵。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>向左移動</short>
+        <long>向左移所使用的按鍵。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnect/keyright</key>
+      <applyto>/apps/gnect/keyright</applyto>
+      <owner>gnect</owner>
+      <type>int</type>
+      <default>65363</default>
+      <locale name="C">
+        <short>Move right</short>
+        <long>Key press to move right.</long>
+      </locale>
+
+      <locale name="am">
+        <short>ወደቀኝ አንቀሳቅስ</short>
+        
+      </locale>
+
+      <locale name="ar">
+        <short>نقل إلى اليمين</short>
+        <long>نقر الزر لالنقل إلى اليمين.</long>
+      </locale>
+
+      <locale name="as">
+        <short>ডানে সৰান</short>
+        <long>ডানে নেওয়াৰ জন্য কী (Key) চাপতে হয় ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Sağa hərəkət</short>
+        <long>Sağa getmək üçün düymə.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Рушыць управа</short>
+        <long>Клявіша для зруху ўправа.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Движение надясно</short>
+        <long>Клавиш за движение надясно.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>ডানে সরান</short>
+        <long>ডানে নেওয়ার জন্য কী (Key) চাপতে হয়।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ডানে সরান</short>
+        <long>ডানে নেওয়ার জন্য কী (Key) চাপতে হয়।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Mou a la dreta</short>
+        <long>Tecla per moure a la dreta.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Pohyb doprava</short>
+        <long>Klávesa pro přesun doprava.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Symud i&apos;r dde</short>
+        <long>Y fysell i&apos;w gwasgu er mwyn symud i&apos;r dde.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Træk til højre</short>
+        <long>Tastetryk for at flytte til højre.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Nach rechts bewegen</short>
+        <long>Tastendruck zum Verschieben nach rechts.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>གཡས་ལུ་སྤོ།</short>
+        <long>གཡོས་ལུ་སྤོ་ནིའི་ ལྡེ་མིག་ཨེབ།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Μετακίνηση προς τα δεξιά</short>
+        <long>Πάτημα πλήκτρου για μετακίνηση προς τα δεξιά.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Move right</short>
+        <long>Key press to move right.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Move right</short>
+        <long>Key press to move right.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Mover derecha</short>
+        <long>Tecla para derecha.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Paremale liigutamine</short>
+        <long>Paremale liigutamise klahvivajutus.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Mugitu eskuinera</short>
+        <long>Sakatu tekla eskuinerantz joateko.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>جابه‌جایی به راست</short>
+        <long>فشردن کلید برای جابه‌جایی به راست.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Siirry oikealle</short>
+        <long>Näppäin oikealle siirtämiseen.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Déplacer à droite</short>
+        <long>Touche à appuyer pour déplacer à droite.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Bog ar deis</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Mover á dereita</short>
+        <long>Tecla para mover á dereita.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>જમણે ખસો</short>
+        <long>જમણે ખસેડવા માટે કી નું દબાણ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>הזז ימינה</short>
+        <long>Key press to move right.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>दाँया जाएँ</short>
+        <long>दाएँ ले जाने हेतु कुंजी दबाएँ.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Pomakni desno</short>
+        <long>Pritisnite tipku za pomicanje u desno.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Lépés jobbra</short>
+        <long>Billentyű a jobbra mozgáshoz.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Pindah kanan</short>
+        <long>Tekan untuk pindah ke kanan.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Færa til hægri</short>
+        <long>Lykill til að hreyfa til hægri.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Sposta a destra</short>
+        <long>Tasto da premere per spostare a destra.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>右へ移動する</short>
+        <long>右に移動するキーです。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಬಲಕ್ಕೆ ನಡೆಸು</short>
+        <long>ಬಲಕ್ಕೆ ಚಲಿಸಲು ಒತ್ತಬೇಕಿರುವ ಕೀಲಿ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>오른쪽으로 이동</short>
+        <long>오른쪽으로 이동할 때 누를 키.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Eiti dešinėn</short>
+        <long>Judėjimo į dešinę klavišas.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Gājiens pa labi</short>
+        <long>Taustiņa nospiediens, lai pārvietotos pa labi.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>दाँया जाउ</short>
+        <long>दायाँ लए जाए लेल कुँजी दाबू.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Помести десно</short>
+        <long>Притисни копче за да се поместиш десно.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>വലത്തേക്ക് നീങ്ങുക</short>
+        <long>വലത്തേക്ക് നീങ്ങുന്നതിനായി കീ അമര്‍ത്തുക.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Баруун шилжих</short>
+        <long>Баруун шилжэх товч дар</long>
+      </locale>
+
+      <locale name="mr">
+        <short>उजविकडे हलवा</short>
+        <long>उजविकडे हलवायला कळ दाबा.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Gerakan ke kanan</short>
+        <long>Kekunci untuk bergerak ke kanan.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Flytt til høyre</short>
+        <long>Tastetrykk for å gå til høyre.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>दाँया सार्नुहोस्</short>
+        <long>दायाँ सार्नलाई कुञ्जी थिच्नुहोस् ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Naar rechts</short>
+        <long>Toetsaanslag om naar rechts te gaan</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Flytt til høgre</short>
+        <long>Tast for å flytta til høgre.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Bolegar cap a drecha</short>
+        
+      </locale>
+
+      <locale name="or">
+        <short>ଡାହାଣପାଖକୁ   ଘୁଞ୍ଚାଅ</short>
+        <long>ଡାହାଣକୁ ଘୁଞ୍ଚିବା ପାଇଁ କି ଦବାଅ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਸੱਜੇ ਚੱਲੋ</short>
+        <long>ਸੱਜੇ ਚੱਲਣ ਲਈ ਸਵਿੱਚ ਦਬਾਉ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Przesunięcie w prawo</short>
+        <long>Klawisz przesunięcia w prawo.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Mover à direita</short>
+        <long>Tecla para mover à direita.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Ir para a direita</short>
+        <long>Tecla para mover à direita.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Mută la dreapta</short>
+        <long>Tasta pentru mișcare la dreapta.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Вправо</short>
+        <long>Клавиша для перемещения вправо.</long>
+      </locale>
+
+      <locale name="rw">
+        <short>Kwimura Iburyo</short>
+        
+      </locale>
+
+      <locale name="si">
+        <short>දකුණට ගෙනයන්න</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Posun doprava</short>
+        <long>Kláves pre presun doprava.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Premaknite se v desno</short>
+        <long>Pritisk tipke za premik v desno.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Lëviz djathtas</short>
+        <long>Tasti për të lëvizur djathtas.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Потез у десно</short>
+        <long>Тастер за кретање у десно.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Potez u desno</short>
+        <long>Taster za kretanje u desno.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Flytta höger</short>
+        <long>Tangenttryck för att flytta till höger.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>வலதுபுறம் நகர்.</short>
+        <long>வலதுபுறம் நகர விசையை அழுத்து.</long>
+      </locale>
+
+      <locale name="te">
+        <short>కుడికి జరుగుము</short>
+        <long>కుడివైపుకు జరుగుటకు మీటను నొక్కుము</long>
+      </locale>
+
+      <locale name="th">
+        <short>เลื่อนขวา</short>
+        <long>ปุ่มกดเพื่อเลื่อนขวา</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Sağa taşı</short>
+        <long>Sağa taşımak için gereken tuş.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Праворуч</short>
+        <long>Натисніть клавішу руху праворуч.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Sang phải</short>
+        <long>Nhấn phím để di chuyển phải.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Yiya ngasekunene</short>
+        <long>Ukucofa iqhosha ukuya ngasekunene.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>向右移动</short>
+        <long>右移的按键。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>向右移動</short>
+        <long>向右移所使用的按鍵。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>向右移動</short>
+        <long>向右移所使用的按鍵。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnect/keydrop</key>
+      <applyto>/apps/gnect/keydrop</applyto>
+      <owner>gnect</owner>
+      <type>int</type>
+      <default>65364</default>
+      <locale name="C">
+        <short>Drop marble</short>
+        <long>Key press to drop a marble.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>إنزال رخامة</short>
+        <long>نقر زر لإنزال رخامة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>মাৰ্বেল ফেলক</short>
+        <long>মাৰ্বেল ফেলাৰ জন্য কী (Key) চাপতে হয় ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Mərməri at</short>
+        <long>Mərməri atmaq üçün düymə.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Кіданьне каменьчыкаў</short>
+        <long>Клявіша для кіданьня каменьчыкаў.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Пускане на топче</short>
+        <long>Клавиш за пускане на топче.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>মার্বেল ফেলুন</short>
+        <long>মার্বেল ফেলার জন্য কী (Key) চাপতে হয়।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>মার্বেল ফেলুন</short>
+        <long>মার্বেল ফেলার জন্য কী (Key) চাপতে হয়।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Deixa caure una bola</short>
+        <long>Tecla per deixar caure una bola.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Položení kamene</short>
+        <long>Klávesa pro položení kamene.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Gollwng marblen</short>
+        <long>Y fysell i&apos;w gwasgu er mwyn gollwng marblen.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Slip kugle</short>
+        <long>Tastetryk for at slippe en kugle.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Murmel abwerfen</short>
+        <long>Tastendruck zum Abwerfen einer Murmel</long>
+      </locale>
+
+      <locale name="dz">
+        <short>ཤེལ་རྡོའི་རིལ་བུ་ས་ཁར་བཞག</short>
+        <long>ཤེལ་རྡོ་རིལ་བུ་ ས་ཁར་བཞག་ནིའི་ ལྡེ་མིག་ཨེབ།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Βώλοι</short>
+        <long>Πάτημα πλήκτρου για να πέσει ένας βώλος.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Drop marble</short>
+        <long>Key press to drop a marble.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Drop marble</short>
+        <long>Key press to drop a marble.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Soltar canica</short>
+        <long>Tecla para soltar canica.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Kivi kukutamine</short>
+        <long>Kivi kukutamise klahvivajutus.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Jaregin puxtarriari</short>
+        <long>Sakatu tekla puxtarriari jaregiteko.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>رها کردن تیله</short>
+        <long>فشردن کلید برای رها کردن تیله.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pudota kuula</short>
+        <long>Näppäin kuulan tiputtamiseen.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Laisser tomber la bille</short>
+        <long>Touche à appuyer pour laisser tomber une bille.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Soltar a bóla</short>
+        <long>Tecla para soltar a bóla.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>લખોટી પાડો</short>
+        <long>લખોટી પાડવા માટે કી નું દબાણ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>הפל גולה</short>
+        <long>Key press to drop a marble.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>कंचा छोड़ें</short>
+        <long>कंचा छोड़ने हेतु कुंजी दबाएँ.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Ispusti kuglicu</short>
+        <long>Pritisnite tipku za ispuštanje kuglice.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Üveggolyó leejtése</short>
+        <long>Billentyű az üveggolyó leejtéséhez.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Buang gundu</short>
+        <long>Tekan tombol untuk meletakkan gundu</long>
+      </locale>
+
+      <locale name="is">
+        <short>Sleppa kúlu</short>
+        <long>Lykill til að sleppa kúlu.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Caduta biglia</short>
+        <long>Tasto da premere per far cadere una biglia.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>石を落とす</short>
+        <long>石を落とすキーです</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಗೋಲಿಯನ್ನು ಬೀಳಿಸು</short>
+        <long>ಒಂದು ಗೋಲಿಯನ್ನು ಬೀಳಿಸಲು ಒತ್ತಬೇಕಿರುವ ಕೀಲಿ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>돌 떨어뜨리기</short>
+        <long>돌 떨어뜨릴 때 누를 키.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Paleisti rutuliuką</short>
+        <long>Rutuliuko paleidimo klavišas.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Nomest lodīti</short>
+        <long>Taustiņa nospiediens, lai pārvietotos nomestu marmoru.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>कंचा छोड़ू</short>
+        <long>कंचा छोड़ब लेल कुँजी दाबू.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Пушти топче</short>
+        <long>Притисни копче за да фрлиш топче.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഒരു ഗോട്ടി ഇടുക</short>
+        <long>ഒരു ഗോട്ടി ഇടുന്നതിനായി കീ അമര്‍ത്തുക.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Бөмбөлөг унагаах</short>
+        <long>Бөмбөлөг унагаах товч дар</long>
+      </locale>
+
+      <locale name="mr">
+        <short>गोटी टाका</short>
+        <long>गोटी टाकायला कळ दाबा.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Jatuhkan guli</short>
+        <long>Kekunci untuk menjatuhkan guli.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Slipp klinkekulen</short>
+        <long>Tastetrykk for å slippe en klinkekule.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>गुच्चा झार्नुहोस्</short>
+        <long>गुच्चा झार्नलाई कुञ्जी थिच्नुहोस् ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Knikker loslaten</short>
+        <long>Toetsaanslag om een knikker te laten vallen</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Slepp kula</short>
+        <long>Tast for å sleppa ei kule.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ମାର୍ବଲ ପକାଅ</short>
+        <long>ଗୋଟିଏ ମାର୍ବଲକୁ ପକାଇବା ପାଇଁ କି ଦବାଅ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਬੰਟਾ ਸੁੱਟੋ</short>
+        <long>ਗੋਲੀ ਸੁੱਟਣ ਲਈ ਸਵਿੱਚ ਦਬਾਉ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Upuszczenie kuli</short>
+        <long>Klawisz upuszczenia kuli.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Largar esfera</short>
+        <long>Tecla para largar uma esfera.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Soltar a bolinha</short>
+        <long>Tecla para soltar a bolinha.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Eliberează piesa</short>
+        <long>Tasta apăsată pentru a elibera o piesă.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Сбросить вкрапления</short>
+        <long>Нажмите клавишу для сброса вкрапления.</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Pustiť</short>
+        <long>Kláves pre pustenie.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Izpusti kroglico</short>
+        <long>Pritisk tipke za izpustitev kroglice.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Hidh pllakën</short>
+        <long>Tasti për të hedhur një pllakë</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Пусти кликер</short>
+        <long>Тастер за пуштање кликера.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Pusti kliker</short>
+        <long>Taster za puštanje klikera.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Släpp kula</short>
+        <long>Tangenttryck för att släppa en kula.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>கோலி குண்டை போடு</short>
+        <long>கோலி குண்டை போட விசையை அழுத்து.</long>
+      </locale>
+
+      <locale name="th">
+        <short>ปล่อยลูกแก้ว</short>
+        <long>ปุ่มกดเพื่อปล่อยลูกแก้ว</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Pul at</short>
+        <long>Pul atmak için gereken tuş.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Скинути кулю</short>
+        <long>Натисніть клавішу скидання кулі.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Thả bí</short>
+        <long>Nhấn phím để thả một viên bí.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Wisa ibhastile</short>
+        <long>Ukucofa iqhosha ukuwisa ibhastile.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>落下小球</short>
+        <long>落下小球的按键。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>放下棋子</short>
+        <long>放下棋子所使用的按鍵。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>放下棋子</short>
+        <long>放下棋子所使用的按鍵。</long>
+      </locale>
+      </schema>
+  </schemalist>
+
+</gconfschemafile>
+

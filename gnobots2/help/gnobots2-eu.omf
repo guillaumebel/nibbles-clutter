@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Patanjali  Somayaji )</creator>
+    <creator>(Mark Rae)</creator>
+    <maintainer>(Patanjali  Somayaji )</maintainer>
+    <title>Robotsen eskuliburua</title>
+    <date>2007ko abuztua</date>
+    <version identifier="Robots-en eskuliburuaren 2.9 bertsioa" date="2007ko abuztua"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      UNIX sistema askotan aurki daitekeen eta testu moduko roboten jokoan oinarrituta dago Robots. Jokalariak robotak saihestu eta robotak elkarren aurka talka egitea lortu behar du.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnobots2/eu/gnobots2.xml"/>
+    <language code="eu"/>
+    <relation seriesid="20b9a66e-8798-480a-a9e8-f309c7afefb6"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Patanjali Somayaji, Mark Rae"/>
+  </resource>
+</omf>

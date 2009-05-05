@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "<application>Blackjack</application>">
+<!ENTITY appname "Blackjack">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="eu">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title><application>Blackjack</application>en eskuliburua</title>       
+    <abstract role="description">
+      <para>Blackjack kasinoko arauak aplikatzen dituen karta sorta anitzeko jokoa da, GNOME proiektuarentzat prestatua. Jokoaren helburua da eskualdiko balioa 21etik gertuago egotea banatzailearen eskualdiko balioa baino, 21 gainditu gabe.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>William Jon McCann</holder> 
+    </copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>GNOMEren dokumentazio-proiektua</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Baimena ematen da dokumentu hau kopiatu, banatu eta/edo aldatzeko, Free Software Foundation-ek argitaratutako GNU Dokumentazio Librearen Lizentziaren 1.1. bertsioan edo berriago batean ezarritako baldintzetan, atal aldaezinik gabe, aurreko azaleko testurik gabe eta atzeko azaleko testurik gabe. GFDL lizentziaren kopia <ulink type="help" url="ghelp:fdl">esteka honetan</ulink> edo eskuliburu honekin batera ematen den COPYING-DOCS fitxategian aurkituko duzu.</para>
+         <para>Eskuliburu hau GFDL lizentziarekin banatzen diren GNOME eskuliburuen bildumakoa da. Eskuliburu hau bildumatik bereizita banatu nahi baduzu, banatu dezakezu, baina eskuliburuari lizentziaren kopia bat gehitu beharko diozu lizentzian bertan 6. atalean azaltzen den bezala.</para>
+
+	<para>Enpresek beren produktu eta zerbitzuak bereizteko erabiltzen dituzten izen asko marka erregistratu gisa hartu behar dira. Izen horiek GNOMEren edozein agiritan agertzen direnean, eta GNOMEren Dokumentazio Proiektuko kideak marka komertzialak direla konturatzen direnean, izen horiek maiuskulaz idatzita agertuko dira, osorik edo hasierako letra bakarrik.</para>
+
+	<para>DOKUMENTUA ETA DOKUMENTUAREN BERTSIO ALDATUAK GNU DOKUMENTAZIO LIBREAREN LIZENTZIAREN BALDINTZEN ARABERA EMATEN DIRA, ETA ONDOREN ZEHAZTEN DIRENAK ONARTZERA BEHARTZEN DUTE: <orderedlist>
+		<listitem>
+		  <para>DOKUMENTUA "DAGOEN-DAGOENEAN" EMATEN DA, INOLAKO BERMERIK GABE, EZ ESPRESUKI ADIERAZITAKORIK ETA EZ INPLIZITURIK ERE; BESTEAK BESTE EZ DA BERMATZEN DOKUMENTUA EDO BERTSIO ALDATUA AKATSIK GABEA DENIK, MERKATURATZEKO EDO XEDE JAKIN BATERAKO EGOKIA DENIK EDO ARAURIK HAUSTEN EZ DUENIK, HORI GUZTIA MUGARIK GABE. DOKUMENTUAREN EDO DOKUMENTUAREN BERTSIO ALDATUAREN KALITATEARI, ZEHAZTASUNARI ETA PERFORMANTZIARI BURUZKO ERANTZUKIZUN OSOA ZUREA DA. DOKUMENTUREN BATEK EDO BERTSIO ALDATUREN BATEK EDOZEIN MOTATAKO AKATSIK IZANEZ GERO, ZUK (EZ HASIERAKO IDAZLEAK, EZ EGILEAK ETA EZ INONGO KOLABORATZAILEK) ZEURE GAIN HARTU BEHARKO DUZU BERRIKUSTEKO, KONPONTZEKO EDO ZUZENTZEKO BEHAR DIREN ZERBITZU GUZTIEN KOSTUA. BERME-UKATZE HAU LIZENTZIA HONEN FUNTSEZKO ZATIA DA. EZ DA BAIMENIK EMATEN EZEIN DOKUMENTU EDO BERTSIO ALDATU ERABILTZEKO, BALDIN ETA EZ BADA BERME-UKATZE HAU ONARTZEN.</para>
+		</listitem>
+		<listitem>
+		  <para>EZIN IZANGO DA INONGO ZIRKUNSTANTZIARIK EDO LEGE-TEORIARIK OINARRI HARTU --EZ ERANTZUKIZUN ZIBILARI BURUZKORIK (ZABARKERIA BARNE HARTUTA), EZ KONTRATUARI BURUZKORIK, EZ BESTERIK-- DOKUMENTU HONEN EDO BERTSIO ALDATU BATEN EGILEA, HASIERAKO IDAZLEA, EDOZEIN KOLABORATZAILE EDO BANATZAILE, EDO ALDERDI HORIEN EDOZEIN HORNITZAILE BESTE PERTSONA BATEN AURREAN ERANTZULE EGITEKO, PERTSONA HORREK EDOZEIN MOTATAKO KALTEA JASAN DUELAKO (ZUZENEKOA, ZEHARKAKOA, BEREZIA, INTZIDENTALA EDO ONDORIOZKOA), HALA NOLA (ETA MUGARIK GABE) BEZEROAK GALTZEA, LANA ETEN BEHARRA, ORDENAGAILUAK EZ IBILTZEA EDO GAIZKI IBILTZEA, EDO DOKUMENTUA NAHIZ HAREN BERTSIO ALDATUAK ERABILTZETIK ONDORIOZTATZEN DIREN EDO ERABILERA HORREKIN ZERIKUSIA DUTEN KALTEAK EDO GALERAK, ALDERDIARI KALTE HORIEK GERTA ZITEZKEELA ADITZERA EMAN BAZAIO ERE.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer">
+		<firstname>William Jon</firstname> 
+		<surname>McCann</surname> 
+		<affiliation> 
+	  		<orgname/> 
+	  		<address> <email>mccann@jhu.edu</email> </address> 
+		</affiliation> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>	
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+      <revision> 
+		<revnumber>Blackjack-en eskuliburuaren 2.8 bertsioa</revnumber> 
+		<date>2004ko iraila</date> 
+		<revdescription> 
+	  		<para role="author">William Jon McCann <email>mccann@jhu.edu</email></para>
+	  		<para role="publisher"/>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Eskuliburu honek Blackjack-en 2.12 bertsioa azaltzen du</releaseinfo> 
+    <legalnotice> 
+      <title>Ohar-bidaltzea</title> 
+      <para><application>Blackjack</application>i buruzko akatsen berri emateko edo oharrak bidaltzeko, <ulink url="ghelp:gnome-feedback" type="help">GNOMEra oharrak bidaltzeko orria</ulink>n aurkituko dituzu argibideak.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Blackjack</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>mygnomeapp</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="blackjack-introduction"> 
+
+    <title>Sarrera</title> 
+
+    <para><application>Blackjack</application> aplikazioa kasinoko arauak aplikatzen dituen karta sorta anitzeko jokoa da. Jokoaren helburua da banatzailearen kartak baino balio handiagoko kartak edukitzea da, 21 gainditu gabe.</para>
+  </sect1>
+
+  <sect1 id="blackjack-basics">
+    <title>Blackjack-en oinarriak</title>
+
+    <sect2 id="blackjack-terms">
+    <title>Blackjack-en terminologia</title>
+    <para>Ondoren, jokoan erabiltzen diren termino garrantzitsuenak azaltzen dira.</para>
+    <para>
+        <variablelist>
+	<varlistentry>
+	<term>Blackjack</term>
+	<listitem>
+	<para>Eskuko lehenengo bi karten batura 21 bada, zure apustuaren % 150 irabazi duzu</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Pasatu</term>
+	<listitem>
+	<para>Eskualdiaren balioak 21 gainditzen badu, jokaldia galdu egiten da</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Bikoiztu</term>
+	<listitem>
+	<para>Hasierako apustua bikoiztea eta karta bat gehiago jasotzea</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Eskatu</term>
+	<listitem>
+	<para>Eskualdiari beste karta bat gehitzeko eskatzea</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Segurua</term>
+	<listitem>
+	<para>Hasierako apustuaren % 50 jokatzen da banatzaileak 21 puntu dituenean (Blakcjack-a); banatzaileak gora begira jartzen duen lehenengo karta batekoa denean egiten da apustua. Banatzaileak berezko 21 puntu baditu, jokalariari bikoitza ordaintzen dio.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Berdinketa</term>
+	<listitem>
+	<para>When the value of the player hand and the dealer hand are 
+        equal, the original wager is returned to the player</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Zatitu</term>
+	<listitem>
+	<para>Eskualdia balio (edo maila) bereko bi kartekin hasten denean, bi eskualdi independente egiteko zatitu daiteke</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Planto egin</term>
+	<listitem>
+	<para>Eskualdira karta gehiago ez gehitzea</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Amore eman</term>
+	<listitem>
+        <para>Zure apustuaren erdia bertan behera uztea, eta eskualdia osatu gabe uztea</para>
+	</listitem>
+	</varlistentry>
+
+        </variablelist>
+    </para>
+    </sect2>
+
+    <sect2 id="blackjack-card-values">
+    <title>Karten balioa</title>
+    <para>Blackjack-en karta bakoitzari balio bat ematen zaio. <itemizedlist> 
+	  <listitem> 
+           <para>Batekoak 1 edo 11 balio dezake.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>2tik 9ra bitarteko kartek berek adierazten duten balioa dute.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>10ekoak, txankak, erreginak eta erregeak 10 balio dute.</para>
+	  </listitem> 
+	</itemizedlist></para> 
+
+    <para>Eskuko balioa eskuan dituzun karten balioaren batura da.</para>
+    </sect2>
+
+    <sect2 id="blackjack-dealer-rules">
+    <title>Banatzailearentzako arauak</title>
+    <para>Banatzaileak arau zehatzei jarraituz jokatu behar du bere eskua. Oinarrizko bi arau daude eta banatzailearen eskuaren balioa guztira zenbatekoa izan daitekeen zehazten dute. <variablelist>
+	<varlistentry>
+	<term>Banatzaileak 17ra arte jokatzen du</term>
+	<listitem>
+	<para>Banatzaileak kartak banatzen jarraitu behar du, eskualdia gutxienez 17koa izan arte guztira.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Banatzaileak 17 biguna banatzen du</term>
+	<listitem>
+	<para>Banatzaileak kartak banatzen jarraitu behar du eskualdia guztira gutxienez 17koa izan arte, guztira 17 biguna duenean izan ezik. Orduan, beste karta bat hartu behar du. Biguna guztira bat da, batekoak 11 balio duenean.</para>
+	</listitem>
+	</varlistentry>
+        </variablelist></para>
+    </sect2>
+
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here. 
+     If the information about how to get started is very short, you can 
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="blackjack-getting-started"> 
+    <title>Erabiltzen hastea</title> 
+
+    <sect2 id="blackjack-start">
+    <title><application>Blackjack</application> abiaraztea</title>
+    <para>Aukera hauek dituzu <application>Blackjack</application> abiarazteko:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term><guimenu>Aplikazioak</guimenu> menua</term>
+    		<listitem>
+    		<para>Aukeratu <menuchoice><guisubmenu>Jokoak</guisubmenu><guimenuitem>Blackjack</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Komando-lerroa</term>
+    		<listitem>
+    		<para><application>Blackjack</application> komando-lerrotik abiarazteko, idatzi komando hau eta sakatu <keycap>Sartu</keycap>:</para>
+    		<para> 
+			<command>blackjack</command> 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-when-start">
+    <title><application>Blackjack</application> abiaraztean</title>
+    <para><application>Blackjack</application> abiaraztean, leiho hau bistaratzen da.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title><application>Blackjack</application>en hasierako leihoa</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/blackjack_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <!-- EPS versions of the figures are not required at the moment. -->
+            <!-- 
+		    <imageobject>
+      		<imagedata fileref="figures/image.eps" format="EPS"/>
+    		    </imageobject>
+	    -->
+	    <textobject> 
+	      <phrase>Leiho nagusia bistaratzen du (<application>Blackjack</application>). Titulu-barra, menu-barra, tresna-barra, joko-eremua eta korritze-barrak erakusten ditu. Menu-barrak menu hauek ditu: Jokoak, Ezarpenak eta Laguntza.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para><application>Blackjack</application>en leihoan elementu hauek daude:</para>
+      <variablelist>
+
+	<varlistentry>
+	<term>Menu-barra</term>
+	<listitem>
+	<para>Menu-barrako menuek <application>Blackjack</application>en fitxategiekin lan egiteko behar dituzun komando guztiak dituzte.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Tresna-barra</term>
+	<listitem>
+	<para>Menu-barrako komando erabilienak izaten ditu tresna-barrak.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Egoera-barra</term>
+	<listitem>
+	<para><application>Blackjack</application>en uneko jarduerari buruzko informazioa eta menu-elementuei buruzko testuinguru-informazioa bistaratzen ditu egoera-barrak.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Joko-eremua</term>
+	<listitem>
+	<para>Joko-eremuan banatzailearen kokalekua, jokalariaren kokalekua, jokalariaren apustu sorta eta jokalariaren fitxak daude.</para>
+	</listitem>
+	</varlistentry>
+
+	</variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-menus">
+    <title><application>Blackjack</application>en menuak</title>
+      <para>Menu-barra <interface>jokatzeko mahaia</interface>ren gainean kokatuta dago eta menu hauek ditu:</para>
+
+      <variablelist>
+
+        <!-- ===== Game ===== -->
+
+        <varlistentry>
+          <term><guimenu>Jokoa</guimenu></term>
+          <listitem>
+            <para>Menu honek elementu hauek ditu: <itemizedlist>
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <shortcut><keysym>Ctrl-N</keysym></shortcut>
+                      <guimenuitem>New game</guimenuitem>
+                    </menuchoice>
+                    —
+                    This clears the table and starts a new game.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <guimenuitem>Restart game</guimenuitem>
+                    </menuchoice>
+                    —
+                    This clears the table and restarts the game.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <guimenuitem>Hint</guimenuitem>
+                    </menuchoice>
+                    —
+                    This will give you the computer's best suggestion for your
+                    move.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <shortcut><keysym>Ctrl-Q</keysym></shortcut>
+                      <guimenuitem>Exit</guimenuitem>
+                    </menuchoice>
+                    —
+                    This quits the game.
+                  </para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Settings ===== -->
+
+        <varlistentry>
+          <term><guimenu>Ezarpenak</guimenu></term>
+          <listitem>
+            <para>Menu honek elementu hauek ditu: <itemizedlist>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>Show tool bar</guimenuitem>
+                    —
+                    This toggle switches the tool bar on and off.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>Preferences…</guimenuitem>
+                    —
+                    This opens the <interface>Preferences Dialog</interface>,
+                    allowing you to configure the game.
+                  </para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Help ===== -->
+
+        <varlistentry>
+          <term><guimenu>Laguntza</guimenu></term>
+          <listitem>
+            <para>Menu honek elementu hauek ditu: <itemizedlist>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>Contents</guimenuitem>
+                    —
+                    Opens your help browser and shows this manual.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>About</guimenuitem>
+                    —
+                    Opens the <interface>About Dialog</interface>, showing
+                    basic information about <application>Blackjack</application> such as its version
+                    number and the names of its authors.
+                  </para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+    <sect2 id="blackjack-playing-area">
+    <title><application>Blackjack</application>en joko-eremua</title>
+      <para>Joko-eremua (edo mahaia), <interface>tresna-barra</interface>ren azpian dago eta elementu hauek ditu:</para>
+
+      <variablelist>
+
+        <varlistentry>
+          <term><interface>Banatzailearen kokalekua</interface></term>
+          <listitem><para>Banatzailearen eskualdiko kartak hemen kokatzen dira. Joko-eremuaren goialdean kokatzen da. Mahaia garbitutakoan, eremu huts zuri gisa agertuko da.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Jokalariaren kokalekuak</interface></term>
+          <listitem><para>Jokalariaren eskualdiko kartak hemen kokatzen dira. Hasieran, jokalariak leku bakarra izango du. Jokalariak bere kartak zatitzen baditu, kokaleku gehiago sortuko dira. Mahaia garbitutakoan, eremu huts zuri gisa agertuko dira banatzailearen kokalekuaren azpian.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Jokalariaren apustu sorta</interface></term>
+          <listitem><para>Apustu sorta eskualdi bakoitzaren hasieran egin diren apustuen adierazle da. Sorta hori fitxaz osatuta dago, eta jokalari bakoitzaren kokalekuaren ezkerrean kokatzen da.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Jokalariaren fitxak</interface></term>
+          <listitem><para>Jokalariaren fitxek fitxa sorta mugagabeak ordezkatzen dituzte, 100, 25, 5 eta 1 balioentzako sorta bana. Fitxa horiek apustua aldatzeko erabiltzen dira.</para></listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for 
+  which the application is designed. -->
+  <sect1 id="blackjack-usage"> 
+    <title>Erabilera</title> 
+    <para>
+      <itemizedlist> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-set-wager"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-deal"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-hit"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-stand"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-double-down"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-split"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-surrender"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-get-hint"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-keyboard-control"/></para>
+	</listitem> 
+      </itemizedlist> </para>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-set-wager"> 
+      <title>Apustua egiteko</title> 
+      <para>Eskualdiko apustua igotzeko: <itemizedlist>
+        <listitem>
+         <para>Egin klik bi aldiz apustuari gehitu nahi diozun fitxaren gainean, joko-eremuaren beheko izkinan.</para>
+        </listitem>
+        <listitem>
+         <para>Edo, bestela, arrastatu nahi duzun fitxa apustu sortara, zure karten ondora.</para>
+        </listitem>
+      </itemizedlist></para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-deal"> 
+      <title>Beste eskualdi bat banatzeko</title> 
+      <para>Beste eskualdi bat banatu daiteke mahaia garbitutakoan edo uneko eskualdiko jokoa amaitutakoan .</para>
+      <para>Garbitutako mahaian beste eskualdi bat banatzeko, egin klik banatzailearen edo jokalariaren kokalekua adierazten duten eremu zurietan.</para>
+      <para>Uneko eskualdiko jokoa amaitutakoan beste eskualdi bat banatzeko, egin klik mahaiko edozein kartatan.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-hit"> 
+      <title>Eskualdiari karta bat gehitzeko (eskatu)</title> 
+      <para>Eskualdiaren balioa guztira 21, edo 21etik gorakoa, izan arte gehitu dakizkioke kartak.</para>
+      <para>Jokalari baten eskualdiari karta bat gehitzeko, egin klik eskualdiko karta batean.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-stand"> 
+      <title>Karta gehiago ez hartzeko (planto egin)</title> 
+      <para>Lehen bi kartak banatutakoan, nahi duzunean esan dezakezu ez duzula karta gehiago nahi.</para>
+      <para>Ez badiozu eskualdiari karta gehiago gehitu nahi, egin klik beste edozein eskutan. Adibidez, jokalari-kokaleku bakarra dagoenean (ez baduzu bikoterik zatitu), egin klik banatzailearen eskuan planto egiteko. Pare bat zatitu baduzu, lehen jokalariaren eskuan planto egin dezakezu; horretarako egin klik bigarren jokalariaren eskuan edo banatzailearen eskuan.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-double-down"> 
+      <title>Bikoizteko</title> 
+      <para>Bikoizteko, egin klik bi aldiz jokalariaren fitxa batean, lehen bi kartak banatutakoan.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-split"> 
+      <title>Pareak zatitzeko</title> 
+      <para>Pare bat zatitzeko, arrastatu jokalariaren kokalekuaren gain-gainean dagoen karta eta utzi mahaiko toki huts batean.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-surrender"> 
+      <title>Amore emateko</title> 
+      <para>Oraindik ez dago inplementatuta.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-get-hint"> 
+      <title>Iradokizun bat jasotzea</title> 
+      <para>Edozein unetan eska diezaiokezu jokoari iradokizun bat emateko. Horretarako, egin klik <interface>tresna-barra</interface>ko <interface>Iradokizuna</interface> botoian, edo aukeratu <menuchoice><guisubmenu>Jokoa</guisubmenu><guimenuitem>Iradokizuna</guimenuitem></menuchoice> menu-elementua.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-keyboard-control"> 
+      <title>Teklatuaren kontrola</title> 
+      <para>Jokoko eragiketa gehienak teklatuaren bidez kontrola daitezke. <table><title>Kontrol-teklak</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead><row><entry>Ekintza</entry><entry>Tekla</entry></row></thead><tbody><row><entry>Eskualdi berria banatu</entry><entry>SARTU</entry></row><row><entry>Karta bat eskatu / gehitu</entry><entry>H</entry></row><row><entry>Planto egin / Eskualdia amaitu</entry><entry>S</entry></row><row><entry>Bikoiztu</entry><entry>D</entry></row><row><entry>Zatitu</entry><entry>P</entry></row><row><entry>Amore eman</entry><entry>R</entry></row></tbody></tgroup></table></para>
+    </sect2> 
+  </sect1>
+
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="blackjack-prefs"> 
+    <title>Ezarpenak</title> 
+    <para><application>Blackjack</application> aplikazioa konfiguratzeko, aukeratu <menuchoice><guimenu>Ezarpenak</guimenu><guimenuitem>Hobespenak</guimenuitem></menuchoice>. <guilabel>Hobespenak</guilabel> elkarrizketa-koadroak fitxa hauek ditu:</para> 
+    <itemizedlist> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-game"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-rules"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-cards"/></para> 
+      </listitem> 
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="blackjack-prefs-game"> 
+      <title>Jokoa</title> 
+      <variablelist> 
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Bistaratu eskualdiko probabilitateak</guilabel> </term> 
+	  <listitem> 
+	    <para>Hautatu elementu hau banatzailearen eskualdiko probabilitateak eta jokalariak dituen aukeretan lortzea espero diren balioak bistaratzeko.</para>
+	  </listitem> 
+	</varlistentry> 
+
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Banaketa azkarrak</guilabel> </term> 
+	  <listitem> 
+	    <para>Hautatu elementu hau ordenagailuak kartak atzerapenik gabe banatu ditzan</para>
+	  </listitem> 
+	</varlistentry> 
+
+      </variablelist> 
+    </sect2>
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-rules"> 
+      <title>Arauak</title> 
+      <para>Hautatu arauen bariazioak zerrendatik.</para>
+    </sect2> 
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-cards"> 
+      <title>Kartak</title> 
+      <para>Pertsonalizatu karten itxura.</para>
+    </sect2> 
+
+  </sect1>
+
+<!-- ============= Advanced ================================== -->
+  <sect1 id="blackjack-advanced">
+  <title>Aurreratua</title>
+  <para>
+  </para>
+
+  <sect2 id="blackjack-advanced-probabilities">
+    <title>Banatzailearen probabilitateak</title>
+    <para><guilabel>Hobespenak</guilabel> elkarrizketa-koadroko <guilabel>Jokoa</guilabel> fitxan dagoen <guilabel>Erakutsi banatzailearen probabilitateak</guilabel> aukera hautatzen denean, banatzailearen eskualdiko emaitza posible guztien probabilitateak bistaratuko dira mahaian, banatzailearen karten ezkerraldean. Probabilitateak zero eta bat artean daude; zerok ezinezkoa adierazten du eta batek segurua. Probabilitate horiek sortatik banatutako karta guztiak hartzen dituzte kontuan.</para>
+  </sect2>
+
+  <sect2 id="blackjack-advanced-expected-values">
+    <title>Jokalariaren aurreikusitako balioak</title>
+    <para><guilabel>Hobespenak</guilabel> elkarrizketa-koadroko <guilabel>Jokoa</guilabel> fitxan dagoen <guilabel>Erakutsi banatzailearen probabilitateak</guilabel> aukera hautatzen denean, jokalari bakoitzak lor ditzakeen balioen aurreikuspen zehatza bistaratzen da mahaian (hasierako apustuaren ehunekotan), banatzailearen karten ezkerraldean. Balio horiek eskuan dituzun karta guztiak eta banatzaileak bistaratuta dauzkan kartak hartzen ditu kontuan. Eman dezagun planto egiteko bistaratutako zenbakia 12.345 dela. Honen arabera, egoera hori askotan agertu bazaizu eta hasierako apustua 1.00 izanik, batez beste 0.12345 galduko zenuke.</para>
+  </sect2>
+
+ </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default. 
+     You can use it to describe known bugs and limitations of the 
+	  program if there are any - please be frank and list all
+     problems you know of. 
+  
+  <sect1 id="blackjack-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="blackjack-about"> 
+    <title><application>Blackjack</application> aplikazioari buruz</title> 
+    <para><application>Blackjack</application> aplikazioa William Jon McCann-ek idatzi zuen (<email>mccann@jhu.edu</email>).</para>
+    <para>Aplikazio honi buruzko akatsen berri emateko edo oharrak bidaltzeko, <ulink url="ghelp:gnome-feedback" type="help">dokumentua</ulink>n aurkituko dituzu argibideak.</para>
+
+    <para>Programa hau Free Software Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren 2. bertsioan edo (nahiago baduzu) bertsio berriago batean jasotako baldintzen arabera banatzen da. Lizentzia horren kopia <ulink url="ghelp:gpl" type="help">esteka</ulink>honetan edo programa honen iturburu-kodean sartutako COPYING fitxategian aurkituko duzu.</para>
+
+  </sect1> 
+</article>

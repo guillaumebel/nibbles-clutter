@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Rosanna Yuen)</creator>
+    <maintainer>(Rosanna Yuen)</maintainer>
+    <contributor>(Telsa Gwynne)</contributor>
+    <title>Manuel de AisleRiot</title>
+    <date>Juillet 2005</date>
+    <version identifier="Manuel de AisleRiot v2.12" date="Juillet 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      AisleRiot est une collection de plus de 80 jeux de cartes, programmés dans le langage de script de GNOME : Scheme.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/aisleriot/fr/aisleriot.xml"/>
+    <language code="fr"/>
+    <relation seriesid="0b80c16d-67c4-4257-9a6a-2b5719b4f235"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Rosanna Yuen"/>
+  </resource>
+</omf>

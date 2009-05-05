@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(William Jon McCann)</creator>
+    <maintainer>(William Jon McCann)</maintainer>
+    <title>Manual del Blackjack</title>
+    <date>Setembre de 2004</date>
+    <version identifier="Manual del Blackjack (versió 2.8)" date="Setembre de 2004"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      El Blackjack és un joc amb regles de casino i varies baralles per al projecte GNOME. L'objectiu del joc és obtenir una mà amb un valor més pròxim a 21 que les del repartidor, sense passar-se de 21. El jugador aposta amb fitxes virtuals.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/blackjack/ca/blackjack.xml"/>
+    <language code="ca"/>
+    <relation seriesid="00680528-1387-403e-8a7e-70ea267df275"/>
+    <rights type="GNU FDL" license.version="1.1" holder="William Jon McCann"/>
+  </resource>
+</omf>

@@ -1,0 +1,2500 @@
+<gconfschemafile>
+
+  <schemalist>
+      <schema>
+      <key>/schemas/apps/glines/preferences/size</key>
+      <applyto>/apps/glines/preferences/size</applyto>
+      <owner>glines</owner>
+      <type>int</type>
+      <default>2</default>
+      <locale name="C">
+        <short>Playing field size</short>
+        <long>Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>حجم إطاتر اللعب</short>
+        <long>قياس مجال اللعب. 1=صغير, 2=متوسط, 3=كبير. أي قيمة أخرى تعتبر غير صالحة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>খেলাৰ ছকেৰ আকাৰ</short>
+        <long>খেলাৰ ছকেৰ আকাৰ ।  ১=ছোট, ২=মাঝাৰি, ৩=বড় ।  অন্য কোন মান লিখলে সেইটো ভুল হ&apos;ব ।</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Размер на дъската</short>
+        <long>Размер на дъската — „1“ (малка), „2“ (средна), „3“ (голяма). Всички други стойности са невалидни.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>খেলার ছকের আকার</short>
+        <long>খেলার ছকের আকার।  ১=ছোট, ২=মাঝারি, ৩=বড়।  অন্য কোন মান লিখলে তা ভুল হবে।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>খেলার ছকের আকার</short>
+        <long>খেলার ছকের আকার।  ১=ছোট, ২=মাঝারি, ৩=বড়।  অন্য কোন মান লিখলে তা ভুল হবে।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Mida del camp</short>
+        <long>Mida del camp de joc. 1=Petit, 2=Mitjà, 3=Gran. Qualsevol altre valor es considera invàlid.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Velikost hracího pole</short>
+        <long>Velikost hracího pole. 1=malá, 2=střední, 3=velká. Jiné hodnoty nejsou platné.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Maint maes chwarae</short>
+        <long>Maint maes chwarae. 1=Bach, 2=Canolig, 3=Mawr. Mae pob gwerth arall yn annilys.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Banestørrelse</short>
+        <long>Banestørrelse. 1=Lille, 2=Mellemstor, 3=Stor. Alle andre værdier er ugyldige.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Spielfeldgröße</short>
+        <long>Spielfeldgröße. 1=Klein, 2=Mittel, 3=Groß. Jeder andere Wert ist ungültig.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེད་ཐང་གི་ཚད།</short>
+        <long>རྩེ་ནིའི་ས་སྒོའི་ཚད། ༡=ཆུང་ཀུ ༢=བར་མ་ ༣=ཆེ་བ། བེ་ལུ་གཞན་ཚུ་ ནུས་མེད་ཨིན།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Μέγεθος πεδίου παιχνιδιού</short>
+        <long>Μέγεθος πεδίου παιχνιδιού. 1=Μικρό, 2=Μεσαίο, 3=Μεγάλο. Οποιαδήποτε άλλη τιμή δεν είναι έγκυρη.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Playing field size</short>
+        <long>Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Playing field size</short>
+        <long>Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Tamaño del campo de juego</short>
+        <long>Tamaño del campo de juego. 1 = pequeño, 2 = mediano, 3 = grande. Cualquier otro valor es incorrecto.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Mänguvälja suurus</short>
+        <long>Mänguvälja suurus. 1=Väike, 2=Keskmine, 3=Suur. Muud väärtused pole lubatud.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Joko-eremuaren tamaina</short>
+        <long>Joko-eremuaren tamaina. 1=Txikia, 2=Ertaina, 3=Handia. Gainerako balioak ez dira baliozkoak.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>اندازه زمین بازی</short>
+        <long>اندازه‌ی زمین بازی. 1=کوچک، 2=متوسط، 3=بزرگ. هر مقدار دیگری نامعتبر است.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pelikentän koko</short>
+        <long>Käytettävän kentän koko. 1=Pieni, 2=Keskikokoinen, 3=Suuri. Kaikki muut arvot ovat virheellisiä</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Taille de la grille</short>
+        <long>Taille de la table de jeu. 1=petite, 2=moyenne, 3=grande. Toute autre valeur est incorrecte.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Tamaño da zona de xogo</short>
+        <long>Tamaño da zona de xogo. 1=Pequena, 2=Media, 3=Grande. Calquera outro valor non será válido.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>રમવાના ક્ષેત્રનું માપ</short>
+        <long>રમવાના ક્ષેત્રનું માપ. ૧=નાનું, ૨=મધ્યમ, ૩=મોટું. અન્ય કોઈપણ કિંમત અયોગ્ય છે.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Playing field size</short>
+        <long>Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>खेल के मैदान का आकार</short>
+        <long>खेल के मैदान का आकार. 1=छोटा, 2=मझौला, 3=बड़ा. अन्य कोई भी मान अमान्य है.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Veličina igračeg polja</short>
+        <long>Veličina igračeg polja. 1=malo, 2=srednje, 3=veliko. Bilo koja druga vrijednost nije valjana.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Játékmező mérete</short>
+        <long>Játékmező mérete. 1=Kicsi, 2=Közepes, 3=Nagy. Bármely más érték érvénytelen.</long>
+      </locale>
+
+      <locale name="id">
+        
+        <long>Ukuran daerah permainan. 1=Kecil, 2=Sedang, 3=Besar. Nilai lain salah.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Dimensione campo di gioco</short>
+        <long>Dimensione campo di gioco. 1=piccolo, 2=medio, 3=grande. Ogni altro valore non è valido.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>プレイするフィールドの大きさ</short>
+        <long>プレイするフィールドの大きさです。指定可能な値: 1=小さい、2=中ぐらい、3=大きい (それ以外の値は無効です)</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಆಟದ ಬಯಲಿನ ಗಾತ್ರ</short>
+        <long>ಆಟದ ಬಯಲಿನ ಗಾತ್ರ. 1=ಸಣ್ಣ, 2=ಮಧ್ಯಮ, 3=ದೊಡ್ಡದಾದ. ಬೇರಾವುದೆ ಮೌಲ್ಯಗಳು ಅಮಾನ್ಯವೆಂದು ಪರಿಗಣಿಸಲ್ಪಡುತ್ತವೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>게임판 크기</short>
+        <long>게임판 크기. 1=작게, 2=중간, 3=크게. 다른 값은 사용할 수 없습니다.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Žaidimo lauko dydis</short>
+        <long>Žaidimo lauko dydis. 1=mažas, 2=vidutinis, 3=didelis. Kitos reikšmės netinkamos.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Spēles lauku izmēri</short>
+        <long>Spēles lauku izmēri. 1=mazs, 2=vidējs,3=liels. Cita vērtība nederīga.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>खेल क&apos; मैदान क&apos; आकार</short>
+        <long>खेल क&apos; मैदान क&apos; आकार. 1=छोट, 2=मझौला, 3=पैघ. आन कोनो मान अमान्य अछि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Големина на полето за играње</short>
+        <long>Големина на полето за играње: 1=Мало, 2=Средно, 3=Големо. Било која друга вредност е невалидна.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>കളിക്കളത്തിന്റെ വലിപ്പം</short>
+        <long>കളിക്കളത്തിന്റെ വലിപ്പം. 1=ചെറുത്, 2=ഇടത്തരം, 3=വലുത്. മറ്റൊരു വിലയും അനുവദിനീയമല്ല.</long>
+      </locale>
+
+      <locale name="mr">
+        <short>खेळ मैदानाचा आकार</short>
+        <long>खेळ मैदानाचा आकार. १=लहान, २=मध्यम, ३=मोठे. दुसरी कुठलीही किंमत अवैध.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Størrelse på spillefeltet</short>
+        <long>Størrelse på spillbrett. 1=Liten, 2=Medium, 3=Stor. Alle andre verdier er ugyldige.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>खेल मैदानको आकार</short>
+        <long>खेलिरहेको खेलको मैदान । १=सानो, २=मध्यम, ३=ठूलो । अन्य कुनै पनि मान अवैध छ ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Speelveld grootte</short>
+        <long>Speelveld grootte. 1=klein, 2=medium, 3=groot. Elke andere waarde is ongeldig.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Storleik på spelefeltet</short>
+        <long>Storleik på spelbrett. 1=Liten, 2=Medium, 3=Stor. Alle andre verdiar er ugyldige.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଖେଳିବା କ୍ଷେତ୍ର ଆକାର</short>
+        <long>ଖେଳିବା କ୍ଷେତ୍ର ଆକାର 1=ଛୋଟ, 2=ମଧ୍ୟମ, 3=ବଡ ୤ ଅନ୍ଯ କୌଣସି ମୂଲ୍ଯ ଅମାନ୍ଯ ଅଟେ ୤ </long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਖੇਡ ਖੇਤਰ ਆਕਾਰ</short>
+        <long>ਖੇਡਣ ਖੇਤਰ ਅਕਾਰ: 1=ਛੋਟਾ, 2=ਮੱਧਮ, 3=ਵੱਡਾ। ਕੋਈ ਹੋਰ ਮੁੱਲ ਗਲਤ ਹੋਵੇਗਾ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Wielkość pola</short>
+        <long>Rozmiar pól. 1 = mały, 2 = średni, 3 = duży. Inne wartości są nieprawidłowe.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Tamanho do campo de jogo</short>
+        <long>Tamanho do campo de jogo. 1=Pequeno, 2=Médio, 3=Grande. Qualquer outro valor é inválido.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Tamanho do campo de jogo</short>
+        <long>Tamanho do campo de jogo. 1=Pequeno, 2=Médio, 3=Grande. Qualquer outro valor é inválido.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Mărimea tablei de joc</short>
+        <long>Mărimea tablei de joc: 1=Mică, 2=Medie, 3=Mare. Orice altă valoare este invalidă.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Размер игрового поля</short>
+        <long>Размер игрового поля. 1 - маленькое, 2 - среднее, 3 - большое. Другие значениянекорректны</long>
+      </locale>
+
+      <locale name="si">
+        <short>ක්‍රිඩා කරන ක්‍ෂේත්‍රයේ ප්‍රමාණය</short>
+        <long>ක්‍රිඩා කරන ක්‍ෂේත්‍රයේ ප්‍රමාණය. 1=කුඩා, 2=මධ්‍යම, 3=විශාල. වෙනත් අගයක් සාවද්‍යවේ.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Velikost igralnega polja</short>
+        <long>Velikost igralnega polja. 1 = majhno, 2 = srednje, 2 = veliko. Katerakoli druga vrednost je neveljavna.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Madhësia e fushës së lojës</short>
+        <long>Madhësia e fushës së lojës. 1=E vogël, 2=E Mesme. Çdo vlerë tjetër është e pavflefshme.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Величина поља за игру</short>
+        <long>Величина поља за игру. 1=мало, 2=средње, 3=велико. Друге вредности нису могуће.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Veličina polja za igru</short>
+        <long>Veličina polja za igru. 1=malo, 2=srednje, 3=veliko. Druge vrednosti nisu moguće.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Storlek på spelfältet</short>
+        <long>Storlek på spelfältet. 1=litet, 2=mellan, 3=stort. Alla andra värden är ogiltiga.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>ஆடு களத்தின் அளவு</short>
+        <long>ஆடு களத்தின் அளவு. 1=சிறிய, 2=நடுத்தரம், 3=பெரிய. மற்ற மதிப்புகள் செல்லுபடி ஆகாது</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఆదుతున్న క్షేత్ర పరిమాణం</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>ขนาดกระดาน</short>
+        <long>ขนาดกระดาน 1=เล็ก, 2=กลาง, 3=ใหญ่ ค่าอื่นๆ ถือว่าใช้ไม่ได้</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Oyun alanı boyutu</short>
+        <long>Oyun alanı boyutu: 1=Küçük, 2=Orta, 3=Büyük. Diğer değerler geçersizdir.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Розмір поля гри.</short>
+        <long>Розмір ігрового поля. 1=Маленький, 2=Середній, 3=Великий. Інші значення некоректні.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Cỡ bảng chơi</short>
+        <long>Kích thước bảng chơi:
+ 1 — nhỏ
+ 2 — vừa
+ 3 — lớn
+Bất cứ giá trị khác nào thì không hợp lệ.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>场地大小</short>
+        <long>游戏区大小。1=小，2=中，3=大。其它值非法。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>遊戲盤大小</short>
+        <long>遊戲盤大小，可接受的值為 1、2、3，代表由小至大。其它的值都不會接受。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>遊戲盤大小</short>
+        <long>遊戲盤大小，可接受的值為 1、2、3，代表由小至大。其它的值都不會接受。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/glines/preferences/ball_theme</key>
+      <applyto>/apps/glines/preferences/ball_theme</applyto>
+      <owner>glines</owner>
+      <type>string</type>
+      <default>balls.svg</default>
+      <locale name="C">
+        <short>Ball style</short>
+        <long>Ball style.  The filename of the images to use for the balls.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>أسلوب الكرة</short>
+        <long>أسلوب الكرة. اسم الملف للصور التس ستستعمل للكرات.</long>
+      </locale>
+
+      <locale name="as">
+        <short>বলেৰ ধৰন</short>
+        <long>বলেৰ ধৰন । বলগুলোৰ জন্য যেসব ছবি ব্যৱহাৰ কৰাৰ হ&apos;ব তাদেৰ নথিপত্ৰৰ নাম ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Topun tərzi.</short>
+        <long>Topun tərzi. İşlədiləcək rəsimlərin fayl adı.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Стил на топчетата</short>
+        <long>Стил на топчетата. Име на файл с изображение, което ще се използва за топчетата.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>বলের ধরন</short>
+        <long>বলের ধরন। বলগুলোর জন্য যেসব ছবি ব্যবহার করার হবে তাদের ফাইলের নাম।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>বলের ধরন</short>
+        <long>বলের ধরন। বলগুলোর জন্য যেসব ছবি ব্যবহার করার হবে তাদের ফাইলের নাম।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Estil de les boles</short>
+        <long>Estil de les boles. El nom del fitxer de les imatges a utilitzar per a les boles.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Styl koule</short>
+        <long>Styl koule. Název souboru obrázků, které budou použity pro koule.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Arddull pêl</short>
+        <long>Arddull pêl. Enw ffeil y delweddau i&apos;w defnyddio ar gyfer y peli.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Boldstil</short>
+        <long>Boldstil. Filnavnet på de billeder der skal bruges til kuglerne.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Kugelstil</short>
+        <long>Kugelstil. Der Dateiname der für die Kugeln zu verwendenden Bilder.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེད་རིལ་གྱི་བཟོ་རྣམ།</short>
+        <long>རྩེད་རིལ་གྱི་བཟོ་རྣམ། རྩེད་རིལ་གྱི་དོན་ལུ་ ལག་ལེན་འཐབ་ནིའི་ གཟུགས་བརྙན་གྱི་ཡིག་སྣོད་མིང་།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Στυλ μπάλας</short>
+        <long>Στυλ μπάλας. Τά όνοματα των αρχείων εικόνας που θα χρησιμοποιούνται για τις μπάλες.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Ball style</short>
+        <long>Ball style. The filename of the images to use for the balls.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Ball style</short>
+        <long>Ball style. The filename of the images to use for the balls.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Estilo de bola</short>
+        <long>Estilo de bola. El nombre de archivo de las imágenes de las bolas.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Pallide laad</short>
+        <long>Pallide laad - failinimi, kus asuvad pallide pildid.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Puxtarrien estiloa</short>
+        <long>Puxtarrien estiloa. Puxtarrietan erabili beharreko irudien fitxategi-izena.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>طرح توپ</short>
+        <long>طرح توپ. نام پرونده‌ی تصاویر استفاده شونده برای توپ‌ها.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pallon tyyli</short>
+        <long>Pallon tyyli. Pallojen kuvatiedostojen nimi.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Style de billes</short>
+        <long>Style de billes. Le nom de fichier des images à utiliser pour les billes.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Estilo da bóla</short>
+        <long>Estilo da bóla. O nome do ficheiro das imaxes que se van usar para as bólas.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>બોલની શૈલી</short>
+        <long>બોલની શૈલી. બોલો માટે વાપરવાના ચિત્રોની ફાઈલનું નામ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Ball style</short>
+        <long>Ball style. The filename of the images to use for the balls.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>गेंद का प्रकार</short>
+        <long>गेंद शैली. फ़ाइल का नाम जिससे गेंदों की छवियाँ उपयोग में लिए जाने हैं.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Stil lopte</short>
+        <long>Stil lopte. Ime datoteke sa slikama koju treba koristiti za lopte.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Labdastílus</short>
+        <long>Labdastílus. A labdákhoz használt képek fájlneve.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Bentuk bola</short>
+        <long>Bentuk bola. Nama berkas gambar yang akan digunakan untuk gambar bola.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Stíll bolta</short>
+        <long>Stíll bolta. Skráin sem geymir myndirnar fyrir boltana.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Stile biglia</short>
+        <long>Stile della biglia. Il nome di file delle immagini da usare per le biglie.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>玉のスタイル</short>
+        <long>玉のスタイルで、玉に使用する画像のファイル名です。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಚೆಂಡಿನ ಶೈಲಿ</short>
+        <long>ಚೆಂಡಿನ ಶೈಲಿ. ಚೆಂಡುಗಳಲ್ಲಿ ಬಳಸಬೇಕಿರುವ ಚಿತ್ರಗಳ ಕಡತದ ಹೆಸರು.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>볼 모양새</short>
+        <long>볼 모양새. 볼에 사용할 그림 파일 이름.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Rutulio stilius</short>
+        <long>Rutulio stilius. Failas, saugantis paveikslėlius, iš kurių suformuojami rutuliai.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Bumbu dizains</short>
+        <long>Bumbu dizains. Attēla, ko lietot bumbām, faila nosaukums.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>गेंद शैली</short>
+        <long>गेंद शैली. फ़ाइल क&apos; नाम जकरासँ गेंद क&apos; छविसभ उपयोगमे लेल जाए अछि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Тип на топчиња</short>
+        <long>Тип на топчиња. Името на датотеката со слики кои ќе се користат за топчињата.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>പന്തിന്റെ തരം</short>
+        
+      </locale>
+
+      <locale name="mn">
+        <short>Бөмбөгийн хэлбэр</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>चेंडुचा प्रकार</short>
+        <long>चेंडुचा प्रकार. चेंडुच्या प्रतीमेकरीता वापरायची फाइल.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Gaya bola</short>
+        
+      </locale>
+
+      <locale name="nb">
+        <short>Ballstil</short>
+        <long>Ballstil. Filnavn på bildene som skal brukes for ballene.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>बल शैली</short>
+        <long>बल शैली । बलका लागि प्रयोग गरिने छविको फाइलनाम ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Knikkerstijl</short>
+        <long>Knikkerstijl. De bestandsnaam van de plaatjes van de knikkers.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Ballstil</short>
+        <long>Ballstil. Namn på fila som inneheld bileta som skal brukast til ballane.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ବଲ ଶୌଳୀ</short>
+        <long>ବଲ ଶୈଳୀ ୤ ବଲଗୁଡିକ ପାଇଁ ଉପୟୋଗ ହେବାକୁ ଥିବା ଚିତ୍ରଗୁଡିକର ଫାଇଲ ନାମ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਬਾਲ ਸ਼ੈਲੀ</short>
+        <long>ਬਾਲ ਸ਼ੈਲੀ ਹੈ। ਬਾਲਾਂ ਲਈ ਵਰਤਣ ਵਾਲੇ ਚਿੱਤਰਾਂ ਦੀ ਫਾਇਲ ਦਾ ਨਾਂ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Wzór kuli</short>
+        <long>Wzór kuli. Nazwa pliku obrazu kul.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Estilo de bola</short>
+        <long>Estilo de bola. O nome deo ficheiro de imagens a utilizar para as bolas.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Estilo da bola</short>
+        <long>Estilo da bola. O nome do arquivo das imagens para usar para as bolas.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Stilul bilei</short>
+        <long>Stilul bilei. Numele fișierului ce conține imaginile pentru bile.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Стиль шариков</short>
+        <long>Стиль шариков. Это имя файла изображения шариков.</long>
+      </locale>
+
+      <locale name="si">
+        <short>බෝල වර්‍ගය</short>
+        
+      </locale>
+
+      <locale name="sl">
+        <short>Slog kroglice</short>
+        <long>Slog kroglice. Datoteka slike za kroglice</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Stili i Topit</short>
+        <long>Stili i topit. Imazhi i përdorur për të zbukuruar topin.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Стил лопте</short>
+        <long>Стил лопте. Име датотеке са сликама које користити за лопте.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Stil lopte</short>
+        <long>Stil lopte. Ime datoteke sa slikama koje koristiti za lopte.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Bollstil</short>
+        <long>Bollstil. Filnamnet för bilderna som ska användas för bollarna.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>பந்தின் பாணி</short>
+        <long>பந்து பாணி, பந்துகளின் பிம்பங்கள் உள்ள பயன்படுத்த வேண்டிய கோப்பின் பெயர்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>బంతి శైలి</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>รูปลักษณ์ของลูกแก้ว</short>
+        <long>รูปลักษณ์ของลูกแก้ว ระบุชื่อแฟ้มของรูปภาพที่ใช้แสดงลูกแก้ว</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Top stili</short>
+        <long>Top stili. Toplar için kullanılacak resimlerin dosya adı.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Стиль куль</short>
+        <long>Назва файлу зображень куль.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Kiểu bóng</short>
+        <long>Kiểu bóng: tên tập tin chứa ảnh cần dùng cho bóng.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Isimbo sebhola</short>
+        <long>Isimbo sebhola. Igama lefayile lemifanekiso emayisetyenziswe ezibholeni.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>小球样式</short>
+        <long>球的样式。球所使用的图片文件。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>棋子款式</short>
+        <long>棋子款式。設定值為棋子的圖片檔名。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>棋子款式</short>
+        <long>棋子款式。設定值為棋子的圖片檔名。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/glines/preferences/background_color</key>
+      <applyto>/apps/glines/preferences/background_color</applyto>
+      <owner>glines</owner>
+      <type>string</type>
+      <default>#7590AE</default>
+      <locale name="C">
+        <short>Background color</short>
+        <long>Background color.  The hex specification of the background color.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>لون الخلفية</short>
+        <long>لون الخلفيّة. التفاصيل السداسيّة للون الخلفيّة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>Background color</short>
+        <long>পটভূমিৰ ৰং । পটভূমিৰ ৰঙেৰ হেক্স (Hex) বিবৰণ ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Arxa plan rəngi</short>
+        <long>Arxa plan rəngi. (Səkkizli olaraq)</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Цвят на фона</short>
+        <long>Цвят на фона. Задава се в шестнадесетичен код.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>পটভূমির রং</short>
+        <long>পটভূমির রং। পটভূমির রঙের হেক্স (Hex) বিবরণ।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>পটভূমির রং</short>
+        <long>পটভূমির রং। পটভূমির রঙের হেক্স (Hex) বিবরণ।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Color de fons</short>
+        <long>L&apos;especificació hexadecimal del color de fons.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Barva pozadí</short>
+        <long>Barva pozadí. Šestnáctková specifikace barvy pozadí.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Lliw cefndir</short>
+        <long>Lliw cefndir. Penodiad hecs y lliw cefndir.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Baggrundsfarve</short>
+        <long>Baggrundsfarve. Hexadecimal specifikation af baggrundsfarven.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Hintergrundfarbe</short>
+        <long>Hintergrundfarbe. Die Hex-Angabe der Hintergrundfarbe.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྒྱབ་གཞིའི་ཚོས་གཞི།</short>
+        <long>རྒྱབ་གཞིའི་ཚོས་གཞི། རྒྱབ་གཞིའི་ཚོས་གཞི་གི་ ཧེགསི་གི་ཁྱད་རྣམ།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Χρώμα φόντου</short>
+        <long>Χρώμα φόντου σε μορφή hex.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Background colour</short>
+        <long>Background colour. The hex specification of the background colour.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Background colour</short>
+        <long>Background colour. The hex specification of the background colour.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Color de fondo</short>
+        <long>Color de fondo. El valor hexadecimal del color de fondo.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Taustavärv</short>
+        <long>Taustavärv kuueteistkümnendsüsteemi numbrina.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Atzeko planoaren kolorea</short>
+        <long>Atzeko planoaren kolorea. Atzeko planoaren kolorearen balio hamaseitarra.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>رنگ پس‌زمینه</short>
+        <long>رنگ پس‌زمینه. نمایش شانزده شانزدهی رنگ پس‌زمینه.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Taustan väri</short>
+        <long>Taustan väri. Heksa-arvo taustan väristä.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Couleur d&apos;arrière-plan</short>
+        <long>Couleur de fond. La description hexadécimale de la couleur de fond.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Dath cúlra</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Cor de fondo</short>
+        <long>Cor de fondo. Valor hexadecimal da cor de fondo.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>પાશ્વ ભાગનો રંગ</short>
+        <long>પાશ્વ ભાગનો રંગ. પાશ્વ ભાગના રંગ માટે હેક્સ સ્પષ્ટીકરણ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Background color</short>
+        <long>Background color. The hex specification of the background color.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>पृष्ठभूमि रंग</short>
+        <long>पृष्ठभूमि रंग. पृष्ठभूमि रंग के हेक्स विशेष लक्षण</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Boja pozadine</short>
+        <long>Boja pozadine. Heksadecimalna vrijednost.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Háttérszín</short>
+        <long>Háttérszín. A háttérszín hexa specifikációja.</long>
+      </locale>
+
+      <locale name="id">
+        
+        <long>Warna latar. Warna latar dalam bentuk heksa.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Bakgrunnslitur</short>
+        <long>Bakgrunnslitur. Sextándugildi bakgrunnslitar.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Colore di sfondo</short>
+        <long>Colore di sfondo. Il colore di sfondo in notazione esadecimale.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>背景色</short>
+        <long>背景色 (16進表記)</long>
+      </locale>
+
+      <locale name="ka">
+        <short>ფონის ფერი</short>
+        
+      </locale>
+
+      <locale name="kn">
+        <short>ಹಿನ್ನಲೆಯ ಬಣ್ಣ</short>
+        <long>ಹಿನ್ನಲೆಯ ಬಣ್ಣ. ಹಿನ್ನಲೆ ಬಣ್ಣದ ಹೆಕ್ಸ್‍ ವಿವರಗಳು.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>배경색</short>
+        <long>배경색. 배경색 16진수 방식으로 지정합니다.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Fono spalva</short>
+        <long>Fono spalva. 16-ainis kodas nurodantis fono spalvą.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Fona krāsa</short>
+        <long>Fona krāsa. Heksadecimālā notācija fona krāsai.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>पृष्ठभूमि रँग</short>
+        <long>पृष्ठभूमि रँग. पृष्ठभूमि रँग क&apos; हेक्स विशेष लक्षण</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Боја на позадина</short>
+        <long>Боја на позадина. HEX спецификацијата на позадинската боја.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>പശ്ചാത്തല നിറം </short>
+        
+      </locale>
+
+      <locale name="mn">
+        <short>Дэвсгэр өнгө</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>पार्श्वभूमीचा रंग</short>
+        <long>पार्श्वभूमीचा रंग. पार्श्वभूमीच्या रंगाचा हेक्साडेसीमल आकडा.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Warna latar belakang</short>
+        <long>Warna latar belakang. Specifikasi heks bagi warna latar belakang.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Bakgrunnsfarge</short>
+        <long>Bakgrunnsfarge. Heksadesimal spesifikasjon av bakgrunnsfargen.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>पृष्ठभूमि रङ</short>
+        <long>पृष्ठभूमि रङ । पृष्ठभूमि रङको हेक्स विवरण ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Achtergrondkleur</short>
+        <long>Achtergrondkleur. De hexadecimale opgave van de achtergrondkleur.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Bakgrunnsfarge</short>
+        <long>Bakgrunnsfarge. Heksadesimal spesifikasjon av bakgrunnsfargen.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Color de fons</short>
+        
+      </locale>
+
+      <locale name="or">
+        <short>ପୃଷ୍ଠଭୂମି ରଙ୍ଗ</short>
+        <long>ପୃଷ୍ଠଭୂମି ରଙ୍ଗ ୤ ପୃଷ୍ଠଭୂମି ରଙ୍ଗର ହେକ୍ସ ବିଶେଷତା</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਪਿੱਠਭੂਮੀ ਰੰਗ</short>
+        <long>ਪਿੱਠਭੂਮੀ ਰੰਗ ਹੈ। ਪਿੱਠਭੂਮੀ ਰੰਗ ਦਾ ਹੈਕਸ ਬਿਆਨ ਹੈ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Kolor tła</short>
+        <long>Kolor tła. Szesnastkowy zapis koloru tła.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Cor do fundo</short>
+        <long>Cor do fundo. A especificação hexadecimal da cor de fundo.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Cor de fundo</short>
+        <long>Cor de fundo. A especificação hexadecimal da cor de fundo.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Culoarea de fundal</short>
+        <long>Culoarea de fundal. Specificația în hexazecimal a culorii de fundal.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Цвет фона</short>
+        <long>Цвет фона. Это шестнадцатеричное число, определяющее цвет фона.</long>
+      </locale>
+
+      <locale name="rw">
+        <short>Ibara rya mbuganyuma</short>
+        
+      </locale>
+
+      <locale name="si">
+        <short>පසුබිම් වර්‍ණය</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Farba pozadia</short>
+        <long>Farba pozadia. Farba pozadia v šestnástkovej sústave.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Barva ozadja</short>
+        <long>Barva ozadja. Vrednost je določena v osmiškem zapisu.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Ngjyra e sfondit</short>
+        <long>Ngjyra e sfondit.Saktësuar në heksadeçimal.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Боја позадине</short>
+        <long>Боја позадине. Хексадекадна вредност за боју позадине.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Boja pozadine</short>
+        <long>Boja pozadine. Heksadekadna vrednost za boju pozadine.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Bakgrundsfärg</short>
+        <long>Bakgrundsfärg. Hexadecimal specifikation av bakgrundsfärgen.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>பின்னணி வண்ணம்</short>
+        <long>பின்னணி வண்னம். பின்னணி வண்ணத்தின் ஹெக்ஸ் குறிப்பு</long>
+      </locale>
+
+      <locale name="te">
+        <short>పూర్వరంగం వర్ణము</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>สีพื้น</short>
+        <long>สีพื้น กำหนดโดยเลขฐานสิบหก</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Arkaplan rengi</short>
+        <long>Arkaplan rengi. Arkaplan renginin hex belirtimi.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Колір тла</short>
+        <long>Колір тла. Шістнадцяткове визначення кольору тла.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Màu nền</short>
+        <long>Màu nền: cách ghi rõ hệ thập lục phân của màu nền.</long>
+      </locale>
+
+      <locale name="wa">
+        <short>Coleur do fond</short>
+        
+      </locale>
+
+      <locale name="xh">
+        <short>Umbala wokuvela ngasemva</short>
+        <long>Umbala wokuvela ngasemva. Uchazo lwe-hex lombala wokuvela ngasemva.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>背景颜色</short>
+        <long>背景颜色，用十六进制表示法表示。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>背景顏色</short>
+        <long>背景顏色，以 16 進制數字表示。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>背景顏色</short>
+        <long>背景顏色，以 16 進制數字表示。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/glines/preferences/move_timeout</key>
+      <applyto>/apps/glines/preferences/move_timeout</applyto>
+      <owner>glines</owner>
+      <type>int</type>
+      <default>100</default>
+      <locale name="C">
+        <short>Time between moves</short>
+        <long>Time between moves in milliseconds.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>وقت بين النقلات</short>
+        <long>الوقت بين النقلات بالملّيثانية.</long>
+      </locale>
+
+      <locale name="as">
+        <short>দুটি চালেৰ মধ্যে সময়েৰ ব্যবধান</short>
+        <long>দুটি চালেৰ মধ্যে সময়েৰ ব্যবধান ( মিলিসেকেন্ডে প্ৰকাশিত ) ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Gedişlər arasındakı vaxt</short>
+        <long>Gedişlər arasındakı milli saniyə olaraq vaxt.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Време между ходовете</short>
+        <long>Време между ходовете в милисекунди.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>দুটি চালের মধ্যে সময়ের ব্যবধান</short>
+        <long>দুটি চালের মধ্যে সময়ের ব্যবধান ( মিলিসেকেন্ডে প্রকাশিত )।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>দুটি চালের মধ্যে সময়ের ব্যবধান</short>
+        <long>দুটি চালের মধ্যে সময়ের ব্যবধান ( মিলিসেকেন্ডে প্রকাশিত )।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Retard entre moviments</short>
+        <long>Retard entre moviments en mil·lisegons.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Čas mezi tahy</short>
+        <long>Čas mezi tahy v milisekundách.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Amser rhwng symudiadau</short>
+        <long>Yr amser rhwng symudiadau mewn milfedau eiliad.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Tid mellem flytninger</short>
+        <long>Tid mellem flytninger i millisekunder.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Zeit zwischen Zügen</short>
+        <long>Zeit zwischen Zügen in Millisekunden</long>
+      </locale>
+
+      <locale name="dz">
+        <short>སྤོ་བཤུད་ཚུ་བར་ནའི་དུས་ཚོད།</short>
+        <long>སྤོ་བཤུད་ཚུ་གི་བར་ནའི་དུས་ཚོད་ མི་ལི་སྐར་ཆའི་ནང་།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Χρόνος μεταξύ των κινήσεων</short>
+        <long>Χρόνος μεταξύ των κινήσεων σε χιλιοστά του δευτερολέπτου.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Time between moves</short>
+        <long>Time between moves in milliseconds.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Time between moves</short>
+        <long>Time between moves in milliseconds.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Demora entre movimientos</short>
+        <long>Tiempo entre jugadas en milisegundos.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Viivitus käikude vahel</short>
+        <long>Kui kaua peab käikude vahel ootama - aeg millisekundites.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Mugimenduen arteko denbora</short>
+        <long>Mugimenduen arteko denbora (milisegundotan).</long>
+      </locale>
+
+      <locale name="fa">
+        <short>زمان بین حرکات</short>
+        <long>زمان بین جابه‌جایی به میلی ثانیه</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Viive siirtojen välillä</short>
+        <long>Viive siirtojen välissä millisekunneissa.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Le délai entre deux déplacements</short>
+        <long>Le délai entre les déplacements, en millisecondes.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Tempo entre cada movemento</short>
+        <long>Tempo entre cada movemento en milisegundos.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>બે ચાલ વચ્ચેનો સમય</short>
+        <long>બે ચાલ વચ્ચેનો સમય મિલિસેકન્ડોમાં.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Time between moves</short>
+        <long>Time between moves in milliseconds.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>चालों के बीच समय</short>
+        <long>मिली सेकण्ड्स में चालों के बीच समय.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Vrijeme između bacanja</short>
+        <long>Vrijeme između poteza u milisekundama.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Mozgások közötti idő</short>
+        <long>Mozgások közötti idő ezredmásodpercben.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Waktu jeda setelah jalan</short>
+        <long>Waktu jeda setelah jalan dalam milidetik</long>
+      </locale>
+
+      <locale name="is">
+        <short>Tími milli leikja</short>
+        <long>Tími milli leikja, í millisekúndum.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Tempo fra le mosse</short>
+        <long>Tempo tra le mosse in millisecondi.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>移動する時間</short>
+        <long>玉の移動に必要な時間 (ミリ秒単位) です。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ನಡೆಗಳ ನಡುವಿನ ಸಮಯ</short>
+        <long>ನಡೆಗಳ ನಡುವಿನ ಸಮಯ, ಮಿಲಿಸೆಕೆಂಡುಗಳಲ್ಲಿ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>움직임 사이의 시간</short>
+        <long>움직임 사이의 시간 (천분의 일초 단위).</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Pauzė tarp ėjimų</short>
+        <long>Laikas tarp ėjimų milisekundėmis.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Laiks starp gājieniem</short>
+        <long>Laiks starp gājieniem milisekundēs.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>चालि क&apos; बीच समय</short>
+        <long>मिली सेकण्ड्समे चालि क&apos; बीच समय.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Пауза меѓу потези</short>
+        <long>Пауза меѓу потези во милисекунди.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>നീക്കങ്ങളുടെ ഇടയിലുള്ള സമയം</short>
+        <long>നീക്കങ്ങളുടെ ഇടയിലുള്ള സമയം മില്ലി സെക്കന്‍ഡുകളില്‍.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Зөөлт хоорондын хугацаа</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>चालींमधील वेळ</short>
+        <long>मिलीसेकंद अंतर्गत चालींमधील वेळ.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Masa di antara pergerakan</short>
+        
+      </locale>
+
+      <locale name="nb">
+        <short>Tid mellom trekk</short>
+        <long>Tid mellom trekk i millisekunder.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>चाल बीचको समय</short>
+        <long>चाल बीचको समय मिलिसकेन्डमा ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Tijd tussen zetten</short>
+        <long>De tijd tussen zetten in miliseconden.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Tid mellom trekk</short>
+        <long>Tid mellom trekk, i millisekund.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଘୁଞ୍ଚାଇବା ମଧ୍ଯରେ ସମଯ</short>
+        <long>ଘୁଞ୍ଚାଇବା ମଧ୍ଯରେ ସମଯ ମିଲିସେକେଣ୍ଡରେ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਚਾਲਾਂ ਵਿਚਕਾਰ ਸਮਾਂ</short>
+        <long>ਮਿਲੀਸਕਿੰਟਾਂ ਵਿੱਚ ਚਾਲਾਂ ਵਿਚਕਾਰ ਸਮਾਂ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Czas pomiędzy posunięciami</short>
+        <long>Czas pomiędzy posunięciami w milisekundach.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Pausa entre jogadas</short>
+        <long>Pausa, em milisegundos, entre jogadas.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Tempo entre jogadas</short>
+        <long>Tempo entre jogadas em milissegundos.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Timpul dintre mutări</short>
+        <long>Timpul dintre mutări în milisecunde.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Время между прыжками шариков</short>
+        <long>Время между прыжками шарика в миллисекундах</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Čas medzi ťahmi</short>
+        <long>Čas medzi ťahmi v milisekundách.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Ćas med potezami</short>
+        <long>Čas med potezami v milisekundah.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Koha midis lëvizjeve</short>
+        <long>Koha midis lëvizjeve në milisekonda.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Време између потеза</short>
+        <long>Време између потеза у милисекундама.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Vreme između poteza</short>
+        <long>Vreme između poteza u milisekundama.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Tid mellan drag</short>
+        <long>Tid mellan drag i millisekunder.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>நகருதலுக்கிடையில் உள்ள நேரம்</short>
+        <long>நகர்வதற்கு ஆகும் நேரம் மில்லி செகக ண்டில்</long>
+      </locale>
+
+      <locale name="th">
+        <short>กำหนดเวลาของแต่ละตา</short>
+        <long>กำหนดเวลาของแต่ละตาเป็นมิลลิวินาที</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Hareketler arasıdaki süre</short>
+        <long>Milisaniye olarak hareketler arasıdaki süre.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Затримка між ходами</short>
+        <long>Затримка між ходами в мілісекундах.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Trì hoãn giữa các lần lượt</short>
+        <long>Trì hoãn giữa các lần lượt theo mi-li-giây.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Ixesha eliphakathi kweentshukumo</short>
+        <long>Ixesha eliphakathi kweentshukumo ngokweemilisekondi.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>移动之间的时间</short>
+        <long>移动之间的时间，以毫秒计。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>移動棋子延遲時間</short>
+        <long>移動棋子延遲時間 (亳秒)</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>移動棋子延遲時間</short>
+        <long>移動棋子延遲時間 (亳秒)</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/glines/saved/score</key>
+      <applyto>/apps/glines/saved/score</applyto>
+      <owner>glines</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Game score</short>
+        <long>Game score from last saved session.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>نتيجة اللعبة</short>
+        <long>نتائج اللعبة من الجلسة المسجلة آخيرا.</long>
+      </locale>
+
+      <locale name="as">
+        <short>খেলাৰ স্কোৰ</short>
+        <long>সৰ্বশেষ সংৰক্ষিত সেশনেৰ খেলাৰ স্কোৰ ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Oyun xalı</short>
+        <long>Son qeyd edilən iclasdan oyunun xalı</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Резултат от играта</short>
+        <long>Резултат от последната записана сесия.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>খেলার স্কোর</short>
+        <long>সর্বশেষ সংরক্ষিত সেশনের খেলার স্কোর।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>খেলার স্কোর</short>
+        <long>সর্বশেষ সংরক্ষিত সেশনের খেলার স্কোর।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Puntuació del joc</short>
+        <long>Puntuació del joc de la darrera sessió desada.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Skóre hry</short>
+        <long>Skóre hry z posledního uloženého sezení.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Sgôr gêm</short>
+        <long>Sgôr o&apos;r sesiwn a gafodd ei gadw diwethaf.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Spilpoint</short>
+        <long>Spilpoint fra sidste gemte session.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Spielpunkte</short>
+        <long>Spielpunkte aus der letzten gespeicherten Sitzung.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེད་མོའི་སྐུགས་གྲངས།</short>
+        <long>མཐའ་མཇུག་ལུ་ སྲུང་བཞག་འབད་མི་རྩེད་ཐེངས་ནང་གི་ རྩེད་མོའི་སྐུགས་གྲངས།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Βαθμολογία παιχνιδιού</short>
+        <long>Βαθμολογία παιχνιδιού από την τελευταία αποθηκευμένη συνεδρία.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Game score</short>
+        <long>Game score from last saved session.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Game score</short>
+        <long>Game score from last saved session.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Puntuación</short>
+        <long>Puntuación de la última sesión guardada.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Mängu tulemus</short>
+        <long>Mängu tulemus viimati salvestatud seansist.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Puntuazioa</short>
+        <long>Azkena gordetako saioko puntuazioa.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>امتیاز بازی</short>
+        <long>امتیاز بازی آخرین نشست ذخیره شده.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pelipisteet</short>
+        <long>Pelipisteen edellisestä tallennetusta kerrasta.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Score du jeu</short>
+        <long>Score du jeu de la dernière session sauvegardée.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Scór an Cluiche</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Puntuación da partida</short>
+        <long>Puntuación da partida da última sesión.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>રમતના ગુણ</short>
+        <long>છેલ્લે સંગ્રહ થયેલા સત્રમાં રમતના ગુણ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Game score</short>
+        <long>Game score from last saved session.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>खेल अंक</short>
+        <long>पिछले सहेजे सत्र से खेल का अंक.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Osvojeni bodovi u igrici</short>
+        <long>Osvojeni bodovi u igri iz zadnje pohranjene sesije.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Játék pontszám</short>
+        <long>Az utolsó mentett menet játékállása.</long>
+      </locale>
+
+      <locale name="id">
+        
+        <long>Nilai permainan yang sudah disimpan sebelumnya.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Stig</short>
+        <long>Stig frá síðustu vistuðu lotu</long>
+      </locale>
+
+      <locale name="it">
+        <short>Punteggio partita</short>
+        <long>Punteggio della partita dall&apos;ultima sessione salvata.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>ゲームの得点</short>
+        <long>最後にプレイしたセッションを保存したゲームの得点です。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಆಟದ ಅಂಕಗಳು</short>
+        <long>ಕೊನೆಯ ಬಾರಿ ಉಳಿಸಲಾದ ಆಟದ ಅಂಕ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>게임 점수</short>
+        <long>지난번 저장했던 세션의 게임 점수.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Žaidimas rezultatai</short>
+        <long>Paskutinės išsaugotos sesijos žaidimo rezultatai.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Spēle punkti</short>
+        <long>Spēle punkti no pēdējās saglabātās sesijas.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>खेल अंक</short>
+        <long>पछिला सहेजल सत्र सँ खेल क&apos; अंक.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Поени</short>
+        <long>Поени од последната снимена сесија.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>കളിയുടെ സ്കോര്‍</short>
+        <long>ഏറ്റവും ഒടുവില്‍ സൂക്ഷിച്ച സെഷനില്‍ നിന്നുള്ള കളിയുടെ സ്കോര്‍.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Тоглоомын оноо</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>खेळ गुण</short>
+        <long>शेवटचे संचयीत सत्र पासूनचे खेळ संख्या.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Markah permainan</short>
+        
+      </locale>
+
+      <locale name="nb">
+        <short>Poengsum for spill</short>
+        <long>Poengsum fra sist lagrede sesjon.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>खेल प्राप्ताङ्क</short>
+        <long>अन्त्यमा बचत गरिएको सत्रबाट खेल प्राप्ताङ्क ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Score</short>
+        <long>Score van de laatst bewaarde sessie.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Poengsum</short>
+        <long>Poengsum frå sist lagra økt.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Marca del jòc</short>
+        
+      </locale>
+
+      <locale name="or">
+        <short>ଖେଳର ସ୍କୋର</short>
+        <long>ଶେଷ ଅଧିବେଶନରୁ ସଂଚିତ ଖେଳର ସ୍କୋର</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਖੇਡ ਸਕੋਰ</short>
+        <long>ਸੰਭਾਲੇ ਹੋਏ ਪਿਛਲੇ ਅਜਲਾਸ ਵਿੱਚੋਂ ਖੇਡ ਸਕੋਰ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Punktacja gry</short>
+        <long>Wynik gry z ostatniej zapisanej sesji.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Pontuação do jogo</short>
+        <long>Pontuação do jogo da última sessão gravada.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Pontuação do jogo</short>
+        <long>Pontuação do jogo da última sessão salva.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Scorul jocului</short>
+        <long>Scorul jocului de la ultima sesiune salvată.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Результаты игры</short>
+        <long>Таблица результатов из последнего сохраненного сеанса игры.</long>
+      </locale>
+
+      <locale name="si">
+        <short>තරග ලකුණු</short>
+        
+      </locale>
+
+      <locale name="sl">
+        <short>Točke igre</short>
+        <long>Točke igre zadnje shranjene seje.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Rezultati i lojës</short>
+        <long>Rezultati i lojës së fundit të shpëtuar.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Резултат игре</short>
+        <long>Резултат из последње сачуване игре.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Rezultat igre</short>
+        <long>Rezultat iz poslednje sačuvane igre.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Spelpoäng</short>
+        <long>Spelpoäng från den senast sparade sessionen.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>ஆட்டத்தின் மதிப்பெண்</short>
+        <long>இறுதியாக சேமித்த அமர்விலிருந்து ஆட்டத்தின் மதிப்பெண்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఆట స్కోర్</short>
+        <long>చివరిగా దాచిన సమకూర్పు నుండి ఆట స్కోరు.</long>
+      </locale>
+
+      <locale name="th">
+        <short>คะแนนของเกม</short>
+        <long>คะแนนของเกมจากเกมที่แล้วที่บันทึกไว้</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Oyun puanı</short>
+        <long>Son kaydedilen oturumdan kalan oyun puanı.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Рахунок гри</short>
+        <long>Рахунок гри з останнього збереженого сеансу.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Điểm chơi</short>
+        <long>Điểm trò chơi từ phiên chơi đã lưu cuối cùng.</long>
+      </locale>
+
+      <locale name="wa">
+        <short>Ponts</short>
+        
+      </locale>
+
+      <locale name="xh">
+        <short>Iskora somdlalo</short>
+        <long>Iskora somdlalo ukusuka kwiseshoni yokugqibela egciniweyo.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>游戏得分</short>
+        <long>自上次保存的会话后的游戏得分。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>遊戲分數</short>
+        <long>上次遊戲的分數。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>遊戲分數</short>
+        <long>上次遊戲的分數。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/glines/saved/field</key>
+      <applyto>/apps/glines/saved/field</applyto>
+      <owner>glines</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Game field</short>
+        <long>Game field from last saved session.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>حقل اللعبة</short>
+        <long>حقل اللعب من آخر جلسة مسجّلة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>খেলাৰ ক্ষেত্ৰ</short>
+        <long>সৰ্বশেষ সংৰক্ষিত সেশনেৰ খেলাৰ ক্ষেত্ৰ ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Oyun sahəsi</short>
+        <long>Son qeyd edilən iclasdan oyun sahəsi.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Дъска за игра</short>
+        <long>Дъската за игра от последната записана сесия.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>খেলার ক্ষেত্র</short>
+        <long>সর্বশেষ সংরক্ষিত সেশনের খেলার ক্ষেত্র।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>খেলার ক্ষেত্র</short>
+        <long>সর্বশেষ সংরক্ষিত সেশনের খেলার ক্ষেত্র।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Camp de joc</short>
+        <long>Camp de joc de la darrera sessió desada.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Herní pole</short>
+        <long>Herní pole z posledního uloženého sezení.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Maes y gêm</short>
+        <long>Maes y gêm i&apos;r sesiwn a gafodd ei gadw diwethaf.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Spillefelt</short>
+        <long>Spillefeltet fra sidste gemte session.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Spielfeld</short>
+        <long>Spielfeld aus der letzten gespeicherten Sitzung.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེད་མོའི་ས་སྒོ།</short>
+        <long>མཐའ་མཇུག་ལུ་ སྲུང་བཞག་འབད་མི་རྩེད་ཐེངས་ནང་གི་ རྩེད་མོའི་ས་སྒོ།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Πεδίο παιχνιδιού</short>
+        <long>Πεδίο παιχνιδιού από την τελευταία αποθηκευμένη συνεδρία.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Game field</short>
+        <long>Game field from last saved session.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Game field</short>
+        <long>Game field from last saved session.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Campo de juego</short>
+        <long>Campo de juego de la última sesión guardada.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Mänguväli</short>
+        <long>Mänguväli viimasest salvestatud seansist.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Joko-eremua</short>
+        <long>Azkena gordetako saioko joko-eremua.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>زمین بازی</short>
+        <long>زمین بازی آخرین نشست ذخیره شده.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pelikenttä</short>
+        <long>Pelikenttä edellisestä tallennetusta kerrasta.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Zone de jeu</short>
+        <long>Zone de jeu de la dernière session sauvegardée.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Zona de xogo</short>
+        <long>Zona de xogo da última partida gardada.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>રમતનુ મેદાન</short>
+        <long>છેલ્લે સંગ્રહ થયેલા સત્રમાં રમતનું મેદાન.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Game field</short>
+        <long>Game field from last saved session.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>खेल मैदान</short>
+        <long>पिछले सहेजे सत्र से खेल का मैदान.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Polje igre</short>
+        <long>Polje igre iz zadnje pohranjene sesije.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Játékmező</short>
+        <long>Az utolsó mentett menet játékmezője.</long>
+      </locale>
+
+      <locale name="id">
+        
+        <long>Kotak gim dari sesi terakhir yang disimpan.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Spilaborð</short>
+        <long>Spilaborð síðustu vistuðu lotu</long>
+      </locale>
+
+      <locale name="it">
+        <short>Campo di gioco</short>
+        <long>Campo di gioco dall&apos;ultima sessione salvata.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>ゲーム・フィールド</short>
+        <long>最後にプレイしたセッションを保存したゲーム・フィールドです。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಆಟದ ಸ್ಥಳ</short>
+        <long>ಕೊನೆಯ ಬಾರಿ ಉಳಿಸಲಾದ ಆಟದ ಬಯಲು.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>게임판</short>
+        <long>지난번 저장했던 세션의 게임 판.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Žaidimo laukas</short>
+        <long>Paskutinės išsaugotos sesijos žaidimo laukas.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Spēle lauks</short>
+        <long>Spēles lauks no pēdējās saglabātās sesijas.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>खेल मैदान</short>
+        <long>पछिला सहेजल सत्र सँ खेल क&apos; मैदान.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Поле за играта</short>
+        <long>Поле за игра од последната снимена сесија</long>
+      </locale>
+
+      <locale name="ml">
+        <short>കളിയുടെ ഫീള്‍ഡ്</short>
+        
+      </locale>
+
+      <locale name="mn">
+        <short>Тоглоомын талбар</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>खेळ मैदान</short>
+        <long>शेवटचे संचयीत सत्र पासूनचे खेळ मैदान.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Medan permainan</short>
+        
+      </locale>
+
+      <locale name="nb">
+        <short>Spillefelt</short>
+        <long>Spillfelt fra sist lagrede sesjon.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>खेल मैदान</short>
+        <long>अन्त्यमा बचत गरिएको सत्रबाट खेल मैदान ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Spelveld</short>
+        <long>Spelveld van de laatstbewaarde sessie.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Spelefelt</short>
+        <long>Spelefelt frå sist lagra økt.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଖେଳ କ୍ଷେତ୍ର</short>
+        <long>ଶେଷ ଅଧିବେଶନରୁ ସଂଚିତ ଖେଳ କ୍ଷେତ୍ର ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਖੇਡ ਦਾ ਮੈਦਾਨ</short>
+        <long>ਸੰਭਾਲੇ ਹੋਏ ਪਿਛਲੇ ਅਜਲਾਸ ਵਿੱਚੋਂ ਖੇਡ ਦਾ ਮੈਦਾਨ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Pole gry</short>
+        <long>Pole gry z ostatniej zapisanej sesji.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Tabuleiro de jogo</short>
+        <long>Tabuleiro de jogo da última sessão gravada.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Campo do jogo</short>
+        <long>Campo do jogo da última sessão salva.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Câmpul jocului</short>
+        <long>Câmpul jocului de la ultima sesiune salvată.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Игровое поле</short>
+        <long>Игровое поле из последнего сохраненного сеанса игры.</long>
+      </locale>
+
+      <locale name="si">
+        <short>තරග ක්‍ෂේත්‍රය</short>
+        
+      </locale>
+
+      <locale name="sl">
+        <short>Igralno polje</short>
+        <long>Polje igre zadnje shranjene seje.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Fusha e lojës</short>
+        <long>Fusha e lojës nga loja e fundit e shpëtuar.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Поље за игру</short>
+        <long>Поље за игру из последње сачуване игре.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Polje za igru</short>
+        <long>Polje za igru iz poslednje sačuvane igre.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Spelfält</short>
+        <long>Spelfält från den senast sparade sessionen.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>ஆட்டத்தின் புலம்</short>
+        <long>இறுதியாக சேமித்த்கத் அமர்விலிருந்து ஆட்டத்தின் புலம்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఆట క్షేత్రము</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>กระดานเกม</short>
+        <long>กระดานเกมจากเกมที่แล้วที่บันทึกไว้</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Oyun sahası</short>
+        <long>Son kaydedilen oturumdan kalan oyun alanı.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Ігрове поле</short>
+        <long>Ігрове поле із останнього збереженого сеансу.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Bảng chơi</short>
+        <long>Bảng chơi từ phiên chơi đã lưu cuối cùng.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Ibala lomdlalo</short>
+        <long>Ibala lomdlalo ukusuka kwiseshoni yokugqibela egciniweyo.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>游戏域</short>
+        <long>游戏上次保存时的状态。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>遊戲盤狀態</short>
+        <long>遊戲上次儲存時的狀態。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>遊戲盤狀態</short>
+        <long>遊戲上次儲存時的狀態。</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/glines/saved/preview</key>
+      <applyto>/apps/glines/saved/preview</applyto>
+      <owner>glines</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Game preview</short>
+        <long>Game preview from last saved session.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>معاينة عن اللعبة</short>
+        <long>معاينة عن لعبة الجلسة المحفوظة أخيرا.</long>
+      </locale>
+
+      <locale name="as">
+        <short>খেলাৰ পূৰ্বদৰ্শন</short>
+        <long>সৰ্বশেষ সংৰক্ষিত সেশনেৰ খেলাৰ পূৰ্বদৰ্শন ।</long>
+      </locale>
+
+      <locale name="az">
+        <short>Oyunun ön nümayişi</short>
+        <long>Son qeyd edilən iclasdan oyunun ön nümayişi.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Преглед на играта</short>
+        <long>Преглед на играта от последната записана сесия.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>খেলার পূর্বদর্শন</short>
+        <long>সর্বশেষ সংরক্ষিত সেশনের খেলার পূর্বদর্শন।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>খেলার পূর্বদর্শন</short>
+        <long>সর্বশেষ সংরক্ষিত সেশনের খেলার পূর্বদর্শন।</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Previsualització del joc</short>
+        <long>Previsualització del joc de la darrera sessió desada.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Náhled hry</short>
+        <long>Náhled hry z posledního uloženého sezení.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Rhagolwg gêm</short>
+        <long>Y rhagolwg gêm o&apos;r sesiwn a gafodd ei gadw diwethaf.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Spilforhåndsvisning</short>
+        <long>Spilforhåndsvisning fra sidste gemte session.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Spielvorschau</short>
+        <long>Vorschau auf Spiel aus der letzten gespeicherten Sitzung.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེད་མོའི་སྔོན་ལྟ།</short>
+        <long>མཐའ་མཇུག་ལུ་ སྲུང་བཞག་འབད་མི་རྩེད་ཐེངས་ནང་གི་ རྩེད་མོའི་སྔོན་ལྟ།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Προεπισκόπηση παιχνιδιού</short>
+        <long>Προεπισκόπηση παιχνιδιού από την τελευταία αποθηκευμένη συνεδρία.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Game preview</short>
+        <long>Game preview from last saved session.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Game preview</short>
+        <long>Game preview from last saved session.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Previsualización del juego</short>
+        <long>Previsualización de la última sesión guardada.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Mängu eelvaade</short>
+        <long>Mängu eelvaade viimati salvestatud seansist.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Jokoaren aurrebista</short>
+        <long>Azkena gordetako saioko jokoaren aurrebista.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>پیش‌نمایش بازی</short>
+        <long>پیش‌نمایش بازی آخرین نشست ذخیره شده.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pelin esikatselu</short>
+        <long>Pelin esikatselu edellisestä tallennetusta kerrasta.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Aperçu du jeu</short>
+        <long>Aperçu du jeu de la dernière session sauvegardée.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Previsualización da partida</short>
+        <long>Previsualización da partida da última sesión.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>રમતનુ પૂર્વદર્શન</short>
+        <long>છેલ્લે સંગ્રહ થયેલા સત્રમાં રમતનું પૂર્વદર્શન.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Game preview</short>
+        <long>Game preview from last saved session.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>खेल पूर्वावलोकन</short>
+        <long>पिछले सहेजे सत्र से खेल का पूर्वावलोकन.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Izgled igre</short>
+        <long>Izgled igre iz zadnje pohranjene sesije.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Játék előkép</short>
+        <long>Az utolsó mentett menet játék előképe.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Pratilik gim</short>
+        <long>Gambaran terakhir permainan yang telah disimpan.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Forsýn</short>
+        <long>Forsýn á síðustu vistuðu lotu.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Anteprima partita</short>
+        <long>Anteprima della partita dall&apos;ultima sessione salvata.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>ゲームのプレビュー</short>
+        <long>最後にプレイしたセッションを保存したゲーム・プレビューです。</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಆಟದ ಮುನ್ನೋಟ</short>
+        <long>ಕೊನೆಯ ಬಾರಿ ಉಳಿಸಲಾದ ಆಟದ ಮುನ್ನೋಟ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>게임 미리 보기</short>
+        <long>지난번 저장했던 세션의 게임 미리 보기.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Žaidimo peržiūra</short>
+        <long>Paskutinės išsaugotos sesijos žaidimo peržiūra.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Spēles priekšskatījums</short>
+        <long>Spēles priekšskatījums no pēdējās saglabātās sesijas.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>खेल पूर्वावलोकन</short>
+        <long>पछिला सहेजल सत्र सँ खेल क&apos; पूर्वावलोकन.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Преглед на играта</short>
+        <long>Преглед на играта од последната снимена сесија.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>കളി സ്ക്രീനില്‍ കാണുക</short>
+        
+      </locale>
+
+      <locale name="mn">
+        <short>Тоглоом урьдчлан харах</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>खेळ पूर्वावलोकन</short>
+        <long>शेवटचे संचयीत सत्र पासूनचे खेळ पूर्वदृश्य.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Prebiu permainan</short>
+        
+      </locale>
+
+      <locale name="nb">
+        <short>Forhåndsvisning av spill</short>
+        <long>Forhåndsvisning av spillet fra sist lagrede sesjon.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>खेल पुर्वावलोकन</short>
+        <long>अन्त्यमा बचत गरिएको सत्रबाट खेल पुर्वावलोकन ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Spelvoorbeeld</short>
+        <long>Spelvoorbeeld van de laatst bewaarde sessie.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Førehandsvising av spel</short>
+        <long>Førehandsvising av spel frå sist lagra økt</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Previsualizacion del jòc</short>
+        
+      </locale>
+
+      <locale name="or">
+        <short>ଖେଳ ପୂର୍ବଦୃଶ୍ଯ</short>
+        <long>ଶେଷ ସଂଚିତ ଅଧିବେଶନରୁ ଖେଳ ପୂର୍ବଦୃଶ୍ଯ</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਖੇਡ ਦੀ ਅਸਲ ਦਿੱਖ</short>
+        <long>ਸੰਭਾਲੇ ਹੋਏ ਪਿਛਲੇ ਅਜਲਾਸ ਵਿੱਚੋਂ ਖੇਡ ਦੀ ਅਸਲ ਦਿੱਖ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Podgląd gry</short>
+        <long>Podgląd gry z ostatniej zapisanej sesji.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Antevisão do jogo</short>
+        <long>Antevisão do jogo da última sessão gravada.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Visualização do jogo</short>
+        <long>Visualização do jogo da última sessão salva.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Previzualizare joc</short>
+        <long>Previzualizare joc de la ultima sesiune salvată.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Просмотр игры</short>
+        <long>Просмотр игры из последнего сохраненного сеанса игры.</long>
+      </locale>
+
+      <locale name="si">
+        <short>තරග පූර්‍වදසුන</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Ukážka hry</short>
+        
+      </locale>
+
+      <locale name="sl">
+        <short>Predogled igre</short>
+        <long>Predogled igre zadnje shranjene seje.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Shikim i parakohshëm i lojës</short>
+        <long>Loja e parakohshme që nga loja e fundit e shpëtuar.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Преглед игре</short>
+        <long>Преглед игре из последње сачуване игре.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Pregled igre</short>
+        <long>Pregled igre iz poslednje sačuvane igre.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Spelförhandsvisning</short>
+        <long>Spelförhandsvisning från den senast sparade sessionen.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>ஆட்டத்தின் முன்னோட்டம்</short>
+        <long>இறுதியாக சேமிக்கத்த அமர்விலிருந்து ஆட்டத்தின் முன்னோட்டம்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఆట ఉపదర్శనం</short>
+        <long>ఇంతకుముందు దాచిన సమక్కుర్పు నుండి ఆట ఉపదర్శనం.</long>
+      </locale>
+
+      <locale name="th">
+        <short>ตัวอย่างเกม</short>
+        <long>ตัวอย่างเกมจากเกมที่แล้วที่บันทึกไว้</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Oyun önizleme</short>
+        <long>Son kaydedilen oturumdan oyun önizleme.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Перегляд гри</short>
+        <long>Перегляд гри з останнього збереженого сеансу.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Xem trò chơi trước</short>
+        <long>Xem trước trò chơi tư phiên chơi đã lưu cuối cùng.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Ukuqale ubone umdlalo</short>
+        <long>Ukuqale ubone umdlalo ujonge lowo ubugciniwe kwiseshoni yokugqibela.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>游戏预览</short>
+        <long>自上次保存的会话后的游戏预览。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>遊戲預覽</short>
+        <long>上次未完成的遊戲的棋盤預覽</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>遊戲預覽</short>
+        <long>上次未完成的遊戲的棋盤預覽</long>
+      </locale>
+      </schema>
+
+  </schemalist>
+
+</gconfschemafile>
+

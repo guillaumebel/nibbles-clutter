@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "<application>Blackjack</application>">
+<!ENTITY appname "Blackjack">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="sv">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Handbok för <application>Tjugoett</application></title>       
+    <abstract role="description">
+      <para>Tjugoett är ett blackjackspel med casinoregler och flera kortlekar för GNOME-projektet. Målet med spelet är att få en hand som är närmare 21 än vad givaren har, utan att gå över 21. Spelaren satsar med virtuella marker.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>William Jon McCann</holder> 
+    </copyright><copyright><year>2007, 2008, 2009</year><holder>Daniel Nylander (po@danielnylander.se)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>Dokumentationsprojekt för GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Tillstånd att kopiera, distribuera och/eller modifiera detta dokument ges under villkoren i GNU Free Documentation License (GFDL), version 1.1 eller senare, utgivet av Free Software Foundation utan standardavsnitt och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink type="help" url="ghelp:fdl">länk</ulink> eller i filen COPYING-DOCS som medföljer denna handbok.</para>
+         <para>Denna handbok utgör en av flera GNOME-handböcker som distribueras under villkoren i GFDL.  Om du vill distribuera denna handbok separat från övriga handböcker kan du göra detta genom att lägga till en kopia av licensavtalet i handboken enligt instruktionerna i avsnitt 6 i licensavtalet.</para>
+
+	<para>Flera namn på produkter och tjänster är registrerade varumärken. I de fall dessa namn förekommer i GNOME-dokumentation - och medlemmarna i GNOME-dokumentationsprojektet är medvetna om dessa varumärken - är de skrivna med versaler eller med inledande versal.</para>
+
+	<para>DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET TILLHANDAHÅLLS UNDER VILLKOREN I GNU FREE DOCUMENTATION LICENSE ENDAST UNDER FÖLJANDE FÖRUTSÄTTNINGAR: <orderedlist>
+		<listitem>
+		  <para>DOKUMENTET TILLHANDAHÅLLS I "BEFINTLIGT SKICK" UTAN NÅGRA SOM HELST GARANTIER, VARE SIG UTTRYCKLIGA ELLER UNDERFÖRSTÅDDA, INKLUSIVE, MEN INTE BEGRÄNSAT TILL, GARANTIER ATT DOKUMENTET ELLER EN MODIFIERAD VERSION AV DOKUMENTET INTE INNEHÅLLER NÅGRA FELAKTIGHETER, ÄR LÄMPLIGT FÖR ETT VISST ÄNDAMÅL ELLER INTE STRIDER MOT LAG. HELA RISKEN VAD GÄLLER KVALITET, EXAKTHET OCH UTFÖRANDE AV DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET LIGGER HELT OCH HÅLLET PÅ ANVÄNDAREN. OM ETT DOKUMENT ELLER EN MODIFIERAD VERSION AV ETT DOKUMENT SKULLE VISA SIG INNEHÅLLA FELAKTIGHETER I NÅGOT HÄNSEENDE ÄR DET DU (INTE DEN URSPRUNGLIGA SKRIBENTEN, FÖRFATTAREN ELLER NÅGON ANNAN MEDARBETARE) SOM FÅR STÅ FÖR ALLA EVENTUELLA KOSTNADER FÖR SERVICE, REPARATIONER ELLER KORRIGERINGAR. DENNA GARANTIFRISKRIVNING UTGÖR EN VÄSENTLIG DEL AV DETTA LICENSAVTAL. DETTA INNEBÄR ATT ALL ANVÄNDNING AV ETT DOKUMENT ELLER EN MODIFIERAD VERSION AV ETT DOKUMENT BEVILJAS ENDAST UNDER DENNA ANSVARSFRISKRIVNING;</para>
+		</listitem>
+		<listitem>
+		  <para>UNDER INGA OMSTÄNDIGHETER ELLER INOM RAMEN FÖR NÅGON LAGSTIFTNING, OAVSETT OM DET GÄLLER KRÄNKNING (INKLUSIVE VÅRDSLÖSHET), KONTRAKT ELLER DYLIKT, SKA FÖRFATTAREN, DEN URSPRUNGLIGA SKRIBENTEN ELLER ANNAN MEDARBETARE ELLER ÅTERFÖRSÄLJARE AV DOKUMENTET ELLER AV EN MODIFIERAD VERSION AV DOKUMENTET ELLER NÅGON LEVERANTÖR TILL NÅGON AV NÄMNDA PARTER STÄLLAS ANSVARIG GENTEMOT NÅGON FÖR NÅGRA DIREKTA, INDIREKTA, SÄRSKILDA ELLER OFÖRUTSEDDA SKADOR ELLER FÖLJDSKADOR AV NÅGOT SLAG, INKLUSIVE, MEN INTE BEGRÄNSAT TILL, SKADOR BETRÄFFANDE FÖRLORAD GOODWILL, HINDER I ARBETET, DATORHAVERI ELLER NÅGRA ANDRA TÄNKBARA SKADOR ELLER FÖRLUSTER SOM KAN UPPKOMMA PÅ GRUND AV ELLER RELATERAT TILL ANVÄNDNINGEN AV DOKUMENTET ELLER MODIFIERADE VERSIONER AV DOKUMENTET, ÄVEN OM PART SKA HA BLIVIT INFORMERAD OM MÖJLIGHETEN TILL SÅDANA SKADOR.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer">
+		<firstname>William Jon</firstname> 
+		<surname>McCann</surname> 
+		<affiliation> 
+	  		<orgname/> 
+	  		<address> <email>mccann@jhu.edu</email> </address> 
+		</affiliation> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>	
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+      <revision> 
+		<revnumber>Handbok för Tjugoett v2.8</revnumber> 
+		<date>September 2004</date> 
+		<revdescription> 
+	  		<para role="author">William Jon McCann <email>mccann@jhu.edu</email></para>
+	  		<para role="publisher"/>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Den här handboken beskriver version 2.12 av Tjugoett.</releaseinfo> 
+    <legalnotice> 
+      <title>Återkoppling</title> 
+      <para>För att rapportera ett fel eller föreslå någonting angående programmet <application>Tjugoett</application> eller den här handboken, följ anvisningarna på <ulink url="ghelp:gnome-feedback" type="help">GNOME:s återkopplingssida</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Tjugoett</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>mygnomeapp</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="blackjack-introduction"> 
+
+    <title>Introduktion</title> 
+
+    <para><application>Tjugoett</application> är ett blackjackspel med casinoregler och flera kortlekar för GNOME-projektet. Målet med spelet är att få en hand som är närmare 21 än vad givaren har, utan att gå över 21.</para>
+  </sect1>
+
+  <sect1 id="blackjack-basics">
+    <title>Grundläggande</title>
+
+    <sect2 id="blackjack-terms">
+    <title>Terminologi</title>
+    <para>Här är några viktiga termer som används i spelet.</para>
+    <para>
+        <variablelist>
+	<varlistentry>
+	<term>Tjugoett</term>
+	<listitem>
+	<para>En hand vars två första kort ger totalt 21; en direktvinst som är värd 150% av din insats</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Tjock</term>
+	<listitem>
+	<para>När värdet på en hand överstiger 21; förlust</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Dubbla</term>
+	<listitem>
+	<para>Dubbla startinsatsen och få exakt ett kort till</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Dra kort</term>
+	<listitem>
+	<para>Begär ett kort till att lägga till handen</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Försäkring</term>
+	<listitem>
+	<para>En sidosatsning på 50% av den ursprungliga insatsen som givaren har en vanlig 21 (alltså blackjack) som erbjuds när givarens vända kort är ett ess. Om givaren får en riktig 21 så får spelaren utbetalt det dubbla.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Oavgjort</term>
+	<listitem>
+	<para>När värdet på både spelaren och givarens hand är samma går den ursprungliga insatsen tillbaka till spelaren</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Dela</term>
+	<listitem>
+	<para>När en hand startar med två kort av samma värde (eller rank) så kan den delas för att bilda två oberoende händer</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Stanna</term>
+	<listitem>
+	<para>Sluta lägg till kort till en hand</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Ge upp</term>
+	<listitem>
+        <para>Att ge upp halva din insats för att inte göra färdiga handen</para>
+	</listitem>
+	</varlistentry>
+
+        </variablelist>
+    </para>
+    </sect2>
+
+    <sect2 id="blackjack-card-values">
+    <title>Kortvärden</title>
+    <para>I tjugoett så tilldelas varje kort ett värde. <itemizedlist> 
+	  <listitem> 
+           <para>Ett ess kan räknas som antingen 1 eller 11.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Korten 2 till 9 har samma värde som de indikerar.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>10, knekt, dam och kung har alla värdet 10.</para>
+	  </listitem> 
+	</itemizedlist></para> 
+
+    <para>Värdet för en hand är summan av värdena för varje kort i handen.</para>
+    </sect2>
+
+    <sect2 id="blackjack-dealer-rules">
+    <title>Regler för givaren</title>
+    <para>Givaren måste spela sin hand enligt mycket specifika regler. Det finns två grundläggande regelvarianter som bestämmer vad handens total måste vara för att givaren ska stanna. <variablelist>
+	<varlistentry>
+	<term>Givaren stannar på alla 17</term>
+	<listitem>
+	<para>Givaren måste fortsätta att dra kort tills handens total är minst 17.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Givaren når mjuk 17</term>
+	<listitem>
+	<para>Givaren måste fortsätta att dra kort tills handens total är minst 17, förutom när givaren har en mjuk total på 17 så måste han ta ytterligare kort. En mjuk total är en där ett esskort räknas som en 11.</para>
+	</listitem>
+	</varlistentry>
+        </variablelist></para>
+    </sect2>
+
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here. 
+     If the information about how to get started is very short, you can 
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="blackjack-getting-started"> 
+    <title>Komma igång</title> 
+
+    <sect2 id="blackjack-start">
+    <title>Starta <application>Tjugoett</application></title>
+    <para>Du kan starta <application>Tjugoett</application> på följande sätt:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term><guimenu>Program</guimenu>-menyn</term>
+    		<listitem>
+    		<para>Välj <menuchoice><guisubmenu>Spel </guisubmenu><guimenuitem>Tjugoett</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Kommandorad</term>
+    		<listitem>
+    		<para>Skriv in följande kommando och tryck på <keycap>Return</keycap> för att starta <application>Tjugoett</application> :</para>
+    		<para> 
+			<command>blackjack</command> 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-when-start">
+    <title>När du startar <application>Tjugoett</application></title>
+    <para>När du startar <application>Tjugoett</application> kommer följande fönster att visas.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title>Uppstartsfönstret i <application>Tjugoett</application></title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/blackjack_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <!-- EPS versions of the figures are not required at the moment. -->
+            <!-- 
+		    <imageobject>
+      		<imagedata fileref="figures/image.eps" format="EPS"/>
+    		    </imageobject>
+	    -->
+	    <textobject> 
+	      <phrase>Visar huvudfönstret i <application>Tjugoett</application>. Innehåller titellist, menyrad, verktygsrad, spelområde och rullningslister. Menyraden innehåller menyerna Spel, Visa, Inställningar, Styrning och Hjälp.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para><application>Tjugoett</application>-fönstret innehåller följande element:</para>
+      <variablelist>
+
+	<varlistentry>
+	<term>Menyrad</term>
+	<listitem>
+	<para>Menyerna på menyraden innehåller alla de kommandon som du behöver för att arbeta med filer i <application>Tjugoett</application>.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Verktygsrad</term>
+	<listitem>
+	<para>Verktygsraden innehåller en mindre uppsättning av kommandon som du kan komma åt från menyraden.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Statusrad</term>
+	<listitem>
+	<para>Statusraden visar information om aktuell aktivitet i <application>Tjugoett</application> och sammanhangsinformation om menyobjekten.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Spelområde</term>
+	<listitem>
+	<para>Spelområdet innehåller givarens position, spelarens position, spelarens insats och spelarens marker.</para>
+	</listitem>
+	</varlistentry>
+
+	</variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-menus">
+    <title>Menyer i <application>Tjugoett</application></title>
+      <para>Menyraden, som finns ovanför <interface>spelbordet</interface>, innehåller följande menyer:</para>
+
+      <variablelist>
+
+        <!-- ===== Game ===== -->
+
+        <varlistentry>
+          <term><guimenu>Spel</guimenu></term>
+          <listitem>
+            <para>Den här menyn innehåller dessa objekt: <itemizedlist>
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-N</keysym></shortcut><guimenuitem>Nytt spel</guimenuitem></menuchoice> — TDetta tömmer bordet och startar en ny omgång.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Starta om</guimenuitem></menuchoice> — Detta tömmer bordet och startar om omgången.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Tips</guimenuitem></menuchoice> — Detta ger dig datorns bästa förslag på ditt nästa drag.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-Q</keysym></shortcut><guimenuitem>Avsluta</guimenuitem></menuchoice> — Detta avslutar spelet.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Settings ===== -->
+
+        <varlistentry>
+          <term><guimenu>Inställningar</guimenu></term>
+          <listitem>
+            <para>Den här menyn innehåller dessa objekt: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Visa verktygsrad</guimenuitem> — Detta visar eller döljer verktygsraden.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Inställningar…</guimenuitem> — Detta öppnar dialogrutan <interface>Inställningar</interface> som låter dig konfigurera spelet.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Help ===== -->
+
+        <varlistentry>
+          <term><guimenu>Hjälp</guimenu></term>
+          <listitem>
+            <para>Den här menyn innehåller: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Innehåll</guimenuitem> — Öppnar din hjälpvisare och visar denna handbok.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Om</guimenuitem> — Öppnar dialogrutan <interface>Om</interface> som visar grundläggande information om <application>Tjugoett</application> såsom dess versionsnummer och namnen på upphovsmännen.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+    <sect2 id="blackjack-playing-area">
+    <title>Spelområde för <application>Tjugoett</application></title>
+      <para>Spelområdet (eller bordet), som finns under <interface>verktygsraden</interface>, innehåller följande element:</para>
+
+      <variablelist>
+
+        <varlistentry>
+          <term><interface>Givarens position</interface></term>
+          <listitem><para>Det är här som givarens hand placerats. Den finns på övre delen av spelområdet. På ett tomt bord kommer den att synas med en vit kontur.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Spelarens position</interface></term>
+          <listitem><para>Det är här som spelarens händer kommer att placeras. Inledningsvis finns det bara en spelarposition. Fler kommer att skapas om spelaren delar upp en hand. På ett tomt bord kommer de att visas med vit kontur under givarens position.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Spelarens insats</interface></term>
+          <listitem><para>Insatsen representerar den initiala insatsen på varje hand. Den består av en hög marker som finns direkt till vänster om varje spelarposition.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Spelarens chips</interface></term>
+          <listitem><para>Spelarens marker representerar en oändlig hög av marker med valörerna 100, 25, 5 och 1. Dessa marker används för att ändra insatsen.</para></listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for 
+  which the application is designed. -->
+  <sect1 id="blackjack-usage"> 
+    <title>Användning</title> 
+    <para>
+      <itemizedlist> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-set-wager"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-deal"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-hit"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-stand"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-double-down"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-split"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-surrender"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-get-hint"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-keyboard-control"/></para>
+	</listitem> 
+      </itemizedlist> </para>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-set-wager"> 
+      <title>Ange insats</title> 
+      <para>För att öka insatsen för handen: <itemizedlist>
+        <listitem>
+         <para>Dubbelklicka på spelarmarken, som finns längs med den nedre kanten av spelarområdet, som du vill lägga till i din insats.</para>
+        </listitem>
+        <listitem>
+         <para>Eller dra valfri marker till din insats, som finns bredvid din hand.</para>
+        </listitem>
+      </itemizedlist></para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-deal"> 
+      <title>Dela ut en ny hand</title> 
+      <para>En ny hand kan ges när bordet är tomt eller när den pågående omgången är färdig.</para>
+      <para>Klicka på den vita konturen som indikerar givare- eller spelarpositionen för att ge en ny hand på ett tomt bord.</para>
+      <para>Klicka en gång på något kort på bordet för att ge en ny hand efter att pågående omgång är färdig.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-hit"> 
+      <title>Lägg till ett kort till en hand (dra)</title> 
+      <para>Du kan lägga till kort till en hand tills handens total är 21 eller över.</para>
+      <para>Klicka en gång på något kort i handen för att lägga till ett kort till spelarens hand.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-stand"> 
+      <title>Sluta dra kort (stanna)</title> 
+      <para>Du kan sluta ta kort när du vill efter att de första två korten har delats ut.</para>
+      <para>Klicka en gång på någon annan hand för att sluta lägga till kort till en hand. Till exempel när det endast finns en spelarposition (alltså, du har inte delat upp ett par), klicka på givarens hand för att stanna. När du har ett delat par kan du stanna på första spelarhanden genom att klicka på andra spelarhanden, eller givarens hand.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-double-down"> 
+      <title>Dubbla</title> 
+      <para>Dubbelklicka på en spelarmarker efter att de första två korten att delats ut för att dubbla.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-split"> 
+      <title>Dela par</title> 
+      <para>Dra det översta kortet i handen från spelarpositionen och släpp det på en ledig plats på bordet för att dela upp ett par.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-surrender"> 
+      <title>Ge upp</title> 
+      <para>Ännu inte implementerat.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-get-hint"> 
+      <title>Få ett tips</title> 
+      <para>Du kan när som helst fråga spelet om tips. Klicka antingen på <interface>Tips</interface>-knappen på <interface>verktygsraden</interface> eller välj menyobjektet <menuchoice><guisubmenu>Spel </guisubmenu><guimenuitem>Tips</guimenuitem></menuchoice> för att göra det.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-keyboard-control"> 
+      <title>Tangentbordsstyrning</title> 
+      <para>De flesta åtgärder i spelet kan styras med tangentbordet. <table><title>Styrtangenter</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead><row><entry>Åtgärd</entry><entry>Tangent</entry></row></thead><tbody><row><entry>Ge ny hand</entry><entry>ENTER</entry></row><row><entry>Nytt kort</entry><entry>H</entry></row><row><entry>Stanna / Färdig hand</entry><entry>S</entry></row><row><entry>Dubbla</entry><entry>D</entry></row><row><entry>Dela upp hand</entry><entry>P</entry></row><row><entry>Ge upp hand</entry><entry>R</entry></row></tbody></tgroup></table></para>
+    </sect2> 
+  </sect1>
+
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="blackjack-prefs"> 
+    <title>Inställningar</title> 
+    <para>Välj <menuchoice><guimenu>Inställningar</guimenu><guimenuitem>Inställningar</guimenuitem></menuchoice> för att konfigurera <application>Tjugoett</application>. Dialogrutan <guilabel>Inställningar</guilabel> innehåller följande flikade sektioner:</para> 
+    <itemizedlist> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-game"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-rules"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-cards"/></para> 
+      </listitem> 
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="blackjack-prefs-game"> 
+      <title>Spel</title> 
+      <variablelist> 
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Visa handsannolikheter</guilabel> </term> 
+	  <listitem> 
+	    <para>Välj detta objekt för att visa sannolikheter för givarhanden och förväntade värden för de olika spelaralternativen.</para>
+	  </listitem> 
+	</varlistentry> 
+
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Snabba givar</guilabel> </term> 
+	  <listitem> 
+	    <para>Välj det här objektet för att datorn ska ge kort utan fördröjning.</para>
+	  </listitem> 
+	</varlistentry> 
+
+      </variablelist> 
+    </sect2>
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-rules"> 
+      <title>Regler</title> 
+      <para>Välj regelvarianter från listan.</para>
+    </sect2> 
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-cards"> 
+      <title>Kort</title> 
+      <para>Anpassa utseendet för spelkorten.</para>
+    </sect2> 
+
+  </sect1>
+
+<!-- ============= Advanced ================================== -->
+  <sect1 id="blackjack-advanced">
+  <title>Avancerat</title>
+  <para>
+  </para>
+
+  <sect2 id="blackjack-advanced-probabilities">
+    <title>Sannolikheter för givare</title>
+    <para>När alternativet <guilabel>Visa sannolikheter för givare</guilabel> har markerats under fliken <guilabel>Spel</guilabel> i dialogrutan <guilabel>Inställningar</guilabel> så visas de exakta sannolikheterna för varje tänkbar utgång för givarens hand över bordets yta, till vänster om givarens hand. Sannolikheterna sträcker sig från noll till ett, där noll betyder omöjligt och ett betyder säkerligen. Dessa sannolikheter omfattar alla kort som delas ut från korthållaren.</para>
+  </sect2>
+
+  <sect2 id="blackjack-advanced-expected-values">
+    <title>Spelarförväntade värden</title>
+    <para>När alternativet <guilabel>Visa sannolikheter för givare</guilabel> har markerats under fliken <guilabel>Spel</guilabel> i dialogrutan <guilabel>Inställningar</guilabel> så visas de exakta förväntade värdena (i procent av initial insats) för varje tillgängligt spelaralternativ visas över bordets yta, till vänster om givarens hand. Dessa värden omfattar alla kort i din aktuella hand och givarens uppvända kort. Till exempel om talet som visas för att stanna är -12.345 betyder det att om du spelar ut den aktuella situationen många, många gånger och stannar varje gång, med en insats på 1.00, så kommer du i genomsnitt att förlora 0.12345.</para>
+  </sect2>
+
+ </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default. 
+     You can use it to describe known bugs and limitations of the 
+	  program if there are any - please be frank and list all
+     problems you know of. 
+  
+  <sect1 id="blackjack-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="blackjack-about"> 
+    <title>Om <application>Tjugoett</application></title> 
+    <para><application>Tjugoett</application> skrevs av William Jon McCann (<email>mccann@jhu.edu</email>).</para>
+    <para>För att rapportera ett fel eller föreslå någoning angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url="ghelp:gnome-feedback" type="help">dokumentet</ulink>.</para>
+
+    <para>Det här programmet distribueras under villkoren för GNU General Public License som publicerats av Free Software Foundation; antingen version 2 av licensen, eller (enligt dig) någon senare version. En kopia av denna licens kan hittas på denna <ulink url="ghelp:gpl" type="help">länk</ulink> eller i filen COPYING som inkluderats i källkoden för detta program.</para>
+
+  </sect1> 
+</article>

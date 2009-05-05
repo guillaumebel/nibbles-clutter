@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Thomas Hinkle)</creator>
+    <maintainer>(Thomas Hinkle)</maintainer>
+    <title>Manual del Sudoku</title>
+    <date>Febrer de 2008</date>
+    <version identifier="Manual del Sudoku (versió 3.0)" date="Febrer de 2008"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      El Sudoku és una aplicació per a jugar al popular joc de trencaclosques sudoku, en el que heu d'omplir una casella de 9 per 9 amb els dígits correctes.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnome-sudoku/ca/gnome-sudoku.xml"/>
+    <language code="ca"/>
+    <relation seriesid="4336a303-fb29-4462-9589-c32a9c5d5ff7"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

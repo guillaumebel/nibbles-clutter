@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Andreas Røsdal)</creator>
+    <maintainer>(Projecte de documentació del GNOME)</maintainer>
+    <title>Manual dels escacs</title>
+    <date>Desembre de 2006</date>
+    <version identifier="1" date="Desembre de 2006"/>
+    <subject category="GNOME|Games"/>
+    <description>
+       El glChess és un joc per a jugar al clàssic joc de tauler dels escacs, en el que dos jugadors simulen una batalla tot capturant les fitxes de l'adversari i finalment el rei. Es pot jugar en mode 2D o 3D, en pantalla completa o en una finestra.
+ </description>
+    <type>user's guide</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/glchess/ca/glchess.xml"/>
+    <language code="ca"/>
+    <relation seriesid="f5f09913-1609-4c62-ac40-b2607df97db9"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

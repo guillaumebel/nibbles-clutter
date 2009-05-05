@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Eric Baudais)</creator>
+    <maintainer>(Eric Baudais)</maintainer>
+    <title>Manuale di Iagno</title>
+    <date>7 aprile 2000</date>
+    <version identifier="1.0" date="7 aprile 2000"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Iagno è il gioco di strategia per due giocatori chiamato Otello, altrimenti conosciuto come Reversi e simile a Go. I pezzi sono dei dischetti colorati di nero su un lato nero e di bianco sull'altro. L'obiettivo del giocatore è girare i pezzi dell'avversario per farli diventare del proprio colore, cercando di fermare l'avversario che cercherà di fare lo stesso. Quando la scacchiera sarà stata riempita dai dischetti, il giocatore con più pezzi su di essa sarà il vincitore.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/iagno/it/iagno.xml"/>
+    <language code="it"/>
+    <relation seriesid="c4d35e1a-878f-4161-8293-98170c696596"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Patanjali Somayaji)</creator>
+    <creator>(Mark Rae)</creator>
+    <maintainer>(Patanjali Somayaji)</maintainer>
+    <title>Εγχειρίδιο του Ρομπότ</title>
+    <date>Αύγουστος 2007</date>
+    <version identifier="Εγχειρίδιο του Ρομπότ, Έκδοση 2.9" date="Αύγουστος 2007"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Το Ρομπότ είναι μια εκδοχή με γραφικά του αυθεντικού παιχνιδιού ρομπότ που βασιζόταν σε χαρακτήρες, και το οποιό μπορεί να βρεθεί σε αρκετά συστήματα UNIX. Ο παίκτης πρέπει να ξεγελάσει τα ρομπότ που τον/την κυνηγούν κάνοντάς τα να πέσουν το ένα πάνω στο άλλο.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnobots2/el/gnobots2.xml"/>
+    <language code="el"/>
+    <relation seriesid="20b9a66e-8798-480a-a9e8-f309c7afefb6"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Patanjali Somayaji, Mark Rae"/>
+  </resource>
+</omf>

@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "<application>Blackjack</application>">
+<!ENTITY appname "Blackjack">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="da">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual til <application>Blackjack</application></title>       
+    <abstract role="description">
+      <para>Blackjack er et spil til GNOME-projektet med kasinoregler og flere sæt kort. Formålet med spillet er at få en værdi på hånden, som er tættere på 21, end den hånd som kortgiveren har, uden at komme over 21. Spilleren bruger virtuelle jetoner som indsats.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>William Jon McCann</holder> 
+    </copyright><copyright><year>2009.</year><holder>Joe Hansen (joedalton2@yahoo.dk)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>GNOME dokumentationsprojekt</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Tilladelse er givet til at kopiere, distribuere og/eller ændre dette dokument under betingelserne i GNU Free Documentation License (GFDL), version 1.1 eller enhver senere version udgivet af Free Software Foundation; uden invariante afsnit, forsidetekster, samt bagsidetekster. Du kan se en kopi af GFDL her <ulink type="help" url="ghelp:fdl">link</ulink> eller i filen COPYING-DOCS som distribueres sammen med denne manual.</para>
+         <para>Denne manual er en del af den samling af GNOME-manualer som udgives under GFDL. Hvis du ønsker at distribuere denne manuel adskilt fra samlingen, kan du gøre dette ved at tilføje en kopi af licensen til manualen, som beskrevet i afsnit 6 af licensen.</para>
+
+	<para>En stor del af de navne som anvendes af firmaer til at identificere deres produkter og tjenester hævdes som værende varemærker. Hvor disse navne fremgår i en hvilken som helst GNOME-dokumentation, og medlemmerne af GNOME-dokumentationsprojeket er gjort opmærksom på disse varemærker, så er disse navne vist med store bogstaver eller stort begyndelsesbogstav.</para>
+
+	<para>DOKUMENTET OG ÆNDREDE VERSIONER AF DOKUMENTET STILLES TIL RÅDIGHED UNDER GNU FREE DOCOMENTATION LICENSE MED FØLGENDE BETINGELSER: <orderedlist>
+		<listitem>
+		  <para>DETTE DOKUMENT GØRES TILGÆNGELIGT SÅDAN SOM DET ER, UDEN NOGEN FORM FOR GARANTI, HVERKEN UDTALT ELLER ANTYDET, DERIBLANDT, UDEN BEGRÆNSNINGER, GARANTIER OM AT DOKUMENTET ELLER ÆNDREDE VERSIONER AF DOKUMENTET ER FRIT FOR DEFEKTER, PASSENDE TIL ET BESTEMT FORMÅL ELLER IKKE-KRÆNKENDE. DU HÆFTER SELV FOR HELE RISIKOEN VEDRØRENDE KVALITET, KORREKTHED OG YDELSE FOR DOKUMENTET ELLER ÆNDREDE VERSIONER AF DOKUMENTET. SKULLE ET DOKUMENT, ELLER EN ÆNDRET VERSION AF ET DOKUMENT VISE SIG AT VÆRE DEFEKT PÅ EN HVILKEN SOM HELST MÅDE, HÆFTER DU FOR BETALING FOR EVENTUEL NØDVENDIG SERVICE, REPARATION ELLER KORREKTION (OG IKKE HVERKEN DEN OPRINDELIGE FORFATTER, SKRIBENT ELLER NOGEN ANDEN BIDRAGYDER). DENNE ERKLÆRING OM GARANTIFORBEHOLD ER EN ESSENTIEL DEL AF DENNE LICENS. INGEN BRUG AF NOGET DOKUMENT ELLER ÆNDRET VERSION AF DOKUMENTET ER AUTORISERET HERUNDER BORTSET FRA DENNE ANSVARSFRASKRIVELSE OG</para>
+		</listitem>
+		<listitem>
+		  <para>UNDER INGEN OMSTÆNDIGHEDER OG UNDER INGEN JURIDISK TEORI, UANSET OM DET ER EN BEVIDST SKADENDE HANDLING (INKLUSIVE UFORSVARLIGHED) ELLER PÅ HVILKEN SOM HELST ANDEN MÅDE, KAN FORFATTEREN, SKRIBENT, BIDRAGYDERE, DISTRIBUTØRER ELLER FORSYNER AF DETTE DOKUMENT ELLER MODIFICEREDE VERSIONER GØRES ANSVARLIG OVERFOR NOGEN PERSON FOR NOGEN DIREKTE, INDIREKTE, SPECIEL, TILFÆLDIG ELLER FØLGENDE SKADE PÅFØRT NOGEN INKLUSIVE, UDEN BEGRÆNSNING, SKADE SOM FØLGE AF TAB AF RYGTE, ARBEJDSSTOP, COMPUTERFEJL ELLER -SVIGT, ELLER ENHVER ANDEN FORM FOR SKADE ELLER TAB SOM ER OPSTÅET I FORBINDELSE MED BRUG AF DETTE DOKUMENT ELLER MODIFICEREDE VERSIONER HERAF, SELV HVIS EN SÅDAN PART HAR VÆRET INFORMERET OM MULIGHEDEN FOR SÅDANNE SKADER.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer">
+		<firstname>William Jon</firstname> 
+		<surname>McCann</surname> 
+		<affiliation> 
+	  		<orgname/> 
+	  		<address> <email>mccann@jhu.edu</email> </address> 
+		</affiliation> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>	
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+      <revision> 
+		<revnumber>Blackjack manual version 2.8</revnumber> 
+		<date>September 2004</date> 
+		<revdescription> 
+	  		<para role="author">William Jon McCann <email>mccann@jhu.edu</email></para>
+	  		<para role="publisher"/>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Denne manual beskriver version 2.12 af Blackjack.</releaseinfo> 
+    <legalnotice> 
+      <title>Tilbagemeldinger</title> 
+      <para>Hvis du ønsker at indrapportere en fejl eller komme med et forslag vedrørende <application>Blackjack</application> eller denne manual så følg vejledningen på siden <ulink url="ghelp:gnome-feedback" type="help">tilbagemeldinger omkring GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Blackjack</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>mygnomeapp</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="blackjack-introduction"> 
+
+    <title>Indledning</title> 
+
+    <para><application>Blackjack</application> er et blackjackspil der har flere sæt kort og spilles efter kasinoregler. Formålet med spillet er få kort der har en højere værdi end dem som kortgiveren har uden at komme over 21.</para>
+  </sect1>
+
+  <sect1 id="blackjack-basics">
+    <title>Blackjack - det grundlæggende</title>
+
+    <sect2 id="blackjack-terms">
+    <title>Blackjack - terminologi</title>
+    <para>Her er nogle vigtige termer som bruges i spillet.</para>
+    <para>
+        <variablelist>
+	<varlistentry>
+	<term>Blackjack</term>
+	<listitem>
+	<para>En hånd hvor dine to første kort giver 21; en øjeblikkelig gevinst værd 150 % af din indsats</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Gået over</term>
+	<listitem>
+	<para>Når værdien af en hånd overgår 21; en tabende hånd</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Doble ned</term>
+	<listitem>
+	<para>At fordoble den oprindelige indsats og modtage præcis et kort mere</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Køb</term>
+	<listitem>
+	<para>At anmode om at endnu et kort tilføjes til hånden</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Forsikring</term>
+	<listitem>
+	<para>Et sideindsats på 50 % af den oprindelige indsats på at kortgiveren har en naturlig 21 (også kaldet blackjack) som tilbydes når kortgiveren har et es som opadvendt kort. Hvis kortgiveren har en naturlig 21 så modtager spilleren dobbelt indsats.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Uafgjort</term>
+	<listitem>
+	<para>Når værdien på spillerens hånd svarer præcis til kortgiverens hånd, så returneres den oprindelige indsats til spilleren</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Split</term>
+	<listitem>
+	<para>Når en hånd starter med to kort af samme værdi (eller rang) må hånden deles op og danne to uafhængige hænder</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Stå</term>
+	<listitem>
+	<para>For at stoppe med at tilføre kort til en hånd</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Giv op</term>
+	<listitem>
+        <para>For at opgive halvdelen af din indsats for ikke at færdiggøre hånden</para>
+	</listitem>
+	</varlistentry>
+
+        </variablelist>
+    </para>
+    </sect2>
+
+    <sect2 id="blackjack-card-values">
+    <title>Kortværdier</title>
+    <para>I blackjack har hvert kort en værdi. <itemizedlist> 
+	  <listitem> 
+           <para>Et es tæller som enten 1 eller 11.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Kortene 2 til 9 har den værdi kortene viser.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>10, knægt, dronning og konge har alle værdien 10.</para>
+	  </listitem> 
+	</itemizedlist></para> 
+
+    <para>Værdien af hånden er summen af den enkelte værdi på hvert kort i hånden.</para>
+    </sect2>
+
+    <sect2 id="blackjack-dealer-rules">
+    <title>Kortgiverregler</title>
+    <para>Kortgiveren skal spille sin hånd efter meget specifikke regler. Der er to basale regelvariationer, som afgører hvilken håndtotal kortgiveren skal trække ekstra kort til.  <variablelist>
+	<varlistentry>
+	<term>Kortgiver står på alle 17'er</term>
+	<listitem>
+	<para>Kortgiveren skal fortsætte med at trække kort (køb) indtil hånden er på mindst 17.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Kortgiver rammer blød 17</term>
+	<listitem>
+	<para>Kortgiveren skal fortsætte med at trække kort (køb) indtil håndens total er mindst 17, undtaget når dealeren har en blød total på 17 må han tage endnu et kort. En blød total er en hvor et es tæller som 11.</para>
+	</listitem>
+	</varlistentry>
+        </variablelist></para>
+    </sect2>
+
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here. 
+     If the information about how to get started is very short, you can 
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="blackjack-getting-started"> 
+    <title>Sådan kommer du i gang</title> 
+
+    <sect2 id="blackjack-start">
+    <title>Start af <application>Blackjack</application></title>
+    <para>Du kan starte <application>Blackjack</application> på følgende måder:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menuen <guimenu>Programmer</guimenu></term>
+    		<listitem>
+    		<para>Vælg <menuchoice><guisubmenu>Spil </guisubmenu><guimenuitem>Blackjack</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Kommandolinje</term>
+    		<listitem>
+    		<para>Du kan starte <application>Blackjack</application> ved hjælp af kommandolinjen ved at skrive den følgende kommando og derefter taste <keycap>Retur</keycap>:</para>
+    		<para> 
+			<command>blackjack</command> 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-when-start">
+    <title>Når du starter <application>Blackjack</application></title>
+    <para>Når du starter <application>Blackjack</application>, viser det følgende vindue sig.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title>Opstartsvindue for <application>Blackjack</application></title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/blackjack_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <!-- EPS versions of the figures are not required at the moment. -->
+            <!-- 
+		    <imageobject>
+      		<imagedata fileref="figures/image.eps" format="EPS"/>
+    		    </imageobject>
+	    -->
+	    <textobject> 
+	      <phrase>Shows <application>Blackjack</application> main window. Contains titlebar, menubar, toolbar, playing area, and
+	      scrollbars. Menubar contains Game, Settings, and Help menus. </phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para>Vinduet <application>Blackjack</application> indeholder de følgende elementer:</para>
+      <variablelist>
+
+	<varlistentry>
+	<term>Menubjælke</term>
+	<listitem>
+	<para>Menuerne på menubjælken indeholder alle de kommandoer, du behøver for at arbejde med filer i <application>Blackjack</application>.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Værktøjsbjælke</term>
+	<listitem>
+	<para>Værktøjsbjælken indeholder en undergruppe af kommandoer, som du kan tilgå fra menubjælken.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Statusbjælke</term>
+	<listitem>
+	<para>Statusbjælken viser information om nuværende aktivitet i <application>Blackjack</application> og sammenhængende information om menupunkterne.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Spilområde</term>
+	<listitem>
+	<para>Spilområdet indeholder kortgiverpositionen, spillerpositionen, spillerens indsatsområde og spillerens jetoner.</para>
+	</listitem>
+	</varlistentry>
+
+	</variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-menus">
+    <title>Menuer i <application>Blackjack</application></title>
+      <para>Menubjælken, der befinder sig over <interface>spillebordet</interface>, indeholder de følgende menuer:</para>
+
+      <variablelist>
+
+        <!-- ===== Game ===== -->
+
+        <varlistentry>
+          <term><guimenu>Spil</guimenu></term>
+          <listitem>
+            <para>Denne menu indeholder disse punkter: <itemizedlist>
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-N</keysym></shortcut><guimenuitem>Nyt spil</guimenuitem></menuchoice> — Denne rydder bordet og starter på et nyt spil.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Genstart spil</guimenuitem></menuchoice> — Denne rydder bordet og genstarter spillet.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Fif</guimenuitem></menuchoice> — Denne vil give dig computerens bedste forslag, til hvad du skal gøre.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-Q</keysym></shortcut><guimenuitem>Afslut</guimenuitem></menuchoice> — Denne afslutter spillet.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Settings ===== -->
+
+        <varlistentry>
+          <term><guimenu>Opsætning</guimenu></term>
+          <listitem>
+            <para>Denne menu indeholder disse punkter: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Vis værktøjsbjælke</guimenuitem> — Denne indstilling slår værktøjsbjælken til og fra.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Indstillinger…</guimenuitem> — Denne åbner <interface>Indstillingsvindue</interface> hvilket giver dig mulighed for at konfigurere spillet.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Help ===== -->
+
+        <varlistentry>
+          <term><guimenu>Hjælp</guimenu></term>
+          <listitem>
+            <para>Denne menu indeholder: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Indhold</guimenuitem> — Åbner din hjælpebrowser og viser denne manual.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Om</guimenuitem> — Åbner vinduet <interface>Om</interface>, som viser basal information om <application>Blackjack</application> såsom versionnummer og navnene på dets forfattere.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+    <sect2 id="blackjack-playing-area">
+    <title>Spilområde i <application>Blackjack</application></title>
+      <para>Spilområdet (eller bordet), der befinder sig under værktøjsbjælken, indeholder de følgende elementer:</para>
+
+      <variablelist>
+
+        <varlistentry>
+          <term><interface>Kortgiverposition</interface></term>
+          <listitem><para>Det er her, at kortgiverens hånd bliver placeret. Den er placeret i toppen af spilområdet. På et ryddet bord kan det ses som et område med en hvid markering.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Spillerpositioner</interface></term>
+          <listitem><para>Det er her hvor spillerens hånd vil blive placeret. I starten vil der kun være en spillerposition. Flere vil blive oprettet, hvis spilleren vælger at dele en hånd. På et blankt bord vil de vise sig med hvidt omrids under kortgiverens position.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Spillers indsatsbunke</interface></term>
+          <listitem><para>Indsatsbunken repræsenterer den oprindelige indsats for hver hånd. Den består af en stak jetoner placeret direkte til venstre for hver spillers position.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Jetoner</interface></term>
+          <listitem><para>Spillerens jetoner repræsenterer en uendelig stak af jetoner hvor hver af jetonværdierne 100, 25, 5 og 1. Disse jetoner bruges til at ændre indsatsen.</para></listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for 
+  which the application is designed. -->
+  <sect1 id="blackjack-usage"> 
+    <title>Brug</title> 
+    <para>
+      <itemizedlist> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-set-wager"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-deal"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-hit"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-stand"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-double-down"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-split"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-surrender"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-get-hint"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-keyboard-control"/></para>
+	</listitem> 
+      </itemizedlist> </para>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-set-wager"> 
+      <title>For at vælge indsatsen</title> 
+      <para>For at øge indsatsen på hånden: <itemizedlist>
+        <listitem>
+         <para>Dobbeltklik på jetonen som du ønsker at tilføje til din indsats. Jetonerne er placeret langs med det nedre hjørne af spilområdet.</para>
+        </listitem>
+        <listitem>
+         <para>Eller, træk den ønskede jeton over på din indsats, placeret ved siden af din hånd.</para>
+        </listitem>
+      </itemizedlist></para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-deal"> 
+      <title>For at give en ny hånd</title> 
+      <para>En ny hånd kan gives, når bordet er ryddet eller, når spillet er afsluttet på de aktuelle hænder.</para>
+      <para>For at give en ny hånd på et ryddet bord, klik i den hvide boks som indikerer kortgiverens eller spillerens position.</para>
+      <para>For at give en ny hånd efter spillet er sluttet på de aktuelle hænder, klik en gang på et af kortene på bordet.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-hit"> 
+      <title>For at tilføje et kort til en hånd (Køb)</title> 
+      <para>Du må tilføje kort til en hånd indtil håndens værdi er 21 eller derover.</para>
+      <para>For at tilføje et kort til en spillers hånd, klik en gang på et kort i hånden.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-stand"> 
+      <title>Stoppe med at modtage kort (Stå)</title> 
+      <para>Du må stoppe med at modtage kort på ethvert tidspunkt efter, at du har modtaget de første to kort.</para>
+      <para>For at stoppe med at tilføje kort til en hånd, klik en gang på en af de andre hænder. For eksempel, når der kun er en spillerposition (det vil sige, du har ikke delt op i et par), klik på kortgiverens hånd for at stoppe. Når du har delt et par, kan du stoppe på den første hånd ved at klikke på den anden spillers hånd, eller kortgiverens hånd.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-double-down"> 
+      <title>At doble ned</title> 
+      <para>For at doble ned, dobbeltklik på en af jetonerne efter de første to kort er blevet uddelt.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-split"> 
+      <title>For at dele i par</title> 
+      <para>For at dele i et par, træk det øverste kort væk fra spillerpositionen og slip det på et tomt sted på bordet.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-surrender"> 
+      <title>At overgive sig</title> 
+      <para>Ikke implementeret endnu.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-get-hint"> 
+      <title>Få et fif</title> 
+      <para>På ethvert tidspunkt kan du bede spillet om et fif. For at gøre dette klik enten på knappen <interface>Fif</interface> på <interface>værktøjslinjen</interface>, eller vælg menupunktet <menuchoice><guisubmenu>Spil </guisubmenu><guimenuitem>Fif</guimenuitem></menuchoice>.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-keyboard-control"> 
+      <title>Tastaturkontrol</title> 
+      <para>De fleste aktioner i spillet kan kontrolleres via tastaturet. <table><title>Kontroltaster</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead><row><entry>Handling</entry><entry>Tast</entry></row></thead><tbody><row><entry>Giv ny hånd</entry><entry>RETUR</entry></row><row><entry>Køb / Tilføj kort</entry><entry>H</entry></row><row><entry>Stå / Færdig hånd</entry><entry>S</entry></row><row><entry>Doble ned</entry><entry>D</entry></row><row><entry>Delt hånd</entry><entry>P</entry></row><row><entry>Overgiv hånd</entry><entry>R</entry></row></tbody></tgroup></table></para>
+    </sect2> 
+  </sect1>
+
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="blackjack-prefs"> 
+    <title>Opsætning</title> 
+    <para>For at konfigurere <application>Blackjack</application>, vælg <menuchoice><guimenu>Opsætning</guimenu><guimenuitem>Indstillinger</guimenuitem></menuchoice>. Vinduet <guilabel>Indstillinger</guilabel> indeholder de følgende sektioner af faneblade:</para> 
+    <itemizedlist> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-game"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-rules"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-cards"/></para> 
+      </listitem> 
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="blackjack-prefs-game"> 
+      <title>Spil</title> 
+      <variablelist> 
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Vis sandsynligheder for hånd</guilabel> </term> 
+	  <listitem> 
+	    <para>Vælg dette punkt for at vise sandsynlighederne for kortgiverens hånd og forventede værdier for de forskellige muligheder for spilleren.</para>
+	  </listitem> 
+	</varlistentry> 
+
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Hurtig runde</guilabel> </term> 
+	  <listitem> 
+	    <para>Vælg dette punkt for at lade computeren uddele kort uden forsinkelse</para>
+	  </listitem> 
+	</varlistentry> 
+
+      </variablelist> 
+    </sect2>
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-rules"> 
+      <title>Regler</title> 
+      <para>Vælg regelvariationer fra listen.</para>
+    </sect2> 
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-cards"> 
+      <title>Kort</title> 
+      <para>Tilpas udseendet på spilkortene.</para>
+    </sect2> 
+
+  </sect1>
+
+<!-- ============= Advanced ================================== -->
+  <sect1 id="blackjack-advanced">
+  <title>Avanceret</title>
+  <para>
+  </para>
+
+  <sect2 id="blackjack-advanced-probabilities">
+    <title>Sandsynligheder for kortgiver</title>
+    <para>Når indstillingen <guilabel>Vis sandsynligheder for kortgiver</guilabel> er valgt i fanebladet <guilabel>Spil</guilabel> i vinduet <guilabel>Indstillinger</guilabel> vises den præcise sandsynlighed for hvert muligt udfald af kortgiverens hånd over spilområdets overflade, til venstre for kortgiverens hånd. Sandsynlighederne går fra nul til en, hvor nul betyder umuligt og en betyder sikker. Disse sandsynligheder tager alle kort trukket fra bunken med i beregningen.</para>
+  </sect2>
+
+  <sect2 id="blackjack-advanced-expected-values">
+    <title>Forventede spillerværdier</title>
+    <para>Når indstillingen <guilabel>Vis sandsynligheder for kortgiver</guilabel> er valgt i fanebladet <guilabel>Spil</guilabel> i vinduet <guilabel>Indstillinger</guilabel> vises de  præcise værdier (i procent af oprindelig indsats) på hver mulig spillerhandling over bordets overflade, til venstre for kortgiverens hånd. Disse værdier tager alle kort i din aktuelle hånd og kortgiverens opadvendte kort med i beregningen. For eksempel, antag at nummeret vist for at stå er -12.345. Dette betyder at hvis du spiller den nuværende situation rigtig mange gang, vil det at stå hver gang, med en oprindelig indsats på 1.00 give dig et tab på 0.12345.</para>
+  </sect2>
+
+ </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default. 
+     You can use it to describe known bugs and limitations of the 
+	  program if there are any - please be frank and list all
+     problems you know of. 
+  
+  <sect1 id="blackjack-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="blackjack-about"> 
+    <title>Om <application>Blackjack</application></title> 
+    <para><application>Blackjack</application> blev skrevet af William Jon McCann (<email>mccann@jhu.edu</email>).</para>
+    <para>For at indrapportere en fejl eller komme med et forslag vedrørende dette program eller denne manual så følg vejledningen i dette <ulink url="ghelp:gnome-feedback" type="help">dokument</ulink>.</para>
+
+    <para>Dette program distribueres under betingelserne i licensen GNU General Public der udgives af Free Software Foundation; enten version 2 eller (ved dit valg) enhver senere version. En kopi af denne licens kan findes her <ulink url="ghelp:gpl" type="help">link</ulink>, eller i filen COPYING der er inkluderet med kildekoden til dette program.</para>
+
+  </sect1> 
+</article>

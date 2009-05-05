@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "<application>Blackjack</application>">
+<!ENTITY appname "Blackjack">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="fr">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manuel de <application>Blackjack</application></title>       
+    <abstract role="description">
+      <para>Blackjack est un jeu de blackjack à plusieurs paquets pour le projet GNOME, selon les règles de casinos. Le but du jeu est d'obtenir une main plus proche de 21 que celle du croupier, sans dépasser 21. Le joueur parie avec des jetons virtuels.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>William Jon McCann</holder> 
+    </copyright><copyright><year>2007-2008</year><holder>Claude Paroz (claude@2xlibre.net)</holder></copyright><copyright><year>2009</year><holder>Bruno Brouard (annoa.b@gmail.com)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>Projet de documentation GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Permission vous est donnée de copier, distribuer et/ou modifier ce document selon les termes de la Licence GNU Free Documentation License, Version 1.1 ou ultérieure publiée par la Free Software Foundation sans section inaltérable, sans texte de première page de couverture ni texte de dernière page de couverture. Vous trouverez un exemplaire de cette licence en suivant ce <ulink type="help" url="ghelp:fdl">lien</ulink> ou dans le fichier COPYING-DOCS fourni avec le présent manuel.</para>
+         <para>Ce manuel fait partie de la collection de manuels GNOME distribués selon les termes de la licence de documentation libre GNU. Si vous souhaitez distribuer ce manuel indépendamment de la collection, vous devez joindre un exemplaire de la licence au document, comme indiqué dans la section 6 de celle-ci.</para>
+
+	<para>La plupart des noms utilisés par les entreprises pour distinguer leurs produits et services sont des marques déposées. Lorsque ces noms apparaissent dans la documentation GNOME et que les membres du projet de Documentation GNOME sont informés de l'existence de ces marques déposées, soit ces noms entiers, soit leur première lettre est en majuscule.</para>
+
+	<para>LE PRÉSENT DOCUMENT ET SES VERSIONS MODIFIÉES SONT FOURNIS SELON LES TERMES DE LA LICENCE DE DOCUMENTATION LIBRE GNU SACHANT QUE : <orderedlist>
+		<listitem>
+		  <para>LE PRÉSENT DOCUMENT EST FOURNI « TEL QUEL », SANS AUCUNE GARANTIE, EXPRESSE OU IMPLICITE, Y COMPRIS, ET SANS LIMITATION, LES GARANTIES DE MARCHANDABILITÉ, D'ADÉQUATION À UN OBJECTIF PARTICULIER OU DE NON INFRACTION DU DOCUMENT OU DE SA VERSION MODIFIÉE. L'UTILISATEUR ASSUME TOUT RISQUE RELATIF À LA QUALITÉ, À LA PERTINENCE ET À LA PERFORMANCE DU DOCUMENT OU DE SA VERSION DE MISE À JOUR. SI LE DOCUMENT OU SA VERSION MODIFIÉE S'AVÉRAIT DÉFECTUEUSE, L'UTILISATEUR (ET NON LE RÉDACTEUR INITIAL, L'AUTEUR, NI TOUT AUTRE PARTICIPANT) ENDOSSERA LES COÛTS DE TOUTE INTERVENTION, RÉPARATION OU CORRECTION NÉCESSAIRE. CETTE DÉNÉGATION DE RESPONSABILITÉ CONSTITUE UNE PARTIE ESSENTIELLE DE CETTE LICENCE. AUCUNE UTILISATION DE CE DOCUMENT OU DE SA VERSION MODIFIÉE N'EST AUTORISÉE AUX TERMES DU PRÉSENT ACCORD, EXCEPTÉ SOUS CETTE DÉNÉGATION DE RESPONSABILITÉ ; </para>
+		</listitem>
+		<listitem>
+		  <para>EN AUCUNE CIRCONSTANCE ET SOUS AUCUNE INTERPRÉTATION DE LA LOI, QU'IL S'AGISSE D'UN DÉLIT CIVIL (Y COMPRIS LA NÉGLIGENCE), CONTRACTUEL OU AUTRE, L'AUTEUR, LE RÉDACTEUR INITIAL, TOUT PARTICIPANT OU TOUT DISTRIBUTEUR DE CE DOCUMENT OU DE SA VERSION MODIFIÉE, OU TOUT FOURNISSEUR DE L'UNE DE CES PARTIES NE POURRA ÊTRE TENU RESPONSABLE À L'ÉGARD DE QUICONQUE POUR TOUT DOMMAGE DIRECT, INDIRECT, PARTICULIER, OU ACCIDENTEL DE TOUT TYPE Y COMPRIS, SANS LIMITATION, LES DOMMAGES LIÉS À LA PERTE DE CLIENTÈLE, À UN ARRÊT DE TRAVAIL, À UNE DÉFAILLANCE OU UN MAUVAIS FONCTIONNEMENT INFORMATIQUE, OU À TOUT AUTRE DOMMAGE OU PERTE LIÉE À L'UTILISATION DU DOCUMENT ET DE SES VERSIONS MODIFIÉES, MÊME SI LADITE PARTIE A ÉTÉ INFORMÉE DE L'ÉVENTUALITÉ DE TELS DOMMAGES.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer">
+		<firstname>William Jon</firstname> 
+		<surname>McCann</surname> 
+		<affiliation> 
+	  		<orgname/> 
+	  		<address> <email>mccann@jhu.edu</email> </address> 
+		</affiliation> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>	
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+      <revision> 
+		<revnumber>Manuel de Blackjack v2.8</revnumber> 
+		<date>Septembre 2004</date> 
+		<revdescription> 
+	  		<para role="author">William Jon McCann <email>mccann@jhu.edu</email></para>
+	  		<para role="publisher"/>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Ce manuel documente la version 2.12 de Blackjack.</releaseinfo> 
+    <legalnotice> 
+      <title>Votre avis</title> 
+      <para>Pour rapporter une anomalie ou émettre une suggestion concernant <application>Blackjack</application> ou ce manuel, procédez selon les instructions de la <ulink url="ghelp:gnome-feedback" type="help">page des réactions sur GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Blackjack</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>mygnomeapp</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="blackjack-introduction"> 
+
+    <title>Introduction</title> 
+
+    <para><application>Blackjack</application> est un jeu de blackjack à plusieurs paquets selon les règles de casinos. Le but du jeu est d'obtenir des cartes dont la valeur cumulée dépasse celle du croupier, sans dépasser 21.</para>
+  </sect1>
+
+  <sect1 id="blackjack-basics">
+    <title>Bases du Blackjack</title>
+
+    <sect2 id="blackjack-terms">
+    <title>Terminologie du Blackjack</title>
+    <para>Voici quelques termes importants utilisés dans ce jeu.</para>
+    <para>
+        <variablelist>
+	<varlistentry>
+	<term>Blackjack</term>
+	<listitem>
+	<para>Une main dont les deux premières cartes font 21 ; une victoire immédiate valant 150% de votre mise.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Dépassement</term>
+	<listitem>
+	<para>Lorsque la valeur des cartes d'une main dépasse 21 ; la main est perdante.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Doubler la mise</term>
+	<listitem>
+	<para>Vous doublez la mise initiale et vous recevez une et une seule carte supplémentaire.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Tirer une carte</term>
+	<listitem>
+	<para>Demander une autre carte pour l'ajouter à votre main.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Assurance</term>
+	<listitem>
+	<para>Une possibilité de réduire la mise de 50% par rapport à la mise initiale lorsque la carte visible du croupier est un As, pour se prémunir d'un éventuel blackjack de ce dernier. Si le croupier a effectivement 21, le joueur est doublement payé.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Égalité</term>
+	<listitem>
+	<para>Lorsque les valeurs des mains du joueur et du croupier sont égales, la mise initiale retourne au joueur.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Couper</term>
+	<listitem>
+	<para>Lorsqu'une main commence par deux cartes de la même valeur (ou rang), elle peut être séparée pour former deux mains indépendantes.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Rester</term>
+	<listitem>
+	<para>Arrêter d'ajouter des cartes à une main.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Abandonner</term>
+	<listitem>
+        <para>Sacrifier la moitié de la mise sans terminer la main.</para>
+	</listitem>
+	</varlistentry>
+
+        </variablelist>
+    </para>
+    </sect2>
+
+    <sect2 id="blackjack-card-values">
+    <title>Valeurs des cartes</title>
+    <para>Dans le blackjack, chaque carte possède une valeur. <itemizedlist> 
+	  <listitem> 
+           <para>Un As peut valoir 1 ou 11.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Les cartes de 2 à 9 ont leur valeur nominale.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Le Dix, le Valet, la Dame et le Roi valent tous 10.</para>
+	  </listitem> 
+	</itemizedlist></para> 
+
+    <para>La valeur d'une main correspond à la somme des valeurs de chaque carte de la main.</para>
+    </sect2>
+
+    <sect2 id="blackjack-dealer-rules">
+    <title>Règles du croupier</title>
+    <para>Le croupier joue selon des règles très spécifiques. Il existe deux variantes de base qui déterminent jusqu'à quel total le croupier doit continuer à tirer des cartes. <variablelist>
+	<varlistentry>
+	<term>Le croupier tire jusqu'à 17</term>
+	<listitem>
+	<para>Le croupier continue de tirer des cartes jusqu'à ce que sa main vale au moins 17.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Le croupier tire encore avec un 17 souple</term>
+	<listitem>
+	<para>Le croupier continue de tirer des cartes jusqu'à ce que sa main vale au moins 17, à la seule exception que lorsqu'il obtient un 17 souple, il doit tirer encore une carte. Un total souple survient lorsque la main contient un As qui vaut 11.</para>
+	</listitem>
+	</varlistentry>
+        </variablelist></para>
+    </sect2>
+
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here. 
+     If the information about how to get started is very short, you can 
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="blackjack-getting-started"> 
+    <title>Premiers pas</title> 
+
+    <sect2 id="blackjack-start">
+    <title>Lancement de <application>Blackjack</application></title>
+    <para><application>Blackjack</application> peut être lancé selon les procédures suivantes :</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menu <guimenu>Applications</guimenu></term>
+    		<listitem>
+    		<para>Choisissez <menuchoice><guisubmenu>Jeux</guisubmenu><guimenuitem>Blackjack</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Ligne de commande</term>
+    		<listitem>
+    		<para>Pour lancer <application>Blackjack</application> à partir d'une ligne de commande, saisissez la commande suivante, puis appuyez sur <keycap>Entrée</keycap> :</para>
+    		<para> 
+			<command>blackjack</command> 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-when-start">
+    <title>Au démarrage de <application>Blackjack</application></title>
+    <para>Lorsque vous lancez <application>Blackjack</application>, la fenêtre suivante apparaît :</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title>Fenêtre de démarrage de <application>Blackjack</application></title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/blackjack_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <!-- EPS versions of the figures are not required at the moment. -->
+            <!-- 
+		    <imageobject>
+      		<imagedata fileref="figures/image.eps" format="EPS"/>
+    		    </imageobject>
+	    -->
+	    <textobject> 
+	      <phrase>Montre la fenêtre principale de <application>Blackjack</application>. Elle contient la barre de titre, la barre de menus, la barre d'outils, la zone de jeu et les barres de défilement. La barre de menus contient les menus Jeu, Paramètres et Aide.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para>La fenêtre de <application>Blackjack</application> contient les éléments suivants :</para>
+      <variablelist>
+
+	<varlistentry>
+	<term>Barre de menus</term>
+	<listitem>
+	<para>Les menus de la barre de menus contiennent toutes les commandes nécessaires à la gestion des fichiers dans <application>Blackjack</application>.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Barre d'outils</term>
+	<listitem>
+	<para>La barre d'outils contient un sous-ensemble des commandes accessibles à partir de la barre de menus.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Barre d'état</term>
+	<listitem>
+	<para>La barre d'état affiche des informations sur l'activité actuelle de <application>Blackjack</application> ainsi que des informations contextuelles sur les éléments de menus.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Zone de jeu</term>
+	<listitem>
+	<para>La zone de jeu contient la place du croupier, la place du joueur, la pile des mises du joueur et les jetons du joueur.</para>
+	</listitem>
+	</varlistentry>
+
+	</variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-menus">
+    <title>Menus de <application>Blackjack</application></title>
+      <para>La barre de menus, située au-dessus de la <interface>table de jeu</interface>, contient les menus suivants :</para>
+
+      <variablelist>
+
+        <!-- ===== Game ===== -->
+
+        <varlistentry>
+          <term><guimenu>Jeu</guimenu></term>
+          <listitem>
+            <para>Ce menu contient les éléments suivants : <itemizedlist>
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-N</keysym></shortcut><guimenuitem>Nouveau</guimenuitem></menuchoice> — Cela efface la table actuelle et démarre une nouvelle partie.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Recommencer</guimenuitem></menuchoice> — Cela efface la table actuelle et redémarre la partie.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Astuce</guimenuitem></menuchoice> — L'ordinateur vous indique la meilleure action à exécuter, selon lui.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-Q</keysym></shortcut><guimenuitem>Quitter</guimenuitem></menuchoice> — Cela quitte le jeu.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Settings ===== -->
+
+        <varlistentry>
+          <term><guimenu>Paramètres</guimenu></term>
+          <listitem>
+            <para>Ce menu contient les éléments suivants : <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Barre d'outils</guimenuitem> — Cet élément de menu affiche ou masque la barre d'outils.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Préférences</guimenuitem> — Cela ouvre la boîte de dialogue des <interface>Préférences</interface>, vous permettant de configurer le jeu.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Help ===== -->
+
+        <varlistentry>
+          <term><guimenu>Aide</guimenu></term>
+          <listitem>
+            <para>Ce menu contient : <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Sommaire</guimenuitem> — Ouvre le navigateur d'aide et affiche ce manuel.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>À propos</guimenuitem> — Ouvre la boîte de dialogue <interface>À propos</interface>, affichant des informations élémentaires au sujet de <application>Blackjack</application>, telles que le numéro de version et les noms de ses auteurs.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+    <sect2 id="blackjack-playing-area">
+    <title>Zone de jeu de <application>Blackjack</application></title>
+      <para>La zone de jeu (ou table), située au-dessous de la <interface>barre d'outils</interface>, contient les éléments suivants :</para>
+
+      <variablelist>
+
+        <varlistentry>
+          <term><interface>Place du croupier</interface></term>
+          <listitem><para>C'est l'endroit où est affichée la main du croupier, au sommet de la zone de jeu. Sur une table vierge, elle apparaît sous la forme d'un rectangle avec une bordure blanche.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Place du joueur</interface></term>
+          <listitem><para>C'est l'endroit où sont affichées les mains du joueur. Au départ, il n'y a qu'une seule main. Cela peut augmenter si le joueur coupe une main. Sur une table vierge, cette zone apparaît comme un rectangle avec une bordure blanche, en dessous de la place du croupier.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Pile des mises du joueur</interface></term>
+          <listitem><para>La pile des mises correspond à la mise initiale de chaque main. Elle est formée d'une pile de jetons située immédiatement à gauche de la place de chaque joueur.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Jetons du joueur</interface></term>
+          <listitem><para>Les jetons du joueur sont constitués d'une pile infinie de jetons de valeurs de 100, 25, 5 et 1. Ces jetons servent à modifier la mise.</para></listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for 
+  which the application is designed. -->
+  <sect1 id="blackjack-usage"> 
+    <title>Utilisation</title> 
+    <para>
+      <itemizedlist> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-set-wager"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-deal"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-hit"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-stand"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-double-down"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-split"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-surrender"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-get-hint"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-keyboard-control"/></para>
+	</listitem> 
+      </itemizedlist> </para>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-set-wager"> 
+      <title>Définition de la mise</title> 
+      <para>Pour augmenter la mise de votre main : <itemizedlist>
+        <listitem>
+         <para>Faites un double-clic sur le jeton correspondant à la somme que vous voulez ajouter à la mise, tout en bas de la zone de jeu.</para>
+        </listitem>
+        <listitem>
+         <para>Il est aussi possible de glisser le jeton souhaité sur la pile de la mise, juste à côté de votre main.</para>
+        </listitem>
+      </itemizedlist></para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-deal"> 
+      <title>Distribution d'une nouvelle main</title> 
+      <para>Il est possible de faire distribuer une nouvelle main lorsque la table est vierge, ou lorsque une partie vient de se terminer.</para>
+      <para>Pour distribuer une nouvelle main sur une table vierge, cliquez sur les bordures blanches indiquant les places du croupier et du joueur.</para>
+      <para>Pour distribuer une nouvelle main à la fin d'une partie, cliquez une seule fois sur n'importe quelle carte se trouvant sur la table.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-hit"> 
+      <title>Ajout d'une carte à une main (tirer)</title> 
+      <para>Vous pouvez ajouter des cartes à une main tant que la somme des cartes de la main est inférieure à 21.</para>
+      <para>Pour ajouter une carte à la main d'un joueur, cliquez une seule fois sur n'importe quelle carte de la main.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-stand"> 
+      <title>Fin du tirage de cartes (rester)</title> 
+      <para>Il est possible d'arrêter de tirer des cartes à n'importe quel moment après la distribution des deux premières cartes.</para>
+      <para>Pour arrêter d'ajouter des cartes à une main, cliquez une fois sur n'importe quelle autre main. Par exemple, lorsqu'il n'y a qu'une place de joueur (aucun paire n'a été coupée), cliquez sur une carte du croupier pour « rester ». Si vous avez coupé une paire, vous pouvez rester sur la première main du joueur en cliquant sur la deuxième main, ou sur la main du croupier.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-double-down"> 
+      <title>Doubler la mise</title> 
+      <para>Pour doubler la mise, double-cliquez sur n'importe quel jeton du joueur après la distribution des deux premières cartes.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-split"> 
+      <title>Couper des paires</title> 
+      <para>Pour couper une paire, faites glisser la carte supérieure de la main du joueur et placez-la sur un espace vide de la table.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-surrender"> 
+      <title>Abandon</title> 
+      <para>Pas encore disponible.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-get-hint"> 
+      <title>Astuces</title> 
+      <para>À n'importe quel moment du jeu, vous avez le droit de demander une astuce. Pour cela, cliquez sur le bouton <interface>Astuce</interface> dans la <interface>barre d'outils</interface> ou choisissez l'élément de menu <menuchoice><guisubmenu>Jeu</guisubmenu><guimenuitem>Astuce</guimenuitem></menuchoice>.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-keyboard-control"> 
+      <title>Raccourcis clavier</title> 
+      <para>La plupart des actions du jeu peuvent être contrôlées par le clavier. <table><title>Touches de raccourcis</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead><row><entry>Action</entry><entry>Touche</entry></row></thead><tbody><row><entry>Distribuer une nouvelle main</entry><entry>Entrée</entry></row><row><entry>Tirer une carte</entry><entry>H</entry></row><row><entry>Rester (terminer la main)</entry><entry>S</entry></row><row><entry>Doubler la mise</entry><entry>D</entry></row><row><entry>Couper la main</entry><entry>P</entry></row><row><entry>Abandonner</entry><entry>R</entry></row></tbody></tgroup></table></para>
+    </sect2> 
+  </sect1>
+
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="blackjack-prefs"> 
+    <title>Paramètres</title> 
+    <para>Pour configurer <application>Blackjack</application>, choisissez <menuchoice><guimenu>Paramètres</guimenu><guimenuitem>Préférences</guimenuitem></menuchoice>. La boîte de dialogue des <guilabel>Préférences</guilabel> contient les sections suivantes :</para> 
+    <itemizedlist> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-game"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-rules"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-cards"/></para> 
+      </listitem> 
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="blackjack-prefs-game"> 
+      <title>Jeu</title> 
+      <variablelist> 
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Afficher les probabilités de la main</guilabel> </term> 
+	  <listitem> 
+	    <para>Cochez cette option pour afficher les probabilités de la main du croupier et les valeurs attendues pour les différentes options du joueur.</para>
+	  </listitem> 
+	</varlistentry> 
+
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Donnes rapides</guilabel> </term> 
+	  <listitem> 
+	    <para>Cochez cette option pour que l'ordinateur distribue les cartes sans délai.</para>
+	  </listitem> 
+	</varlistentry> 
+
+      </variablelist> 
+    </sect2>
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-rules"> 
+      <title>Règles du jeu</title> 
+      <para>Sélectionnez la variante de règles dans la liste.</para>
+    </sect2> 
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-cards"> 
+      <title>Style des cartes</title> 
+      <para>Permet de personnaliser l'apparence des cartes de jeu.</para>
+    </sect2> 
+
+  </sect1>
+
+<!-- ============= Advanced ================================== -->
+  <sect1 id="blackjack-advanced">
+  <title>Réglages avancés</title>
+  <para>
+  </para>
+
+  <sect2 id="blackjack-advanced-probabilities">
+    <title>Probabilités du croupier</title>
+    <para>Lorsque l'option <guilabel>Afficher les probabilités de la main</guilabel> est cochée dans la fenêtre des <guilabel>Préférences</guilabel>, les probabilités exactes de toutes les combinaisons possibles de la main du croupier sont affichées sur la table, à gauche de la main du croupier. Les probabilités vont de 0 à 100%, où 0 signifie impossible et 100 signifie la certitude. Ces probabilités prennent en compte toutes les cartes tirées du sabot.</para>
+  </sect2>
+
+  <sect2 id="blackjack-advanced-expected-values">
+    <title>Valeurs attendues du joueur</title>
+    <para>Lorsque l'option <guilabel>Afficher les probabilités de la main</guilabel> est cochée dans la fenêtre des <guilabel>Préférences</guilabel>, les valeurs attendues exactes (en pourcent du pari initial) de chaque option possible du joueur sont affichées sur la table, à gauche de la main du joueur. Ces valeurs tiennent compte de toutes les cartes des mains actuelles et de la carte visible du croupier. Par exemple, supposons que la probabilité de l'action « Garder » est de -12.345 %. Cela signifie que si vous jouiez la situation actuelle de très nombreuses fois et que vous gardiez les cartes à chaque fois, avec une mise initiale de 100, vous perdriez en moyenne 12.345.</para>
+  </sect2>
+
+ </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default. 
+     You can use it to describe known bugs and limitations of the 
+	  program if there are any - please be frank and list all
+     problems you know of. 
+  
+  <sect1 id="blackjack-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="blackjack-about"> 
+    <title>À propos de <application>Blackjack</application></title> 
+    <para><application>Blackjack</application> a été écrit par William Jon McCann (<email>mccann@jhu.edu</email>).</para>
+    <para>Pour rapporter une anomalie ou émettre une suggestion concernant cette application ou ce manuel, procédez selon les instructions de <ulink url="ghelp:gnome-feedback" type="help">ce document</ulink>.</para>
+
+    <para>Ce programme est distribué sous les termes de la Licence Publique Générale GNU publiée par la Free Software Foundation ; version 2 ou bien toute autre version ultérieure choisie par vous. Une copie de cette licence est disponible en suivant ce <ulink url="ghelp:gpl" type="help">lien</ulink>, ou dans le fichier COPYING inclus dans le code source de ce programme.</para>
+
+  </sect1> 
+</article>

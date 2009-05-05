@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Thomas Hinkle)</creator>
+    <maintainer>(Thomas Hinkle)</maintainer>
+    <title>Τεκμηρίωση του Σουντόκου</title>
+    <date>Φεβρουάριος 2008</date>
+    <version identifier="Τεκμηρίωση του GNOME Sudoku V3.0" date="Φεβρουάριος 2008"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Η εφαρμογή Σουντόκου σας επιτρέπει να παίξετε το δημοφιλές παιχνίδι λογικής σουντόκου, όπου πρέπει να συμπληρώσετε ένα τετράγωνο μεγέθους 9x9 με τους σωστούς αριθμούς.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnome-sudoku/el/gnome-sudoku.xml"/>
+    <language code="el"/>
+    <relation seriesid="4336a303-fb29-4462-9589-c32a9c5d5ff7"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

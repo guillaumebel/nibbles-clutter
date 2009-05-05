@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Andreas Røsdal)</creator>
+    <maintainer>(GNOMEren dokumentazio-proiektua)</maintainer>
+    <title>Chess-en eskuliburua</title>
+    <date>2006ko abendua</date>
+    <version identifier="1" date="2006ko abendua"/>
+    <subject category="GNOME|Games"/>
+    <description>
+       glChess mahaiko xake joko klasikoa jokatzeko jokoa da, non bi jokalarik bataila bat simulatzen duten aurkariaren piezak harrapatuz eta erregeari amaiera emanez. 2D edo 3D moduan joka daiteke, pantaila osoan edo leiho batean.
+ </description>
+    <type>user's guide</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/glchess/eu/glchess.xml"/>
+    <language code="eu"/>
+    <relation seriesid="f5f09913-1609-4c62-ac40-b2607df97db9"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

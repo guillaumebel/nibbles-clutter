@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Emese Kovács)</creator>
+    <maintainer>(Dokumentationsprojekt för GNOME)</maintainer>
+    <title>Handbok för Fem eller mer</title>
+    <date>September 2004</date>
+    <version identifier="Handbok för Fem eller mer v2.8" date="September 2004"/>
+    <subject category="GNOME|Games"/>
+    <description>
+    Målet med Fem eller mer är att rada upp färgade objekt under tiden brädet fylls upp med slumpmässigt placerade objekt. När fem eller fler objekt av samma färg blir uppradade så försvinner de. Spelet är över när brädet fyllts upp hela vägen.
+  </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/glines/sv/glines.xml"/>
+    <language code="sv"/>
+    <relation seriesid="06b00474-20fc-41e2-bf08-462272d449ef"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Emese Kovács"/>
+  </resource>
+</omf>

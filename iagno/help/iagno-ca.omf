@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Eric Baudais)</creator>
+    <maintainer>(Eric Baudais)</maintainer>
+    <title>Manual del Iagno</title>
+    <date>7 d'abril de 2000</date>
+    <version identifier="1.0" date="7 d'abril de 2000"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      El Iagno és el joc d'estratègia de dos jugadors Othello, que també es conegut com a Reversi i que s'assembla al Go. Les peces són fitxes que són negres per una banda i blanques per l'altre i l'objectiu és que el jugador giri les fitxes de l'adversari al seu color, mentre evita que l'adversari faci el mateix. Quan el tauler està ple de fitxes, el guanyador serà el jugador amb més fitxes del seu color en el tauler.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/iagno/ca/iagno.xml"/>
+    <language code="ca"/>
+    <relation seriesid="c4d35e1a-878f-4161-8293-98170c696596"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

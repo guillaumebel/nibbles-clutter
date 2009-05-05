@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(William Jon McCann)</creator>
+    <maintainer>(William Jon McCann)</maintainer>
+    <title>Manual til Blackjack</title>
+    <date>September 2004</date>
+    <version identifier="Blackjack manual version 2.8" date="September 2004"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Blackjack er et spil til GNOME-projektet med kasinoregler og flere sæt kort. Formålet med spillet er at få en værdi på hånden, som er tættere på 21, end den hånd som kortgiveren har, uden at komme over 21. Spilleren bruger virtuelle jetoner som indsats.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/blackjack/da/blackjack.xml"/>
+    <language code="da"/>
+    <relation seriesid="00680528-1387-403e-8a7e-70ea267df275"/>
+    <rights type="GNU FDL" license.version="1.1" holder="William Jon McCann"/>
+  </resource>
+</omf>

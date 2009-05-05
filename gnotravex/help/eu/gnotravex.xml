@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.10">
+<!ENTITY date "June 2005">
+<!ENTITY app "<application>Tetravex</application>">
+<!ENTITY appname "Tetravex">
+<!ENTITY version "2.10">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Feb 12, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="eu">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+ <articleinfo>
+  <title><application>Tetravex</application>en eskuliburua</title>
+
+    <abstract role="description">
+      <para>Tetravex buru-hausgarri bat da. Fitxak kokatu behar dira eta elkar ukitzen duten zenbakiek berdinak izan behar dute. Jokoa bukatzeko behar duzun denbora hartzen da kontuan eta lortutako denborak puntuazio-taula batean jasotzen dira.</para>
+    </abstract>
+
+  <copyright>
+   <year>2001</year>
+   <holder>Rob Bradford</holder>
+  </copyright><copyright><year>2008.</year><holder>Hizkuntza Politikarako Sailburuordetza (hizpol@ej.gv.es)</holder></copyright>
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>GNOMEren dokumentazio-proiektua</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Baimena ematen da dokumentu hau kopiatu, banatu eta/edo aldatzeko Free Software Foundation-ek argitaratutako GNU Dokumentazio Librearen Lizentziaren 1.1. bertsioan edo berriago batean ezarritako baldintzetan, atal aldaezinik gabe, aurreko azaleko testurik gabe eta atzeko azaleko testurik gabe. GFDL lizentziaren kopia <ulink type="help" url="ghelp:fdl">esteka honetan</ulink> edo eskuliburu honekin batera ematen den COPYING-DOCS fitxategian aurkituko duzu.</para>
+         <para>Eskuliburu hau GFDL lizentziarekin banatzen diren GNOME eskuliburuen bildumakoa da. Eskuliburu hau bildumatik bereizita banatu nahi baduzu, banatu dezakezu, baina eskuliburuari lizentziaren kopia bat gehitu beharko diozu, lizentzian bertan 6. atalean azaltzen den bezala.</para>
+
+	<para>Enpresek beren produktu eta zerbitzuak bereizteko erabiltzen dituzten izen asko marka erregistratu gisa hartu behar dira. Izen horiek GNOMEren edozein agiritan agertzen direnean, eta GNOMEren Dokumentazio Proiektuko kideak marka komertzialak direla konturatzen direnean, izen horiek osorik maiuskulaz edo hasierako letra maiuskulaz idatzi dituzte.</para>
+
+	<para>DOKUMENTUA ETA DOKUMENTUAREN BERTSIO ALDATUAK GNU DOKUMENTAZIO LIBREAREN LIZENTZIAREN BALDINTZEN ARABERA EMATEN DIRA, ETA ONDOREN ZEHAZTEN DIRENAK ONARTZERA BEHARTZEN DUTE: <orderedlist>
+		<listitem>
+		  <para>DOKUMENTUA "DAGOEN-DAGOENEAN" EMATEN DA, INOLAKO BERMERIK GABE, EZ ESPRESUKI ADIERAZITAKORIK ETA EZ INPLIZITURIK ERE; BESTEAK BESTE, EZ DA BERMATZEN DOKUMENTUA EDO BERTSIO ALDATUA AKATSIK GABEA DENIK, MERKATURATZEKO EDO XEDE JAKIN BATERAKO EGOKIA DENIK EDO ARAURIK HAUSTEN EZ DUENIK, HORI GUZTIA MUGARIK GABE. DOKUMENTUAREN EDO DOKUMENTUAREN BERTSIO ALDATUAREN KALITATEARI, ZEHAZTASUNARI ETA PERFORMANTZIARI BURUZKO ERANTZUKIZUN OSOA ZUREA DA. DOKUMENTUREN BATEK EDO BERTSIO ALDATUREN BATEK EDOZEIN MOTATAKO AKATSIK IZANEZ GERO, ZUK (EZ HASIERAKO IDAZLEAK, EZ EGILEAK ETA EZ INONGO KOLABORATZAILEK) ZEURE GAIN HARTU BEHARKO DUZU BERRIKUSTEKO, KONPONTZEKO EDO ZUZENTZEKO BEHAR DIREN ZERBITZU GUZTIEN KOSTUA. BERME-UKATZE HAU LIZENTZIA HONEN FUNTSEZKO ZATIA DA. EZ DA BAIMENIK EMATEN EZEIN DOKUMENTU EDO BERTSIO ALDATU ERABILTZEKO, BALDIN ETA EZ BADA BERME-UKATZE HAU ONARTZEN.</para>
+		</listitem>
+		<listitem>
+		  <para>EZIN IZANGO DA INONGO ZIRKUNSTANTZIARIK EDO LEGE-TEORIARIK OINARRI HARTU --EZ ERANTZUKIZUN ZIBILARI BURUZKORIK (ZABARKERIA BARNE HARTUTA), EZ KONTRATUARI BURUZKORIK, EZ BESTERIK-- DOKUMENTU HONEN EDO BERTSIO ALDATU BATEN EGILEA, HASIERAKO IDAZLEA, EDOZEIN KOLABORATZAILE EDO BANATZAILE, EDO ALDERDI HORIEN EDOZEIN HORNITZAILE BESTE PERTSONA BATEN AURREAN ERANTZULE EGITEKO, PERTSONA HORREK EDOZEIN MOTATAKO KALTEA JASAN DUELAKO (ZUZENEKOA, ZEHARKAKOA, BEREZIA, INTZIDENTALA EDO ONDORIOZKOA), HALA NOLA (ETA MUGARIK GABE) BEZEROAK GALTZEA, LANA ETEN BEHARRA, ORDENAGAILUAK EZ IBILTZEA EDO GAIZKI IBILTZEA, EDO DOKUMENTUA NAHIZ HAREN BERTSIO ALDATUAK ERABILTZETIK ONDORIOZTATZEN DIREN EDO ERABILERA HORREKIN ZERIKUSIA DUTEN KALTEAK EDO GALERAK, ALDERDIARI KALTE HORIEK GERTA ZITEZKEELA ADITZERA EMAN BAZAIO ERE.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Rob</firstname> 
+	<surname>Bradford</surname> 
+	<affiliation> 
+	  <address> <email>robster@debian.org</email> </address> 
+	</affiliation> 
+      </author> 
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>
+
+    <revhistory>
+      <revision> 
+	<revnumber>Tetravex-en eskuliburuaren 2.10 bertsioa</revnumber> 
+	<date>2005eko ekaina</date> 
+	<revdescription> 
+	  <para role="author">Rob Bradford <email>rob@funky-penguin.co.uk</email></para>
+	  <para role="publisher">GNOMEren dokumentazio-proiektua</para>
+	</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Tetravex-en 2.12 bertsioa azaltzen da eskuliburu honetan.</releaseinfo>
+    <!-- The following feedback information only applies to appliactions
+    listed in bugzilla.gnome.org and bugzilla.ximian.com. For other
+    applications, please provide your own feedback info or remove thsi
+    section altogether -->
+    <legalnotice> 
+      <title>Ohar-bidaltzea</title> 
+      <para><application>Tetravex</application>i buruzko akatsen berri emateko edo oharrak bidaltzeko, <ulink url="ghelp:gnome-feedback" type="help">GNOMEra oharrak bidaltzeko orria</ulink>n aurkituko dituzu argibideak.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+ </articleinfo>
+
+  <indexterm zone="index"> 
+    <primary>GNOME Tetravex</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+ <sect1 id="intro">
+  <title>Sarrera</title>
+
+  <para><application>GNOME Tetravex</application> buru-hausgarri bat da. Fitxak kokatu egin behar dira eta elkar ukitzen duten zenbakiek berdinak izan behar dute. Jokoa bukatzeko behar duzun denbora hartzen da kontuan eta lortutako denborak puntuazio-taula batean jasotzen dira.</para>
+    
+  <para><application>GNOME Tetravex</application> abiarazteko, hautatu <menuchoice><guisubmenu>Jokoak</guisubmenu><guimenuitem>Gnotravex</guimenuitem></menuchoice> <guimenu>Menu nagusia</guimenu> menuan, edo idatzi <command>gnotravex</command> komando-lerroan.</para>
+
+  <para><application>GNOME Tetravex</application> <filename>gnome-games</filename> paketearen barruan sartzen da, eta hori GNOMEren mahaigaineko ingurunearen parte da. Dokumentu honek <application>GNOME Tetravex</application>en 2.10 bertsioa deskribatzen du.</para>
+ </sect1>
+
+ <sect1 id="usage"> 
+  <title>GNOME Tetravex-en jokatzea</title>
+
+  <para><application>GNOME Tetravex</application> buru-hausgarri bat da. Atal honetan nola jokatu azaltzen da.</para>
+
+  <sect2 id="mainwin">
+   <title>Oinarrizko erabilera</title>
+   <sect3 id="playing">
+    <title>Jokatzea</title> 
+    <para><application>GNOME Tetravex</application> abiaraztean, <interface>Leiho nagusia</interface> irekitzen da; ikus <xref linkend="mainwindow-fig"/>. Leihoa bi laukitan banatzen da. Eskuineko koadroan, kokatu behar dituzun piezak daude, eta ezkerreko koadroan kokatu behar dituzu.</para>
+
+     <figure id="mainwindow-fig">
+      <title>GNOME Tetravex-en leiho nagusia</title> 
+      <screenshot>
+        <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnotravex_mainwindow.png" format="PNG" srccredit="ME"/>
+  </imageobject>
+    <textobject> 
+      <phrase>GNOME Tetravex-en leiho nagusia</phrase> 
+    </textobject> 
+  </mediaobject>
+      </screenshot> 
+     </figure>
+
+     <para>Nahi duzunean has zaitezke jolasten. Jokoa berriro hasteko, hautatu <menuchoice><guisubmenu>Fitxategia</guisubmenu><guimenuitem>Joko berria</guimenuitem></menuchoice><xref linkend="playing-fig"/></para>
+      <figure id="playing-fig">
+       <title>GNOME Tetravex-en joko bat.</title> 
+       <screenshot> 
+         <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnotravex_game.png" format="PNG" srccredit="ME"/>
+  </imageobject>
+    <textobject> 
+      <phrase>GNOME Tetravex-en joko bat.</phrase> 
+    </textobject> 
+  </mediaobject>
+       </screenshot>
+      </figure>
+     <para>Fitxak lau zatitan banatuta daude (zenbaki bat zati bakoitzean). Piezak kokatzerakoan, elkar ukituko duten zenbakiak berdinak direla ziurtatu behar duzu. Jokoak ez dizu utziko berdinak ez diren zenbakiak elkarren ondoan jartzen. Piezak kokatzeko, dauden lekutik kokaleku berrira arrastatu behar dituzu. Mugimendu horiek ez dira behin betikoak, eta aldatu egin daitezke. Ezkerreko koadroko pieza guztiak aldi berean mugi ditzakezu komando hauek erabiliz: <menuchoice><guisubmenu>Mugitu</guisubmenu><guimenuitem>Ezkerrera/Eskuinera/Gora/Behera</guimenuitem></menuchoice></para>
+    </sect3>
+    <sect3 id="winning">
+     <title>Jokoa irabaztea</title> 
+     <para>Fitxa guztiak toki egokian kokatzen dituzunean amaitzen da jokoa. Jokoa bukatzen duzunean, zein postutan zauden ikusiko duzu puntuaziorik onenen taulan (behar adina puntu lortu baduzu). Iradokizuna edo Ebatzi erabili badituzu, zure puntuazioa ez da puntuaziorik onenen taulan egongo.</para>
+    </sect3>
+
+  </sect2>
+ </sect1>
+	
+ <sect1 id="prefs"> 
+  <title>Pertsonalizazioa</title> 
+  <para><guimenuitem>Ezarpenak</guimenuitem> menuan saretaren tamaina alda dezakezu: bi bider bi tamainatik, sei bider seira. Lehenespenez, hiru bider hirukoa agertuko da.</para>
+  <para>Fitxak txikiegiak baldin badira, leihoaren tamaina aldatzen duzunean fitxen tamaina ere aldatu egingo da.</para>
+
+ </sect1>
+
+<!-- Do not try to be funny, it will only annoy users.  
+Use this section to manage user expectations if there are known problems like 
+slow animation.  Better to leave this section out than say something not 
+actually helpful.  
+
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title> 
+  <para> 
+    Of course not, its perfect!
+  </para> 
+ </sect1>
+-->
+
+ <sect1 id="authors"> 
+  <title>Egileak</title> 
+  <para><application>GNOME Tetravex</application> Lars Rydlinge-k (<email>lars.rydlinge@hig.se</email>) idatzi zuen. Eskuliburu hau Rob Bradford-ek idatzi zuen (<email>rob@funky-penguin.co.uk</email>). Aplikazio honi buruzko akatsen berri emateko edo oharrak bidaltzeko, <ulink url="ghelp:gnome-feedback" type="help">dokumentua</ulink>n aurkituko dituzu argibideak.</para>
+
+  <!-- For translations: uncomment this:
+  <para>
+    Latin translation was done by ME (<email>MYNAME@MYADDRESS</email>). 
+    Please send all comments and suggestions regarding this translation to
+    SOMEWHERE.
+  </para>
+   -->
+
+ </sect1>
+
+ <sect1 id="license"> 
+  <title>Lizentzia</title> 
+  <para>Programa hau software librea da; birbana eta/edo alda dezakezu Free Software Foundation-ek argitaratutako <citetitle>GNU Lizentzia Publiko Orokorra</citetitle>ren 2. bertsioan, edo (nahiago baduzu) bertsio berriago batean, jasotako baldintzak betez gero.</para>
+  <para>Programa hau erabilgarria izango delakoan banatzen da, baina INOLAKO BERMERIK GABE; era berean, ez da bermatzen beraren EGOKITASUNA MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO ERABILTZEKO. Argibide gehiago nahi izanez gero, ikus <citetitle>GNU Lizentzia Publiko Orokorra</citetitle>.</para>
+  <para><citetitle>GNU Lizentzia Publiko Orokorra</citetitle>ren kopia <citetitle>GNOMEren erabiltzaile</citetitle>aren gidaren eranskinean daukazu. <citetitle>GNU Dokumentazio Librearen Lizentzia</citetitle>ren kopia bat Free Software Foundation-en bidez ere lor dezakezu, <ulink url="http://www.fsf.org" type="http">haren webgunea</ulink> bisitatuz, edo hona idatziz: <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - 330. Suitea <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>AEB</country></address></para> 
+ </sect1>
+</article>

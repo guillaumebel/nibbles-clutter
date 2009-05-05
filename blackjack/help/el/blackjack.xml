@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "<application>Blackjack</application>">
+<!ENTITY appname "Blackjack">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="el">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title><application>Μπλάκτζακ</application> Εγχειρίδιο</title>       
+    <abstract role="description">
+      <para>Το μπλάκτζακ είναι ένα παιχνίδι με κανόνες από το καζίνο, με πολλούς παίκτες, για το περιβάλλον του Gnome. Το αντικείμενο του παιχνιδιού είναι να αποκτήσετε χέρι με τιμή που είναι πιο κοντά στο 21 από εκείνο του ντίλερ, χωρίς να ξεπεράσετε το 21. Ο παίκτης στοιχηματίζει με εικονικές μάρκες.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>William Jon McCann</holder> 
+    </copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>Πρόγραμμα τεκμηρίωσης του Gnome</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Δίνεται άδεια για αντιγραφή, διανομή και/ή τροποποίηση του εγγράφου υπό τους όρους της Ελεύθερης Άδειας Τεκμηρίωσης GNU (GFDL), Έκδοση 1.1 ή μεταγενέστερη εκδιδόμενη από το Ίδρυμα Ελεύθερου Λογισμικού χωρίς Σταθερά Εδάφια, χωρίς Εξώφυλλα Κειμένου, και χωρίς Οπισθόφυλλα Κειμένου. Μπορείτε να βρείτε ένα αντίγραφο της GFDL σε αυτόν τον <ulink type="help" url="ghelp:fdl">σύνδεσμο</ulink> ή στο αρχείο COPYING-DOCS που διανεμήθηκε με αυτόν τον οδηγό.</para>
+         <para>Αυτή η τεκμηρίωση είναι μέρος της συλλογής τεκμηρίωσης του GNOME όπως διανέμεται υπό τους όρους του GFDL. Εάν επιθυμείτε να διανείμετε αυτή την τεκμηρίωση ξεχωριστά από την συλλογή, μπορείτε να το κάνετε εάν η τεκμηρίωση συνοδεύεται από αντίγραφο της άδειας (GFDL) όπως περιγράφεται στον τομέα 6 της άδειας.</para>
+
+	<para>Πολλά από τα ονόματα που χρησιμοποιούνται από εταιρίες για να ξεχωρίσουν τα  προϊόντα και τις υπηρεσίες είναι σήματα κατατεθέν. Όπου αυτά τα ονόματα εμφανίζονται στην τεκμηρίωση GNOME, και τα μέλη της ομάδας τεκμηρίωσης GNOME έχουν γνώση αυτών, τότε αυτά αναγράφονται με κεφαλαίους χαρακτήρες ή με αρχικούς κεφαλαίους χαρακτήρες.</para>
+
+	<para>ΤΟ ΈΓΓΡΑΦΟ ΚΑΙ ΤΡΟΠΟΠΟΙΗΜΕΝΕΣ ΕΚΔΟΣΕΙΣ ΑΥΤΟΥ ΠΑΡΕΧΟΝΤΑΙ ΥΠΟ ΤΟΥΣ ΟΡΟΥΣ ΤΗΣ ΑΔΕΙΑΣ GNU FREE DOCUMENTATION ΜΕ ΤΗΝ ΠΕΡΑΙΤΕΡΩ ΔΙΕΥΚΡΙΝΙΣΗ ΟΤΙ: <orderedlist>
+		<listitem>
+		  <para>Η ΤΕΚΜΗΡΙΩΣΗ ΑΥΤΗ ΠΑΡΕΧΕΤΑΙ "ΩΣ ΕΧΕΙ", ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ ΟΤΙ ΜΠΟΡΕΙ ΝΑ ΕΞΥΠΗΡΕΤΗΣΕΙ ΚΑΠΟΙΟ ΣΚΟΠΟ Η ΟΤΙ ΕΙΝΑΙ ΧΩΡΙΣ ΣΦΑΛΜΑ. ΟΛΟΚΛΗΡΗ Η ΕΥΘΥΝΗ ΓΙΑ ΤΗΝ ΠΟΙΟΤΗΤΑ, ΑΚΡΙΒΕΙΑ ΚΑΙ ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ Ή ΠΑΡΑΛΛΑΓΩΝ ΑΥΤΗΣ ΑΝΗΚΕΙ ΣΕ ΕΣΑΣ. ΕΑΝ Η ΤΕΚΜΗΡΙΩΣΗ ΑΥΤΗ Ή ΠΑΡΑΛΛΑΓΗ ΑΥΤΗΣ ΕΙΝΑΙ ΛΑΘΟΣ ΚΑΤΑ ΚΑΠΟΙΟ ΤΡΟΠΟ ΕΣΕΙΣ ΑΝΑΛΑΜΒΑΝΕΤΕ ΤΗΝ ΕΥΘΥΝΗ ΤΗΣ ΔΙΟΡΘΩΣΗΣ. Η ΑΠΑΛΛΑΓΗ ΕΥΘΥΝΗΣ ΠΟΥ ΣΥΝΟΔΕΥΕΙ ΑΥΤΗ ΤΗΝ ΤΕΚΜΗΡΙΩΣΗ ΕΙΝΑΙ ΑΝΑΠΟΣΠΑΣΤΟ ΚΟΜΜΑΤΙ ΑΥΤΗΣ. ΚΑΜΙΑ ΧΡΗΣΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ Ή ΠΑΡΑΛΛΑΓΩΝ ΑΥΤΗΣ ΔΕΝ ΕΠΙΤΡΕΠΕΤΑΙ ΠΑΡΑ ΜΟΝΟ ΕΑΝ ΣΥΝΟΔΕΥΕΤΑΙ ΑΠΟ ΤΗΝ ΑΠΑΛΛΑΓΗ ΕΥΘΥΝΗΣ.</para>
+		</listitem>
+		<listitem>
+		  <para>ΣΕ ΚΑΜΙΑ ΠΕΡΙΠΤΩΣΗ ΚΑΙ ΥΠΟ ΚΑΜΙΑ ΝΟΜΙΚΗ ΣΥΝΘΗΚΗ, ΕΙΤΕ ΜΕΣΩ ΣΥΜΒΟΛΑΙΩΝ Ή ΑΛΛΙΩΣ, ΔΕΝ ΕΥΘΥΝΟΝΤΑΙ Ο ΣΥΓΓΡΑΦΕΑΣ, Ο ΔΙΑΝΟΜΕΑΣ, Η ΑΛΛΟΣ ΣΥΝΥΠΕΥΘΥΝΟΣ ΓΙΑ ΤΗΝ ΣΥΓΓΡΑΦΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ, ΓΙΑ ΕΜΜΕΣΕΣ Η ΑΜΕΣΕΣ, ΤΥΧΑΙΕΣ Ή ΜΗ ΖΗΜΙΕΣ ΠΑΝΤΩΣ ΦΥΣΕΩΣ ΠΟΥ ΠΡΟΕΡΧΟΝΤΑΙ ΑΠΟ ΤΗΝ ΧΡΗΣΗ ΤΗΣ ΤΕΚΜΗΡΙΩΣΗΣ ΚΑΙ/Ή ΠΑΡΑΛΛΑΓΩΝ ΑΥΤΗΣ ΑΚΟΜΑ ΚΑΙ ΕΑΝ ΕΧΕΙ ΥΠΑΡΞΕΙ ΠΡΟΕΙΔΟΠΟΙΗΣΗ ΓΙΑ ΤΗΝ ΠΙΘΑΝΟΤΗΤΑ ΥΠΑΡΞΗΣ ΤΕΤΟΙΩΝ ΖΗΜΙΩΝ.</para>
+		</listitem>
+	  </orderedlist>"</para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer">
+		<firstname>William Jon</firstname> 
+		<surname>McCann</surname> 
+		<affiliation> 
+	  		<orgname/> 
+	  		<address> <email>mccann@jhu.edu</email> </address> 
+		</affiliation> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>	
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+      <revision> 
+		<revnumber>Τεκμηρίωση του Μπλάκτζακ V2.8</revnumber> 
+		<date>Σεπτέμβριος 2004 </date> 
+		<revdescription> 
+	  		<para role="author">William Jon McCann <email>mccann@jhu.edu</email></para>
+	  		<para role="publisher"/>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Αυτή η τεκμηρίωση περιγράφει την έκδοση 2.12 του Μπλάκτζακ</releaseinfo> 
+    <legalnotice> 
+      <title>Ανάδραση</title> 
+      <para>Για να αναφέρετε ένα σφάλμα ή να κάνετε μια πρόταση σχετικά με το <application>Μπλάκτζακ</application> ή αυτή την τεκμηρίωση, ακολουθήστε τις οδηγίες στη σελίδα <ulink url="ghelp:gnome-feedback" type="help">ανάδρασης GNOME </ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Μπλάκτζακ</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>mygnomeapp</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="blackjack-introduction"> 
+
+    <title>Εισαγωγή</title> 
+
+    <para>Το <application>Μπλάκτζακ</application> είναι ένα παιχνίδι με κανόνες του καζίνο, με πολλούς παίκτες. Το αντικείμενο του παιχνιδιού είναι να κρατήσετε χαρτιά με το μεγαλύτερο άθροισμα από αυτών του ντίλερ και χωρίς να ξεπεράσετε το 21.</para>
+  </sect1>
+
+  <sect1 id="blackjack-basics">
+    <title>Τα βασικά του Μπλάκτζακ</title>
+
+    <sect2 id="blackjack-terms">
+    <title>Ορολογία του Μπλάκτζακ</title>
+    <para>Εδώ βρίσκονται μερικοί σημαντικοί όροι που χρησιμοποιούνται στο παιχνίδι.</para>
+    <para>
+        <variablelist>
+	<varlistentry>
+	<term>Μπλάκτζακ</term>
+	<listitem>
+	<para>Ένα χέρι όπου τα δύο πρώτα φύλλα έχουν σύνολο 21; μια στιγμιαία νίκη αξίζει 150% του στοιχήματός σας. </para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Κάηκες</term>
+	<listitem>
+	<para>Όταν η αξία του χεριού ξεπερνά το 21; χαμένο χέρι</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Διπλασιασμός</term>
+	<listitem>
+	<para>Για να διπλασιάσετε το αρχικό στοίχημα και να πάρετε μόνο ένα φύλλο</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Τράβα</term>
+	<listitem>
+	<para>Για να ζητήσετε ένα άλλο φύλλο να προστεθεί στο χέρι σας</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Ασφάλεια</term>
+	<listitem>
+	<para>Ένα παράπλευρο στοίχημα του 50% του αρχικού στοιχήματος μπαίνει για την περίπτωση που ο ντίλερ έχει ένα φυσικό 21 (δηλαδή μπλάκτζακ) και προσφέρεται όταν το ορατό χαρτί του ντίλερ είναι ένας άσσος. Αν ο ντίλερ έχει φυσικό 21, τότε ο παίκτης πληρώνεται διπλά.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Ισοπαλία</term>
+	<listitem>
+	<para>When the value of the player hand and the dealer hand are 
+        equal, the original wager is returned to the player</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Χώρισε</term>
+	<listitem>
+	<para>Όταν ένα χέρι ξεκινά με δύο φύλλο της ίδιας αξίας (ή κατάταξης) μπορεί να διαχωριστεί σε δύο ανεξάρτητα χέρια.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Σταμάτα</term>
+	<listitem>
+	<para>Για να σταματήσετε να προσθέτετε άλλα φύλλα στο χέρι</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Παραδόσου</term>
+	<listitem>
+        <para>Για να παραδόσετε το μισό σας στοίχημα και να μην ολοκληρώσετε το χέρι</para>
+	</listitem>
+	</varlistentry>
+
+        </variablelist>
+    </para>
+    </sect2>
+
+    <sect2 id="blackjack-card-values">
+    <title>Αξίες φύλλου</title>
+    <para>Στο μπλάκτζακ, κάθε φύλλο έχει μια καθορισμένη αξία. <itemizedlist> 
+	  <listitem> 
+           <para>Ένας Άσσος μπορεί να μετρήσει είτε σαν 1 ή σαν 11.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Τα φύλλα 2 έως 9 έχουν την αξία που αναγράφεται σε αυτά.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>10, Βαλές, Ντάμα και Ρήγας έχουν αξία 10.</para>
+	  </listitem> 
+	</itemizedlist></para> 
+
+    <para>Η αξία του χεριού είναι το άθροισμα των αξιών από κάθε φύλλο του χεριού.</para>
+    </sect2>
+
+    <sect2 id="blackjack-dealer-rules">
+    <title>Κανόνες ντίλερ</title>
+    <para>Ο ντίλερ πρέπει να παίξει το χέρι του σύμφωνα με πολύ συγκεκριμένους κανόνες. Υπάρχουν δύο βασικές παραλλαγές κανόνων που καθορίζουν ποιο άθροισμα χεριού πρέπει να τραβήξει ο ντίλερ. <variablelist>
+	<varlistentry>
+	<term>Ο ντίλερ σταματά σε όλα τα 17ρια</term>
+	<listitem>
+	<para>Ο ντίλερ πρέπει να συνεχίσει να τραβά χαρτιά (τράβα) μέχρι το χέρι του να φτάσει τουλάχιστον το 17.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Ο ντίλερ τράβηξε μαλακό 17</term>
+	<listitem>
+	<para>Ο ντίλερ πρέπει να συνεχίσει να τραβά φύλλα (τράβα) μέχρι το χέρι να έχει άθροισμα τουλάχιστον 17, εκτός εάν ο ντίλερ έχει ένα μαλακό 17 οπότε πρέπει να πάρει άλλο ένα φύλλο. Ένα μαλακό άθροισμα είναι αυτό όπου ένας Άσσος μετράται σαν 11.</para>
+	</listitem>
+	</varlistentry>
+        </variablelist></para>
+    </sect2>
+
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here. 
+     If the information about how to get started is very short, you can 
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="blackjack-getting-started"> 
+    <title>Ξεκινώντας</title> 
+
+    <sect2 id="blackjack-start">
+    <title>Για να εκκινήσετε το  <application>Μπλάκτζακ</application></title>
+    <para>Μπορείτε να εκκινήσετε το <application>Μπλάκτζακ</application> με τους παρακάτω τρόπους:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term><guimenu>Εφαρμογές</guimenu> μενού</term>
+    		<listitem>
+    		<para>Επιλέξτε <menuchoice><guisubmenu>Παιχνίδια </guisubmenu><guimenuitem>Μπλάκτζακ</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Γραμμή εντολών</term>
+    		<listitem>
+    		<para>Για να εκκινήσετε το <application>Μπλάκτζακ</application> από την γραμμή εντολών, πληκτρολογήστε την παρακάτω εντολή, και μετά πατήστε  <keycap>Επιστροφή</keycap>:</para>
+    		<para> 
+			<command>μπλάκτζακ</command> 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-when-start">
+    <title>Όταν ξεκινάτε το <application>Μπλάκτζακ</application></title>
+    <para>Όταν ξεκινάτε το  <application>Μπλάκτζακ</application>, εμφανίζεται το παρακάτω παράθυρο.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title><application>Μπλάκτζακ</application> Παράθυρο Έναρξης</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/blackjack_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <!-- EPS versions of the figures are not required at the moment. -->
+            <!-- 
+		    <imageobject>
+      		<imagedata fileref="figures/image.eps" format="EPS"/>
+    		    </imageobject>
+	    -->
+	    <textobject> 
+	      <phrase>Προβάλλει <application>Μπλάκτζακ</application> το κυρίως παράθυρο. Περιέχει γραμμή τίτλων, γραμμή μενού, γραμμή εργαλείων, περιοχή παιχνιδιού, και γραμμές κύλισης.  Η γραμμή μενού περιέχει τα μενού Παιχνίδι, Ρυθμίσεις και Βοήθεια.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para>Το <application>Μπλάκτζακ</application> παράθυρο περιέχει τα παρακάτω στοιχεία:</para>
+      <variablelist>
+
+	<varlistentry>
+	<term>Μπάρα μενού</term>
+	<listitem>
+	<para>Τα μενού στην γραμμή μενού περιέχουν όλες τις εντολές που θα χρειαστείτε για να δουλέψετε με αρχεία του <application>Μπλάκτζακ</application>.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Γραμμή εργαλείων</term>
+	<listitem>
+	<para>Η γραμμή εργαλείων περιέχει μερικές από τις εντολές στις οποίες μπορείτε να έχετε πρόσβαση από τη γραμμή των μενού.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Γραμμή κατάστασης</term>
+	<listitem>
+	<para>Η γραμμή κατάστασης προβάλλει πληροφορίες σχετικά με την τρέχουσα δραστηριότητα του <application>Μπλάκτζακ</application> και πληροφορίες σχετικά με τα αντικείμενα του μενού.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Περιοχή παιχνιδιού</term>
+	<listitem>
+	<para>Η περιοχή του παχνιδιού περιέχει τη θέση του ντίλερ, του παίκτη, τη θέση του στοιχήματος του παίκτη και τις μάρκες του παίκτη.</para>
+	</listitem>
+	</varlistentry>
+
+	</variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-menus">
+    <title><application>Μπλάκτζακ</application> Μενού</title>
+      <para>Η γραμμή μενού, που βρίσκεται πάνω από τον  <interface>πίνακα παιχνιδού</interface>, περιέχει τα παρακάνω μενού:</para>
+
+      <variablelist>
+
+        <!-- ===== Game ===== -->
+
+        <varlistentry>
+          <term><guimenu>Παιχνίδι</guimenu></term>
+          <listitem>
+            <para>Το μενού περιέχει τα εξής αντικείμενα: <itemizedlist>
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <shortcut><keysym>Ctrl-N</keysym></shortcut>
+                      <guimenuitem>New game</guimenuitem>
+                    </menuchoice>
+                    —
+                    This clears the table and starts a new game.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <guimenuitem>Restart game</guimenuitem>
+                    </menuchoice>
+                    —
+                    This clears the table and restarts the game.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <guimenuitem>Hint</guimenuitem>
+                    </menuchoice>
+                    —
+                    This will give you the computer's best suggestion for your
+                    move.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <menuchoice>
+                      <shortcut><keysym>Ctrl-Q</keysym></shortcut>
+                      <guimenuitem>Exit</guimenuitem>
+                    </menuchoice>
+                    —
+                    This quits the game.
+                  </para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Settings ===== -->
+
+        <varlistentry>
+          <term><guimenu>Ρυθμίσεις</guimenu></term>
+          <listitem>
+            <para>Το μενού περιέχει τα εξής αντικείμενα: <itemizedlist>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>Show tool bar</guimenuitem>
+                    —
+                    This toggle switches the tool bar on and off.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>Preferences…</guimenuitem>
+                    —
+                    This opens the <interface>Preferences Dialog</interface>,
+                    allowing you to configure the game.
+                  </para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Help ===== -->
+
+        <varlistentry>
+          <term><guimenu>Βοήθεια</guimenu></term>
+          <listitem>
+            <para>Αυτό το μενού περιέχει: <itemizedlist>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>Contents</guimenuitem>
+                    —
+                    Opens your help browser and shows this manual.
+                  </para>
+                </listitem>
+
+                <listitem>
+                  <para>
+                    <guimenuitem>About</guimenuitem>
+                    —
+                    Opens the <interface>About Dialog</interface>, showing
+                    basic information about <application>Blackjack</application> such as its version
+                    number and the names of its authors.
+                  </para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+    <sect2 id="blackjack-playing-area">
+    <title><application>Μπλάκτζακ</application> Περιοχή παιχνιδιού</title>
+      <para>Η περιοχή παιχνιδιού (ή τραπέζι), βρίσκεται κάτω από τη <interface>γραμμή εργαλείων</interface> και περιέχει τα παρακάτω στοιχεία:</para>
+
+      <variablelist>
+
+        <varlistentry>
+          <term><interface>Θέση του ντίλερ</interface></term>
+          <listitem><para>Εδώ είναι όπου το χέρι του ντίλερ θα τοποθετηθεί. Βρίσκεται στην κορυφή της περιοχής παιχνιδιού. Σε ένα άδειο τραπέζι θα εμφανιστεί σαν μία περιοχή άσπρου περιγράμματος. </para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Θέσεις του παίκτη</interface></term>
+          <listitem><para>Εδώ είναι όπου θα τοποθετηθούν τα χέρια του παίκτη. Αρχικά, θα υπάρχει μόνο μία θέση παίκτη. Περισσότερες θα δημιουργηθούν εάν ο παίκτης κάνει χωρισμό του χεριού. Σε ένα άδειο τραπέζι θα εμφανιστούν σαν άσπρο περίγραμμα κάτω από τη θέση του ντίλερ.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Το σύνολο του στοιχήματος του παίκτη</interface></term>
+          <listitem><para>Το ποσό του στοιχήματος αντιπροσωπεύει το αρχικό στοίχημα σε κάθε χέρι. Αποτελείται από ένα ποσό μαρκών που βρίσκεται ακριβώς στα αριστερά της θέσης κάθε παίκτη.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Οι μάρκες του παίκτη</interface></term>
+          <listitem><para>Οι μάρκες του παίκτη αντιπροσωπεύουν ένα άπειρο αριθμό από μάρκες, με τιμές 100, 25, 5 και 1. Αυτές οι μάρκες χρησιμεύουν ώστε να τροποποιούν το στοίχημα.</para></listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for 
+  which the application is designed. -->
+  <sect1 id="blackjack-usage"> 
+    <title>Χρήση</title> 
+    <para>
+      <itemizedlist> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-set-wager"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-deal"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-hit"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-stand"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-double-down"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-split"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-surrender"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-get-hint"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-keyboard-control"/></para>
+	</listitem> 
+      </itemizedlist> </para>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-set-wager"> 
+      <title>Για να ορίσετε το στοίχημα</title> 
+      <para>Για να αυξήσετε το στοίχημα για το χέρι: <itemizedlist>
+        <listitem>
+         <para>Κάντε διπλό κλικ στις μάρκες του παίκτη, που βρίσκονται στο κάτω άκρο της επιφάνειας του παιχνιδιού, τις οποίες επιθυμείτε να προσθέσετε στο στοίχημα.</para>
+        </listitem>
+        <listitem>
+         <para>Ή τραβήξτε την επιθυμητή μάρκα πάνω στο στοίχημά σας, που βρίσκεται δίπλα στο χέρι σας.</para>
+        </listitem>
+      </itemizedlist></para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-deal"> 
+      <title>Για να μοιράσετε ένα νέο χέρι</title> 
+      <para>Ένα νέο χέρι μπορεί να μοιραστεί όταν το τραπέζι είναι άδειο ή όταν το παιχνίδι έχει τελειώσει από τα τρέχοντα χαρτιά.</para>
+      <para>Για να μοιράσετε ένα νέο χέρι σε άδειο τραπέζι, κάντε κλικ στο άσπρο περίγραμμα που υποδεικνύει τη θέση του ντίλερ ή των παικτών.</para>
+      <para>Για να μοιράσετε ένα νέο χέρι μετά το πέρας ενός γύρου, κάντε κλικ μία φορά σε ένα οποιοδήποτε φύλλο πάνω στο τραπέζι.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-hit"> 
+      <title>Για να προσθέσετε ένα φύλλο στο χέρι (Τράβα)</title> 
+      <para>Μπορείτε να προσθέσετε φύλλα στο χέρι μέχρι το άθροισμα του χεριού να είναι ή παραπάνω.</para>
+      <para>Για να προσθέσετε ένα φύλλο στο χέρι ενός παίκτη, κάντε κλικ μία φορά σε οποιοδήποτε φύλλο του χεριού.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-stand"> 
+      <title>ΓΙα να Σταματήσετε να Παίρνετε Φύλλα (Σταμάτα)</title> 
+      <para>Μπορείτε να σταματήσετε να παίρνετε φύλλα οποιαδήποτε στιγμή αφού έχουν μοιραστεί τα δύο πρώτα φύλλα.</para>
+      <para>Για να σταματήσετε να προσθέτετε φύλλα στο χέρι, κάντε κλικ σε ένα οποιοδήποτε άλλο χέρι. Για παράδειγμα, όταν υπάρχει μία μόνο θέση του παίκτη (π.χ. δεν έχετε κάνει χωρισμό σε ένα ζευγάρι), κάντε κλικ στο χέρι του ντίλερ για να σταματήσετε. Όταν έχετε κάνει χωρισμό σε ένα ζευγάρι, μπορείτε να σταματήσετε στο πρώτο χέρι του παίκτη κάνοντας κλικ στο δεύτερο χέρι του παίκτη ή στο χέρι του ντίλερ.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-double-down"> 
+      <title>Για να διπλασιάσετε</title> 
+      <para>Για να κάνετε διαχωρισμό, κάντε διπλό κλικ στις μάρκες οποιοδήποτε παίκτη αφού έχουν μοιραστεί τα δύο πρώτα φύλλα.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-split"> 
+      <title>Χώρισε ζευγάρια</title> 
+      <para>Για να χωρίσετε ένα ζευγάρι, τραβήξτε το πάνω φύλλο από το χέρι του παίκτη και ρίξτε το πάνω σε ένα άδειο χώρο πάνω στο τραπέζι.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-surrender"> 
+      <title>Παραδώσου</title> 
+      <para>Δεν έχει ακόμη ενσωματωθεί.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-get-hint"> 
+      <title>Λήψη συμβουλής</title> 
+      <para>Σε οποιαδήποτε στιγμή μπορείτε να ζητήσετε από το παιχνίδι μία υπόδειξη. Για να το κάνετε είτε κάνετε κλικ στο κουμπί <interface>Υπόδειξη</interface> στην <interface>γραμμή εργαλείων</interface>, ή επιλέξτε το αντικείμενο του μενού <menuchoice><guisubmenu>Παιχνίδι </guisubmenu><guimenuitem>Υπόδειξη</guimenuitem></menuchoice>.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-keyboard-control"> 
+      <title>Έλεγχος με το πληκτρολόγιο</title> 
+      <para>Οι περισσότερες από τις λειτουργίες στο παιχνίδι μπορούν να ελεγχθούν από το πληκτρολόγιο. <table><title>Πλήκτρα ελέγχου</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead><row><entry>Ενέργεια</entry><entry>Key</entry></row></thead><tbody><row><entry>Μοίρασε νέο χέρι</entry><entry>ENTER</entry></row><row><entry>Τράβα / Πρόσθεσε φύλλο</entry><entry>H</entry></row><row><entry>Σταμάτα / Τελείωσε το χέρι</entry><entry>S</entry></row><row><entry>Διπλασίασε</entry><entry>D</entry></row><row><entry>Χώρισε το χέρι</entry><entry>P</entry></row><row><entry>Παράδοσε το χέρι</entry><entry>R</entry></row></tbody></tgroup></table></para>
+    </sect2> 
+  </sect1>
+
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="blackjack-prefs"> 
+    <title>Ρυθμίσεις</title> 
+    <para>Για να διαμορφώσετε το <application>Μπλάκτζακ</application>, επιλέξτε  <menuchoice><guimenu>Ρυθμίσεις</guimenu><guimenuitem>Προτιμήσεις</guimenuitem></menuchoice>. Ο διάλογος <guilabel>Προτιμήσεις</guilabel> περιέχει τις παρακάτω ενότητες:</para> 
+    <itemizedlist> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-game"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-rules"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-cards"/></para> 
+      </listitem> 
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="blackjack-prefs-game"> 
+      <title>Παιχνίδι</title> 
+      <variablelist> 
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Εμφάνιση πιθανοτήτων χεριού</guilabel> </term> 
+	  <listitem> 
+	    <para>Επιλέξτε αυτό το αντικείμενο για να εμφανιστούν οι πιθανότητες του χεριού του ντίλερ και οι αναμενόμενες τιμές για τις διάφορες επιλογές του παίκτη.</para>
+	  </listitem> 
+	</varlistentry> 
+
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Γρήγορα μοιράσματα</guilabel> </term> 
+	  <listitem> 
+	    <para>Επιλέξτε αυτό το αντικείμενο για να κάνετε τον υπολογιστή να μοιράζει φύλλα χωρίς καθυστέρηση.</para>
+	  </listitem> 
+	</varlistentry> 
+
+      </variablelist> 
+    </sect2>
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-rules"> 
+      <title>Κανόνες</title> 
+      <para>Επιλέξτε παραλαγές κανόνων από τον κατάλογο.</para>
+    </sect2> 
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-cards"> 
+      <title>Φύλλα</title> 
+      <para>Τροποποιήστε την εμφάνιση των φύλλων.</para>
+    </sect2> 
+
+  </sect1>
+
+<!-- ============= Advanced ================================== -->
+  <sect1 id="blackjack-advanced">
+  <title>Για προχωρημένους</title>
+  <para>
+  </para>
+
+  <sect2 id="blackjack-advanced-probabilities">
+    <title>Πιθανότητες ντίλερ</title>
+    <para>Όταν επιλεγεί η <guilabel>Προβολή πιθανοτήτων ντίλερ</guilabel> στο μενού <guilabel>Παιχνίδι</guilabel> του διαλόγου <guilabel>Προτιμήσεις</guilabel>, οι ακριβείς πιθανότητες κάθε δυνατού αποτελέσματος του χεριού του ντίλερ θα προβληθεί πάνω στην επιφάνεια του τραπεζιού, στα αριστερά του χεριού του παίκτη. Αυτές οι πιθανότητες λαμβάνουν υπόψη όλα τα φύλλα που μοιράστηκαν από την αρχή.</para>
+  </sect2>
+
+  <sect2 id="blackjack-advanced-expected-values">
+    <title>Αναμενόμενες τιμές παίκτη</title>
+    <para>Όταν η επιλογή <guilabel>Εμφάνιση πιθανοτήτων ντίλερ</guilabel> είναι επιλεγμένη στον τίτλο <guilabel>Παιχνίδι</guilabel> από το μενού διαλόγου <guilabel>Προτιμήσεις</guilabel>, οι ακριβώς αναμενόμενες τιμές (σε ποσοστά του αρχικού στοιχήματος) των επιλογών κάθε διαθέσιμου παίκτη εμφανίζονται πάνω στην επιφάνεια του παιχνιδιού, στα αριστερά του χεριού του ντίλερ. Αυτές οι τιμές λαμβάνουν υπόψη όλα τα φύλλα στο τρέχον σας χέρι και το εμφανές φύλλο του ντίλερ. Για παράδειγμα, ας πούμε ότι ο αριθμός που εμφανίζεται για το σταμάτημα είναι -12,345. Αυτό σημαίνει ότι αν παίξετε τη συγκεκριμένη θέση πάρα πολλές φορές, με σταμάτημα κάθε φορά, και αρχικό στοίχημα το 1.00, κατά μέσο όρο θα χάνατε 0,12345.</para>
+  </sect2>
+
+ </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default. 
+     You can use it to describe known bugs and limitations of the 
+	  program if there are any - please be frank and list all
+     problems you know of. 
+  
+  <sect1 id="blackjack-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="blackjack-about"> 
+    <title>Σχετικά με το <application>Μπλάκτζακ</application></title> 
+    <para><application>Μπλάκτζακ</application> γράφτηκε από τον William Jon McCann (<email>mccann@jhu.edu</email>).</para>
+    <para>Για να αναφέρετε ένα σφάλμα ή να κάνετε μια πρόταση σχετικά με αυτήν την εφαρμογή ή αυτή την τεκμηρίωση, ακολουθήστε τις οδηγίες στη σελίδα <ulink url="ghelp:gnome-feedback" type="help">document</ulink>.</para>
+
+    <para>Αυτό το πρόγραμμα διανέμεται υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU όπως αυτή δημοσιεύεται από το Ίδρυμα Ελεύθερου Λογισμικού (Free Software Foundation) - είτε της έκδοσης 2 της άδειας, είτε (κατ' επιλογήν) οποιασδήποτε μεταγενέστερης έκδοσης. Ένα αντίγραφο αυτής της άδειας μπορεί να βρεθεί στο <ulink url="ghelp:gpl" type="help">link</ulink>, ή στο αρχείο COPYING που διανεμήθηκε με τον πηγαίο κώδικα αυτού του προγράμματος.</para>
+
+  </sect1> 
+</article>

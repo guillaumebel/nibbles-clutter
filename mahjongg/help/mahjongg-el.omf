@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Eric Baudais)</creator>
+    <maintainer>(Eric Baudais)</maintainer>
+    <title>Τεκμηρίωση του Ματζόγκ</title>
+    <date>Ιούνιος 2005</date>
+    <version identifier="Τεκμηρίωση Mahjongg V2.10" date="Ιούνιος 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      To Ματζόγκ είναι μια εκδοχή για έναν παίκτη του κλασικού ανατολικού παιχνιδιού με τα πλακίδια. Ο παίκτης πρέπει να αδειάσει το ταμπλό, βρίσκοντας ποια πλακίδια ταιριάζουν μεταξύ τους και βγάζοντάς τα από το παιχνίδι.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/mahjongg/el/mahjongg.xml"/>
+    <language code="el"/>
+    <relation seriesid="81e6f484-a13f-46ae-bf37-1e01674a6210"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

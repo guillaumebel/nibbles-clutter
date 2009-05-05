@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(William Jon McCann)</creator>
+    <maintainer>(William Jon McCann)</maintainer>
+    <title>Handbok för Tjugoett</title>
+    <date>September 2004</date>
+    <version identifier="Handbok för Tjugoett v2.8" date="September 2004"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Tjugoett är ett blackjackspel med casinoregler och flera kortlekar för GNOME-projektet. Målet med spelet är att få en hand som är närmare 21 än vad givaren har, utan att gå över 21. Spelaren satsar med virtuella marker.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/blackjack/sv/blackjack.xml"/>
+    <language code="sv"/>
+    <relation seriesid="00680528-1387-403e-8a7e-70ea267df275"/>
+    <rights type="GNU FDL" license.version="1.1" holder="William Jon McCann"/>
+  </resource>
+</omf>

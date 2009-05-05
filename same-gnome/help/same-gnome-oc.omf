@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Callum McKenzie)</creator>
+    <maintainer>(Projècte de documentacion de GNOME)</maintainer>
+    <title>Same GNOME Manual</title>
+    <date>Febrièr de 2005</date>
+    <version identifier="Same GNOME Manual V2.10" date="Febrièr de 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      
+	Same GNOME is a puzzle game, of which the objective is to clear 
+	the window of as many pieces as possible by clicking on groups 
+	of the same colored pieces. That group will vanish and the 
+	pieces on top will fall until there are none left or no more 
+	color groups.
+      
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/same-gnome/oc/same-gnome.xml"/>
+    <language code="oc"/>
+    <relation seriesid="52ee583d-42e4-4959-b5c7-8887cc4fbdee"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Callum McKenzie"/>
+  </resource>
+</omf>

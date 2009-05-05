@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Rob Bradford)</creator>
+    <maintainer>(Rob Bradford)</maintainer>
+    <title>Τεκμηρίωση Tetravex</title>
+    <date>Ιούνιος 2005</date>
+    <version identifier="Τεκμηρίωση Tetravex V2.10" date="Ιούνιος 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Το Tetravex είναι ένα απλό παιγνίδι γρίφος, όπου τα κομμάτια έχουν αριθμούς σε κάθε πλευρά τους. Πρέπει να τοποθετήσετε τα κομμάτια αυτά με τέτοιο τρόπο έτσι ώστε οι όμοιοι αριθμοί να εφάπτονται μεταξύ τους, ενώ κατά την διαρκεια αυτής της διαδικασίας χρονομετρήστε. Οι χρόνοι σας έπειτα αποθηκεύονται σε έναν γενικό πίνακα βαθμολογίας.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnotravex/el/gnotravex.xml"/>
+    <language code="el"/>
+    <relation seriesid="56fe5081-403c-4024-b124-d69acc1c92e8"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Rob Bradford"/>
+  </resource>
+</omf>

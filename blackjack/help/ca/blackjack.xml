@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "<application>Blackjack</application>">
+<!ENTITY appname "Blackjack">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="ca">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual del <application>Blackjack</application></title>       
+    <abstract role="description">
+      <para>El Blackjack és un joc amb regles de casino i varies baralles per al projecte GNOME. L'objectiu del joc és obtenir una mà amb un valor més pròxim a 21 que les del repartidor, sense passar-se de 21. El jugador aposta amb fitxes virtuals.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>William Jon McCann</holder> 
+    </copyright><copyright><year>2007-2009</year><holder>Joan Duran (jodufi@gmail.com)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>Projecte de documentació del GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Teniu permís per a copiar, distribuir i/o modificar aquest document, sota els termes de la Llicència de documentació lliure GNU (GFDL), versió 1.1 o qualsevol versió publicada posteriorment per la Free Software Foundation, sense seccions invariants, sense texts de portada i sense texts de contraportada. Podeu trobar una còpia de la GFDL en aquest <ulink type="help" url="ghelp:fdl">enllaç</ulink> o en el fitxer COPYING-DOCS distribuït amb aquest manual.</para>
+         <para>Aquest manual forma part d'una col·lecció de manuals del GNOME distribuïts sota la GFDL. Si voleu distribuir aquest manual independentment de la col·lecció, podeu fer-ho afegint una còpia de la llicència al manual, tal com es descriu a la secció 6 de la llicència.</para>
+
+	<para>Molts dels noms que les empreses utilitzen per a distingir els seus productes i serveis es consideren marques comercials. Quan aquests noms apareguin en qualsevol documentació del GNOME, si els membres del Projecte de documentació del GNOME han estat avisats pel que fa a les marques, els noms apareixeran en majúscules o amb les inicials en majúscules.</para>
+
+	<para>EL DOCUMENT I LES VERSIONS MODIFICADES DEL DOCUMENT S'OFEREIXEN SOTA ELS TERMES DE LA LLICÈNCIA DE DOCUMENTACIÓ LLIURE DE GNU, TENINT EN COMPTE QUE: <orderedlist>
+		<listitem>
+		  <para>EL DOCUMENT S'OFEREIX «TAL COM ÉS», SENSE CAP TIPUS DE GARANTIA, NI EXPLÍCITA NI IMPLÍCITA; AIXÒ INCLOU, SENSE LIMITAR-S'HI, LES GARANTIES QUE EL DOCUMENT O LA VERSIÓ MODIFICADA DEL DOCUMENT NO TINGUI DEFECTES, SIGUI COMERCIALITZABLE, SIGUI ADEQUAT PER A UN ÚS CONCRET O NO INFRINGEIXI CAP LLEI. TOT EL RISC PEL QUE FA A LA QUALITAT, EXACTITUD I RENDIMENT DEL DOCUMENT O LA VERSIÓ MODIFICADA DEL DOCUMENT ÉS VOSTRE. EN CAS QUE EL DOCUMENT RESULTÉS DEFECTUÓS EN QUALSEVOL ASPECTE, VÓS (NO PAS L'ESCRIPTOR INICIAL, L'AUTOR O CAP ALTRE COL·LABORADOR) ASSUMIU TOT EL COST DE MANTENIMENT, REPARACIÓ O CORRECCIÓ. AQUESTA RENÚNCIA DE GARANTIA CONSTITUEIX UNA PART ESSENCIAL D'AQUESTA LLICÈNCIA. NO S'AUTORITZA L'ÚS DE CAP DOCUMENT O VERSIÓ MODIFICADA DEL DOCUMENT EXCEPTE SOTA AQUESTA RENÚNCIA DE GARANTIA; I </para>
+		</listitem>
+		<listitem>
+		  <para>EN CAP CAS I SOTA CAP INTERPRETACIÓ LEGAL, JA SIGUI PER AGREUJAMENT (INCLOENT-HI LA NEGLIGÈNCIA), CONTRACTE O ALTRE CAS, L'AUTOR, L'ESCRIPTOR ORIGINAL, QUALSEVOL DELS COL·LABORADORS O DISTRIBUÏDORS DEL DOCUMENT O UNA VERSIÓ MODIFICADA DEL DOCUMENT NI CAP PROVEÏDOR D'AQUESTES PARTS NO SERAN RESPONSABLES DAVANT DE NINGÚ PER CAP DANY DIRECTE, INDIRECTE, ESPECIAL, ACCIDENTAL O CONSECUTIU DE QUALSEVOL TIPUS; AIXÒ INCLOU, SENSE LIMITAR-S'HI, ELS DANYS PER PÈRDUA DE CLIENTS, INTERRUPCIONS DE LA FEINA, FALLADA O MALFUNCIONAMENT DE L'ORDINADOR, O QUALSEVOL ALTRA PÈRDUA O DANY RELACIONAT AMB L'ÚS DEL DOCUMENT I LES VERSIONS MODIFICADES DEL DOCUMENT, FINS I TOT SI S'HA INFORMAT AQUESTA PART DE LA POSSIBILITAT D'AQUESTS DANYS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer">
+		<firstname>William Jon</firstname> 
+		<surname>McCann</surname> 
+		<affiliation> 
+	  		<orgname/> 
+	  		<address> <email>mccann@jhu.edu</email> </address> 
+		</affiliation> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>	
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+      <revision> 
+		<revnumber>Manual del Blackjack (versió 2.8)</revnumber> 
+		<date>Setembre de 2004</date> 
+		<revdescription> 
+	  		<para role="author">William Jon McCann <email>mccann@jhu.edu</email></para>
+	  		<para role="publisher"/>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Aquest manual descriu la versió 2.12 del Blackjack.</releaseinfo> 
+    <legalnotice> 
+      <title>Comentaris</title> 
+      <para>Per a informar d'un error o fer algun suggeriment quant al <application>Blackjack</application> o aquest manual, seguiu les indicacions a la <ulink url="ghelp:gnome-feedback" type="help">pàgina de comentaris del GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Blackjack</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>mygnomeapp</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="blackjack-introduction"> 
+
+    <title>Introducció</title> 
+
+    <para>El <application>Blackjack</application> és un joc amb varies baralles i regles de casino. L'objectiu del joc és obtenir una mà amb un valor més pròxim a 21 que les del repartidor, sense passar-se de 21.</para>
+  </sect1>
+
+  <sect1 id="blackjack-basics">
+    <title>Regles bàsiques del Blackjack</title>
+
+    <sect2 id="blackjack-terms">
+    <title>Terminologia del Blackjack</title>
+    <para>Alguns termes importants que s'utilitzen en el joc.</para>
+    <para>
+        <variablelist>
+	<varlistentry>
+	<term>Blackjack</term>
+	<listitem>
+	<para>Una mà on les dues primeres cartes sumen 21 implica un premi instantani amb el valor del 150% de l'aposta</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Passat</term>
+	<listitem>
+	<para>Quan el valor de la mà excedeix 21 perdreu la mà</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Dobla</term>
+	<listitem>
+	<para>Per a doblar l'aposta inicial i rebre exactament una carta més</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Tirada</term>
+	<listitem>
+	<para>Per a demanar d'afegir una altra carta a la mà</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Assegurança</term>
+	<listitem>
+	<para>Una aposta paral·lela del 50% de l'aposta original de que el repartidor té un 21 natural (blackjack) que s'ofereix quan la carta descoberta del repartidor és un as. Si el repartidor té un 21 natural es paga el doble al jugador.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Empeny</term>
+	<listitem>
+	<para>Quan el valor de la mà del jugador i del repartidor són iguals, l'aposta original es retorna al jugador</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Divideix</term>
+	<listitem>
+	<para>Quan una mà comença amb dues cartes del mateix valor (o rang) es pot dividir per a formar dues mans independents</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Planta't</term>
+	<listitem>
+	<para>Deixa d'afegir cartes a la mà</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Rendir-se</term>
+	<listitem>
+        <para>Perdre la meitat de l'aposta per a no acabar la mà</para>
+	</listitem>
+	</varlistentry>
+
+        </variablelist>
+    </para>
+    </sect2>
+
+    <sect2 id="blackjack-card-values">
+    <title>Valor de les cartes</title>
+    <para>En el Blackjack cada carta té un valor assignat. <itemizedlist> 
+	  <listitem> 
+           <para>Una as pot comptar com a 1 o com a 11.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Les cartes del 2 al 9 valen el valor indicat.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>El 10, jota, reina i rei valen 10.</para>
+	  </listitem> 
+	</itemizedlist></para> 
+
+    <para>El valor de la mà és la suma dels valors de cada carta en la mà.</para>
+    </sect2>
+
+    <sect2 id="blackjack-dealer-rules">
+    <title>Regles del repartidor</title>
+    <para>El repartidor ha de jugar la seva mà d'acord amb unes regles molt estrictes. Hi ha dues variacions de les regles bàsiques que determinen la mà total que el repartidor ha d'arribar. <variablelist>
+	<varlistentry>
+	<term>El repartidor es planta amb un 17</term>
+	<listitem>
+	<para>El repartidor ha de continuar repartint cartes (tirada) fins que el total de la mà és com a mínim 17.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>El repartidor tira amb un 17 tou</term>
+	<listitem>
+	<para>El repartidor ha de continuar repartint cartes (tirada) fins que el total de la mà és com a mínim 17, excepte quan el repartidor té un 17 tou llavors ha d'agafar una altra carta. Un total tou es aquell en què es compte un as com a 11.</para>
+	</listitem>
+	</varlistentry>
+        </variablelist></para>
+    </sect2>
+
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here. 
+     If the information about how to get started is very short, you can 
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="blackjack-getting-started"> 
+    <title>Inici</title> 
+
+    <sect2 id="blackjack-start">
+    <title>Per a iniciar el <application>Blackjack</application></title>
+    <para>Podeu iniciar el <application>Blackjack</application> de les maneres següents:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menú <guimenu>Aplicacions</guimenu></term>
+    		<listitem>
+    		<para>Seleccioneu <menuchoice><guisubmenu>Jocs</guisubmenu><guimenuitem>Blackjack</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Línia d'ordres</term>
+    		<listitem>
+    		<para>Per a iniciar el <application>Blackjack</application> des de la línia d'ordres, introduïu la següent ordre i premeu <keycap>Retorn</keycap>:</para>
+    		<para> 
+			<command>blackjack</command> 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-when-start">
+    <title>En iniciar el <application>Blackjack</application></title>
+    <para>En iniciar el <application>Blackjack</application> es mostra la finestra següent.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title>Finestra d'inici del <application>Blackjack</application></title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/blackjack_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <!-- EPS versions of the figures are not required at the moment. -->
+            <!-- 
+		    <imageobject>
+      		<imagedata fileref="figures/image.eps" format="EPS"/>
+    		    </imageobject>
+	    -->
+	    <textobject> 
+	      <phrase>Mostra la finestra principal <application>Blackjack</application>. Conté la barra del títol, la barra de menú, la barra d'eines, l'àrea de joc i les barres de desplaçament. La barra de menú conté els menús Partida, Paràmetres i Ajuda.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para>La finestra del <application>Blackjack</application> conté els elements següents:</para>
+      <variablelist>
+
+	<varlistentry>
+	<term>Barra de menú</term>
+	<listitem>
+	<para>En els menús de la barra de menú hi ha totes les ordres que necessitareu per a jugar al <application>Blackjack</application>.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Barra d'eines</term>
+	<listitem>
+	<para>A la barra d'eines hi ha un subconjunt de les ordres de la barra de menú.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Barra d'estat</term>
+	<listitem>
+	<para>La barra d'estat mostra informació sobre l'activitat actual del <application>Blackjack</application> i informació contextual sobre els elements del menú.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Àrea de joc</term>
+	<listitem>
+	<para>L'àrea de joc conté la posició del repartidor, la posició del jugador, la pila d'apostes del jugador, i les fitxes del jugador.</para>
+	</listitem>
+	</varlistentry>
+
+	</variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-menus">
+    <title>Menús del <application>Blackjack</application></title>
+      <para>La barra de menú, ubicada sobre del <interface>tauler de joc</interface>, conté els menús següents:</para>
+
+      <variablelist>
+
+        <!-- ===== Game ===== -->
+
+        <varlistentry>
+          <term><guimenu>Partida</guimenu></term>
+          <listitem>
+            <para>Aquest menú conté aquests elements: <itemizedlist>
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-N</keysym></shortcut><guimenuitem>Nova</guimenuitem></menuchoice> — Neteja el tauler i inicia una partida nova.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Reinicia</guimenuitem></menuchoice> — Neteja el tauler i torna a iniciar la partida.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Pista</guimenuitem></menuchoice> — L'ordinador us suggerirà el millor moviment.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-Q</keysym></shortcut><guimenuitem>Surt</guimenuitem></menuchoice> — Surt del joc.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Settings ===== -->
+
+        <varlistentry>
+          <term><guimenu>Paràmetres</guimenu></term>
+          <listitem>
+            <para>Aquest menú conté aquests elements: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Barra d'eines</guimenuitem> — Commuta la visualització de la barra d'eines.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Preferències…</guimenuitem> — Obre el diàleg <interface>Preferències del Blackjack</interface>, el qual us permet configurar el joc.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Help ===== -->
+
+        <varlistentry>
+          <term><guimenu>Ajuda</guimenu></term>
+          <listitem>
+            <para>Aquest menú conté: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Continguts</guimenuitem> — Obre el navegador d'ajuda i mostra aquest manual.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Quant a</guimenuitem> — Obre el diàleg <interface>Quant a</interface>, on es mostra la informació bàsica sobre el <application>Blackjack</application>, com el número de versió de l'aplicació i el nom dels autors.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+    <sect2 id="blackjack-playing-area">
+    <title>Àrea de joc del <application>Blackjack</application></title>
+      <para>L'àrea de joc (o tauler), ubicat sota la <interface>barra d'eines</interface>, conté els elements següents:</para>
+
+      <variablelist>
+
+        <varlistentry>
+          <term><interface>Posició del repartidor</interface></term>
+          <listitem><para>Aquí és on es posarà la mà del repartidor. Està ubicat a la part superior de l'àrea de joc. En un tauler net apareixerà com a una regió delimitada per una línia blanca.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Posicions del jugador</interface></term>
+          <listitem><para>Aquí és on es posarà la mà del jugador. Inicialment només hi haurà una posició del jugador. S'en crearan més si el jugador divideix una mà. En un tauler net apareixerà com a una regió delimitada per una línia blanca sota la posició del repartidor.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Pila d'apostes del jugador</interface></term>
+          <listitem><para>La pila d'apostes representa l'aposta inicial de cada mà. Consisteix en una pila de fitxes ubicada a l'esquerra de cada posició del jugador.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Fitxes del jugador</interface></term>
+          <listitem><para>Les fitxes del jugador representen una pila infinita de peces per a cada un dels valors 100, 25, 5 i 1. Aquestes peces s'utilitzen per a modificar l'aposta.</para></listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for 
+  which the application is designed. -->
+  <sect1 id="blackjack-usage"> 
+    <title>Utilització</title> 
+    <para>
+      <itemizedlist> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-set-wager"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-deal"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-hit"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-stand"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-double-down"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-split"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-surrender"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-get-hint"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-keyboard-control"/></para>
+	</listitem> 
+      </itemizedlist> </para>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-set-wager"> 
+      <title>Per a establir l'aposta</title> 
+      <para>Per a incrementar l'aposta de la mà: <itemizedlist>
+        <listitem>
+         <para>Feu doble clic en les peces del jugador, ubicades al llarg de la vora inferior de l'àrea de joc, que voleu afegir a l'aposta.</para>
+        </listitem>
+        <listitem>
+         <para>O arrossegueu les peces desitjades a pila d'apostes, ubicada al costat de la mà.</para>
+        </listitem>
+      </itemizedlist></para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-deal"> 
+      <title>Per a repartir una mà nova</title> 
+      <para>Es pot repartir una mà nova quan el tauler estigui net o quan la partida amb les mans actuals hagi finalitzat.</para>
+      <para>Per a repartir una mà nova en un tauler net, feu clic en la regió delimitada per una línia blanca que indica la posició del repartidor o del jugador.</para>
+      <para>Per a repartir una mà nova després de finalitzar la partida amb les mans actuals, feu clic en qualsevol carta en el tauler.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-hit"> 
+      <title>Per a afegir una carta a una mà (tirada)</title> 
+      <para>Podeu afegir cartes a la mà fins que el total de la mà sigui 21 o més.</para>
+      <para>Per a afegir una carta a la mà del jugador, feu clic en qualsevol carta de la mà.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-stand"> 
+      <title>Per a no agafar més cartes (planta't)</title> 
+      <para>Podeu deixar d'agafar més cartes en qualsevol moment després de que les dues primeres cartes s'hagin repartit.</para>
+      <para>Per a deixar d'agafar més cartes a una mà, feu clic en una altra mà. Per exemple, quan només hi ha una posició del jugador (si no heu dividit una parella), per a plantar-vos feu clic en la mà del repartidor. Quan heu dividit una parella, podeu plantar-vos en la primera mà del jugador fent clic en la segona mà del jugador o en la mà del repartidor.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-double-down"> 
+      <title>Per a doblar</title> 
+      <para>Per a doblar, feu doble clic en qualsevol de les fitxes del jugador després que les dues primers cartes s'hagin repartit.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-split"> 
+      <title>Per a dividir una parella</title> 
+      <para>Per a dividir una parella, arrossegueu la carta superior de la mà fora de la posició del jugador i deixeu-la en qualsevol espai buit del tauler.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-surrender"> 
+      <title>Per a rendir-se</title> 
+      <para>Encara no s'ha implementat.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-get-hint"> 
+      <title>Per a obtenir una pista</title> 
+      <para>En qualsevol moment de la partida podeu demanar una pista. Per a fer-ho podeu fer clic en el botó <interface>Pista</interface> en la <interface>barra d'eines</interface>, o seleccioneu l'element del menú <menuchoice><guisubmenu>Partida</guisubmenu><guimenuitem>Pista</guimenuitem></menuchoice>.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-keyboard-control"> 
+      <title>Control amb el teclat</title> 
+      <para>La majoria de les operacions del joc es poden controlar amb el teclat. <table><title>Tecles de control</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead><row><entry>Acció</entry><entry>Tecla</entry></row></thead><tbody><row><entry>Reparteix una mà nova</entry><entry>RETORN</entry></row><row><entry>Tirada / Afegeix una carta</entry><entry>H</entry></row><row><entry>Planta't / Finalitza la mà</entry><entry>S</entry></row><row><entry>Dobla</entry><entry>D</entry></row><row><entry>Divideix la mà</entry><entry>P</entry></row><row><entry>Rendeix la mà</entry><entry>R</entry></row></tbody></tgroup></table></para>
+    </sect2> 
+  </sect1>
+
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="blackjack-prefs"> 
+    <title>Paràmetres</title> 
+    <para>Per a configurar el <application>Blackjack</application>, seleccioneu <menuchoice><guimenu>Paràmetres</guimenu><guimenuitem>Preferències</guimenuitem></menuchoice>. El diàleg <guilabel>Preferències</guilabel> conté les seccions següents:</para> 
+    <itemizedlist> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-game"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-rules"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-cards"/></para> 
+      </listitem> 
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="blackjack-prefs-game"> 
+      <title>Partida</title> 
+      <variablelist> 
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Visualitza les probabilitats d'aquesta mà</guilabel> </term> 
+	  <listitem> 
+	    <para>Seleccioneu aquest element per a visualitzar les probabilitats de la mà i els valors esperats per a les vàries opcions del jugador.</para>
+	  </listitem> 
+	</varlistentry> 
+
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Dóna ràpidament</guilabel> </term> 
+	  <listitem> 
+	    <para>Seleccioneu aquest element per a fer que l'ordinador reparteixi les cartes sense retard</para>
+	  </listitem> 
+	</varlistentry> 
+
+      </variablelist> 
+    </sect2>
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-rules"> 
+      <title>Regles</title> 
+      <para>Seleccioneu variacions de les regles de la llista.</para>
+    </sect2> 
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-cards"> 
+      <title>Estil de les cartes</title> 
+      <para>Personalitza l'aparença de les cartes.</para>
+    </sect2> 
+
+  </sect1>
+
+<!-- ============= Advanced ================================== -->
+  <sect1 id="blackjack-advanced">
+  <title>Avançat</title>
+  <para>
+  </para>
+
+  <sect2 id="blackjack-advanced-probabilities">
+    <title>Probabilitats del repartidor</title>
+    <para>Quan l'opció <guilabel>Visualitza les probabilitats d'aquesta mà</guilabel> estigui seleccionada en la pestanya <guilabel>Paràmetres</guilabel> del diàleg de <guilabel>Preferències</guilabel>, es visualitzaran en el tauler les probabilitats exactes de cada resultat possible de la mà del repartidor, a l'esquerra de la mà del repartidor. Les probabilitats varien des de zero fina a u, on zero significa impossible i u significa segur. Aquestes probabilitats tenen en compte totes les cartes repartides de la baralla.</para>
+  </sect2>
+
+  <sect2 id="blackjack-advanced-expected-values">
+    <title>Valors esperats del jugador</title>
+    <para>Quan l'opció <guilabel>Visualitza les probabilitats d'aquesta mà</guilabel> estigui seleccionada en la pestanya <guilabel>Paràmetres</guilabel> del diàleg de <guilabel>Preferències</guilabel>, es visualitzaran en el tauler els valors exactes (en percentatge sobre l'aposta inicial) de cada opció possible del jugador, a l'esquerra de la mà del repartidor. Aquests valors tenen en compte totes les cartes de la mà actual i la carta mostrada del repartidor. Per exemple, suposeu que el número mostrat per a plantar-vos és -12.345. Això significa que s'ha jugat fora de la situació actual molts cops, plantat-vos cada cop, amb una aposta inicial de 1.00, llavors de mitja perdríeu 0.12345.</para>
+  </sect2>
+
+ </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default. 
+     You can use it to describe known bugs and limitations of the 
+	  program if there are any - please be frank and list all
+     problems you know of. 
+  
+  <sect1 id="blackjack-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="blackjack-about"> 
+    <title>Quant al <application>Blackjack</application></title> 
+    <para>En William Jon McCann (<email>mccann@jhu.edu</email>) ha escrit el <application>Blackjack</application>.</para>
+    <para>Per a informar d'un error o fer algun suggeriment d'aquesta aplicació o aquest manual, seguiu les indicacions d'aquest <ulink url="ghelp:gnome-feedback" type="help">document</ulink>.</para>
+
+    <para>Aquest programa es distribueix sota els termes de la Llicència pública general de GNU tal com publica la Free Software Foundation; tant en la versió 2 de la llicència, o (a la vostra opció) una versió posterior. Es pot trobar una copia d'aquesta llicència en aquest <ulink url="ghelp:gpl" type="help">enllaç</ulink>, o en el fitxer COPYING inclòs amb el codi font d'aquest programa.</para>
+
+  </sect1> 
+</article>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Thomas Hinkle)</creator>
+    <maintainer>(Thomas Hinkle)</maintainer>
+    <title>Sudoku-manual</title>
+    <date>February 2008</date>
+    <version identifier="Manual til GNOME Sudoku, version 3.0" date="February 2008"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Sudoku er et program til afvikling af det populære logiske sudoku-puslespil, hvori der skal udfyldes 9x9 felter med de korrekte tal.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnome-sudoku/da/gnome-sudoku.xml"/>
+    <language code="da"/>
+    <relation seriesid="4336a303-fb29-4462-9589-c32a9c5d5ff7"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

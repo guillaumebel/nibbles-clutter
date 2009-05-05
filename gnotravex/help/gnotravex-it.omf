@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Rob Bradford)</creator>
+    <maintainer>(Rob Bradford)</maintainer>
+    <title>Manuale di Tetravex</title>
+    <date>Giugno 2005</date>
+    <version identifier="Manuale di Tetravex V2.10" date="Giugno 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Tetravex è un semplice gioco di puzzle con i pezzi numerati su ogni lato. Una volta avviato il cronometro, i pezzi devono essere posizionati in modo tale da far toccare fra di loro i numeri uguali. I tempi di gioco vengono memorizzati in una tabella di punteggi generale.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnotravex/it/gnotravex.xml"/>
+    <language code="it"/>
+    <relation seriesid="56fe5081-403c-4024-b124-d69acc1c92e8"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Rob Bradford"/>
+  </resource>
+</omf>

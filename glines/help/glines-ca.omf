@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Emese Kovács)</creator>
+    <maintainer>(Projecte de documentació del GNOME)</maintainer>
+    <title>Manual del Cinc o més</title>
+    <date>Stembre de 2004</date>
+    <version identifier="Manual del Cinc o més (versió 2.8)" date="Stembre de 2004"/>
+    <subject category="GNOME|Games"/>
+    <description>
+    Per a jugar al cinc o més s'han d'alinear les fitxes del mateix color mentre el tauler s'omple amb fitxes ubicades aleatòriament. Quan s'alineen cinc o més fitxes del mateix color, aquestes desapareixen. La partida acaba quan el tauler s'omple completament.
+  </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/glines/ca/glines.xml"/>
+    <language code="ca"/>
+    <relation seriesid="06b00474-20fc-41e2-bf08-462272d449ef"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Emese Kovács"/>
+  </resource>
+</omf>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Eric Baudais)</creator>
+    <maintainer>(Eric Baudais)</maintainer>
+    <title>Τεκμηρίωση του Ιάγνος</title>
+    <date>7 Απριλίου 2000</date>
+    <version identifier="1.0" date="7 Απριλίου 2000"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Τα Ιάγνος είναι το παιχνίδι στρατηγικής δύο παικτών του Othello, το οποίο είναι επίσης γνωστό και ως Reversi και είναι παρόμοιο με το Go. Τα κομμάτια είναι πλακίδια με τη μία πλευρά τους μαύρη και την άλλη λευκή και ο στόχος του παίκτη είναι να γυρίζει τα πλακίδια του αντιπάλου στο δικό του χρώμα, ενώ εμποδίζει τον αντίπαλο να κάνει το ίδιο σ' αυτόν. Όταν το ταμπλώ γεμίσει με πλακίδια, κερδίζει ο παίκτης με τα περισσότερα πλακίδια του δικού του χρώματος.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/iagno/el/iagno.xml"/>
+    <language code="el"/>
+    <relation seriesid="c4d35e1a-878f-4161-8293-98170c696596"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>

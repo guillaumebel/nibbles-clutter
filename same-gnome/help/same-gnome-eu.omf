@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Callum McKenzie)</creator>
+    <maintainer>(GNOMEren dokumentazio-proiektua)</maintainer>
+    <title>Same GNOMEren eskuliburua</title>
+    <date>2005eko otsaila</date>
+    <version identifier="Same GNOME-ren eskuliburuaren 2.10 bertsioa" date="2005eko otsaila"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Same GNOME buru-hausgarri bat da, eta joko honen helburua leihoa ahalik eta garbiena (pieza gutxienekin) uztea da, horretarako kolore berdineko piezetan klik egin. Talde hori desagertu egingo da eta gaineko piezak erori egingo dira ezkerrean beste piezarik edo kolore berdineko talde gehiago ez egon arte.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/same-gnome/eu/same-gnome.xml"/>
+    <language code="eu"/>
+    <relation seriesid="52ee583d-42e4-4959-b5c7-8887cc4fbdee"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Callum McKenzie"/>
+  </resource>
+</omf>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Timothy Musson)</creator>
+    <maintainer>(Projecte de documentació del GNOME)</maintainer>
+    <title>Manual del Quatre en ratlla</title>
+    <date>Setembre de 2004</date>
+    <version identifier="Manual del Quatre en ratlla (versió 2.8)" date="Setembre de 2004"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      L'objectiu del Quatre en ratlla és col·locar quatre fitxes en fila vertical, horitzontal o diagonal mentre l'adversari intenta bloquejar-vos i fer la seva fila de quatre. El Quatre en ratlla es pot jugar contra una altra persona o contra l'ordinador.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnect/ca/gnect.xml"/>
+    <language code="ca"/>
+    <relation seriesid="3454d1dd-ecd5-40fb-99a3-3d87571878ef"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Timothy Musson"/>
+  </resource>
+</omf>

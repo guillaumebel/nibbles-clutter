@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Роб Брэдфорд)</creator>
+    <maintainer>(Роб Брэдфорд)</maintainer>
+    <title>Руководство по игре Тетравекс</title>
+    <date>Июнь 2005</date>
+    <version identifier="Руководство по игре Тетравекс версия 2.10" date="Июнь 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Тетравекс - это простая игра-головоломка, в которой плитки имеют число на каждой стороне. Необходимо расположить все плитки так, чтобы они соприкасались одинаковыми числами. Затраченное время показывается в строке статуса.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnotravex/ru/gnotravex.xml"/>
+    <language code="ru"/>
+    <relation seriesid="56fe5081-403c-4024-b124-d69acc1c92e8"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Rob Bradford"/>
+  </resource>
+</omf>

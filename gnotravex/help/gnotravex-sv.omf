@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Rob Bradford)</creator>
+    <maintainer>(Rob Bradford)</maintainer>
+    <title>Handbok för Tetravex</title>
+    <date>Juni 2005</date>
+    <version identifier="Handbok för Tetravex v2.10" date="Juni 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Tetravex är ett enkelt pussel där bitarna måste positioneras så att samma siffror rör vid varandra. Ditt spel går på tid och dessa tider lagras i en systembred poänglista.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnotravex/sv/gnotravex.xml"/>
+    <language code="sv"/>
+    <relation seriesid="56fe5081-403c-4024-b124-d69acc1c92e8"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Rob Bradford"/>
+  </resource>
+</omf>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Callum McKenzie)</creator>
+    <maintainer>(GNOME-Dokumentationsprojekt)</maintainer>
+    <title>Same GNOME-Handbuch</title>
+    <date>Februar 2005</date>
+    <version identifier="Same-GNOME-Handbuch V2.10" date="Februar 2005"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Same GNOME ist ein Puzzlespiel, dessen Ziel es ist, durch Anklicken von Gruppen von Objekten in einem Spielfeld dieses so weit wie möglich zu leeren. Beim Verschwinden einer solchen Gruppe fallen die übrigen Objekte herunter, bis keine Objekte oder zumindest keine gleichfarbigen Gruppen mehr vorhanden sind.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/same-gnome/de/same-gnome.xml"/>
+    <language code="de"/>
+    <relation seriesid="52ee583d-42e4-4959-b5c7-8887cc4fbdee"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Callum McKenzie"/>
+  </resource>
+</omf>

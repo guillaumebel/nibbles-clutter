@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Timothy Musson)</creator>
+    <maintainer>(Progetto di documentazione GNOME)</maintainer>
+    <title>Manuale di Forza 4</title>
+    <date>Settembre 2004</date>
+    <version identifier="Manuale di Forza 4 V2.8" date="Settembre 2004"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Lo scopo di Forza 4 è allineare quattro pezzi in modo orizzontale, verticale o diagonale mentre l'avversario cerca di bloccare le proprie mosse e allineare i suoi pezzi. È possibile giocare a Forza 4 contro un altro giocatore umano oppure contro il computer.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnect/it/gnect.xml"/>
+    <language code="it"/>
+    <relation seriesid="3454d1dd-ecd5-40fb-99a3-3d87571878ef"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Timothy Musson"/>
+  </resource>
+</omf>

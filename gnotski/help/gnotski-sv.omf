@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Andrew Sobala)</creator>
+    <maintainer>(Ross Burton)</maintainer>
+    <contributor>(Lars Rydlinge)</contributor>
+    <contributor>(Ross Burton)</contributor>
+    <title>Handbok för Klotski</title>
+    <date>13 Augusti 2002</date>
+    <version identifier="V2.0" date="13 Augusti 2002"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Klotski är ett pusselspel vars mål är att få det mönstrade blocket till markören, vilket görs genom att flytta undan de block som är i vägen.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnotski/sv/gnotski.xml"/>
+    <language code="sv"/>
+    <relation seriesid="3f83b2c8-40c4-4d38-b7b6-e59ac1efb954"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Andrew Sobala"/>
+  </resource>
+</omf>

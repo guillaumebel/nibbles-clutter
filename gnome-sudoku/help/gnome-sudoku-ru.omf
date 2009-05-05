@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Томас Хинкль)</creator>
+    <maintainer>(Томас Хинкль)</maintainer>
+    <title>Руководство по игре Судоку</title>
+    <date>Февраль 2008</date>
+    <version identifier="Руководство по игре Судоку v3.0" date="Февраль 2008"/>
+    <subject category="GNOME|Games"/>
+    <description>
+      Судоку - это приложение для игры в популярную логическую игру, в которой нужно заполнить правильными цифрами 9 по 9 клеток.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gnome-sudoku/ru/gnome-sudoku.xml"/>
+    <language code="ru"/>
+    <relation seriesid="4336a303-fb29-4462-9589-c32a9c5d5ff7"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Eric Baudais"/>
+  </resource>
+</omf>
