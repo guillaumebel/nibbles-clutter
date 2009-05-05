@@ -1,5 +1,0 @@
-blackjack-strategy.o: strategy.cpp ../../config.h strategy.h
-
-../../config.h:
-
-strategy.h:
