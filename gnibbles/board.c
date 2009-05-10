@@ -2,7 +2,8 @@
 
 /* 
  *   Gnome Nibbles: Gnome Worm Game
- *   Written by Sean MacIsaac <sjm@acm.org>, Ian Peters <itp@gnu.org>
+ *   Written by Sean MacIsaac <sjm@acm.org>, Ian Peters <itp@gnu.org>,
+ *              Guillaume Beland <guillaume.beland@gmail.com>
  * 
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -56,9 +57,12 @@ gnibbles_board_new (gint t_w, gint t_h)
   stage = gtk_clutter_embed_get_stage (GTK_CLUTTER_EMBED (board->clutter_widget));
   clutter_stage_set_color (CLUTTER_STAGE(stage), &stage_color);
   clutter_stage_set_user_resizable (CLUTTER_STAGE(stage), FALSE); //False for now, will implement true later
-  clutter_actor_set_size (CLUTTER_ACTOR (stage), 653, 520);
+  clutter_actor_set_size (CLUTTER_ACTOR (stage), 
+                        properties->tilesize * BOARDWIDTH,
+                        properties->tilesize * BOARDHEIGHT);
+  clutter_stage_set_user_resizable (CLUTTER_STAGE (stage), FALSE);
   clutter_actor_show (stage);
-
+  
   gnibbles_board_draw (board);
 
   return board;
@@ -125,14 +129,12 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
 
   dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
 
-  FILE *fil = fopen ("lvlll.txt", "w");
   
   /* Load walls onto the surface*/
   for (i = 0; i < BOARDHEIGHT; i++) {
     y_pos = i * properties->tilesize;
     for (j = 0; j < BOARDWIDTH; j++) {
       wall = TRUE;
-      fputc ((int)level->walls[i][j],  fil);
       switch (level->walls[i][j]) {
         case 'a': // empty space
           wall = FALSE;
@@ -210,9 +212,7 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
         clutter_container_add_actor (CLUTTER_CONTAINER (board->level), tmp);
       }
     }
-    fputc ((int) '\n', fil);
   }
-  fclose (fil);
   ClutterActor *stage = gnibbles_board_get_stage (board);
   clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->level);
   //raise the level above the surface
