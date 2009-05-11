@@ -161,7 +161,7 @@ for game in $gamelist; do
     *) ;;
   esac
   case $game in
-    gnometris|lightsoff) need_clutter=yes ;;
+    gnometris|lightsoff|gnibbles) need_clutter=yes ;;
     *) ;;
   esac
 done

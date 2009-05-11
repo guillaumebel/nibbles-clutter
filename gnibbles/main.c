@@ -46,6 +46,9 @@
 #include "scoreboard.h"
 #include "warp.h"
 
+#include <clutter-gtk/clutter-gtk.h>
+#include "board.h"
+
 #ifdef GGZ_CLIENT
 #include <libgames-support/games-dlg-chat.h>
 #include <libgames-support/games-dlg-players.h>
@@ -1087,6 +1090,27 @@ main (int argc, char **argv)
   gtk_action_set_visible (new_game_action, !ggz_network_mode);
   gtk_action_set_visible (player_list_action, ggz_network_mode);
 
+
+  // clutter
+  gtk_clutter_init (&argc, &argv);
+  GtkWidget *clutter_win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  GtkWidget *clutter_vbox = gtk_vbox_new (TRUE,0);
+  GnibblesBoard *board = gnibbles_board_new (BOARDWIDTH, BOARDHEIGHT);
+  gtk_container_add (GTK_CONTAINER (clutter_win), clutter_vbox);
+  gtk_widget_show (clutter_vbox);
+  gtk_box_pack_start (GTK_BOX(clutter_vbox), board->clutter_widget, TRUE, TRUE, 2);
+  gtk_widget_set_size_request (GTK_WIDGET (board->clutter_widget),
+                                DEFAULT_WIDTH,
+                                DEFAULT_HEIGHT);
+  gtk_widget_show (board->clutter_widget);
+
+  gtk_window_set_default_size (GTK_WINDOW (clutter_win), DEFAULT_WIDTH, DEFAULT_HEIGHT);
+  gtk_widget_show (GTK_WIDGET (clutter_win));
+
+  //load the level
+  GnibblesLevel *lvl = gnibbles_level_new (1);
+  
+  gnibbles_board_load_level (board, lvl);
   gtk_main ();
 
   gnibbles_properties_destroy (properties);

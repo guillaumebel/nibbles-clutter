@@ -30,8 +30,11 @@
 #define BOARDWIDTH 92
 #define BOARDHEIGHT 66
 
+#define EMPTYCHAR 'a'
+#define WORMCHAR 'w'
+
 typedef struct {
-  gchar walls[BOARDHEIGHT][BOARDWIDTH];
+  gchar walls[BOARDWIDTH][BOARDHEIGHT];
   gint level;
 } GnibblesLevel;
 

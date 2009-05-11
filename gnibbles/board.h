@@ -36,7 +36,7 @@ typedef struct {
 } GnibblesBoard;
 
 static gchar *wall_images[] = {
-    "wall-empty.svg",
+    "wall.png",
     "wall-straight-up.svg",
     "wall-straight-side.svg",
     "wall-corner-bottom-left.svg",
@@ -53,7 +53,7 @@ static gchar *wall_images[] = {
 GnibblesBoard *gnibbles_board_new (gint t_w, gint t_h);
 
 ClutterActor *gnibbles_board_get_stage (GnibblesBoard *board);
-
+gpointer gnibbles_board_draw (void *arg);
 void gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level);
 
 #endif

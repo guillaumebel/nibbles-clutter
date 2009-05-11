@@ -22,7 +22,7 @@
 #include <config.h>
 
 #include <stdlib.h>
-
+#include <glib.h>
 #include <glib/gi18n.h>
 #include <libgames-support/games-runtime.h>
 
@@ -34,7 +34,7 @@
 
 #include "board.h"
 
-void gnibbles_board_draw (GnibblesBoard *board);
+
 void throw_error (char *msg);
 
 extern GnibblesProperties *properties;
@@ -49,28 +49,50 @@ gnibbles_board_new (gint t_w, gint t_h)
   board->height = t_h;
 
   board->level = clutter_group_new ();
-  board->surface = clutter_group_new ();
+  board->surface = clutter_texture_new ();
   board->clutter_widget = gtk_clutter_embed_new ();
 
   ClutterActor *stage;
-  
+
+  const char * dirname;
+  gchar *filename;
+
+  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
+  filename = g_build_filename (dirname, wall_images[0], NULL);
+
   stage = gtk_clutter_embed_get_stage (GTK_CLUTTER_EMBED (board->clutter_widget));
   clutter_stage_set_color (CLUTTER_STAGE(stage), &stage_color);
-  clutter_stage_set_user_resizable (CLUTTER_STAGE(stage), FALSE); //False for now, will implement true later
+  //Stage can't be resized by the user. it's resized internaly via the window's
+  //resize signal
+  clutter_stage_set_user_resizable (CLUTTER_STAGE(stage), FALSE); 
   clutter_actor_set_size (CLUTTER_ACTOR (stage), 
                         properties->tilesize * BOARDWIDTH,
                         properties->tilesize * BOARDHEIGHT);
   clutter_stage_set_user_resizable (CLUTTER_STAGE (stage), FALSE);
   clutter_actor_show (stage);
-  
-  gnibbles_board_draw (board);
 
+  clutter_texture_set_from_file (CLUTTER_TEXTURE (board->surface),
+                                 filename, NULL);
+  clutter_actor_set_size (CLUTTER_ACTOR (board->surface),
+                          properties->tilesize * BOARDWIDTH,
+                          properties->tilesize * BOARDHEIGHT);
+  clutter_actor_set_position (CLUTTER_ACTOR (board->surface), 0,0);
+  clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->surface);
+  clutter_actor_show (board->surface);
+  
+  //temporary solution while I produce a proper background
+  //g_thread_create (gnibbles_board_draw, board, FALSE, NULL);
+  
   return board;
 }
 
-void 
-gnibbles_board_draw (GnibblesBoard *board) 
+/* TODO: Drawing so many tiles is dumb, and since there's ALWAYS the same number of
+ * tiles on the board why not produce a proper SVG background? instead of using
+ * 92*66 tiny SVGs. */
+gpointer
+gnibbles_board_draw (void *arg) 
 {
+  GnibblesBoard *board = (GnibblesBoard *)arg;
   int i,j;
   gchar *filename;
   const char *dirname;
@@ -97,22 +119,23 @@ gnibbles_board_draw (GnibblesBoard *board)
                                   x_pos,
                                   y_pos);
       clutter_actor_show (clone);
-      clutter_container_add_actor (CLUTTER_CONTAINER (board->surface), CLUTTER_ACTOR(clone));
-      //TODO unref clone ?
+      clutter_container_add_actor (
+                    CLUTTER_CONTAINER (board->surface), 
+                    CLUTTER_ACTOR(clone));
     }
   }
 
   ClutterActor *stage = gnibbles_board_get_stage (board);
   clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->surface);
 
+  return NULL;
 }
 
 ClutterActor *
 gnibbles_board_get_stage (GnibblesBoard *board) 
 {
-  return gtk_clutter_embed_get_stage (GTK_CLUTTER_EMBED (board->clutter_widget));
+  return gtk_clutter_embed_get_stage(GTK_CLUTTER_EMBED(board->clutter_widget));
 }
-
 
 void 
 gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level) 
@@ -128,14 +151,13 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
   gboolean wall = TRUE;
 
   dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
-
   
   /* Load walls onto the surface*/
   for (i = 0; i < BOARDHEIGHT; i++) {
     y_pos = i * properties->tilesize;
     for (j = 0; j < BOARDWIDTH; j++) {
       wall = TRUE;
-      switch (level->walls[i][j]) {
+      switch (level->walls[j][i]) {
         case 'a': // empty space
           wall = FALSE;
           break; // break right away
@@ -216,7 +238,7 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
   ClutterActor *stage = gnibbles_board_get_stage (board);
   clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->level);
   //raise the level above the surface
-  clutter_actor_raise (board->level, board->surface);
+  clutter_actor_raise (board->level,board->surface);
 }
 
 void throw_error (char *msg) {

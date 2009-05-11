@@ -65,8 +65,57 @@ gnibbles_level_new (gint level)
       break;
     }
     for (j = 0; j < BOARDWIDTH; j++) {
-      lvl->walls[i][j] = tmpboard[j];
-      //TODO: set worm start point, boni, etc
+      lvl->walls[j][i] = tmpboard[j];
+      switch (lvl->walls[j][i]) {
+        case 'm':
+          lvl->walls[j][i] = EMPTYCHAR;
+          //if (count < properties->numworms)
+          //  gnibbles_worm_set_start (worms[count++], j, i, WORMUP);
+          break;
+        case 'n':
+          lvl->walls[j][i] = EMPTYCHAR;
+          //if (count < properties->numworms)
+          //  gnibbles_worm_set_start (worms[count++], j, i, WORMLEFT);
+          break;
+        case 'o':
+          lvl->walls[j][i] = EMPTYCHAR;
+          //if (count < properties->numworms)
+          //  gnibbles_worm_set_start (worms[count++], j, i, WORMDOWN);
+          break;
+        case 'p':
+          lvl->walls[j][i] = EMPTYCHAR;
+          //if (count < properties->numworms)
+          //  gnibbles_worm_set_start (worms[count++], j, i, WORMRIGHT);
+          break;
+        case 'Q':
+          //gnibbles_warpmanager_add_warp (warpmanager, j - 1, i - 1, -1, -1);
+          break;
+        case 'R':
+        case 'S':
+        case 'T':
+        case 'U':
+        case 'V':
+        case 'W':
+        case 'X':
+        case 'Y':
+        case 'Z':
+          //gnibbles_warpmanager_add_warp
+          //  (warpmanager, j - 1, i - 1, -board[j][i], 0);
+          break;
+        case 'r':
+        case 's':
+        case 't':
+        case 'u':
+        case 'v':
+        case 'w':
+        case 'x':
+        case 'y':
+        case 'z':
+          //gnibbles_warpmanager_add_warp
+          //  (warpmanager, -(board[j][i] - 'a' + 'A'), 0, j, i);
+          lvl->walls[j][i] = EMPTYCHAR;
+          break;
+       }
     }
   }
 
