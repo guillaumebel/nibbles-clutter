@@ -321,7 +321,7 @@ draw_board (void)
 }
 
 static gboolean
-configure_event_cb (GtkWidget * widget, GdkEventConfigure * event)
+configure_event_cb (GtkWidget * widget, GdkEventConfigure * event, gpointer data)
 {
   int tilesize, ts_x, ts_y;
 
@@ -334,6 +334,11 @@ configure_event_cb (GtkWidget * widget, GdkEventConfigure * event)
   if (ts_y * BOARDHEIGHT > event->height)
     ts_y--;
   tilesize = MIN (ts_x, ts_y);
+
+if (data != NULL) {
+    GnibblesBoard *board = (GnibblesBoard *)data;
+    gnibbles_board_resize (board, tilesize);
+  }
 
   /* But, has the tile size changed? */
   if (properties->tilesize == tilesize) {
@@ -368,7 +373,7 @@ configure_event_cb (GtkWidget * widget, GdkEventConfigure * event)
     draw_board ();
   else
     render_logo ();
-
+  
   return FALSE;
 }
 
@@ -1106,6 +1111,10 @@ main (int argc, char **argv)
 
   gtk_window_set_default_size (GTK_WINDOW (clutter_win), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   gtk_widget_show (GTK_WIDGET (clutter_win));
+
+
+  g_signal_connect (G_OBJECT (board->clutter_widget), "configure_event",
+		    G_CALLBACK (configure_event_cb), board);
 
   //load the level
   GnibblesLevel *lvl = gnibbles_level_new (1);

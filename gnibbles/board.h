@@ -53,7 +53,8 @@ static gchar *wall_images[] = {
 GnibblesBoard *gnibbles_board_new (gint t_w, gint t_h);
 
 ClutterActor *gnibbles_board_get_stage (GnibblesBoard *board);
-gpointer gnibbles_board_draw (void *arg);
+//gpointer gnibbles_board_draw (void *arg);
 void gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level);
+void gnibbles_board_resize (GnibblesBoard *board, gint newtile);
 
 #endif

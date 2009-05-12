@@ -89,7 +89,8 @@ gnibbles_board_new (gint t_w, gint t_h)
 /* TODO: Drawing so many tiles is dumb, and since there's ALWAYS the same number of
  * tiles on the board why not produce a proper SVG background? instead of using
  * 92*66 tiny SVGs. */
-gpointer
+/*
+ gpointer
 gnibbles_board_draw (void *arg) 
 {
   GnibblesBoard *board = (GnibblesBoard *)arg;
@@ -112,7 +113,7 @@ gnibbles_board_draw (void *arg)
   for (i = 0; i < BOARDHEIGHT; i++) {
     y_pos = i * properties->tilesize;
     for (j = 0; j < BOARDWIDTH; j++) {
-      /*One actor at each tile */
+      One actor at each tile 
       x_pos = j * properties->tilesize;
       clone = clutter_clone_new (CLUTTER_ACTOR (tmp));
       clutter_actor_set_position (CLUTTER_ACTOR (clone), 
@@ -130,7 +131,7 @@ gnibbles_board_draw (void *arg)
 
   return NULL;
 }
-
+*/
 ClutterActor *
 gnibbles_board_get_stage (GnibblesBoard *board) 
 {
@@ -240,6 +241,43 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
   //raise the level above the surface
   clutter_actor_raise (board->level,board->surface);
 }
+
+void
+gnibbles_board_resize (GnibblesBoard *board, gint newtile)
+{
+  int i;
+  int x_pos;
+  int y_pos;
+  int count;
+
+  ClutterActor *stage = gnibbles_board_get_stage (board);
+  clutter_actor_set_size (stage, 
+                          BOARDWIDTH * newtile,
+                          BOARDHEIGHT * newtile);
+  clutter_actor_set_size (board->surface,
+                          BOARDWIDTH * newtile,
+                          BOARDHEIGHT * newtile);
+
+  count = clutter_group_get_n_children (CLUTTER_GROUP (board->level));
+
+  for (i = 0; i < count; i++) {
+    clutter_actor_get_position (
+        clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i),
+        &x_pos,
+        &y_pos);
+    clutter_actor_set_position (
+        clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i),
+        (x_pos / properties->tilesize) * newtile,
+        (y_pos / properties->tilesize) * newtile);
+    clutter_actor_set_size (
+        clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i),
+        newtile,
+        newtile);
+
+  }
+
+}
+
 
 void throw_error (char *msg) {
   char *message = 
