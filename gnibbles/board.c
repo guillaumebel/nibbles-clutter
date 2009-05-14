@@ -24,6 +24,7 @@
 #include <stdlib.h>
 #include <glib.h>
 #include <glib/gi18n.h>
+#include <gdk/gdk.h>
 #include <libgames-support/games-runtime.h>
 
 #include <clutter-gtk/clutter-gtk.h>
@@ -34,8 +35,19 @@
 
 #include "board.h"
 
+void gnibbles_board_load_pixmap ();
+GdkPixbuf*  gnibbles_board_load_pixmap_file (const gchar * pixmap,
+			                                      gint xsize, gint ysize);
 
-void throw_error (char *msg);
+GdkPixbuf *board_bonus_pixmaps[9] = { NULL, NULL, NULL, NULL, NULL,
+  NULL, NULL, NULL, NULL
+};
+
+GdkPixbuf *wall_pixmaps[19] = { NULL, NULL, NULL, NULL, NULL,
+  NULL, NULL, NULL, NULL, NULL,
+  NULL, NULL, NULL, NULL, NULL,
+  NULL, NULL, NULL, NULL
+};
 
 extern GnibblesProperties *properties;
 
@@ -47,18 +59,13 @@ gnibbles_board_new (gint t_w, gint t_h)
   GnibblesBoard *board = g_new (GnibblesBoard, 1);
   board->width = t_w;
   board->height = t_h;
-
-  board->level = clutter_group_new ();
+  board->level = NULL;
   board->surface = clutter_texture_new ();
   board->clutter_widget = gtk_clutter_embed_new ();
 
   ClutterActor *stage;
 
-  const char * dirname;
-  gchar *filename;
-
-  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
-  filename = g_build_filename (dirname, wall_images[0], NULL);
+  gnibbles_board_load_pixmap ();
 
   stage = gtk_clutter_embed_get_stage (GTK_CLUTTER_EMBED (board->clutter_widget));
   clutter_stage_set_color (CLUTTER_STAGE(stage), &stage_color);
@@ -71,67 +78,18 @@ gnibbles_board_new (gint t_w, gint t_h)
   clutter_stage_set_user_resizable (CLUTTER_STAGE (stage), FALSE);
   clutter_actor_show (stage);
 
-  clutter_texture_set_from_file (CLUTTER_TEXTURE (board->surface),
-                                 filename, NULL);
+  gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (board->surface),
+                                      wall_pixmaps[0]);
   clutter_actor_set_size (CLUTTER_ACTOR (board->surface),
                           properties->tilesize * BOARDWIDTH,
                           properties->tilesize * BOARDHEIGHT);
-  clutter_actor_set_position (CLUTTER_ACTOR (board->surface), 0,0);
+  clutter_actor_set_position (CLUTTER_ACTOR (board->surface), 0, 0);
   clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->surface);
   clutter_actor_show (board->surface);
-  
-  //temporary solution while I produce a proper background
-  //g_thread_create (gnibbles_board_draw, board, FALSE, NULL);
-  
+
   return board;
 }
 
-/* TODO: Drawing so many tiles is dumb, and since there's ALWAYS the same number of
- * tiles on the board why not produce a proper SVG background? instead of using
- * 92*66 tiny SVGs. */
-/*
- gpointer
-gnibbles_board_draw (void *arg) 
-{
-  GnibblesBoard *board = (GnibblesBoard *)arg;
-  int i,j;
-  gchar *filename;
-  const char *dirname;
-
-  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
-  filename = g_build_filename (dirname, wall_images[0], NULL);
-
-  ClutterActor *tmp = clutter_texture_new_from_file (filename, NULL);
-  clutter_actor_set_size (CLUTTER_ACTOR (tmp), 
-                          properties->tilesize, 
-                          properties->tilesize);
-  ClutterActor *clone;
-
-  gint x_pos;
-  gint y_pos;
-
-  for (i = 0; i < BOARDHEIGHT; i++) {
-    y_pos = i * properties->tilesize;
-    for (j = 0; j < BOARDWIDTH; j++) {
-      One actor at each tile 
-      x_pos = j * properties->tilesize;
-      clone = clutter_clone_new (CLUTTER_ACTOR (tmp));
-      clutter_actor_set_position (CLUTTER_ACTOR (clone), 
-                                  x_pos,
-                                  y_pos);
-      clutter_actor_show (clone);
-      clutter_container_add_actor (
-                    CLUTTER_CONTAINER (board->surface), 
-                    CLUTTER_ACTOR(clone));
-    }
-  }
-
-  ClutterActor *stage = gnibbles_board_get_stage (board);
-  clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->surface);
-
-  return NULL;
-}
-*/
 ClutterActor *
 gnibbles_board_get_stage (GnibblesBoard *board) 
 {
@@ -143,16 +101,14 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
 {
   gint i,j;
   gint x_pos, y_pos;
-  //TODO: unref/free  board->level
-  ClutterActor *tmp;
-  
-  gchar *filename;
-  const char *dirname;
-
+  ClutterActor *tmp;  
   gboolean wall = TRUE;
 
-  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
-  
+  if (board->level != NULL)
+    g_object_unref (board->level);
+
+  board->level = clutter_group_new ();
+
   /* Load walls onto the surface*/
   for (i = 0; i < BOARDHEIGHT; i++) {
     y_pos = i * properties->tilesize;
@@ -163,59 +119,37 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
           wall = FALSE;
           break; // break right away
         case 'b': // straight up
-          filename = g_build_filename (dirname, wall_images[1], NULL);
-          if (!filename) 
-            throw_error (wall_images[1]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[1]);
           break;
         case 'c': // straight side
-          filename = g_build_filename (dirname, wall_images[2], NULL);
-          if (!filename) 
-            throw_error (wall_images[2]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[2]);
           break;
         case 'd': // corner bottom left
-          filename = g_build_filename (dirname, wall_images[3], NULL);
-          if (!filename) 
-            throw_error (wall_images[3]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[3]);
           break;
         case 'e': // corner bottom right
-          filename = g_build_filename (dirname, wall_images[4], NULL);
-          if (!filename) 
-            throw_error (wall_images[4]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[4]);
           break;
         case 'f': // corner up left
-          filename = g_build_filename (dirname, wall_images[5], NULL);
-          if (!filename) 
-            throw_error (wall_images[5]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[5]);
           break;
         case 'g': // corner up right
-          filename = g_build_filename (dirname, wall_images[6], NULL);
-          if (!filename) 
-            throw_error (wall_images[6]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[6]);
           break;
         case 'h': // tee up
-          filename = g_build_filename (dirname, wall_images[7], NULL);
-          if (!filename) 
-            throw_error (wall_images[7]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[7]);
           break;
         case 'i': // tee right
-          filename = g_build_filename (dirname, wall_images[8], NULL);
-          if (!filename) 
-            throw_error (wall_images[8]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[8]);
           break;
         case 'j': // tee left
-          filename = g_build_filename (dirname, wall_images[9], NULL);
-          if (!filename) 
-            throw_error (wall_images[9]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[9]);
           break;
         case 'k': // tee down
-          filename = g_build_filename (dirname, wall_images[10], NULL);
-          if (!filename) 
-            throw_error (wall_images[10]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[10]);
           break;
         case 'l': // cross
-          filename = g_build_filename (dirname, wall_images[11], NULL);
-          if (!filename) 
-            throw_error (wall_images[11]);
+          tmp = gtk_clutter_texture_new_from_pixbuf (wall_pixmaps[11]);
           break;
         default:
           wall = FALSE;
@@ -225,7 +159,6 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
       if (wall == TRUE) {
         x_pos = j * properties->tilesize;
 
-        tmp = clutter_texture_new_from_file(filename, NULL);
         clutter_actor_set_size (CLUTTER_ACTOR(tmp),
                                  properties->tilesize,
                                  properties->tilesize);
@@ -236,6 +169,7 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
       }
     }
   }
+
   ClutterActor *stage = gnibbles_board_get_stage (board);
   clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->level);
   //raise the level above the surface
@@ -249,8 +183,9 @@ gnibbles_board_resize (GnibblesBoard *board, gint newtile)
   int x_pos;
   int y_pos;
   int count;
-
+  ClutterActor *tmp;
   ClutterActor *stage = gnibbles_board_get_stage (board);
+
   clutter_actor_set_size (stage, 
                           BOARDWIDTH * newtile,
                           BOARDHEIGHT * newtile);
@@ -261,29 +196,95 @@ gnibbles_board_resize (GnibblesBoard *board, gint newtile)
   count = clutter_group_get_n_children (CLUTTER_GROUP (board->level));
 
   for (i = 0; i < count; i++) {
-    clutter_actor_get_position (
-        clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i),
-        &x_pos,
-        &y_pos);
-    clutter_actor_set_position (
-        clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i),
+    tmp = clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i);
+    clutter_actor_get_position (tmp, &x_pos, &y_pos);
+    clutter_actor_set_position (tmp,
         (x_pos / properties->tilesize) * newtile,
         (y_pos / properties->tilesize) * newtile);
-    clutter_actor_set_size (
-        clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i),
-        newtile,
-        newtile);
+    clutter_actor_set_size (tmp ,newtile, newtile);
+  }
+}
 
+void 
+gnibbles_board_load_pixmap ()
+{
+  gchar *bonus_files[] = {
+    "blank.svg",
+    "diamond.svg",
+    "bonus1.svg",
+    "bonus2.svg",
+    "life.svg",
+    "bonus3.svg",
+    "bonus4.svg",
+    "bonus5.svg",
+    "questionmark.svg"
+  };
+
+  gchar *small_files[] = {
+    "wall.png",
+    "wall-straight-up.svg",
+    "wall-straight-side.svg",
+    "wall-corner-bottom-left.svg",
+    "wall-corner-bottom-right.svg",
+    "wall-corner-top-left.svg",
+    "wall-corner-top-right.svg",
+    "wall-tee-up.svg",
+    "wall-tee-right.svg",
+    "wall-tee-left.svg",
+    "wall-tee-down.svg",
+    "wall-cross.svg",
+    "snake-red.svg",
+    "snake-green.svg",
+    "snake-blue.svg",
+    "snake-yellow.svg",
+    "snake-cyan.svg",
+    "snake-magenta.svg",
+    "snake-grey.svg"
+  };
+  int i;
+
+  for (i = 0; i < 9; i++) {
+    if (board_bonus_pixmaps[i])
+      g_object_unref (board_bonus_pixmaps[i]);
+      board_bonus_pixmaps[i] = gnibbles_board_load_pixmap_file (bonus_files[i],
+						  2 * properties->tilesize,
+						  2 * properties->tilesize);
   }
 
+  for (i = 0; i < 19; i++) {
+    if (wall_pixmaps[i])
+      g_object_unref (wall_pixmaps[i]);
+      wall_pixmaps[i] = gnibbles_board_load_pixmap_file (small_files[i],
+						  properties->tilesize,
+						  properties->tilesize);
+  }
+}
+
+GdkPixbuf *
+gnibbles_board_load_pixmap_file (const gchar * pixmap,
+			   gint xsize, gint ysize)
+{
+  GdkPixbuf *image;
+  gchar *filename;
+  const char *dirname;
+
+  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
+  filename = g_build_filename (dirname, pixmap, NULL);
+
+  if (!filename) {
+    char *message =
+      g_strdup_printf (_("Nibbles couldn't find pixmap file:\n%s\n\n"
+			 "Please check your Nibbles installation"), pixmap);
+    //gnibbles_error (window, message);
+    /* We should never get here since the app exits in gnibbles_error. But let's
+     * free it anyway in case someone comes along and changes gnibbles_error */
+    g_free(message);
+  }
+
+  image = gdk_pixbuf_new_from_file_at_size (filename, xsize, ysize, NULL);
+  g_free (filename);
+
+  return image;
 }
 
 
-void throw_error (char *msg) {
-  char *message = 
-        g_strdup_printf (_("Nibbles couldn't find pixmap file:\n%s\n\n"
-			              "Please check your Nibbles installation"), msg);
-
-  //gnibbles_error (window, message);
-  g_free (message);
-}

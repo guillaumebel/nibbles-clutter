@@ -52,8 +52,6 @@ gnibbles_level_new (gint level)
     g_free (message);
   }
 
-  g_free (filename);
-
   for (i = 0; i < BOARDHEIGHT; i++) {
     if (!fgets (tmpboard, sizeof (tmpboard), in)) {
       char *message =
@@ -64,6 +62,7 @@ gnibbles_level_new (gint level)
       g_free (message);
       break;
     }
+
     for (j = 0; j < BOARDWIDTH; j++) {
       lvl->walls[j][i] = tmpboard[j];
       switch (lvl->walls[j][i]) {
@@ -119,6 +118,7 @@ gnibbles_level_new (gint level)
     }
   }
 
+  g_free (filename);
   fclose (in);
 
   return lvl;

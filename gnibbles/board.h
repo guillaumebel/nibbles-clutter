@@ -35,25 +35,8 @@ typedef struct {
         ClutterActor *level;
 } GnibblesBoard;
 
-static gchar *wall_images[] = {
-    "wall.png",
-    "wall-straight-up.svg",
-    "wall-straight-side.svg",
-    "wall-corner-bottom-left.svg",
-    "wall-corner-bottom-right.svg",
-    "wall-corner-top-left.svg",
-    "wall-corner-top-right.svg",
-    "wall-tee-up.svg",
-    "wall-tee-right.svg",
-    "wall-tee-left.svg",
-    "wall-tee-down.svg",
-    "wall-cross.svg",
-};
-
 GnibblesBoard *gnibbles_board_new (gint t_w, gint t_h);
-
 ClutterActor *gnibbles_board_get_stage (GnibblesBoard *board);
-//gpointer gnibbles_board_draw (void *arg);
 void gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level);
 void gnibbles_board_resize (GnibblesBoard *board, gint newtile);
 

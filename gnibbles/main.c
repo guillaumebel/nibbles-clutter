@@ -1111,15 +1111,27 @@ main (int argc, char **argv)
 
   gtk_window_set_default_size (GTK_WINDOW (clutter_win), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   gtk_widget_show (GTK_WIDGET (clutter_win));
+  
+
 
 
   g_signal_connect (G_OBJECT (board->clutter_widget), "configure_event",
 		    G_CALLBACK (configure_event_cb), board);
 
   //load the level
-  GnibblesLevel *lvl = gnibbles_level_new (1);
+  GnibblesLevel *lvl = gnibbles_level_new (20);
   
   gnibbles_board_load_level (board, lvl);
+/*
+  ClutterText *text = CLUTTER_TEXT (clutter_text_new());
+  //ClutterActor *text = clutter_rectangle_new ();
+  ClutterActor *stage = gnibbles_board_get_stage (board);
+  clutter_actor_set_position (CLUTTER_ACTOR (text), DEFAULT_WIDTH / 2, DEFAULT_HEIGHT / 2);
+  clutter_actor_set_size (CLUTTER_ACTOR (text), 50,50);
+  clutter_actor_show (CLUTTER_ACTOR (text));
+  clutter_container_add_actor (CLUTTER_CONTAINER (stage), CLUTTER_ACTOR (text));
+  clutter_text_set_text (text, "Nibbles Clutter");
+*/
   gtk_main ();
 
   gnibbles_properties_destroy (properties);
