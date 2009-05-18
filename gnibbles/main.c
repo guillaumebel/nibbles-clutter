@@ -47,6 +47,8 @@
 #include "warp.h"
 
 #include <clutter-gtk/clutter-gtk.h>
+#include <clutter/clutter.h>
+
 #include "board.h"
 
 #ifdef GGZ_CLIENT
@@ -108,6 +110,7 @@ NULL};
 
 static gint add_bonus_cb (gpointer data);
 static void render_logo (void);
+static void render_logo_clutter (GnibblesBoard *board);
 static gint end_game_cb (GtkAction * action, gpointer data);
 
 static GtkAction *new_game_action;
@@ -335,7 +338,7 @@ configure_event_cb (GtkWidget * widget, GdkEventConfigure * event, gpointer data
     ts_y--;
   tilesize = MIN (ts_x, ts_y);
 
-if (data != NULL) {
+  if (data) {
     GnibblesBoard *board = (GnibblesBoard *)data;
     gnibbles_board_resize (board, tilesize);
   }
@@ -371,8 +374,11 @@ if (data != NULL) {
 
   if (game_running ())
     draw_board ();
-  else
+  else {
     render_logo ();
+    if (data)
+      render_logo_clutter ((GnibblesBoard*)data);
+  }
   
   return FALSE;
 }
@@ -967,6 +973,39 @@ setup_window (void)
 
 }
 
+static void 
+render_logo_clutter (GnibblesBoard *board)
+{
+  
+  guint width, height;
+  ClutterActor *logo;
+  ClutterActor *text;
+  ClutterActor *desc;
+  ClutterColor actor_color = {0xff,0xff,0xff,0xff};
+
+  ClutterActor *stage = gnibbles_board_get_stage (board);
+
+  clutter_actor_get_size (CLUTTER_ACTOR (stage), &width, &height);
+  
+  logo = gtk_clutter_texture_new_from_pixbuf (logo_pixmap);
+  clutter_actor_set_size (CLUTTER_ACTOR (logo), width, height);
+  clutter_actor_set_position (CLUTTER_ACTOR (logo), 0, 0);
+  clutter_actor_show (logo);
+
+  text = clutter_text_new_full ("Sans Bold 70", _("Nibbles"), &actor_color);
+  clutter_actor_set_position (CLUTTER_ACTOR (text), (width / 2) - 200, height - 130);
+  clutter_actor_show (text);
+
+  desc = clutter_text_new_full ("Sans Bold 18", _("A worm game for GNOME."), &actor_color);
+  clutter_actor_set_position (CLUTTER_ACTOR (desc), (width / 2) - 170, height - 40);
+  clutter_actor_show (desc);
+
+  clutter_container_add (CLUTTER_CONTAINER (stage), logo, text, desc, NULL);
+  clutter_actor_raise_top (logo);
+  clutter_actor_raise (text, logo);
+  clutter_actor_raise (desc, logo);
+}
+
 static void
 render_logo (void)
 {
@@ -1027,6 +1066,8 @@ render_logo (void)
 
 
 }
+
+
 
 int
 main (int argc, char **argv)
@@ -1111,26 +1152,26 @@ main (int argc, char **argv)
 
   gtk_window_set_default_size (GTK_WINDOW (clutter_win), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   gtk_widget_show (GTK_WIDGET (clutter_win));
-  
-
-
 
   g_signal_connect (G_OBJECT (board->clutter_widget), "configure_event",
 		    G_CALLBACK (configure_event_cb), board);
 
   //load the level
-  GnibblesLevel *lvl = gnibbles_level_new (20);
+  //GnibblesLevel *lvl = gnibbles_level_new (26);
   
-  gnibbles_board_load_level (board, lvl);
-/*
-  ClutterText *text = CLUTTER_TEXT (clutter_text_new());
-  //ClutterActor *text = clutter_rectangle_new ();
+  //gnibbles_board_load_level (board, lvl);
+
+  render_logo_clutter (board);
+  //Clutter fun
+  /*
+  ClutterColor actor_color = {0xff,0xff,0xff,0xff};
+  ClutterText *text = CLUTTER_TEXT (clutter_text_new_full("Sans Bold 18", "Nibbles Clutter!", &actor_color));
   ClutterActor *stage = gnibbles_board_get_stage (board);
-  clutter_actor_set_position (CLUTTER_ACTOR (text), DEFAULT_WIDTH / 2, DEFAULT_HEIGHT / 2);
+  clutter_actor_set_position (CLUTTER_ACTOR (text), ((BOARDWIDTH * properties->tilesize)/ 2) - 100, 
+                                                    (BOARDHEIGHT * properties->tilesize)/ 2);
   clutter_actor_set_size (CLUTTER_ACTOR (text), 50,50);
   clutter_actor_show (CLUTTER_ACTOR (text));
   clutter_container_add_actor (CLUTTER_CONTAINER (stage), CLUTTER_ACTOR (text));
-  clutter_text_set_text (text, "Nibbles Clutter");
 */
   gtk_main ();
 

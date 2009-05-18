@@ -32,12 +32,11 @@
 #include "main.h"
 #include "gnibbles.h"
 #include "properties.h"
-
 #include "board.h"
 
-void gnibbles_board_load_pixmap ();
-GdkPixbuf*  gnibbles_board_load_pixmap_file (const gchar * pixmap,
+static GdkPixbuf*  load_pixmap_file (const gchar * pixmap,
 			                                      gint xsize, gint ysize);
+static void load_pixmap ();
 
 GdkPixbuf *board_bonus_pixmaps[9] = { NULL, NULL, NULL, NULL, NULL,
   NULL, NULL, NULL, NULL
@@ -65,12 +64,11 @@ gnibbles_board_new (gint t_w, gint t_h)
 
   ClutterActor *stage;
 
-  gnibbles_board_load_pixmap ();
+  load_pixmap ();
 
   stage = gtk_clutter_embed_get_stage (GTK_CLUTTER_EMBED (board->clutter_widget));
   clutter_stage_set_color (CLUTTER_STAGE(stage), &stage_color);
-  //Stage can't be resized by the user. it's resized internaly via the window's
-  //resize signal
+
   clutter_stage_set_user_resizable (CLUTTER_STAGE(stage), FALSE); 
   clutter_actor_set_size (CLUTTER_ACTOR (stage), 
                         properties->tilesize * BOARDWIDTH,
@@ -104,7 +102,7 @@ gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level)
   ClutterActor *tmp;  
   gboolean wall = TRUE;
 
-  if (board->level != NULL)
+  if (board->level)
     g_object_unref (board->level);
 
   board->level = clutter_group_new ();
@@ -183,6 +181,7 @@ gnibbles_board_resize (GnibblesBoard *board, gint newtile)
   int x_pos;
   int y_pos;
   int count;
+
   ClutterActor *tmp;
   ClutterActor *stage = gnibbles_board_get_stage (board);
 
@@ -192,6 +191,8 @@ gnibbles_board_resize (GnibblesBoard *board, gint newtile)
   clutter_actor_set_size (board->surface,
                           BOARDWIDTH * newtile,
                           BOARDHEIGHT * newtile);
+  if (!board->level)
+    return;
 
   count = clutter_group_get_n_children (CLUTTER_GROUP (board->level));
 
@@ -199,14 +200,14 @@ gnibbles_board_resize (GnibblesBoard *board, gint newtile)
     tmp = clutter_group_get_nth_child (CLUTTER_GROUP (board->level), i);
     clutter_actor_get_position (tmp, &x_pos, &y_pos);
     clutter_actor_set_position (tmp,
-        (x_pos / properties->tilesize) * newtile,
-        (y_pos / properties->tilesize) * newtile);
+                                (x_pos / properties->tilesize) * newtile,
+                                (y_pos / properties->tilesize) * newtile);
     clutter_actor_set_size (tmp ,newtile, newtile);
   }
 }
 
-void 
-gnibbles_board_load_pixmap ()
+static void 
+load_pixmap ()
 {
   gchar *bonus_files[] = {
     "blank.svg",
@@ -241,28 +242,30 @@ gnibbles_board_load_pixmap ()
     "snake-magenta.svg",
     "snake-grey.svg"
   };
+
   int i;
 
   for (i = 0; i < 9; i++) {
     if (board_bonus_pixmaps[i])
       g_object_unref (board_bonus_pixmaps[i]);
-      board_bonus_pixmaps[i] = gnibbles_board_load_pixmap_file (bonus_files[i],
-						  2 * properties->tilesize,
-						  2 * properties->tilesize);
+      
+    board_bonus_pixmaps[i] = load_pixmap_file (bonus_files[i],
+		                                   			  2 * properties->tilesize,
+      					                              2 * properties->tilesize);
   }
 
   for (i = 0; i < 19; i++) {
     if (wall_pixmaps[i])
       g_object_unref (wall_pixmaps[i]);
-      wall_pixmaps[i] = gnibbles_board_load_pixmap_file (small_files[i],
-						  properties->tilesize,
-						  properties->tilesize);
+      
+    wall_pixmaps[i] = load_pixmap_file (small_files[i],
+		  		                              properties->tilesize,
+                           						  properties->tilesize);
   }
 }
 
-GdkPixbuf *
-gnibbles_board_load_pixmap_file (const gchar * pixmap,
-			   gint xsize, gint ysize)
+static GdkPixbuf *
+load_pixmap_file (const gchar * pixmap, gint xsize, gint ysize)
 {
   GdkPixbuf *image;
   gchar *filename;
@@ -275,9 +278,7 @@ gnibbles_board_load_pixmap_file (const gchar * pixmap,
     char *message =
       g_strdup_printf (_("Nibbles couldn't find pixmap file:\n%s\n\n"
 			 "Please check your Nibbles installation"), pixmap);
-    //gnibbles_error (window, message);
-    /* We should never get here since the app exits in gnibbles_error. But let's
-     * free it anyway in case someone comes along and changes gnibbles_error */
+    //gnibbles_error (window, message;
     g_free(message);
   }
 

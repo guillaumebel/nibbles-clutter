@@ -35,8 +35,8 @@ typedef struct {
         ClutterActor *level;
 } GnibblesBoard;
 
-GnibblesBoard *gnibbles_board_new (gint t_w, gint t_h);
-ClutterActor *gnibbles_board_get_stage (GnibblesBoard *board);
+GnibblesBoard* gnibbles_board_new (gint t_w, gint t_h);
+ClutterActor* gnibbles_board_get_stage (GnibblesBoard *board);
 void gnibbles_board_load_level (GnibblesBoard *board, GnibblesLevel *level);
 void gnibbles_board_resize (GnibblesBoard *board, gint newtile);
 
