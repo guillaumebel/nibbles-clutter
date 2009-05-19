@@ -376,8 +376,8 @@ configure_event_cb (GtkWidget * widget, GdkEventConfigure * event, gpointer data
     draw_board ();
   else {
     render_logo ();
-    if (data)
-      render_logo_clutter ((GnibblesBoard*)data);
+    /*if (data && !((GnibblesBoard*)data)->level)
+      render_logo_clutter ((GnibblesBoard*)data);*/
   }
   
   return FALSE;
@@ -871,6 +871,81 @@ create_menus (GtkUIManager * ui_manager)
 }
 
 static void
+setup_window_clutter (GnibblesBoard *board)
+{
+  GtkWidget *vbox;
+  GtkWidget *main_vbox;
+  GtkWidget *packing;
+  GtkWidget *menubar;
+  GtkUIManager *ui_manager;
+  GtkAccelGroup *accel_group;
+
+  window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (window), _("Nibbles"));
+
+  gtk_window_set_default_size (GTK_WINDOW (window), DEFAULT_WIDTH, DEFAULT_HEIGHT);
+  games_conf_add_window (GTK_WINDOW (window), KEY_PREFERENCES_GROUP);
+
+  g_signal_connect (G_OBJECT (window), "destroy", G_CALLBACK (gtk_main_quit), NULL);
+  g_signal_connect (G_OBJECT (window), "delete_event",
+		    G_CALLBACK (delete_cb), NULL);
+  g_signal_connect (G_OBJECT (window), "window_state_event",
+		    G_CALLBACK (window_state_cb), NULL);
+
+  gtk_widget_realize (window);
+
+  vbox = gtk_vbox_new (FALSE, 0);
+
+  games_stock_init ();
+  ui_manager = gtk_ui_manager_new ();
+  create_menus (ui_manager);
+  set_fullscreen_actions (FALSE);
+  notebook = gtk_notebook_new ();
+  gtk_notebook_set_show_tabs (GTK_NOTEBOOK (notebook), FALSE);
+
+  accel_group = gtk_ui_manager_get_accel_group (ui_manager);
+  gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
+
+  menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
+  gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
+
+  packing = games_grid_frame_new (BOARDWIDTH, BOARDHEIGHT);
+  gtk_box_pack_start (GTK_BOX (vbox), packing, TRUE, TRUE, 0);
+  gtk_widget_show (packing);
+
+
+  gtk_container_add (GTK_CONTAINER (packing), board->clutter_widget);
+#ifdef GGZ_CLIENT
+  chat = create_chat_widget ();
+  gtk_box_pack_start (GTK_BOX (vbox), chat, FALSE, TRUE, 0);
+#endif
+
+  g_signal_connect (G_OBJECT (board->clutter_widget), "configure_event",
+		    G_CALLBACK (configure_event_cb), board);
+
+  g_signal_connect (G_OBJECT (window), "focus_out_event",
+		    G_CALLBACK (show_cursor_cb), NULL);
+
+  main_vbox = gtk_vbox_new (FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (main_vbox), notebook, TRUE, TRUE, 0);
+  gtk_notebook_append_page (GTK_NOTEBOOK (notebook), vbox, NULL);
+  gtk_notebook_set_current_page (GTK_NOTEBOOK (notebook), MAIN_PAGE);
+
+  statusbar = gtk_statusbar_new ();
+  gtk_box_pack_start (GTK_BOX (main_vbox), statusbar, FALSE, FALSE, 0);
+
+  gtk_container_add (GTK_CONTAINER (window), main_vbox);
+
+
+  gtk_widget_show_all (window);
+#ifdef GGZ_CLIENT
+  gtk_widget_hide (chat);
+#endif
+
+  scoreboard = gnibbles_scoreboard_new (statusbar);
+}
+
+static void
 setup_window (void)
 {
   GdkPixmap *cursor_dot_pm;
@@ -1067,8 +1142,6 @@ render_logo (void)
 
 }
 
-
-
 int
 main (int argc, char **argv)
 {
@@ -1137,42 +1210,15 @@ main (int argc, char **argv)
   gtk_action_set_visible (player_list_action, ggz_network_mode);
 
 
-  // clutter
+  // clutter fun
   gtk_clutter_init (&argc, &argv);
-  GtkWidget *clutter_win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  GtkWidget *clutter_vbox = gtk_vbox_new (TRUE,0);
   GnibblesBoard *board = gnibbles_board_new (BOARDWIDTH, BOARDHEIGHT);
-  gtk_container_add (GTK_CONTAINER (clutter_win), clutter_vbox);
-  gtk_widget_show (clutter_vbox);
-  gtk_box_pack_start (GTK_BOX(clutter_vbox), board->clutter_widget, TRUE, TRUE, 2);
-  gtk_widget_set_size_request (GTK_WIDGET (board->clutter_widget),
-                                DEFAULT_WIDTH,
-                                DEFAULT_HEIGHT);
-  gtk_widget_show (board->clutter_widget);
-
-  gtk_window_set_default_size (GTK_WINDOW (clutter_win), DEFAULT_WIDTH, DEFAULT_HEIGHT);
-  gtk_widget_show (GTK_WIDGET (clutter_win));
-
-  g_signal_connect (G_OBJECT (board->clutter_widget), "configure_event",
-		    G_CALLBACK (configure_event_cb), board);
-
-  //load the level
-  //GnibblesLevel *lvl = gnibbles_level_new (26);
+  setup_window_clutter (board);
   
-  //gnibbles_board_load_level (board, lvl);
+  gnibbles_board_load_level (board, gnibbles_level_new (1));
 
-  render_logo_clutter (board);
-  //Clutter fun
-  /*
-  ClutterColor actor_color = {0xff,0xff,0xff,0xff};
-  ClutterText *text = CLUTTER_TEXT (clutter_text_new_full("Sans Bold 18", "Nibbles Clutter!", &actor_color));
-  ClutterActor *stage = gnibbles_board_get_stage (board);
-  clutter_actor_set_position (CLUTTER_ACTOR (text), ((BOARDWIDTH * properties->tilesize)/ 2) - 100, 
-                                                    (BOARDHEIGHT * properties->tilesize)/ 2);
-  clutter_actor_set_size (CLUTTER_ACTOR (text), 50,50);
-  clutter_actor_show (CLUTTER_ACTOR (text));
-  clutter_container_add_actor (CLUTTER_CONTAINER (stage), CLUTTER_ACTOR (text));
-*/
+  //render_logo_clutter (board);
+
   gtk_main ();
 
   gnibbles_properties_destroy (properties);

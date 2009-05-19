@@ -59,7 +59,7 @@ gnibbles_board_new (gint t_w, gint t_h)
   board->width = t_w;
   board->height = t_h;
   board->level = NULL;
-  board->surface = clutter_texture_new ();
+  board->surface =NULL;
   board->clutter_widget = gtk_clutter_embed_new ();
 
   ClutterActor *stage;
@@ -76,8 +76,17 @@ gnibbles_board_new (gint t_w, gint t_h)
   clutter_stage_set_user_resizable (CLUTTER_STAGE (stage), FALSE);
   clutter_actor_show (stage);
 
-  gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (board->surface),
-                                      wall_pixmaps[0]);
+  gchar *filename;
+  const char *dirname;
+
+  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
+  filename = g_build_filename (dirname, "wall.svg", NULL);
+
+  board->surface = clutter_texture_new_from_file (filename, NULL);
+
+  //gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (board->surface),
+  //                                    wall_pixmaps[0]);
+  
   clutter_actor_set_size (CLUTTER_ACTOR (board->surface),
                           properties->tilesize * BOARDWIDTH,
                           properties->tilesize * BOARDHEIGHT);
@@ -191,6 +200,7 @@ gnibbles_board_resize (GnibblesBoard *board, gint newtile)
   clutter_actor_set_size (board->surface,
                           BOARDWIDTH * newtile,
                           BOARDHEIGHT * newtile);
+
   if (!board->level)
     return;
 
@@ -222,7 +232,7 @@ load_pixmap ()
   };
 
   gchar *small_files[] = {
-    "wall.png",
+    "wall.svg",
     "wall-straight-up.svg",
     "wall-straight-side.svg",
     "wall-corner-bottom-left.svg",
@@ -259,8 +269,8 @@ load_pixmap ()
       g_object_unref (wall_pixmaps[i]);
       
     wall_pixmaps[i] = load_pixmap_file (small_files[i],
-		  		                              properties->tilesize,
-                           						  properties->tilesize);
+		  		                              4 * properties->tilesize,
+                           						  4 * properties->tilesize);
   }
 }
 
