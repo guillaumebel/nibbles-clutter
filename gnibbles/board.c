@@ -23,6 +23,7 @@
 
 #include <stdlib.h>
 #include <glib.h>
+#include <glib/gprintf.h>
 #include <glib/gi18n.h>
 #include <gdk/gdk.h>
 #include <libgames-support/games-runtime.h>
@@ -38,10 +39,6 @@ static GdkPixbuf*  load_pixmap_file (const gchar * pixmap,
 			                                      gint xsize, gint ysize);
 static void load_pixmap ();
 
-GdkPixbuf *board_bonus_pixmaps[9] = { NULL, NULL, NULL, NULL, NULL,
-  NULL, NULL, NULL, NULL
-};
-
 GdkPixbuf *wall_pixmaps[19] = { NULL, NULL, NULL, NULL, NULL,
   NULL, NULL, NULL, NULL, NULL,
   NULL, NULL, NULL, NULL, NULL,
@@ -49,6 +46,7 @@ GdkPixbuf *wall_pixmaps[19] = { NULL, NULL, NULL, NULL, NULL,
 };
 
 extern GnibblesProperties *properties;
+
 
 GnibblesBoard *
 gnibbles_board_new (gint t_w, gint t_h) 
@@ -80,20 +78,43 @@ gnibbles_board_new (gint t_w, gint t_h)
   const char *dirname;
 
   dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
-  filename = g_build_filename (dirname, "wall.svg", NULL);
+  filename = g_build_filename (dirname, "wall-small-empty.svg", NULL);
 
-  board->surface = clutter_texture_new_from_file (filename, NULL);
+  /* Using ClutterScript to set special texture property such as "repeat-x",
+   * "repeat-y" and "keep-aspect-ratio" */
+  gchar texture_script[200];
 
-  //gtk_clutter_texture_set_from_pixbuf (CLUTTER_TEXTURE (board->surface),
-  //                                    wall_pixmaps[0]);
-  
+  g_sprintf (texture_script, "["
+                             "  {"
+                             "    \"id\" : \"surface\","
+                             "    \"type\" : \"ClutterTexture\","
+                             "    \"filename\" : \"%s\","
+                             "    \"x\" : 0,"
+                             "    \"y\" : 0,"
+                             "    \"width\" : %d,"
+                             "    \"height\" : %d,"
+                             "    \"keep-aspect-ratio\" : true"
+                             "    \"visible\" : true,"
+                             "    \"repeat-x\" : true,"
+                             "    \"repeat-y\" : true"
+                             "  }"
+                             "]",
+                             filename,
+                             properties->tilesize,
+                             properties->tilesize);
+
+  ClutterScript *script = clutter_script_new ();
+
+  clutter_script_load_from_data (script, texture_script, -1, NULL);
+  clutter_script_get_objects (script, "surface", &(board->surface), NULL);
+
   clutter_actor_set_size (CLUTTER_ACTOR (board->surface),
                           properties->tilesize * BOARDWIDTH,
                           properties->tilesize * BOARDHEIGHT);
-  clutter_actor_set_position (CLUTTER_ACTOR (board->surface), 0, 0);
   clutter_container_add_actor (CLUTTER_CONTAINER (stage), board->surface);
   clutter_actor_show (board->surface);
 
+  g_object_unref (script);
   return board;
 }
 
@@ -219,20 +240,9 @@ gnibbles_board_resize (GnibblesBoard *board, gint newtile)
 static void 
 load_pixmap ()
 {
-  gchar *bonus_files[] = {
-    "blank.svg",
-    "diamond.svg",
-    "bonus1.svg",
-    "bonus2.svg",
-    "life.svg",
-    "bonus3.svg",
-    "bonus4.svg",
-    "bonus5.svg",
-    "questionmark.svg"
-  };
 
   gchar *small_files[] = {
-    "wall.svg",
+    "wall-empty.svg",
     "wall-straight-up.svg",
     "wall-straight-side.svg",
     "wall-corner-bottom-left.svg",
@@ -254,15 +264,6 @@ load_pixmap ()
   };
 
   int i;
-
-  for (i = 0; i < 9; i++) {
-    if (board_bonus_pixmaps[i])
-      g_object_unref (board_bonus_pixmaps[i]);
-      
-    board_bonus_pixmaps[i] = load_pixmap_file (bonus_files[i],
-		                                   			  2 * properties->tilesize,
-      					                              2 * properties->tilesize);
-  }
 
   for (i = 0; i < 19; i++) {
     if (wall_pixmaps[i])

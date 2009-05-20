@@ -1222,7 +1222,6 @@ main (int argc, char **argv)
   gtk_main ();
 
   gnibbles_properties_destroy (properties);
-
   games_conf_shutdown ();
 
   games_runtime_shutdown ();
