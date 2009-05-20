@@ -35,7 +35,7 @@ gnibbles_cworm_new (guint number, gint x_s, gint y_s)
   worm->list = NULL;
   worm->number = number;
   worm->lives = SLIVES;
-  worm->directoin = 1;
+  worm->direction = 1;
   worm->inverse = FALSE;
   worm->xstart = x_s;
   worm->ystart = y_s;
@@ -46,22 +46,24 @@ gnibbles_cworm_new (guint number, gint x_s, gint y_s)
     clutter_actor_set_size (CLUTTER_ACTOR (actor), 
                             SLENGTH * properties->tilesize, 
                             properties->tilesize);
+   
   } else if (worm->direction == WORMDOWN || worm->direction == WORMUP) {
     clutter_actor_set_size (CLUTTER_ACTOR (actor),  
                             properties->tilesize,
                             SLENGTH * properties->tilesize);
   }
 
-  clutter_actor_set_position (CLUTTER_ACTOR (actor), xstart, ystart);
+  clutter_actor_set_position (CLUTTER_ACTOR (actor), worm->xstart, worm->ystart);
   clutter_container_add_actor (CLUTTER_CONTAINER (worm->actors), actor);  
-
+  
+  worm->list = g_list_append (worm->list, actor);
   return worm;
 }
 
 void
 gnibbles_cworm_add_straight_actor (GnibblesCWorm *worm)
 {
-  ClutterActor *straignt = clutter_rectangle_new ();
+  ClutterActor *straight = clutter_rectangle_new ();
   
   if (worm->direction == WORMRIGHT || worm->direction == WORMLEFT)
     clutter_actor_set_size (straight, properties->tilesize ,0);
@@ -69,9 +71,9 @@ gnibbles_cworm_add_straight_actor (GnibblesCWorm *worm)
     clutter_actor_set_size (straight, 0, properties->tilesize);
 
   if (!worm->inverse)
-    g_list_append (worm->list, straight);
+    worm->list = g_list_append (worm->list, straight);
   else
-    g_list_prepend (worm->list, straight);
+    worm->list = g_list_prepend (worm->list, straight);
   
   clutter_container_add_actor (CLUTTER_CONTAINER (worm->actors), straight);
 
@@ -101,9 +103,9 @@ gnibbles_cworm_add_corner_actor (GnibblesCWorm *worm)
   }
 
   if (!worm->inverse)
-    g_list_append (worm->list, corner);
+    worm->list = g_list_append (worm->list, corner);
   else
-    g_list_prepend (worm->list, corner);
+    worm->list = g_list_prepend (worm->list, corner);
 
   clutter_container_add_actor (CLUTTER_CONTAINER (worm->actors), corner);
 }
@@ -112,9 +114,9 @@ void
 gnibbles_cworm_remove_actor (GnibblesCWorm *worm)
 {
   if (!worm->inverse)
-    g_list_remove_link (worm->list, g_list_first (worm->list));
+    worm->list = g_list_remove_link (worm->list, g_list_first (worm->list));
   else 
-    g_list_remove_link (worm->list, g_list_last (worm->list));
+    worm->list = g_list_remove_link (worm->list, g_list_last (worm->list));
 }
 
 
